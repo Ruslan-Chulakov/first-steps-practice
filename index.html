@@ -12,446 +12,434 @@
     <nav>
         <ul>
             <li>
-                <a href="#alt">Атрибут <b>alt</b></a>
-            </li>
-            <li>
-                <a href="#picture-link">Изображение-ссылка</a>
-            </li>
-            <li>
-                <a href="#img-vs-sign">Изображение с подписью</a>
-            </li>
-            <li>
-                <a href="#absolut-and-relative-link">Абсолютные и относительные пути</a>
+                <a href="#streaming-content">Потоковое содержимое</a>
             </li>
             <li>
                 <ul>
                     <li>
-                        <a href="#absolute-link">Абсолютный путь</a>
+                        <a href="#header">Тег &lt;header&gt;</a>
                     </li>
                     <li>
-                        <a href="#relative-link">Относительный путь</a>
+                        <a href="#footer">Тег &lt;footer&gt;</a>
+                    </li>
+                    <li>
+                        <a href="#main">Тег &lt;main&gt;</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#graphic-formats">Графические форматы</a>
+                <a href="#semantic-sections">Смысловые разделы</a>
             </li>
             <li>
                 <ul>
                     <li>
-                        <a href="#raster-graphics">Растровая графика</a>
+                        <a href="#nav">Тег &lt;nav&gt;</a>
                     </li>
                     <li>
-                        <a href="#vector-graphics">Векторная графика</a>
+                        <a href="#aricle">Тег &lt;article&gt;</a>
+                    </li>
+                    <li>
+                        <a href="#section">Тег &lt;section&gt;</a>
+                    </li>
+                    <li>
+                        <a href="#div">Тег &lt;div&gt;</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#image-optimization">Оптимизация изображений</a>
+                <a href="#tag-selection-algoritm">Алгоритм выбора тега</a>
             </li>
             <li>
-                <a href="#progressive-jpeg">Прогрессивный JPEG</a>
-            </li>
-            <li>
-                <ul>
-                    <li>
-                        <a href="#creation">Создание</a>
-                    </li>
-                </ul>
+                <a href="#page-layout">Разметка страницы</a>
             </li>
         </ul>
-        
+       
     </nav>
 </header>
 
 <body>
-   <h1>Изображения</h1>
-        <section>
+    <h1>Структурная разметка</h1>
+
+    <p>
+        Есть целый набор семантических тегов для разметки больших логических разделов и улучшения структурной семантики
+        страницы. Каждый из них может быть использован при определённых условиях. Это влияет на работу ассистивных технологий,
+        индексирование страницы и её рейтинг выдачи в поиске.
+    </p>
+
+
+    <section>
+
+        <a name="streaming-content"></a>
+        <h2>Потоковое содержимое</h2>
+
+            <a name="header"></a>
+            <h3>Тег <mark>&lt;header&gt;</mark></h3>
+
             <p>
-                Использование графики делает веб-страницы визуально привлекательнее. Изображения помогают лучше передать суть и
-                содержание документа.  
-                <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element" title="will be opened in new window" target="_blank" rel="noopener noreferrer noifollow">
-                    Тег <mark>&lt;img&gt;</mark>
-                </a> 
-                предназначен для разметки изображений в различных графических форматах.
+                Шапка (хедер) выделяет вводную часть всей страницы, сложной секции или статьи. Обычно содержит логотип, навигацию,
+                вводный текст, сложный заголовок. Может быть несколько на странице.
             </p>
 
-            <textarea name="code" id="" cols="90" rows="6">
-                <img 
-                src="https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg" 
-                alt="Macbook Air на сером деревянном столе"
-                width="400" 
-                />
+            <textarea name="code-header" id="" cols="95" rows="11">
+                <body>
+                    <!-- Шапка страницы -->
+                    <header>
+                        <a href="/">Логотип сайта</a>
+                
+                        <ul>
+                            Меню навигации по другим страницам
+                        </ul>
+                    </header>
+                </body>
+            </textarea>
+            <br>
+
+            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-header-element" target="_link" rel="noopener noreferrer nofollow">
+                Ссылка на спецификацию
+            </a>
+
+            <a name="footer"></a>
+            <h3>Тег &lt;footer&gt;</h3>
+
+            <p>
+                Подвал (футер) это финальная часть всей страницы, её раздела или статьи. Часто содержит копирайт, список ссылок на
+                социальные сети, контактную информацию и так далее. Может быть несколько на странице.
+            </p>
+
+            <textarea name="code-footer" id="" cols="95" rows="24">
+                <body>
+                    <!-- Шапка страницы -->
+                    <header>
+                        <a href="/">Логотип сайта</a>
+                
+                        <ul>
+                            Меню навигации по другим страницам
+                        </ul>
+                    </header>
+                
+                    <!-- Подвал страницы -->
+                    <footer>
+                        <!-- Копирайт -->
+                        <p>Все права защищены &copy;lpj.dev</p>
+                
+                        <!-- Ссылки на соцсети -->
+                        <ul>
+                            <li><a href="">Facebook</a></li>
+                            <li><a href="">Twitter</a></li>
+                            <li><a href="">Instagram</a></li>
+                        </ul>
+                    </footer>
+                </body>
             </textarea>
 
+            <br>
+
+            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-footer-element" target="_blank" rel="noopener noreferrer nofollow">
+                Ссылка на спецификацию
+            </a>
+
+            <a name="main"></a>
+            <h3>Тег <mark>&lt;main&gt;</mark></h3>
+
+            <p>
+                Основное, не повторяющееся на других страницах сайта (уникальное), содержание. Может быть только один на странице.
+            </p>
+
+            <textarea name="code-main" id="" cols="95" rows="11">
+                <body>
+                    <!-- Шапка страницы -->
+                    <header></header>
+                
+                    <!-- Уникальный контент страницы -->
+                    <main></main>
+                
+                    <!-- Подвал страницы -->
+                    <footer></footer>
+                </body>
+            </textarea>
+
+            <br>
+
+            <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element" target="_blank" rel="noreferrer noopener nofollow">
+                Ссылка на спецификацию
+            </a>
+
+    </section>
+
+
+    <section>
+
+        <a name="semantic-sections"></a>
+        <h2>Смысловые разделы</h2>
+
+            <a name="nav"></a>
+            <h3>Тег <mark>&lt;nav&gt;</mark></h3>
+
+            <p>
+                Определяет раздел основной навигации со ссылками на секции текущей или других страниц. Используется только для основной
+                навигации, а не для любой группы ссылок в документе.
+            </p>
+
+            <textarea name="code-nav" id="" cols="95" rows="30">
+                <body>
+                    <!-- Шапка страницы -->
+                    <header>
+                        <a href="/">Логотип сайта</a>
+                
+                        <nav>
+                            <!-- Навигация на другие страницы -->
+                            <ul>
+                                <li><a href="/portfolio">Portfolio</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="/about">About</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                
+                    <!-- Уникальный контент страницы -->
+                    <main></main>
+                
+                    <!-- Подвал страницы -->
+                    <footer>
+                        <!-- ⚠️ Ссылки на соцсети, не nav -->
+                        <ul>
+                            <li><a href="">Facebook</a></li>
+                            <li><a href="">Twitter</a></li>
+                            <li><a href="">Instagram</a></li>
+                        </ul>
+                    </footer>
+                </body>
+            </textarea>
+
+            <br>
+
+            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-nav-element" target="_blank" rel="noopener noreferrer nofollow">
+                Ссылка на спецификацию
+            </a>
+
+
+            <a name="aricle"></a>
+            <h3>Тег <mark>&lt;article&gt;</mark></h3>
+
+            <p>
+                Независимая, отделяемая и, имеющая значение вне, часть документа. Например пост на форуме, твит, статья в блоге, виджет
+                с рекламой, инстаграм история, карточка товара в магазине.
+            </p>
+
+            <textarea name="code-article" id="" cols="95" rows="10">
+         <article>
+            <h1>Сладкий пирожок</h1>
+            <img src="ссылка на изображение пирожка" alt="пирожок" />
+            <p>
+                Очень вкусный печёный пирожок с различными наполнителями: вишней, персиком
+                сливой или клубникой.
+            </p>
+            <p>Цена: 50 кредитов</p>
+        </article>
+            </textarea>
+
+            <h4>ПОЛЕЗНО</h4>
+
+            <p>
+                Если разделу документа можно дать имя, вынести его вне сайта и он будет иметь смысл 
+                - это <mark>&lt;article&gt;</mark>. Обязателен
+                    заголовок.
+            </p>
+
+            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element" target="_blank" rel="nofollow noreferrer noopener">
+                Ссылка на спецификацию
+            </a>
+
+
+            <a name="section"></a>
+            <h3>Тег <mark>&lt;section&gt;</mark></h3>
+
+            <p>
+                Крупный раздел, объединяющий содержание по смыслу. Неотделим от основного документа. Например секция списка товаров,
+                блок личной информации в профиле пользователя, раздел контактной информации.
+            </p>
+
+            <textarea name="code-section" id="" cols="95" rows="12">
+        <section>
+            <h1>Самые популярные пирожки этой недели</h1>
+                
+            <!-- Внутри каждого <li> может быть карточка пирожка из секции «Тег <article>» -->
             <ul>
-                <li>
-                    <mark>src="путь"</mark> - обязательный атрибут, указывает адрес изображения. Путь к картинке может быть абсолютным или относительным.
-                </li>
-                <li>
-                    <mark>alt="описание"</mark> - обязательный атрибут, альтернативное описание.
-                </li>
-                <li>
-                    <mark>width="значение"</mark> и <mark>height="значение"</mark> - задают размеры изображения в пикселях. Без задания размеров изображение
-                    отображается на странице в оригинальном размере. Если задать только одну величину, браузер автоматически вычислит другую
-                    для сохранения пропорций.
-                </li>
+                <li>Жареный с грибами</li>
+                <li>Жареный с мяссом</li>
+                <li>Печёный с яблоками</li>
+                <li>Печёный с творогом</li>
             </ul>
-
         </section>
-
-        <section>
-            <h2 >Атрибут alt</h2>
-            <a name="alt"></a>
-
-            <p>
-                Необходим для предоставления значимой информации для пользователей, которые не могут видеть изображение (слабовидящие),
-                или если изображение не загрузилось. Альтернативный текст должен быть в каждом теге &lt;img&gt;.
-            </p>
-
-            <ul>
-                <li>
-                    В описании должно быть законченное, полностью сформированное предложение.
-                </li>
-                <li>
-                    Альтернативный текст должен отвечать на вопрос «Что изображено на картинке?».
-                </li>
-                <li>
-                    Описание должно быть уникальным и не повторять то, что уже есть в тексте к этому изображению.
-                </li>
-                <li>
-                    В описании не нужно использовать слова «изображение», «картинка» или «илюстрация», это само собой понятно.
-                </li>
-            </ul>
-
-            <img src="./img/alt-1.jpg" alt="3 cats" width="700">
-
-            <p>
-                Если в тексте страницы описывается история этих котят, достаточно будет следующего описания.
-            </p>
-
-            <textarea name="code" id="" cols="90" rows="2">
-                <img src="kittens.jpg" alt="Котята" />
             </textarea>
 
-            <p>
-                В случае когда у нас просто галерея изображений, без какого-то текстового описания, необходимо уточнить что именно
-                изображено.
-            </p>
-
-            <textarea name="code" id="" cols="90" rows="5">
-                <img 
-                src="kittens.jpg" 
-                alt="Три котёнка играют на соломе. Два серых и один чёрный." 
-                />
-            </textarea>
-       
-        </section>
-
-        <section>
-            <h2>Изображение-ссылка</h2>
-            <a name="picture-link"></a>
-
-            <p>
-                Ссылка не обязательно должна быть с текстовыми контентом. Очень часто, особенно в интернет-магазинах, клик по
-                изображению товара, в списке товаров, перенаправляет пользователя на страницу этого товара.
-            </p>
-
-            <p>
-                Для создания изображения-ссылки оборачиваем тег &lt;img&gt; в ссылку.
-            </p>
-
-            <textarea name="code" id="" cols="95" rows="8">
-<a href="https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/">
-    <img 
-        src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?w=640" 
-        alt="Рыжий кот"
-        width="640" 
-    />
-</a>
-            </textarea>
-
-        </section>
-
-        <section>
-            <h2>Изображение с подписью</h2>
-            <a name="img-vs-sign"></a>
-
-            <p>
-                Такая задача часто встречается в статьях, где много изображений с пояснением под или над картинкой, например
-                иллюстрации, графики или диаграммы. Если необходимо разметить изображение с подписью, можно использовать теги <mark>&lt;img&gt;</mark> и
-                абзац <mark>&lt;p&gt;</mark>. Но, именно для таких задач, есть семантические теги
-                <mark>&lt;figure&gt;</mark> и <mark>&lt;figcaption&gt;</mark>.
-            </p>
-
-            <p>
-                Внутрь <mark>&lt;figure&gt;</mark> помещаем разметку изображения и описания. Тег <mark>&lt;figcaption&gt;</mark> обязательно должен быть первым или последним
-                        ребёнком <mark>&lt;figure&gt;</mark>.
-            </p>
-
-            <textarea name="code" id="" cols="95" rows="6">
-<figure>
-    <!-- Произвольный графический контент: фотография, график, диаграмма и т. п. -->
-    <img src="адрес изображения" alt="альтернативный текст" />
-    <figcaption>Текст пояснения который будет под изображением</figcaption>                
-</figure>
-            </textarea>
-        </section>
-
-        <section>
-            <h2>Абсолютные и относительные пути</h2>
-            <a name="absolut-and-relative-link"></a>
-
-            <p>
-                Веб-сайты содержат множество файлов, которые размещают в отдельные папки, чтобы ими было легче управлять. Для того,
-                чтобы создать связь между разными файлами, например в HTML-документе подключить изображение или файл стилей,
-                используются абсолютные или относительные пути, описывающие расположение подключаемого файла.
-            </p>
-
-                <h3>Абсолютный путь</h3>
-                <a name="absolute-link"></a>
+                <h4>ПОЛЕЗНО</h4>
 
                 <p>
-                    Указывает точное местоположение файла в структуре папок на сервере. Абсолютный путь позволяет получить доступ к файлу со
-                    сторонних ресурсов.
+                    Если разделу документа можно дать имя, но вне сайта он не будет иметь смысла - это <mark>&lt;section&gt;</mark>. Желателен заголовок.
                 </p>
 
-                <textarea name="a-link" id="" cols="95" rows="2">
-        https://images.pexels.com/photos/583842/pexels-photo-583842.jpeg
-                </textarea>
+            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-section-element" target="_blank" rel="noopener noreferrer nofollow">
+                Ссылка на спецификацию
+            </a>
+        
+        <a name="div"></a>
+        <h3>Тег &lt;div&gt;</h3>
 
-                <p>
-                    Абсолютные адреса состоят минимум из трёх частей: протокол, имя сервера и путь к файлу.
-                </p>
+        <p>
+            Универсальный контейнер без семантического значения. Используется как блок-обёртка для последующей стилизации контента.
+        </p>
 
-                <ul>
-                    <li>
-                        https:// - протокол.
-                    </li>
-                    <li>
-                        images.pexels.com - имя сервера.
-                    </li>
-                    <li>
-                        /photos/583842/pexels-photo-583842.jpeg — путь к файлу изображения, где «photos» и «583842» имена папок. Папка «583842»
-                        вложена в «photos».
-                    </li>
-                </ul>
+        <h4>ПОЛЕЗНО</h4>
 
-                    <h4>&#10071;ИНТЕРЕСНО</h4>
+        <p>
+            Если не получается дать группе контента вменяемое имя (не "правая колонка", а имеющее смысл) - это <mark>&lt;div&gt;</mark> и скорее всего
+                вам просто нужен общий контейнер для оформления.
+        </p>
 
-                    <p>
-                        Например, при клике на 
-                        <a href="https://images.pexels.com/photos/583842/pexels-photo-583842.jpeg" target="_blank" rel="noopener nofollow noreferrer">ссылку с таким адресом</a> ,
-                         в браузере откроется вкладка с изображением, которое лежит где-то на
-                        сервере в интернете.
-                    </p>
-
-                <h3>Относительный путь</h3>
-                <a name="relative-link"></a>
-
-                <p>
-                    Описывает путь к ресурсу относительно текущего файла. Используется для составления путей к изображениям, файлам стилей
-                    или создания навигации на другие страницы сайта, который вы создаёте.
-                </p>
-
-                <p>
-                    Возьмём стандартную структуру файлов и папок проекта.
-                </p>
-
-                <img src="./img/project-structure.png" alt="project structure" width="700">
-
-                <p>
-                    Для того, чтобы в <mark>index.html</mark> достучаться до изображения логотипа из папки <mark>images</mark>, 
-                    в атрибуте <mark>src</mark> нужно указать
-                    относительный путь, то есть относительно HTML-документа.
-                </p>
-
-                <textarea name="code" id="" cols="95" rows="4">
-        <a href="">
-            <img src="images/logo.png" alt="Логотип сайта" />
+        <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element" target="_blank" rel="noopener noreferrer nofollow">
+            Ссылка на спецификацию
         </a>
-                </textarea>
 
+    </section>
+
+
+    <section>
+
+        <a name="tag-selection-algoritm"></a>
+        <h2>Алгоритм выбора тега</h2>
+
+        <p>
+            Не только новичкам бывает трудно решить какой тег использовать для разметки блока контента основываясь на его
+            семантическом значении. Пользуйтесь этим алгоритмом для определения подходящего тега.
+        </p>
+
+        <img src="./img/algorithm.jpeg" alt="Алгоритм выбора тегов" width="700">
+
+    </section>
+
+    <section>
+
+        <a name="page-layout"></a>
+        <h2>Разметка страницы</h2>
+
+        <p>
+            Используя все рассмотренные теги наберём разметку простой страницы начинающей веб-студии.
+        </p>
+
+        <textarea name="code-page-layout" id="" cols="95" rows="10">
+<!-- Page header -->
+<header>
+    <!-- The logo is always a link -->
+    <a href="/">
+        <img src="https://www.flaticon.com/svg/static/icons/svg/616/616475.svg" alt="Webstudio logo" width="32" />
+        Mango.dev
+    </a>
+
+    <!-- Main navigation -->
+    <nav>
+        <!--Links to other pages or sections of the current page -->
+        <ul>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Unique page content -->
+<main>
+    <!-- Features section -->
+    <section>
+        <h2>Features</h2>
+
+        <ul>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2015/09/09/19/56/office-932926_1280.jpg"
+                    alt="Workplace in the company" width="320" />
+                <h3>Experience</h3>
                 <p>
-                    Символ <mark>/</mark> обозначает переход на один уровень ниже. Такой путь браузер буквально понимает как: 
-                    «В папке <mark>images</mark>, на одном
-                    уровне с текущим файлом <mark>index.html</mark>, взять файл <mark>logo.png</mark>».
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
+                    repellendus voluptates sequi natus accusantium adipisci ratione
+                    laborum sunt, modi nemo?
                 </p>
-
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049_1280.jpg"
+                    alt="A man holds a tablet in his hands and drinks coffee" width="320" />
+                <h3>Technology stack</h3>
                 <p>
-                    В будущем необходимо будет подключать изображения в файле стилей. 
-                    Для того, чтобы в файле <mark>styles.css</mark> достучаться до
-                    изображения логотипа из папки <mark>images</mark>, 
-                    необходимо указать относительный путь (относительно файла-стилей).
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
+                    repellendus voluptates sequi natus accusantium adipisci ratione
+                    laborum sunt, modi nemo?
                 </p>
-
-                <textarea name="code" id="" cols="95" rows="3">
-        background-image: url('../images/logo.png');
-                </textarea>
-
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2018/03/10/12/00/paper-3213924_1280.jpg"
+                    alt="Four hands in a gesture of mutual assistance" width="320" />
+                <h3>Support</h3>
                 <p>
-                    Последовательность символов <mark>../</mark> обозначает переход на одну папку (уровень) выше. 
-                    Такой путь браузер буквально понимает
-                    как: «Перейти на одну папку выше (назад),
-                     зайти в папку <mark>images</mark> и взять в ней файл <mark>logo.png</mark>».
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
+                    repellendus voluptates sequi natus accusantium adipisci ratione
+                    laborum sunt, modi nemo?
                 </p>
-        </section>
+            </li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Графические форматы</h2>
-            <a name="graphic-formats"></a>
+    <!-- Technology stack section -->
+    <section>
+        <h2>Our technology stack</h2>
 
-            <img src="./img/image-formats.jpg" alt="image formats" width="700">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Node.js</li>
+            <li>PostgreSQL</li>
+        </ul>
+    </section>
+</main>
 
-            <p>
-                Векторная графика будет отображаться одинаково хорошо на обычных экранах и на экранах с высокой пиксельной плотностью.
-                Растровая графика, особенно сжатая с потерей качества, будет выглядеть размыто.
-            </p>
+<!-- Page footer -->
+<footer>
+    <p>All rights reserved &copy;mango.dev</p>
 
-                <h3>Растровая графика</h3>
-                <a name="raster-graphics"></a>
+    <p>Our contacts in social networks</p>
+    <ul>
+        <li><a href="">Facebook</a></li>
+        <li><a href="">Twitter</a></li>
+        <li><a href="">Instagram</a></li>
+    </ul>
 
-                <dl>
-                    <dt>
-                        <strong>Растровая графика (raster, bitmap)</strong>
-                    </dt>
-                    <dd>
-                        - описание графического файла в виде массива с координатами каждого пикселя и
-                    описанием цвета этого пикселя. Как карта цветов с фиксированным размером.
-                    </dd>
-                </dl>
+    <button type="button">Request a call back</button>
+</footer>
+        </textarea>
 
-                <p>
-                    Самые популярные растровые форматы изображений:
-                </p>
-                
-                <ul>
-                    <li>
-                        JPEG - большие файлы не требующие прозрачного фона или анимации. Этот формат идеален для красочных фотореалистичных
-                        фотографий, так как они могут содержать миллионы цветов.
-                    </li>
-                    <li>
-                        PNG - в отличие от JPEG, имеет дополнительный параметр для описания прозрачности (альфа канал). Подходит для
-                        изображений, фон которых должен быть прозрачный или одноцветный. Используется для иконок и декоративных элементов. Также
-                        используется для изображений повышенной точности - скриншотов, чертежей, графиков и т. п.
-                    </li>
-                    <li>
-                        webP - формат заменяющий PNG и JPEG, но еще с неполной поддержкой в браузерах. При равном качестве изображения, сжатые
-                        файлы будут меньше PNG и JPEG в среднем на 25%.
-                    </li>
-                </ul>
+        <p>
+            В примере не хватает разметки скелета документа, потому что его автоматически добавляет сама интерактивная площадка
+            <a href="https://codepen.io/" target="_blank" rel="noopener noreferrer nofollow">codepen.io</a>.
+             Для полноты картины запишем базовую разметку документа.
+        </p>
 
-                    <h4>&#10071;ПОЛЕЗНО</h4>
-
-                    <p>
-                        Отличить растровое изображение довольно просто, достаточно увеличить его масштаб. В определённый момент изображение
-                        начнёт размываться, и появятся квадраты (пикселизация).
-                    </p>
-                
-                <h3>Векторная графика</h3>
-                <a name="vector-graphics"></a>
-
-                <dl>
-                    <dt>
-                        <strong>Векторная графика (SVG, Scalable Vector Graphics)</strong>
-                    </dt>
-                    <dd>
-                        - описывается в виде правил или уравнений, определяющих линии, а также дополнительные свойства, цвет линий и фон для
-                        фигур.
-                    </dd>
-                </dl>
-
-                <p>
-                    Векторная графика идеально подходит для простых масштабируемых изображений, занимая очень мало места. Тем не менее, с
-                    ростом сложности изображения, размер файла делает использование формата SVG невыгодным. Векторная графика заменяет PNG и
-                    используется для иконок, логотипов, графиков, абстрактной графики и декоративных элементов.
-                </p>
-
-        </section>
-
-        <section>
-            <h2>Оптимизация изображений</h2>
-            <a name="image-optimization"></a>
-
-            <p>
-                Изображения составляют около 90% общего веса ресурсов веб-сайта, поэтому их необходимо оптимизировать в первую очередь.
-                В будущем оптимизацией ресурсов проекта будут заниматься специальные инструменты, которые сделают это автоматически. Но
-                уже сейчас нужно думать об оптимизации веса страницы и использовать специальные онлайн-сервисы для сжатия изображений.
-            </p>
-
-            <ul>
-                <li>
-                    <a href="https://squoosh.app/" target="_blank" rel="noopener noreferrer nofollow">Squoosh для оптимизации растровой графики</a>
-                </li>
-                <li>
-                    <a href="https://jakearchibald.github.io/svgomg/" target="_blank" rel="noopener noreferrer nofollow">SVGOMG для оптимизации векторной графики</a>
-                </li>
-            </ul>
-
-            <p>
-                Нужно помнить, что оптимизация JPEG-файла ведёт к потере качества изображения. Поэтому, при уменьшении веса изображения,
-                ухудшится его внешний вид. Оптимизация JPEG сводится к поиску баланса между качеством и весом изображения.
-            </p>
-
-                <h4>&#10071;ВНИМАНИЕ</h4>
-
-                <p>
-                    Оптимизация изображения делается один раз. Экспортированное из макета изображение оптимизируется и только после этого
-                    добавляется в проект.
-                </p>
-
-        </section>
-
-        <section>
-            <h2>Прогрессивный JPEG</h2>
-            <a name="progressive-jpeg"></a>
+        <textarea name="basic-layout-of-document" id="" cols="95" rows="14">
+            <!DOCTYPE html>
+            <html lang="ru">
             
-            <dl>
-                <dt>
-                    <strong>Прогрессивные JPEG-изображения</strong>
-                </dt>
-                <dd>
-                    - это файлы изображений в формате <mark>JPEG</mark>, которые были закодированы таким образом, что при отображении они загружаются
-                    слоями. Прогрессивный JPEG выглядит точно так же, как и обычные JPEG-изображения. Разница в том, как они отображаются во
-                    время загрузки.
-                </dd>
-            </dl>
+            <head>
+                <meta charset="UTF-8" />
+                <title>Веб студия mango.dev</title>
+            </head>
+            
+            <body>
+                <!-- Вся разметка из живого примера -->
+            </body>
+            
+            </html>
+        </textarea>
+    </section>
 
-            <p>
-                Обычные JPEG-файлы загружаются и отрисовываются полосами (построчно), сверху вниз. Для пользователя это создаёт эффект
-                плохой скорости загрузки страницы. Это особенно заметно для больших изображений или на мобильных устройствах с плохой
-                скоростью подключения к сети.
-            </p>
-
-            <img src="./img/baseline-jpg.jpg" alt="демонстрация частичной загрузки обычного jpeg" width="700">
-
-            <p>
-                Прогрессивный JPEG загружается так, что сразу показывается всё изображение, но в плохом качестве, и в процессе его
-                загрузки качество постепенно улучшается до максимального.
-            </p>
-
-            <img src="./img/progressive-jpg.jpg" alt="демонстрация частичной загрузки прогрессивного jpeg" width="700">
-
-            <p>
-                С точки зрения пользователя, прогрессивный JPEG обеспечивает гораздо более приятный опыт посещения страницы.
-                Пользователь сразу получает полное представление о содержимом страницы.
-            </p>
-
-        </section>
-
-        <section>
-            <h2>Создание</h2>
-            <a name="creation"></a>
-
-            <p>
-                Для того, чтобы сделать прогрессивное JPEG-изображение достаточно воспользоваться специальными инструментами, в том
-                числе онлайн. Например, при оптимизиации JPEG-изображений в <a href="https://squoosh.app/" target="_blank" rel="noopener noreferrer nofollow">Squoosh</a>, они по умолчанию (автоматически) превращаются в
-                прогрессивные.
-            </p>
-
-            <h4>&#10071;ИНТЕРЕСНО</h4>
-
-            <p>Вес файла прогрессивного JPEG-изображения обычно немного меньше его базового JPEG-аналога.</p>
-        </section>
 </body>
 </html>
