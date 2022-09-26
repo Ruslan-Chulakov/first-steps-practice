@@ -8,438 +8,117 @@
     <title>Training-manual</title>
 </head>
 
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a href="#streaming-content">Потоковое содержимое</a>
-            </li>
-            <li>
-                <ul>
-                    <li>
-                        <a href="#header">Тег &lt;header&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#footer">Тег &lt;footer&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#main">Тег &lt;main&gt;</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#semantic-sections">Смысловые разделы</a>
-            </li>
-            <li>
-                <ul>
-                    <li>
-                        <a href="#nav">Тег &lt;nav&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#aricle">Тег &lt;article&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#section">Тег &lt;section&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#div">Тег &lt;div&gt;</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#tag-selection-algoritm">Алгоритм выбора тега</a>
-            </li>
-            <li>
-                <a href="#page-layout">Разметка страницы</a>
-            </li>
-        </ul>
-       
-    </nav>
-</header>
 
 <body>
-    <h1>Структурная разметка</h1>
 
-    <p>
-        Есть целый набор семантических тегов для разметки больших логических разделов и улучшения структурной семантики
-        страницы. Каждый из них может быть использован при определённых условиях. Это влияет на работу ассистивных технологий,
-        индексирование страницы и её рейтинг выдачи в поиске.
-    </p>
-
-
-    <section>
-
-        <a name="streaming-content"></a>
-        <h2>Потоковое содержимое</h2>
-
-            <a name="header"></a>
-            <h3>Тег <mark>&lt;header&gt;</mark></h3>
-
-            <p>
-                Шапка (хедер) выделяет вводную часть всей страницы, сложной секции или статьи. Обычно содержит логотип, навигацию,
-                вводный текст, сложный заголовок. Может быть несколько на странице.
-            </p>
-
-            <textarea name="code-header" id="" cols="95" rows="11">
-                <body>
-                    <!-- Шапка страницы -->
-                    <header>
-                        <a href="/">Логотип сайта</a>
-                
-                        <ul>
-                            Меню навигации по другим страницам
-                        </ul>
-                    </header>
-                </body>
-            </textarea>
-            <br>
-
-            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-header-element" target="_link" rel="noopener noreferrer nofollow">
-                Ссылка на спецификацию
-            </a>
-
-            <a name="footer"></a>
-            <h3>Тег &lt;footer&gt;</h3>
-
-            <p>
-                Подвал (футер) это финальная часть всей страницы, её раздела или статьи. Часто содержит копирайт, список ссылок на
-                социальные сети, контактную информацию и так далее. Может быть несколько на странице.
-            </p>
-
-            <textarea name="code-footer" id="" cols="95" rows="24">
-                <body>
-                    <!-- Шапка страницы -->
-                    <header>
-                        <a href="/">Логотип сайта</a>
-                
-                        <ul>
-                            Меню навигации по другим страницам
-                        </ul>
-                    </header>
-                
-                    <!-- Подвал страницы -->
-                    <footer>
-                        <!-- Копирайт -->
-                        <p>Все права защищены &copy;lpj.dev</p>
-                
-                        <!-- Ссылки на соцсети -->
-                        <ul>
-                            <li><a href="">Facebook</a></li>
-                            <li><a href="">Twitter</a></li>
-                            <li><a href="">Instagram</a></li>
-                        </ul>
-                    </footer>
-                </body>
-            </textarea>
-
-            <br>
-
-            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-footer-element" target="_blank" rel="noopener noreferrer nofollow">
-                Ссылка на спецификацию
-            </a>
-
-            <a name="main"></a>
-            <h3>Тег <mark>&lt;main&gt;</mark></h3>
-
-            <p>
-                Основное, не повторяющееся на других страницах сайта (уникальное), содержание. Может быть только один на странице.
-            </p>
-
-            <textarea name="code-main" id="" cols="95" rows="11">
-                <body>
-                    <!-- Шапка страницы -->
-                    <header></header>
-                
-                    <!-- Уникальный контент страницы -->
-                    <main></main>
-                
-                    <!-- Подвал страницы -->
-                    <footer></footer>
-                </body>
-            </textarea>
-
-            <br>
-
-            <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element" target="_blank" rel="noreferrer noopener nofollow">
-                Ссылка на спецификацию
-            </a>
-
-    </section>
-
-
-    <section>
-
-        <a name="semantic-sections"></a>
-        <h2>Смысловые разделы</h2>
-
-            <a name="nav"></a>
-            <h3>Тег <mark>&lt;nav&gt;</mark></h3>
-
-            <p>
-                Определяет раздел основной навигации со ссылками на секции текущей или других страниц. Используется только для основной
-                навигации, а не для любой группы ссылок в документе.
-            </p>
-
-            <textarea name="code-nav" id="" cols="95" rows="30">
-                <body>
-                    <!-- Шапка страницы -->
-                    <header>
-                        <a href="/">Логотип сайта</a>
-                
-                        <nav>
-                            <!-- Навигация на другие страницы -->
-                            <ul>
-                                <li><a href="/portfolio">Portfolio</a></li>
-                                <li><a href="/contact">Contact</a></li>
-                                <li><a href="/about">About</a></li>
-                            </ul>
-                        </nav>
-                    </header>
-                
-                    <!-- Уникальный контент страницы -->
-                    <main></main>
-                
-                    <!-- Подвал страницы -->
-                    <footer>
-                        <!-- ⚠️ Ссылки на соцсети, не nav -->
-                        <ul>
-                            <li><a href="">Facebook</a></li>
-                            <li><a href="">Twitter</a></li>
-                            <li><a href="">Instagram</a></li>
-                        </ul>
-                    </footer>
-                </body>
-            </textarea>
-
-            <br>
-
-            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-nav-element" target="_blank" rel="noopener noreferrer nofollow">
-                Ссылка на спецификацию
-            </a>
-
-
-            <a name="aricle"></a>
-            <h3>Тег <mark>&lt;article&gt;</mark></h3>
-
-            <p>
-                Независимая, отделяемая и, имеющая значение вне, часть документа. Например пост на форуме, твит, статья в блоге, виджет
-                с рекламой, инстаграм история, карточка товара в магазине.
-            </p>
-
-            <textarea name="code-article" id="" cols="95" rows="10">
-         <article>
-            <h1>Сладкий пирожок</h1>
-            <img src="ссылка на изображение пирожка" alt="пирожок" />
-            <p>
-                Очень вкусный печёный пирожок с различными наполнителями: вишней, персиком
-                сливой или клубникой.
-            </p>
-            <p>Цена: 50 кредитов</p>
-        </article>
-            </textarea>
-
-            <h4>ПОЛЕЗНО</h4>
-
-            <p>
-                Если разделу документа можно дать имя, вынести его вне сайта и он будет иметь смысл 
-                - это <mark>&lt;article&gt;</mark>. Обязателен
-                    заголовок.
-            </p>
-
-            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element" target="_blank" rel="nofollow noreferrer noopener">
-                Ссылка на спецификацию
-            </a>
-
-
-            <a name="section"></a>
-            <h3>Тег <mark>&lt;section&gt;</mark></h3>
-
-            <p>
-                Крупный раздел, объединяющий содержание по смыслу. Неотделим от основного документа. Например секция списка товаров,
-                блок личной информации в профиле пользователя, раздел контактной информации.
-            </p>
-
-            <textarea name="code-section" id="" cols="95" rows="12">
+    <main>
         <section>
-            <h1>Самые популярные пирожки этой недели</h1>
-                
-            <!-- Внутри каждого <li> может быть карточка пирожка из секции «Тег <article>» -->
+            <h1>Валидация</h1>
+
+            <p>
+                В коде важна каждая запятая, кавычка и скобка, имя атрибута и тега, 
+                открывающий и закрывающий тег. Глазами, особенно
+                новичкам, за всем этим не уследить, поэтому придумали валидатор.
+            </p>
+
+            <p>
+                Валидация нужна для выявления ошибок в синтаксисе разметки HTML-документа и 
+                расхождений с HTML-спецификацией, указанной
+                в <mark>&lt;!DOCTYPE&gt;</mark>. Программа для такой проверки называется валидатором. 
+                В результате валидации документ либо проходит
+                валидацию, либо получает список рекомендованных исправлений.
+            </p>
+
+            <h2>ВНИМАНИЕ</h2>
+
+            <p>
+                Валидаторы проверяют только HTML-синтаксис и соотвествие спецификации, не семантику.
+            </p>
+
+            <p>
+                Есть специальный 
+                <a href="https://validator.w3.org/nu/" target="_blank" rel="noopener noreferrer nofollow">
+                    онлайн сервис (валидатор) </a> который проверяет код HTML-документа на соответствие стандарту. Для проверки
+                необходимо всего два шага, первый - передать валидатору исходный код, второй - нажать на кнопку проверки. Передать код
+                для валидации можно загрузив HTML-файл, передать ссылку на живую веб-страницу, либо скопировать и вставить код целиком.
+            </p>
+
+            <h2>ПОЛЕЗНО</h2>
+
+            <p>
+                Если передать валидатору просто отдельные HTML-теги, то он выдаст ошибку, потому что у каждой страницы должен быть
+                базовый скелет документа.
+            </p>
+
+            <p>
+                Валидатор проверяет следующие пункты.
+            </p>
+
             <ul>
-                <li>Жареный с грибами</li>
-                <li>Жареный с мяссом</li>
-                <li>Печёный с яблоками</li>
-                <li>Печёный с творогом</li>
+                <li>
+                    Правильное написание тегов.
+                </li>
+                <li>
+                    Актуальность тегов и возможность их применения в данной версии HTML.
+                </li>
+                <li>
+                    Правильность закрытия и вложенности тегов.
+                </li>
+                <li>
+                    Правильность использования атрибутов.
+                </li>
             </ul>
-        </section>
+
+            <textarea name="code-validation-error" id="code-validation-error" cols="95" rows="10">
+    <section>
+        <!-- Не соблюдается порядок закрытия тегов. -->
+        <p><a href="squoosh.app">Squoosh - сервис <em></a>оптимизации</p> изображений.</em>
+    
+        <!-- Не соблюдаются специфические правила вложения тегов. -->
+        <ul>
+            <p>Преимущества</p>
+            <li>Работает в браузере</li>
+            <li>Не грузит систему</li>
+            <li>Удобный интерфейс</li>
+        </ul>
+    </section>
             </textarea>
 
-                <h4>ПОЛЕЗНО</h4>
+            <p>
+                Если проверить этот код в валидаторе (не забыв добавить скелет документа), получим отчёт - список ошибок и
+                предупреждений. В каждом элементе списка указано значение, атрибут и элемент, которые не прошли валидацию, описание
+                проблемы, а также приведена цитата кода с ошибкой и номер строки.
+            </p>
 
-                <p>
-                    Если разделу документа можно дать имя, но вне сайта он не будет иметь смысла - это <mark>&lt;section&gt;</mark>. Желателен заголовок.
-                </p>
+            <img src="./img/validation.jpg" alt="пример списка ошибок валидации" width="700">
 
-            <a href="https://html.spec.whatwg.org/multipage/sections.html#the-section-element" target="_blank" rel="noopener noreferrer nofollow">
-                Ссылка на спецификацию
-            </a>
-        
-        <a name="div"></a>
-        <h3>Тег &lt;div&gt;</h3>
+            <p>
+                Ошибки помечаются как <mark>Error</mark> и их нужно обязательно исправлять в том порядке, в котором они указаны. Предупреждения
+                помечаются как <mark>Warning</mark>, исправлять их не обязательно, но это повод задуматься и пересмотреть качество разметки.
+            </p>
 
-        <p>
-            Универсальный контейнер без семантического значения. Используется как блок-обёртка для последующей стилизации контента.
-        </p>
+            <p>
+                Исправим все ошибки валидации в примере.
+            </p>
 
-        <h4>ПОЛЕЗНО</h4>
+            <textarea name="code-validation" id="code-validation" cols="95" rows="10">
+                <section>
+                    <p>
+                        <a href="squoosh.app">Squoosh</a> - сервис <em>оптимизации</em> изображений.
+                    </p>
+                
+                    <p>Преимущества</p>
+                    <ul>
+                        <li>Работает в браузере</li>
+                        <li>Не грузит систему</li>
+                        <li>Удобный интерфейс</li>
+                    </ul>
+                </section>
+            </textarea>      
+                        
+        </section>
 
-        <p>
-            Если не получается дать группе контента вменяемое имя (не "правая колонка", а имеющее смысл) - это <mark>&lt;div&gt;</mark> и скорее всего
-                вам просто нужен общий контейнер для оформления.
-        </p>
-
-        <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element" target="_blank" rel="noopener noreferrer nofollow">
-            Ссылка на спецификацию
-        </a>
-
-    </section>
-
-
-    <section>
-
-        <a name="tag-selection-algoritm"></a>
-        <h2>Алгоритм выбора тега</h2>
-
-        <p>
-            Не только новичкам бывает трудно решить какой тег использовать для разметки блока контента основываясь на его
-            семантическом значении. Пользуйтесь этим алгоритмом для определения подходящего тега.
-        </p>
-
-        <img src="./img/algorithm.jpeg" alt="Алгоритм выбора тегов" width="700">
-
-    </section>
-
-    <section>
-
-        <a name="page-layout"></a>
-        <h2>Разметка страницы</h2>
-
-        <p>
-            Используя все рассмотренные теги наберём разметку простой страницы начинающей веб-студии.
-        </p>
-
-        <textarea name="code-page-layout" id="" cols="95" rows="10">
-<!-- Page header -->
-<header>
-    <!-- The logo is always a link -->
-    <a href="/">
-        <img src="https://www.flaticon.com/svg/static/icons/svg/616/616475.svg" alt="Webstudio logo" width="32" />
-        Mango.dev
-    </a>
-
-    <!-- Main navigation -->
-    <nav>
-        <!--Links to other pages or sections of the current page -->
-        <ul>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Contacts</a></li>
-            <li><a href="">About</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- Unique page content -->
-<main>
-    <!-- Features section -->
-    <section>
-        <h2>Features</h2>
-
-        <ul>
-            <li>
-                <img src="https://cdn.pixabay.com/photo/2015/09/09/19/56/office-932926_1280.jpg"
-                    alt="Workplace in the company" width="320" />
-                <h3>Experience</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-                    repellendus voluptates sequi natus accusantium adipisci ratione
-                    laborum sunt, modi nemo?
-                </p>
-            </li>
-            <li>
-                <img src="https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049_1280.jpg"
-                    alt="A man holds a tablet in his hands and drinks coffee" width="320" />
-                <h3>Technology stack</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-                    repellendus voluptates sequi natus accusantium adipisci ratione
-                    laborum sunt, modi nemo?
-                </p>
-            </li>
-            <li>
-                <img src="https://cdn.pixabay.com/photo/2018/03/10/12/00/paper-3213924_1280.jpg"
-                    alt="Four hands in a gesture of mutual assistance" width="320" />
-                <h3>Support</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-                    repellendus voluptates sequi natus accusantium adipisci ratione
-                    laborum sunt, modi nemo?
-                </p>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Technology stack section -->
-    <section>
-        <h2>Our technology stack</h2>
-
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Next.js</li>
-            <li>Node.js</li>
-            <li>PostgreSQL</li>
-        </ul>
-    </section>
-</main>
-
-<!-- Page footer -->
-<footer>
-    <p>All rights reserved &copy;mango.dev</p>
-
-    <p>Our contacts in social networks</p>
-    <ul>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Twitter</a></li>
-        <li><a href="">Instagram</a></li>
-    </ul>
-
-    <button type="button">Request a call back</button>
-</footer>
-        </textarea>
-
-        <p>
-            В примере не хватает разметки скелета документа, потому что его автоматически добавляет сама интерактивная площадка
-            <a href="https://codepen.io/" target="_blank" rel="noopener noreferrer nofollow">codepen.io</a>.
-             Для полноты картины запишем базовую разметку документа.
-        </p>
-
-        <textarea name="basic-layout-of-document" id="" cols="95" rows="14">
-            <!DOCTYPE html>
-            <html lang="ru">
-            
-            <head>
-                <meta charset="UTF-8" />
-                <title>Веб студия mango.dev</title>
-            </head>
-            
-            <body>
-                <!-- Вся разметка из живого примера -->
-            </body>
-            
-            </html>
-        </textarea>
-    </section>
-
+    </main>
+     
 </body>
 </html>
