@@ -11,28 +11,466 @@
 
 <body>
 
+    <header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#header-cells">Ячейки-заголовки</a>
+                </li>
+                <li>
+                    <a href="#table-section">Секции таблицы</a>
+                </li>
+                <li>
+                    <a href="#table-header">Заголовок таблицы</a>
+                </li>
+                <li>
+                    <a href="#cell-grouping">Группировка ячеек</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
     <main>
+
         <section>
-            
-            <h1>Оформление кода</h1>
+
+            <h1>Таблицы</h1>
 
             <p>
-                В процессе работы над созданием веб-сайтов всегда необходимо возвращаться к уже написанному коду для внесения правок. В
-                подавляющем большинстве проектов больше чем один разработчик. Если код не оформлен согласно стандартам - он теряет
-                читабельность и, как следствие, скорость разработки падает.
+                <a href="https://html.spec.whatwg.org/multipage/tables.html#tables">Таблицы</a>  позволяют отобразить сложные связи, размещая в ячейках любой контент.
+                Использовать их нужно только для разметки табличных данных: 
+                расписание транспорта, календарь, результаты матчей, финансовые операции, меню в ресторане, 
+                прайслист и т. п. То есть информацию, которую логично представить в табличном виде,
+                например используя Google Sheets.
             </p>
 
-            <h2>ПОЛЕЗНО</h2>
+            <h3>ПОЛЕЗНО</h3>
 
             <p>
-                Используйте  
-                <a href="https://codeguide.co/" target="_blank" rel="noopener noreferrer nofollow">
-                    это руководство от @mdo
-                </a>
-                 при написании кода по мере изучения технологий.
+                Элементы таблицы семантически описывают табличные данные, 
+                и использование их для других целей это нарушение семантики.
+            </p>
+
+            <p>
+                Будем набирать разметку вот такого расписания поездов.
+            </p>
+
+            <img src="./img/train-schedule.png" alt="таблица с расписанием поездов" width="700">
+
+            <p>
+                Таблица это набор строк с ячейками. Познакомимся с базовыми тегами.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element" target="_blank" rel="noopener noreferrer nofollow">
+                        &lt;table&gt;
+                    </a> 
+                    - определяет всю таблицу, контейнер для контента.
+                </li>
+                <li>
+                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element" target="_blank" rel="noopener noreferrer nofollow">
+                        &lt;tr&gt;
+                    </a>
+                    - строка таблицы (table row). Не может быть пустой, должна содержать хотя бы одну ячейку.
+                </li>
+                <li>
+                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element" target="_blank" rel="noopener noreferrer nofollow">
+                        &lt;td&gt;
+                    </a> 
+                    - ячейка таблицы (table data). Можно использовать только внутри строки. В каждой строке таблицы должно быть одинаковое количество ячеек.</li>
+            </ul>
+
+            <p>
+                Разметим расписание поездов таблицей с тремя строками.
+            </p>
+
+            <textarea name="code-table1" id="" cols="95" rows="18">
+                <table>
+    <tr>
+        <td>433</td>
+        <td>Киев - Ковель</td>
+        <td>5 часов</td>
+    </tr>
+    <tr>
+        <td>701</td>
+        <td>Харьков - Днепр</td>
+        <td>7 часов</td>
+    </tr>
+    <tr>
+        <td>258</td>
+        <td>Львов - Одесса</td>
+        <td>4 часа</td>
+    </tr>
+    </table>
+            </textarea>
+
+            <h3>ПОЛЕЗНО</h3>
+
+            <p>
+                По умолчанию у таблицы нет особого оформления, например такой тёмной рамки как на изображении. 
+                Для этого используется CSS, как и для любого другого оформления контента.
             </p>
 
         </section>
+
+        
+        
+        <section>
+
+            <a name="header-cells"></a>
+            <h2>Ячейки-заголовки</h2>
+
+            <p>
+                Для того, чтобы создать строку с заголовками столбцов, используем стандартный тег 
+                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element" target="_blank" rel="noopener noreferrer nofollow">
+                    &lt;tr&gt;
+                </a>
+                     для строки, а ячейки размечаем специальным тегом 
+                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element" target="_blank" rel="noopener noreferrer nofollow">
+                        &lt;th&gt;
+                </a> 
+                (table header) - семантическим тегом ячейки-заголовка. По умолчанию текст внутри 
+                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element" target="_blank" rel="noopener noreferrer nofollow">
+                        &lt;th&gt;
+                </a> 
+                 выделяется жирным и центрируется.
+            </p>
+
+            <textarea name="code-table2" id="code-table2" cols="95" rows="23">
+                <table>
+  <tr>
+    <th>Номер</th>
+    <th>Маршрут</th>
+    <th>Время в пути</th>
+  </tr>
+  <tr>
+    <td>433</td>
+    <td>Киев - Ковель</td>
+    <td>5 часов</td>
+  </tr>
+  <tr>
+    <td>701</td>
+    <td>Харьков - Днепр</td>
+    <td>7 часов</td>
+  </tr>
+  <tr>
+    <td>258</td>
+    <td>Львов - Одесса</td>
+    <td>4 часа</td>
+  </tr>
+</table>
+            </textarea>
+
+        </section>
+
+        <section>
+
+            <a name="table-section"></a>
+            <h2>Секции таблицы</h2>
+
+            <p>
+                Для повышения семантики разметки таблицы есть несколько структурных тегов.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-thead-element">
+                        &lt;thead&gt;
+                    </a>
+                    - шапка, оборачивает группу строк таблицы в области заголовка.
+                </li>
+                <li>
+                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element">
+                        &lt;tbody&gt;
+                    </a>
+                    - тело, оборачивает основную группу строк таблицы.
+                </li>
+                <li>
+                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element">
+                        &lt;tfoot&gt;
+                    </a>
+                    - подвал, обозначает группу строк таблицы в области нижнего колонтитула.
+                </li>
+            </ul>
+            
+            <p>
+                В расписании поездов можно выделить шапку из одной строки с названиями колонок и тело.
+            </p>
+
+            <textarea name="code-table3" id="code-table3" cols="95" rows="28">
+                <table>
+  <thead>
+    <tr>
+      <th>Номер</th>
+      <th>Маршрут</th>
+      <th>Время в пути</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>433</td>
+      <td>Киев - Ковель</td>
+      <td>5 часов</td>
+    </tr>
+    <tr>
+      <td>701</td>
+      <td>Харьков - Днепр</td>
+      <td>7 часов</td>
+    </tr>
+    <tr>
+      <td>258</td>
+      <td>Львов - Одесса</td>
+      <td>4 часа</td>
+    </tr>
+  </tbody>
+</table>
+            </textarea>
+
+        </section>
+
+        <section>
+
+            <a name="table-header"></a>
+            <h2>Заголовок таблицы</h2>
+
+            <p>
+                Если у таблицы есть заголовок, конечно можно разметить его используя теги заголовков.
+            </p>
+
+            <textarea name="code-table-header-1" id="code-table-header-1" cols="95" rows="5">
+                <h1>Расписание поездов</h1>
+<table>
+  <!-- Разметка таблицы -->
+</table>
+            </textarea>
+
+            <p>
+                Но более семантично будет использовать специальный табличный тег 
+                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-caption-element">
+                    &lt;caption&gt;
+                </a> 
+                , который должен располагаться внутри таблицы, самым первым элементом.
+            </p>
+
+            <textarea name="code-table-header-2" id="code-table-header-2" cols="95" rows="8">
+                <table>
+  <caption>
+    Расписание поездов
+  </caption>
+
+  <!-- Остальная разметка таблицы -->
+</table>
+            </textarea>
+
+            <p>
+                Вот пример результата. 
+            </p>
+
+            <textarea name="code-table-full" id="code-table-full" cols="95" rows="31">
+                <table>
+  <caption>
+    Train schedule
+  </caption>
+  <thead>
+    <tr>
+      <th>Train number</th>
+      <th>Route</th>
+      <th>Travel time</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>433</td>
+      <td>London - Paris</td>
+      <td>5 hours</td>
+    </tr>
+    <tr>
+      <td>701</td>
+      <td>New York - Chicago</td>
+      <td>7 hours</td>
+    </tr>
+    <tr>
+      <td>258</td>
+      <td>Oslo - Warsaw</td>
+      <td>4 hours</td>
+    </tr>
+  </tbody>
+</table>
+            </textarea>
+
+            <p>
+                Можно посмотреть CSS стили, где к каждому из CSS-правил есть комментарий с пояснением.
+            </p>
+
+            <textarea name="code-table-css" id="code-table-css" cols="95" rows="10">
+                /* Using a sans serif font and increasing the size of the characters */
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+/* Shift the heading text to the left, by default it is centered */
+table caption {
+  text-align: left;
+}
+
+/* We "collapse" the frames of adjacent cells */
+table {
+  border-collapse: collapse;
+}
+
+/* 
+  Add a border and padding to the cells, the distance from the content to the border.
+  To control the vertical position, the caption-side property is used.
+*/
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #2a2a2a;
+}
+            </textarea>
+
+        </section>
+
+        <section>
+
+            <a name="cell-grouping"></a>
+            <h2>Группировка ячеек</h2>
+
+            <p>
+                Некоторые таблицы сделаны так, что нужно объединить несколько ячеек по горизонтали или вертикали.
+            </p>
+
+            <img src="./img/cloud-services.png" alt="пример таблицы с объединенными ячейками" width="700">
+
+            <p>
+                Напишем разметку такой таблицы добавив дополнительные ячейки, 
+                учитывая что «Облачный сервис» займёт две ячейки по вертикали, а «Использование» - три по горизонтали.
+            </p>
+
+            <textarea name="code-table-example-1" id="code-table-example-1" cols="95" rows="32">
+                <table>
+  <thead>
+    <tr>
+      <th>Облачный сервис</th>
+      <th>Использование</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Пользователи</th>
+      <th>Посещений</th>
+      <th>Объём</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Google</td>
+      <td>12000</td>
+      <td>307000</td>
+      <td>1000 Tb</td>
+    </tr>
+    <tr>
+      <td>Amazon</td>
+      <td>9000</td>
+      <td>200500</td>
+      <td>800 Tb</td>
+    </tr>
+  </tbody>
+</table>
+            </textarea>
+
+            <p>
+                Обратите внимание на пустые теги <mark>&lt;th&gt;</mark>, 
+                в каждой строке должно быть одинаковое количество ячеек, 
+                поэтому «лишние» пока что оставлям пустыми. В результате получим такую таблицу.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                    <th>Cloud service</th>
+                    <th>Statistics</th>
+                    <th></th>
+                    <th></th>
+                    </tr>
+                    <tr>
+                    <th></th>
+                    <th>Users</th>
+                    <th>Visits</th>
+                    <th>Volume</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                    <td>Google</td>
+                    <td>12000</td>
+                    <td>307000</td>
+                    <td>1000 Tb</td>
+                    </tr>
+                    <tr>
+                    <td>Amazon</td>
+                    <td>9000</td>
+                    <td>200500</td>
+                    <td>800 Tb</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <p>
+                    Правило равенства числа ячеек в строках и столбцах нельзя отменить, но можно обойти. 
+                    Для того чтобы расширить ячейку по горизонтали используется атрибут <mark>colspan</mark>, по вертикали - <mark>rowspan</mark>.
+                </p>
+
+                <p>
+                    Нужно определить группу ячеек для слияния и затем самой верхней и левой ячейке группы задать атрибут
+                    <mark>colspan</mark> с числом ячеек требующих объединения справа и/или <mark>rowspan</mark> снизу. 
+                    После этого обязательно нужно удалить ставшие ненужными ячейки справа и/или снизу.
+                </p>
+
+                <p>
+                    В нашей задаче ячейка «Облачный сервис» должна занимать 2 ячейки по вертикали, поэтому добавляем ей <mark>rowspan="2"</mark> 
+                    и удаляем пустой <mark>&lt;th&gt;</mark> на строке ниже. 
+                    Аналогично с ячейкой «Использование», устанавливаем <mark>colspan="3"</mark> и удаляем две соседние ячейки справа в этой строке.
+                </p>
+
+                <textarea name="code-table-example-2" id="code-table-example-2" cols="95" rows="16">
+                    <table>
+  <thead>
+    <tr>
+      <th rowspan="2">Облачный сервис</th>
+      <th colspan="3">Использование</th>
+    </tr>
+    <tr>
+      <th>Пользователи</th>
+      <th>Посещений</th>
+      <th>Объём</th>
+    </tr>
+  </thead>
+
+  <!-- Разметка tbody -->
+</table>
+                </textarea>
+
+                <h3>ИНТЕРЕСНО</h3>
+
+                <p>
+                    Правило равенства числа ячеек будет визуально нарушено, но браузер учитывает ячейки в объединённых группах, поэтому всё правильно.
+                </p>
+
+
+
+        </section>
+        
+
 
     </main>
      
