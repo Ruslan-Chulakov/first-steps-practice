@@ -16,16 +16,22 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#header-cells">Ячейки-заголовки</a>
+                    <a href="#dl">Тег &lt;dl&gt;</a>
                 </li>
                 <li>
-                    <a href="#table-section">Секции таблицы</a>
+                    <a href="#pre">Тег &lt;pre&gt;</a>
                 </li>
                 <li>
-                    <a href="#table-header">Заголовок таблицы</a>
+                    <a href="#supsub">Теги &lt;sup&gt; и &lt;sub&gt;</a>
                 </li>
                 <li>
-                    <a href="#cell-grouping">Группировка ячеек</a>
+                    <a href="#time">Тег &lt;time&gt;</a>
+                </li>
+                <li>
+                  <a href="#addres">Тег &lt;address&gt;</a>
+                </li>
+                <li>
+                  <a href="#em-i">Теги &lt;em&gt; и &lt;i&gt;</a>
                 </li>
             </ul>
         </nav>
@@ -34,444 +40,351 @@
 
     <main>
 
-        <section>
+      <h1>Разметка текста</h1>
 
-            <h1>Таблицы</h1>
+      <section>
 
-            <p>
-                <a href="https://html.spec.whatwg.org/multipage/tables.html#tables">Таблицы</a>  позволяют отобразить сложные связи, размещая в ячейках любой контент.
-                Использовать их нужно только для разметки табличных данных: 
-                расписание транспорта, календарь, результаты матчей, финансовые операции, меню в ресторане, 
-                прайслист и т. п. То есть информацию, которую логично представить в табличном виде,
-                например используя Google Sheets.
-            </p>
+        <a name="dl"></a>
+        <h2>Тег 
+          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;dl&gt; 
+          </a>
+        </h2>
 
-            <h3>ПОЛЕЗНО</h3>
+        <p>
+          Тег 
+          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;dl&gt; (description list) 
+          </a>  
+          это контейнер для списка пар терминов и их описаний, то есть словарь. 
+          Для разметки терминов есть тег 
+          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element"> 
+            &lt;dt&gt; 
+          </a>
+          , а для описаний 
+          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element"> 
+            &lt;dd&gt;
+          </a>
+          . Используется для разметки списка определений, например при создании глоссария, телефонного справочника и т. п.
+        </p>
 
-            <p>
-                Элементы таблицы семантически описывают табличные данные, 
-                и использование их для других целей это нарушение семантики.
-            </p>
+        <textarea name="code-dl" id="code-dl" cols="95" rows="21">
+          <dl>
+  <dt>JPEG</dt>
+  <dd>
+    Large files that do not require transparent backgrounds or animations. This format is ideal for vivid photorealistic photographs as it can contain millions of colors.
+  </dd>
 
-            <p>
-                Будем набирать разметку вот такого расписания поездов.
-            </p>
+  <dt>PNG</dt>
+  <dd>
+    Has an additional parameter for describing transparency - the alpha channel. Suitable for images with transparent or monochrome backgrounds. Used for icons and decorative items.
+  </dd>
 
-            <img src="./img/train-schedule.png" alt="таблица с расписанием поездов" width="700">
+  <dt>webP</dt>
+  <dd>
+    A replacement format for PNG and JPEG, but with incomplete browser support. When
+    equal image quality, the compressed files will be smaller than PNG and JPEG on average
+    by 25%.
+  </dd>
+</dl>
+        </textarea>
 
-            <p>
-                Таблица это набор строк с ячейками. Познакомимся с базовыми тегами.
-            </p>
+      </section>
 
-            <ul>
-                <li>
-                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element" target="_blank" rel="noopener noreferrer nofollow">
-                        &lt;table&gt;
-                    </a> 
-                    - определяет всю таблицу, контейнер для контента.
-                </li>
-                <li>
-                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element" target="_blank" rel="noopener noreferrer nofollow">
-                        &lt;tr&gt;
-                    </a>
-                    - строка таблицы (table row). Не может быть пустой, должна содержать хотя бы одну ячейку.
-                </li>
-                <li>
-                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element" target="_blank" rel="noopener noreferrer nofollow">
-                        &lt;td&gt;
-                    </a> 
-                    - ячейка таблицы (table data). Можно использовать только внутри строки. В каждой строке таблицы должно быть одинаковое количество ячеек.</li>
-            </ul>
+      <section>
 
-            <p>
-                Разметим расписание поездов таблицей с тремя строками.
-            </p>
+        <a name="span"></a>
 
-            <textarea name="code-table1" id="" cols="95" rows="18">
-                <table>
-    <tr>
-        <td>433</td>
-        <td>Киев - Ковель</td>
-        <td>5 часов</td>
-    </tr>
-    <tr>
-        <td>701</td>
-        <td>Харьков - Днепр</td>
-        <td>7 часов</td>
-    </tr>
-    <tr>
-        <td>258</td>
-        <td>Львов - Одесса</td>
-        <td>4 часа</td>
-    </tr>
-    </table>
-            </textarea>
+        <h2>
+          Тег 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;span&gt;
+          </a>
+        </h2>
 
-            <h3>ПОЛЕЗНО</h3>
+        <p>
+          Универсальный контейнер для мелкого текстового контента, например отдельных слов, частей слов или целых фраз внутри текстового массива. Аналогично тегу 
+          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;div&gt;
+          </a>
+          , не имеет никакого семантического значения и используется для дополнительной стилизации.
+        </p>
 
-            <p>
-                По умолчанию у таблицы нет особого оформления, например такой тёмной рамки как на изображении. 
-                Для этого используется CSS, как и для любого другого оформления контента.
-            </p>
+        <textarea name="span" id="span" cols="95" rows="5">
+          <p>
+  Тег <span class="accent">span</span> это универсальный контейнер для мелкого
+  текстового контента.
+</p>
+        </textarea>
 
-        </section>
+        <h3>ИНТЕРЕСНО</h3>
 
+        <p>
+          Спану с атрибутом <mark>class="accent"</mark> при помощи CSS можно будет добавить стили, например другой цвет текста, его размер и т. п.
+        </p>
+
+      </section>
+
+      <section>
+
+        <a name="pre"></a>
+        <h2>Тег 
+          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;pre&gt;
+          </a>
+        </h2>
+
+        <p>
+          По умолчанию браузер игнорирует переносы строк и более одного пробела подряд. 
+          Этот тег позволяет добавить преформатированный текст с принудительными переносами строк. 
+          Например разметка текста песни или стихотворения.
+        </p>
+
+        <textarea name="code-pre" id="code-pre" cols="95" rows="21">
+          <pre>
+  Wyatt resteth here, that quick could never rest;
+  Whose heavenly gifts increased by disdain,
+  And virtue sank the deeper in his breast;
+  Such profit he by envy could obtain.
+</pre>
+
+<pre>
+  A head where wisdom mysteries did frame,
+  Whose hammers beat still in that lively brain
+  As on a stithy where that some work of fame
+  Was daily wrought, to turn to Britain's gain.
+</pre>
+
+<pre>
+  A visage stern and mild, where both did grow,
+  Vice to contemn, in virtue to rejoice;
+  Amid great storms, whom grace assured so
+  To live upright and smile at fortune's choice.
+</pre>
+        </textarea>
+
+      </section>
+
+      <section>
+
+        <a name="supsub"></a>
         
+        <h2>Теги 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;sup&gt;
+          </a> 
+            и 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;sub&gt;
+          </a>
+        </h2>
+
+        <p>
+          Предназначены для отображения символов в верхнем (<mark>&lt;sup&gt;</mark>, сокращение от superscript) 
+          и нижнем (<mark>&lt;sub&gt;</mark>, сокращение от subscript) индексе. 
+          Например для разметки несложных математических или химических формул.
+        </p>
+
+        <textarea name="code-sub-sup" id="code-sub-sup" cols="95" rows="6">
+          <p>Formula of water  - H<sub>2</sub>O</p>
+
+<p>Total area of the room - 150м<sup>2</sup>.</p>
+
+<p>Solve the equation a<sup>3</sup>+a<sup>2</sup>=4</p>
+        </textarea>
+      </section>
+
+      <section>
+
+        <a name="time"></a>
+
+        <h2>Тег 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;time&gt;
+          </a>
+        </h2>
+
+        <p>
+          Дату и время можно написать просто текстом, но лучше использовать специальный тег 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;time&gt;
+          </a>
+          . Дата для человека это текст внутри тега, а для машины - значение атрибута <mark>datetime</mark> в формате 
+          <a href="https://ru.wikipedia.org/wiki/ISO_8601" target="_blank" rel="noopener noreferrer nofollow">
+            ISO 8601.
+          </a>
+        </p>
+
+        <textarea name="code-time" id="code-time" cols="95" rows="8">
+          <p>
+  Последние новости на <time datetime="2019-12-14">14 декабря 2019 года</time>.
+</p>
+
+<p>
+  Заседание состоялось в <time datetime="2018-07-14T11:30">11:30 утра</time>.
+</p>
+        </textarea>
+
+        <p>
+          Браузер отобразит только текст внутри тега. 
+          Человек увидит понятный текст, а ассистивная технология прочитает атрибут 
+          <mark>datetime</mark> и получит точное значение в нужном формате.
+        </p>
+
+      </section>
+
+      <section>
+
+        <a name="addres"></a>
+
+        <h2>Тег 
+          <a href="https://html.spec.whatwg.org/multipage/sections.html#the-address-element" target="_blank" rel="noreferrer nofollow noopener">
+            &lt;address&gt;
+          </a>
+        </h2>
+
+        <p>
+          Предназначен для хранения контактной информации об авторе статьи, блока информации или веб-страницы в целом. 
+          Контактная информация может быть в любой подходящей форме, 
+          например физический адрес, адрес электронной почты, ссылка на сайт, номер телефона, тег соцсети.
+        </p>
+
+        <textarea name="code-addres" id="code-addres" cols="95" rows="11">
+          <address>
+  г. Киев, <br />
+  Бульвар Леси Украинки, д. 26, <br />
+  4й этаж офис 427
+</address>
+
+<address>
+  <a href="mailto:mango@mail.pig">mango@mail.pig</a>
+  <a href="tel:+1112223344">(111) 222-33-44</a>
+</address>
+        </textarea>
+
+        <p>
+          Обратите внимание на тег 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;br&gt;
+          </a>
+          , он используется для разметки массива текста с принудительными переносами строк для визуального форматирования. 
+          Например разметка одной строки адреса в несколько строк.
+        </p>
+
+        <h3>ВНИМАНИЕ</h3>
+
+        <p>
+          Тег 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;br&gt;
+          </a>
+           (сокращение от line break) не используется для того,
+           чтобы принудительно добавить разрывы строки между тегами или разбить массив текста на абазцы.
+        </p>
+
+      </section>
+
+      <section>
+
+        <a name="strong-b"></a>
+
+        <h2>Теги 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;strong&gt; 
+          </a>
+          и 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;b&gt;
+          </a>
+        </h2>
+
+        <p>
+          Используются для выделения важного слова или целой фразы внутри текста. 
+          Визуально оба тега делают текст жирным, и на первый взгляд разницы между ними нет, но это не так.
+        </p>
+
+        <p>
+          Тег 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;strong&gt; 
+          </a>
+           семантически подчеркивает текст как важный и указывает, что это значимое слово или фраза. 
+            Например выделить предупреждение или любую часть текста, на которую пользователь должен обратить внимание в первую очередь.
+        </p>
+
+        <textarea name="code-strong" id="code-strong" cols="95" rows="6">
+<p>
+  <strong>Внимание!</strong> Заканчивается срок подписки.
+  <strong>Учётная запись будет приостановлена.</strong> Пожалуйста продлите
+  подписку или свяжитесь со службой поддержки.
+</p>
+        </textarea>
+
+        <p>
+          Тег 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element" target="_blank" rel="noopener noreferrer nofollow">
+            &lt;b&gt;
+          </a>
+           (сокращение от bold) делает текст только визуально жирным, привлекая внимание, но не придавая особой важности.
+        </p>
+
+        <h3>ИНТЕРЕСНО</h3>
+
+        <p>
+          Для ассистивных технологий, например скринридера, текст обернутый в <mark>&lt;strong&gt;</mark> имеет особую важность и будет дополнительно выделен интонацией.
+        </p>
+
+      </section>
+
+      <section>
+
+        <a name="em-i"></a>
+        <h2>Теги 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element" target="_blank" rel="noreferrer noopener nofollow">
+            &lt;em&gt;
+          </a> 
+          и 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element" target="_blank" rel="noreferrer nofollow noopener">
+            &lt;i&gt;
+          </a>
+        </h2>
+
+        <p>
+          Используются для акцентирования внимания на части текста. 
+          Визуально оба тега делают текст курсивным, и на первый взгляд разницы между ними нет, но это не так.
+        </p>
+
+        <p>
+          Тег  
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element" target="_blank" rel="noreferrer noopener nofollow">
+            &lt;em&gt;
+          </a> 
+          (сокращение от emphasis) семантически выделяет текст, на который сделан особый акцент, 
+          меняющий смысл фразы. Например можно выделить сарказм.
+        </p>
+
+        <textarea name="code-em" id="code-em" cols="95" rows="2">
+          <p>Я <em>в полном восторге</em> когда задерживают зарплату!</p>
+        </textarea>
+
+        <p>
+          Тег 
+          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element" target="_blank" rel="noreferrer nofollow noopener">
+            &lt;i&gt;
+          </a> 
+          (сокращение от italic) делает текст только визуально курсивным, 
+          привлекая внимание, но не придавая особой важности. Например выделить термины в предложении.
+        </p>
         
-        <section>
+        <h3>ИНТЕРЕСНО</h3>
 
-            <a name="header-cells"></a>
-            <h2>Ячейки-заголовки</h2>
+        <p>
+          Для ассистивных технологий, например скринридера, текст обернутый в <mark>&lt;em&gt;</mark> имеет особый акцент 
+          и будет дополнительно выделен интонацией.
+        </p>
 
-            <p>
-                Для того, чтобы создать строку с заголовками столбцов, используем стандартный тег 
-                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element" target="_blank" rel="noopener noreferrer nofollow">
-                    &lt;tr&gt;
-                </a>
-                     для строки, а ячейки размечаем специальным тегом 
-                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element" target="_blank" rel="noopener noreferrer nofollow">
-                        &lt;th&gt;
-                </a> 
-                (table header) - семантическим тегом ячейки-заголовка. По умолчанию текст внутри 
-                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element" target="_blank" rel="noopener noreferrer nofollow">
-                        &lt;th&gt;
-                </a> 
-                 выделяется жирным и центрируется.
-            </p>
-
-            <textarea name="code-table2" id="code-table2" cols="95" rows="23">
-                <table>
-  <tr>
-    <th>Номер</th>
-    <th>Маршрут</th>
-    <th>Время в пути</th>
-  </tr>
-  <tr>
-    <td>433</td>
-    <td>Киев - Ковель</td>
-    <td>5 часов</td>
-  </tr>
-  <tr>
-    <td>701</td>
-    <td>Харьков - Днепр</td>
-    <td>7 часов</td>
-  </tr>
-  <tr>
-    <td>258</td>
-    <td>Львов - Одесса</td>
-    <td>4 часа</td>
-  </tr>
-</table>
-            </textarea>
-
-        </section>
-
-        <section>
-
-            <a name="table-section"></a>
-            <h2>Секции таблицы</h2>
-
-            <p>
-                Для повышения семантики разметки таблицы есть несколько структурных тегов.
-            </p>
-
-            <ul>
-                <li>
-                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-thead-element">
-                        &lt;thead&gt;
-                    </a>
-                    - шапка, оборачивает группу строк таблицы в области заголовка.
-                </li>
-                <li>
-                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element">
-                        &lt;tbody&gt;
-                    </a>
-                    - тело, оборачивает основную группу строк таблицы.
-                </li>
-                <li>
-                    <a href="https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element">
-                        &lt;tfoot&gt;
-                    </a>
-                    - подвал, обозначает группу строк таблицы в области нижнего колонтитула.
-                </li>
-            </ul>
-            
-            <p>
-                В расписании поездов можно выделить шапку из одной строки с названиями колонок и тело.
-            </p>
-
-            <textarea name="code-table3" id="code-table3" cols="95" rows="28">
-                <table>
-  <thead>
-    <tr>
-      <th>Номер</th>
-      <th>Маршрут</th>
-      <th>Время в пути</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>433</td>
-      <td>Киев - Ковель</td>
-      <td>5 часов</td>
-    </tr>
-    <tr>
-      <td>701</td>
-      <td>Харьков - Днепр</td>
-      <td>7 часов</td>
-    </tr>
-    <tr>
-      <td>258</td>
-      <td>Львов - Одесса</td>
-      <td>4 часа</td>
-    </tr>
-  </tbody>
-</table>
-            </textarea>
-
-        </section>
-
-        <section>
-
-            <a name="table-header"></a>
-            <h2>Заголовок таблицы</h2>
-
-            <p>
-                Если у таблицы есть заголовок, конечно можно разметить его используя теги заголовков.
-            </p>
-
-            <textarea name="code-table-header-1" id="code-table-header-1" cols="95" rows="5">
-                <h1>Расписание поездов</h1>
-<table>
-  <!-- Разметка таблицы -->
-</table>
-            </textarea>
-
-            <p>
-                Но более семантично будет использовать специальный табличный тег 
-                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-caption-element">
-                    &lt;caption&gt;
-                </a> 
-                , который должен располагаться внутри таблицы, самым первым элементом.
-            </p>
-
-            <textarea name="code-table-header-2" id="code-table-header-2" cols="95" rows="8">
-                <table>
-  <caption>
-    Расписание поездов
-  </caption>
-
-  <!-- Остальная разметка таблицы -->
-</table>
-            </textarea>
-
-            <p>
-                Вот пример результата. 
-            </p>
-
-            <textarea name="code-table-full" id="code-table-full" cols="95" rows="31">
-                <table>
-  <caption>
-    Train schedule
-  </caption>
-  <thead>
-    <tr>
-      <th>Train number</th>
-      <th>Route</th>
-      <th>Travel time</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>433</td>
-      <td>London - Paris</td>
-      <td>5 hours</td>
-    </tr>
-    <tr>
-      <td>701</td>
-      <td>New York - Chicago</td>
-      <td>7 hours</td>
-    </tr>
-    <tr>
-      <td>258</td>
-      <td>Oslo - Warsaw</td>
-      <td>4 hours</td>
-    </tr>
-  </tbody>
-</table>
-            </textarea>
-
-            <p>
-                Можно посмотреть CSS стили, где к каждому из CSS-правил есть комментарий с пояснением.
-            </p>
-
-            <textarea name="code-table-css" id="code-table-css" cols="95" rows="10">
-                /* Using a sans serif font and increasing the size of the characters */
-body {
-  font-family: sans-serif;
-  font-size: 20px;
-}
-
-/* Shift the heading text to the left, by default it is centered */
-table caption {
-  text-align: left;
-}
-
-/* We "collapse" the frames of adjacent cells */
-table {
-  border-collapse: collapse;
-}
-
-/* 
-  Add a border and padding to the cells, the distance from the content to the border.
-  To control the vertical position, the caption-side property is used.
-*/
-table th,
-table td {
-  padding: 10px;
-  border: 1px solid #2a2a2a;
-}
-            </textarea>
-
-        </section>
-
-        <section>
-
-            <a name="cell-grouping"></a>
-            <h2>Группировка ячеек</h2>
-
-            <p>
-                Некоторые таблицы сделаны так, что нужно объединить несколько ячеек по горизонтали или вертикали.
-            </p>
-
-            <img src="./img/cloud-services.png" alt="пример таблицы с объединенными ячейками" width="700">
-
-            <p>
-                Напишем разметку такой таблицы добавив дополнительные ячейки, 
-                учитывая что «Облачный сервис» займёт две ячейки по вертикали, а «Использование» - три по горизонтали.
-            </p>
-
-            <textarea name="code-table-example-1" id="code-table-example-1" cols="95" rows="32">
-                <table>
-  <thead>
-    <tr>
-      <th>Облачный сервис</th>
-      <th>Использование</th>
-      <th></th>
-      <th></th>
-    </tr>
-    <tr>
-      <th></th>
-      <th>Пользователи</th>
-      <th>Посещений</th>
-      <th>Объём</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>Google</td>
-      <td>12000</td>
-      <td>307000</td>
-      <td>1000 Tb</td>
-    </tr>
-    <tr>
-      <td>Amazon</td>
-      <td>9000</td>
-      <td>200500</td>
-      <td>800 Tb</td>
-    </tr>
-  </tbody>
-</table>
-            </textarea>
-
-            <p>
-                Обратите внимание на пустые теги <mark>&lt;th&gt;</mark>, 
-                в каждой строке должно быть одинаковое количество ячеек, 
-                поэтому «лишние» пока что оставлям пустыми. В результате получим такую таблицу.
-            </p>
-
-            <table>
-                <thead>
-                    <tr>
-                    <th>Cloud service</th>
-                    <th>Statistics</th>
-                    <th></th>
-                    <th></th>
-                    </tr>
-                    <tr>
-                    <th></th>
-                    <th>Users</th>
-                    <th>Visits</th>
-                    <th>Volume</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                    <td>Google</td>
-                    <td>12000</td>
-                    <td>307000</td>
-                    <td>1000 Tb</td>
-                    </tr>
-                    <tr>
-                    <td>Amazon</td>
-                    <td>9000</td>
-                    <td>200500</td>
-                    <td>800 Tb</td>
-                    </tr>
-                </tbody>
-                </table>
-
-                <p>
-                    Правило равенства числа ячеек в строках и столбцах нельзя отменить, но можно обойти. 
-                    Для того чтобы расширить ячейку по горизонтали используется атрибут <mark>colspan</mark>, по вертикали - <mark>rowspan</mark>.
-                </p>
-
-                <p>
-                    Нужно определить группу ячеек для слияния и затем самой верхней и левой ячейке группы задать атрибут
-                    <mark>colspan</mark> с числом ячеек требующих объединения справа и/или <mark>rowspan</mark> снизу. 
-                    После этого обязательно нужно удалить ставшие ненужными ячейки справа и/или снизу.
-                </p>
-
-                <p>
-                    В нашей задаче ячейка «Облачный сервис» должна занимать 2 ячейки по вертикали, поэтому добавляем ей <mark>rowspan="2"</mark> 
-                    и удаляем пустой <mark>&lt;th&gt;</mark> на строке ниже. 
-                    Аналогично с ячейкой «Использование», устанавливаем <mark>colspan="3"</mark> и удаляем две соседние ячейки справа в этой строке.
-                </p>
-
-                <textarea name="code-table-example-2" id="code-table-example-2" cols="95" rows="16">
-                    <table>
-  <thead>
-    <tr>
-      <th rowspan="2">Облачный сервис</th>
-      <th colspan="3">Использование</th>
-    </tr>
-    <tr>
-      <th>Пользователи</th>
-      <th>Посещений</th>
-      <th>Объём</th>
-    </tr>
-  </thead>
-
-  <!-- Разметка tbody -->
-</table>
-                </textarea>
-
-                <h3>ИНТЕРЕСНО</h3>
-
-                <p>
-                    Правило равенства числа ячеек будет визуально нарушено, но браузер учитывает ячейки в объединённых группах, поэтому всё правильно.
-                </p>
-
-
-
-        </section>
-        
-
-
+      </section>
+      
     </main>
      
 </body>
