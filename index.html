@@ -14,293 +14,170 @@
     <nav>
       <ul>
         <li>
-          <a href="#video">Видео</a>
+          <a href="#syntax">Синтаксис</a>
+        </li>
+        <li>
+          <a href="#link-css">Подключение стилей</a>
         </li>
         <li>
           <ul>
             <li>
-              <a href="#formats-video">Форматы видео</a>
+              <a href="#inline-styles">Встроенные стили</a>
             </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#audio">Аудио</a>
-        </li>
-        <li>
-          <ul>
             <li>
-              <a href="#formats-audio">Форматы аудио</a>
+              <a href="#embeded-styles">Встроенная таблица стилей</a>
+            </li>
+            <li>
+              <a href="#external-styles">Внешняя таблица стилей</a>
             </li>
           </ul>
         </li>
-        <li>
-          <a href="#old">Поддержка старых браузеров</a>
-        </li>
+        
       </ul>
     </nav>
   </header>
 
   <main>
+<!--introducing to CSS-->
     <section>
-      <h1>Видео и аудио</h1>
-
-      <p>
-        До HTML5 разметка видео и аудио была сложной задачей. 
-        В современном стандарте добавили новые теги для разметки медиаконтента 
-        с поддержкой различных форматов, встроенными элементами управления и т. д.
-      </p>
+      <h1>Введение в CSS</h1>
+      <dl>
+        <dt><strong>CSS (Cascading Style Sheets, каскадные таблицы стилей)</strong></dt>
+        <dd>
+          - это язык для описания и изменения внешнего вида элементов. 
+          HTML используется для определения структуры и семантики содержимого документа, а CSS для его оформления и позиционирования.
+        </dd>
+      </dl>
     </section>
-
+<!--syntax-->
     <section>
-
-      <a name="video"></a>
-      <h2>Видео</h2>
+      <a name="syntax"></a>
+      <h2>Синтаксис</h2>
 
       <p>
-        Для разметки видеоконтента используется парный тег 
-        <a href="https://html.spec.whatwg.org/multipage/media.html#the-video-element" target="_blank" rel="noopener noreferrer nofollow">
-          &lt;video&gt;
-        </a>
-        .
+        Блок CSS-кода называется правилом, которое состоит из селектора и группы объявлений в фигурных скобках.
       </p>
 
-      <textarea name="code-video" id="code-video" cols="95" rows="11">
-<video
-  src="http://techslides.com/demos/sample-videos/small.webm"
-  poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
-  width="640"
-  controls
-  autoplay
-  loop
-  preload="auto"
-  >
-</video>
+      <img src="./img/css-rule.png" alt="css rules" width="700">
+
+      <p>
+        Селектор указывает браузеру на то, к каким элементам нужно применить стили из этого правила. 
+        Каждое объявление состоит из пары <mark>свойство: значение;</mark>, 
+        где свойство и его значение разделяются двоеточием с пробелом и обязательно заканчиваются точкой с запятой. 
+        Они описывают что именно нужно сделать со стилями элемента.
+      </p>
+
+      <textarea name="css-rule" id="css-rule" cols="95" rows="6">
+селектор {
+  свойство: значение;
+  свойство: значение;
+  свойство: значение;
+}
       </textarea>
-
-      <p>
-        Разберём атрибуты.
-      </p>
-
-      <ul>
-        <li>
-          <mark>src</mark> - указывает адрес видеофайла
-        </li>
-        <li>
-          <mark>poster</mark> - адрес изображения, которое используется как постер если видео не загружено или еще не проигрывается
-        </li>
-        <li>
-          <mark>width и height</mark> - задают высоту и ширину как у изображения
-        </li>
-        <li>
-          <mark>controls</mark> - атрибут-флаг, если присутствует - добавляются элементы управления видео
-        </li>
-        <li>
-          <mark>autoplay</mark> - атрибут-флаг, если присутствует - проигрывание видео начинается как только оно доступно
-        </li>
-        <li>
-          <mark>loop</mark> - атрибут-флаг, если присуствует - видео будет повторяться в цикле
-        </li>
-      </ul>
-    
-      <p>
-        Атрибут <mark>preload</mark> указывает режим предварительной загрузки видео. 
-        Его значение влияет на то, какая иформация будет загружена. 
-        Значение по умолчанию зависит от браузера в котором была открыта веб-страница.
-      </p>
-
-      <ul>
-        <li>
-          <mark>none</mark> - не загружать видео заранее
-        </li>
-        <li>
-          <mark>metadata</mark> - загрузить служебную информацию (длительность и т. п.)
-        </li>
-        <li>
-          <mark>auto</mark> - заранее загружать всё видео
-        </li>
-      </ul>
-      
     </section>
-<!--vodeo-formats-->
+<!--connecting styles-->
     <section>
-      <a name="formats-video"></a>
-      <h3>Форматы видео</h3>
+      <a name="link-css"></a>
+      <h2>Подключение стилей</h2>
 
       <p>
-        Загружать лишь один формат видеофайла недостаточно, некоторые браузеры могут его не поддерживать, 
-        и пользователь не сможет посмотреть видео. 
-        Есть несколько популярных видеоформатов которые необходимо предоставить браузеру на выбор: 
-        <mark>webm</mark>, <mark>mp4</mark> и <mark>ogg</mark>.
+        Есть три способа добавить стили к HTML-документу: встроенные стили (inline styles), 
+        встроенная таблица стилей (embedded stylesheet) и внешняя таблица стилей (external stylesheet). 
+        У каждого способа есть свои преимущества, недостатки, ограничения и сфера применения.
+      </p>
+    </section>
+<!--inline styles-->
+    <section>
+      <a name="inline-styles"></a>
+      <h3>Встроенные стили</h3>
+
+      <p>
+        Встроенные (инлайн) стили задаются тегу прямо в атрибуте <mark>style</mark>. Их невозможно масштабировать, 
+        сложно переопределять и использовать повторно, поэтому они применяются в очень редких случаях. 
+        Например, для динамических стилей которые устанавливаются во время выполнения JavaScript кода,
+         когда мы заранее не знаем какое будет значение свойства.
       </p>
 
+      <textarea name="inline-css" id="inline-css" cols="95" rows="2">
+<p style="color:blue; font-size:24px;">Этот текст будет синим.</p>
+      </textarea>
+    </section>
+<!--embeded style sheet-->
+    <section>
+      <a name="embeded-styles"></a>
+      <h3>Встроенная таблица стилей</h3>
+
       <p>
-        Для этого убираем атрибут <mark>src</mark> у тега <mark>&lt;video&gt;</mark> и 
-        добавляем новый тег 
-        <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element" target="_blank" rel="noopener noreferrer nofollow">
-          &lt;source&gt;
+        При таком подходе CSS-правила добавляются внутрь тега 
+        <a href="https://html.spec.whatwg.org/multipage/dom.html#the-style-attribute" target="_blank" rel="noopener noreferrer nofollow">
+          &lt;style&gt;
         </a>
-         для каждого формата. 
-        В атрибуте <mark>src</mark> указываем адрес видеофайла, 
-        а в атрибуте <mark>type</mark> видеоформат. 
-        Браузер выберет из списка первый, который поддерживает и загрузит его, проигнорировав остальные.
+         в шапке документа. 
+        Их невозможно использовать повторно на других страницах и сложно масштабировать и поддерживать.
       </p>
 
-      <textarea name="code-format" id="code-format" cols="95" rows="19">
-<video
-  poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
-  width="640"
-  controls
->
-  <source
-    src="http://techslides.com/demos/sample-videos/small.webm"
-    type="video/webm"
-  />
-  <source
-    src="http://techslides.com/demos/sample-videos/small.mp4"
-    type="video/mp4"
-  />
-  <source
-    src="http://techslides.com/demos/sample-videos/small.ogg"
-    type="video/ogg"
-  />
-</video>
+      <textarea name="embeded-css" id="embeded-css" cols="95" rows="9">
+<head>
+  <style type="text/css">
+    p {
+      color: blue;
+      font-size: 24px;
+    }
+  </style>
+</head>
       </textarea>
 
       <h4>ИНТЕРЕСНО</h4>
 
       <p>
-        Конвертация видео и аудио в необходимые форматы это задача создателя контента, 
-        контент-менеджера или, в крайнем случае, разработчика.
+        Иногда этот подход используется для оптимизации скорости отрисовки страницы, 
+        добавляя самые важные стили прямо в HTML-документ. 
+        Эта продвинутая техника называется <mark>Critical CSS</mark>.
       </p>
     </section>
-
+<!--external style sheet-->
     <section>
-      <a name="audio"></a>
-      <h2>Аудио</h2>
+      <a name="external-styles"></a>
+      <h3>Внешняя таблица стилей</h3>
 
       <p>
-        Для разметки аудиоконтента используется парный тег 
-        <a href="https://html.spec.whatwg.org/multipage/media.html#the-audio-element" target="_blank" rel="noopener noreferrer nofollow">
-          &lt;audio&gt;
-        </a>
-        . Его использование очень похоже на 
-        <a href="https://html.spec.whatwg.org/multipage/media.html#the-video-element" target="_blank" rel="noopener noreferrer nofollow">
-          &lt;video&gt;
-        </a>
-        , 
-        но можно задать меньше атрибутов.
+        Внешний CSS-код легко масштабировать, поддерживать и использовать повторно на других страницах, 
+        поэтому это стандарт подключения стилей. 
+        В проекте создаётся отдельный файл стилей с расширением <mark>.css</mark> и подключается в HTML-документе.
       </p>
 
-      <textarea name="code-audio" id="code-audio" cols="95" rows="2">
-        <audio src="song.mp3" controls autoplay loop preload="auto"></audio>
+      <textarea name="external-css" id="external-css" cols="95" rows="4">
+<head>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
       </textarea>
 
-      <p>
-        Разберём атрибуты.
-      </p>
-
       <ul>
         <li>
-          <mark>src</mark> - указывает адрес аудиофайла
+          На одном уровне с <mark>index.html</mark> создаётся папка
+          <mark>css</mark>, а внутри неё файл стилей
+          <mark>styles.css</mark>.
         </li>
         <li>
-          <mark>controls</mark> - атрибут-флаг, если присутствует - добавляются элементы управления аудио
+          В теге 
+          <mark>&lt;head&gt;</mark>, используя тег 
+          <mark>&lt;link&gt;</mark>, созданный ранее файл подключается.
         </li>
         <li>
-          <mark>autoplay</mark> - атрибут-флаг, если присутствует - проигрывание аудио начинается как только оно доступно
+          В атрибуте <mark>href</mark> указывается путь к файлу стилей относительно HTML-документа.
         </li>
         <li>
-          <mark>loop</mark> - атрибут-флаг, если присуствует - аудио будет повторяться в цикле
-        </li>
-      </ul>
-
-      <p>
-        Атрибут <mark>preload</mark> указывает режим предварительной загрузки аудиофайла. 
-        Его значение влияет на то, какая иформация будет загружена. 
-        Значение по умолчанию зависит от браузера, в котором была открыта веб-страница.
-      </p>
-
-      <ul>
-        <li>
-          <mark>none</mark> - не загружать аудио заранее
-        </li>
-        <li>
-          <mark>metadata</mark> - загрузить служебную информацию (длительность и т. п.)
-        </li>
-        <li>
-          <mark>auto</mark> - заранее загружать весь аудиофайл
+          В атрибуте <mark>rel</mark> указывается тип подключаемого документа -
+          <mark>stylesheet</mark> (таблица стилей).
+          <mark></mark>
         </li>
       </ul>
       
-    </section>
-<!--audio-formats-->
-    <section>
-      <a name="formats-audio"></a>
-      <h3>Форматы аудио</h3>
+      <h4>ПОЛЕЗНО</h4>
 
       <p>
-        С поддержкой форматов в браузере у аудио ситуация лучше.
-         Все современные браузеры гарантированно поддерживают один из двух форматов: 
-         <mark>mp3 </mark>или <mark>ogg</mark>.
+        Можно подключить сколько угодно CSS-файлов, добавляя для каждого тег <mark>&lt;link&gt;</mark>.
       </p>
-
-      <p>
-        Как и в случае с видео, убираем атрибут src и используем тег 
-        <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element" target="_blank" rel="noopener noreferrer nofollow">
-          &lt;source&gt;
-        </a>
-         с атрибутами 
-         <mark>src</mark> и <mark>type</mark>.
-      </p>
-
-      <textarea name="code-audio" id="code-audio" cols="95" rows="5">
-<audio controls>
-  <source src="song.mp3" type="audio/mp3" />
-  <source src="song.ogg" type="audio/ogg" />
-</audio>
-      </textarea>
-    </section>
-
-    <section>
-      <a name="old"></a>
-      <h2>Поддержка старых браузеров</h2>
-
-      <p>
-        Если браузер очень старый и не поддерживает HTML5 медиаконтент, нужно сказать об этом пользователю. 
-        Для этого внутри тегов <mark>&lt;video&gt;</mark> или <mark>&lt;audio&gt;</mark>, 
-        после всех тегов <mark>&lt;source&gt;</mark> добавим строку текста, 
-        которую браузер отобразит, если не поддерживает медиаконтент.
-      </p>
-
-      <textarea name="code-text" id="code-text" cols="95" rows="28">
-<video
-  poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
-  width="640"
-  controls
->
-  <source
-    src="http://techslides.com/demos/sample-videos/small.webm"
-    type="video/webm"
-  />
-  <source
-    src="http://techslides.com/demos/sample-videos/small.mp4"
-    type="video/mp4"
-  />
-  <source
-    src="http://techslides.com/demos/sample-videos/small.ogg"
-    type="video/ogg"
-  />
-
-  Your browser does not support the <code>video</code> element.
-</video>
-
-<audio controls>
-  <source src="song.mp3" type="audio/mpeg" />
-  <source src="song.ogg" type="audio/ogg" />
-
-  Your browser does not support the <code>audio</code> element.
-</audio>
-      </textarea>
     </section>
   </main>
      
