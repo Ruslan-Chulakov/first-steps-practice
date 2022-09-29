@@ -11,381 +11,91 @@
 
 <body>
 
-    <header>
+  <main>
+    <section>
+      <h1>Символьные подстановки</h1>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="#dl">Тег &lt;dl&gt;</a>
-                </li>
-                <li>
-                    <a href="#pre">Тег &lt;pre&gt;</a>
-                </li>
-                <li>
-                    <a href="#supsub">Теги &lt;sup&gt; и &lt;sub&gt;</a>
-                </li>
-                <li>
-                    <a href="#time">Тег &lt;time&gt;</a>
-                </li>
-                <li>
-                  <a href="#addres">Тег &lt;address&gt;</a>
-                </li>
-                <li>
-                  <a href="#em-i">Теги &lt;em&gt; и &lt;i&gt;</a>
-                </li>
-            </ul>
-        </nav>
+      <p>
+        Не все символы можно набрать на клавиатуре. Например символ зарегистрированного торгового знака ®, торговой марки ™, 
+        авторского права ©. Для ввода подобных знаков используют символьные подстановки.
+      </p>
 
-    </header>
+      <h2>ИНТЕРЕСНО</h2>
 
-    <main>
+      <p>
+        В стандарте кодирования Unicode хранятся знаки почти всех языков мира, а также специальные и служебные символы. 
+        Символьные подстановки это ссылки-мнемоники, по которым браузер знает какой Unicode-символ нужно отобразить.
+      </p>
 
-      <h1>Разметка текста</h1>
+      <p>
+        Символьные подстановки это специальные строки, преобразуемые браузерами в символы. 
+        Подстановку можно осуществить несколькими способами.
+      </p>
 
-      <section>
+      <ul>
+        <li>
+          &мнемокод; - вставка символа по его «мнемокоду», то есть имени
+        </li>
+        <li>
+          &#КОД10; - вставка символа по его десятичному коду
+        </li>
+        <li>
+          &#xКОД16; - вставка символа по его шеснадцатиричному коду
+        </li>
+      </ul>
 
-        <a name="dl"></a>
-        <h2>Тег 
-          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;dl&gt; 
-          </a>
-        </h2>
+      <textarea name="code-simbols" id="code-simbols" cols="95" rows="4">
+<p>Все права защищены &copy; Lex, 2020</p>
+<p>Все права защищены &#169; Lex, 2020</p>
+<p>Все права защищены &#xa9; Lex, 2020</p>
+      </textarea>
 
-        <p>
-          Тег 
-          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;dl&gt; (description list) 
-          </a>  
-          это контейнер для списка пар терминов и их описаний, то есть словарь. 
-          Для разметки терминов есть тег 
-          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element"> 
-            &lt;dt&gt; 
-          </a>
-          , а для описаний 
-          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element"> 
-            &lt;dd&gt;
-          </a>
-          . Используется для разметки списка определений, например при создании глоссария, телефонного справочника и т. п.
-        </p>
+      <p>
+        Символьные подстановки применяются не только для вставки символов которых нет на клавиатуре, 
+        но так же для символов имеющих специальное назначение в HTML. 
+        Например если нужно вывести на страницу текст, содержащий тэги как текст.
+      </p>
 
-        <textarea name="code-dl" id="code-dl" cols="95" rows="21">
-          <dl>
-  <dt>JPEG</dt>
-  <dd>
-    Large files that do not require transparent backgrounds or animations. This format is ideal for vivid photorealistic photographs as it can contain millions of colors.
-  </dd>
+      <textarea name="code-strong-1" id="code-strong-1" cols="95" rows="2">
+        <p>Для полужирного текста, выделите его тэгами <strong> и </strong>.</p>
+      </textarea>
 
-  <dt>PNG</dt>
-  <dd>
-    Has an additional parameter for describing transparency - the alpha channel. Suitable for images with transparent or monochrome backgrounds. Used for icons and decorative items.
-  </dd>
+      <p>
+        Символы <mark>&lt;</mark> и <mark>&gt;</mark> это часть синтаксиса HTML, открывают и закрывют теги. 
+        Поэтому непосредственная вставка их в код страницы приведет к интерпретации 
+        <mark>&lt;strong&gt;</mark> и <mark>&lt;/strong&gt;</mark> как тэгов. 
+        В таком случае вместо символов <mark>&lt;</mark> и <mark>&gt;</mark> 
+        необходимо использовать символьные подстановки <mark>&amp;lt&semi;</mark> и <mark>&amp;gt&semi;</mark>.
+      </p>
 
-  <dt>webP</dt>
-  <dd>
-    A replacement format for PNG and JPEG, but with incomplete browser support. When
-    equal image quality, the compressed files will be smaller than PNG and JPEG on average
-    by 25%.
-  </dd>
-</dl>
-        </textarea>
-
-      </section>
-
-      <section>
-
-        <a name="span"></a>
-
-        <h2>
-          Тег 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;span&gt;
-          </a>
-        </h2>
-
-        <p>
-          Универсальный контейнер для мелкого текстового контента, например отдельных слов, частей слов или целых фраз внутри текстового массива. Аналогично тегу 
-          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;div&gt;
-          </a>
-          , не имеет никакого семантического значения и используется для дополнительной стилизации.
-        </p>
-
-        <textarea name="span" id="span" cols="95" rows="5">
-          <p>
-  Тег <span class="accent">span</span> это универсальный контейнер для мелкого
-  текстового контента.
-</p>
-        </textarea>
-
-        <h3>ИНТЕРЕСНО</h3>
-
-        <p>
-          Спану с атрибутом <mark>class="accent"</mark> при помощи CSS можно будет добавить стили, например другой цвет текста, его размер и т. п.
-        </p>
-
-      </section>
-
-      <section>
-
-        <a name="pre"></a>
-        <h2>Тег 
-          <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;pre&gt;
-          </a>
-        </h2>
-
-        <p>
-          По умолчанию браузер игнорирует переносы строк и более одного пробела подряд. 
-          Этот тег позволяет добавить преформатированный текст с принудительными переносами строк. 
-          Например разметка текста песни или стихотворения.
-        </p>
-
-        <textarea name="code-pre" id="code-pre" cols="95" rows="21">
-          <pre>
-  Wyatt resteth here, that quick could never rest;
-  Whose heavenly gifts increased by disdain,
-  And virtue sank the deeper in his breast;
-  Such profit he by envy could obtain.
-</pre>
-
-<pre>
-  A head where wisdom mysteries did frame,
-  Whose hammers beat still in that lively brain
-  As on a stithy where that some work of fame
-  Was daily wrought, to turn to Britain's gain.
-</pre>
-
-<pre>
-  A visage stern and mild, where both did grow,
-  Vice to contemn, in virtue to rejoice;
-  Amid great storms, whom grace assured so
-  To live upright and smile at fortune's choice.
-</pre>
-        </textarea>
-
-      </section>
-
-      <section>
-
-        <a name="supsub"></a>
-        
-        <h2>Теги 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;sup&gt;
-          </a> 
-            и 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;sub&gt;
-          </a>
-        </h2>
-
-        <p>
-          Предназначены для отображения символов в верхнем (<mark>&lt;sup&gt;</mark>, сокращение от superscript) 
-          и нижнем (<mark>&lt;sub&gt;</mark>, сокращение от subscript) индексе. 
-          Например для разметки несложных математических или химических формул.
-        </p>
-
-        <textarea name="code-sub-sup" id="code-sub-sup" cols="95" rows="6">
-          <p>Formula of water  - H<sub>2</sub>O</p>
-
-<p>Total area of the room - 150м<sup>2</sup>.</p>
-
-<p>Solve the equation a<sup>3</sup>+a<sup>2</sup>=4</p>
-        </textarea>
-      </section>
-
-      <section>
-
-        <a name="time"></a>
-
-        <h2>Тег 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;time&gt;
-          </a>
-        </h2>
-
-        <p>
-          Дату и время можно написать просто текстом, но лучше использовать специальный тег 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;time&gt;
-          </a>
-          . Дата для человека это текст внутри тега, а для машины - значение атрибута <mark>datetime</mark> в формате 
-          <a href="https://ru.wikipedia.org/wiki/ISO_8601" target="_blank" rel="noopener noreferrer nofollow">
-            ISO 8601.
-          </a>
-        </p>
-
-        <textarea name="code-time" id="code-time" cols="95" rows="8">
-          <p>
-  Последние новости на <time datetime="2019-12-14">14 декабря 2019 года</time>.
-</p>
-
+      <textarea name="code-strong-2" id="code-strong-2" cols="95" rows="4">
 <p>
-  Заседание состоялось в <time datetime="2018-07-14T11:30">11:30 утра</time>.
+  Для полужирного текста выделите его тэгами &amp;lt&semi;strong&amp;gt&semi; и &amp;lt&semi;/strong&amp;gt&semi;.
 </p>
-        </textarea>
+      </textarea>
 
-        <p>
-          Браузер отобразит только текст внутри тега. 
-          Человек увидит понятный текст, а ассистивная технология прочитает атрибут 
-          <mark>datetime</mark> и получит точное значение в нужном формате.
-        </p>
+      <p>
+        Есть 
+        <a href="https://dev.w3.org/html5/html-author/charref" target="_link" rel="noopener noreferrer nofollow">
+          официальная страница W3C
+        </a>
+         и 
+         <a href="https://www.toptal.com/designers/htmlarrows/symbols/" target="_blank" rel="noopener noreferrer nofollow">
+          сервис от Toptal
+         </a>
+         , где можно найти мнемонику для любого символа.
+      </p>
 
-      </section>
+      <h2>ИНТЕРЕСНО</h2>
 
-      <section>
-
-        <a name="addres"></a>
-
-        <h2>Тег 
-          <a href="https://html.spec.whatwg.org/multipage/sections.html#the-address-element" target="_blank" rel="noreferrer nofollow noopener">
-            &lt;address&gt;
-          </a>
-        </h2>
-
-        <p>
-          Предназначен для хранения контактной информации об авторе статьи, блока информации или веб-страницы в целом. 
-          Контактная информация может быть в любой подходящей форме, 
-          например физический адрес, адрес электронной почты, ссылка на сайт, номер телефона, тег соцсети.
-        </p>
-
-        <textarea name="code-addres" id="code-addres" cols="95" rows="11">
-          <address>
-  г. Киев, <br />
-  Бульвар Леси Украинки, д. 26, <br />
-  4й этаж офис 427
-</address>
-
-<address>
-  <a href="mailto:mango@mail.pig">mango@mail.pig</a>
-  <a href="tel:+1112223344">(111) 222-33-44</a>
-</address>
-        </textarea>
-
-        <p>
-          Обратите внимание на тег 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;br&gt;
-          </a>
-          , он используется для разметки массива текста с принудительными переносами строк для визуального форматирования. 
-          Например разметка одной строки адреса в несколько строк.
-        </p>
-
-        <h3>ВНИМАНИЕ</h3>
-
-        <p>
-          Тег 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;br&gt;
-          </a>
-           (сокращение от line break) не используется для того,
-           чтобы принудительно добавить разрывы строки между тегами или разбить массив текста на абазцы.
-        </p>
-
-      </section>
-
-      <section>
-
-        <a name="strong-b"></a>
-
-        <h2>Теги 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;strong&gt; 
-          </a>
-          и 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;b&gt;
-          </a>
-        </h2>
-
-        <p>
-          Используются для выделения важного слова или целой фразы внутри текста. 
-          Визуально оба тега делают текст жирным, и на первый взгляд разницы между ними нет, но это не так.
-        </p>
-
-        <p>
-          Тег 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;strong&gt; 
-          </a>
-           семантически подчеркивает текст как важный и указывает, что это значимое слово или фраза. 
-            Например выделить предупреждение или любую часть текста, на которую пользователь должен обратить внимание в первую очередь.
-        </p>
-
-        <textarea name="code-strong" id="code-strong" cols="95" rows="6">
-<p>
-  <strong>Внимание!</strong> Заканчивается срок подписки.
-  <strong>Учётная запись будет приостановлена.</strong> Пожалуйста продлите
-  подписку или свяжитесь со службой поддержки.
-</p>
-        </textarea>
-
-        <p>
-          Тег 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element" target="_blank" rel="noopener noreferrer nofollow">
-            &lt;b&gt;
-          </a>
-           (сокращение от bold) делает текст только визуально жирным, привлекая внимание, но не придавая особой важности.
-        </p>
-
-        <h3>ИНТЕРЕСНО</h3>
-
-        <p>
-          Для ассистивных технологий, например скринридера, текст обернутый в <mark>&lt;strong&gt;</mark> имеет особую важность и будет дополнительно выделен интонацией.
-        </p>
-
-      </section>
-
-      <section>
-
-        <a name="em-i"></a>
-        <h2>Теги 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element" target="_blank" rel="noreferrer noopener nofollow">
-            &lt;em&gt;
-          </a> 
-          и 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element" target="_blank" rel="noreferrer nofollow noopener">
-            &lt;i&gt;
-          </a>
-        </h2>
-
-        <p>
-          Используются для акцентирования внимания на части текста. 
-          Визуально оба тега делают текст курсивным, и на первый взгляд разницы между ними нет, но это не так.
-        </p>
-
-        <p>
-          Тег  
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element" target="_blank" rel="noreferrer noopener nofollow">
-            &lt;em&gt;
-          </a> 
-          (сокращение от emphasis) семантически выделяет текст, на который сделан особый акцент, 
-          меняющий смысл фразы. Например можно выделить сарказм.
-        </p>
-
-        <textarea name="code-em" id="code-em" cols="95" rows="2">
-          <p>Я <em>в полном восторге</em> когда задерживают зарплату!</p>
-        </textarea>
-
-        <p>
-          Тег 
-          <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element" target="_blank" rel="noreferrer nofollow noopener">
-            &lt;i&gt;
-          </a> 
-          (сокращение от italic) делает текст только визуально курсивным, 
-          привлекая внимание, но не придавая особой важности. Например выделить термины в предложении.
-        </p>
-        
-        <h3>ИНТЕРЕСНО</h3>
-
-        <p>
-          Для ассистивных технологий, например скринридера, текст обернутый в <mark>&lt;em&gt;</mark> имеет особый акцент 
-          и будет дополнительно выделен интонацией.
-        </p>
-
-      </section>
+      <p>
+        Спецсимволы, не имеющие мнемоники, 
+        могут не отображаться вовсе или же отображаться некорректно в каких-то браузерах. 
+        В таком случае их заменяют на иконки (изображения).
+      </p>
       
-    </main>
+    </section>
+  </main>
      
 </body>
 </html>
