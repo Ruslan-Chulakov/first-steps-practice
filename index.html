@@ -10,90 +10,297 @@
 
 
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#video">Видео</a>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <a href="#formats-video">Форматы видео</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#audio">Аудио</a>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <a href="#formats-audio">Форматы аудио</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#old">Поддержка старых браузеров</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section>
-      <h1>Символьные подстановки</h1>
+      <h1>Видео и аудио</h1>
 
       <p>
-        Не все символы можно набрать на клавиатуре. Например символ зарегистрированного торгового знака ®, торговой марки ™, 
-        авторского права ©. Для ввода подобных знаков используют символьные подстановки.
+        До HTML5 разметка видео и аудио была сложной задачей. 
+        В современном стандарте добавили новые теги для разметки медиаконтента 
+        с поддержкой различных форматов, встроенными элементами управления и т. д.
+      </p>
+    </section>
+
+    <section>
+
+      <a name="video"></a>
+      <h2>Видео</h2>
+
+      <p>
+        Для разметки видеоконтента используется парный тег 
+        <a href="https://html.spec.whatwg.org/multipage/media.html#the-video-element" target="_blank" rel="noopener noreferrer nofollow">
+          &lt;video&gt;
+        </a>
+        .
       </p>
 
-      <h2>ИНТЕРЕСНО</h2>
+      <textarea name="code-video" id="code-video" cols="95" rows="11">
+<video
+  src="http://techslides.com/demos/sample-videos/small.webm"
+  poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
+  width="640"
+  controls
+  autoplay
+  loop
+  preload="auto"
+  >
+</video>
+      </textarea>
 
       <p>
-        В стандарте кодирования Unicode хранятся знаки почти всех языков мира, а также специальные и служебные символы. 
-        Символьные подстановки это ссылки-мнемоники, по которым браузер знает какой Unicode-символ нужно отобразить.
-      </p>
-
-      <p>
-        Символьные подстановки это специальные строки, преобразуемые браузерами в символы. 
-        Подстановку можно осуществить несколькими способами.
+        Разберём атрибуты.
       </p>
 
       <ul>
         <li>
-          &мнемокод; - вставка символа по его «мнемокоду», то есть имени
+          <mark>src</mark> - указывает адрес видеофайла
         </li>
         <li>
-          &#КОД10; - вставка символа по его десятичному коду
+          <mark>poster</mark> - адрес изображения, которое используется как постер если видео не загружено или еще не проигрывается
         </li>
         <li>
-          &#xКОД16; - вставка символа по его шеснадцатиричному коду
+          <mark>width и height</mark> - задают высоту и ширину как у изображения
+        </li>
+        <li>
+          <mark>controls</mark> - атрибут-флаг, если присутствует - добавляются элементы управления видео
+        </li>
+        <li>
+          <mark>autoplay</mark> - атрибут-флаг, если присутствует - проигрывание видео начинается как только оно доступно
+        </li>
+        <li>
+          <mark>loop</mark> - атрибут-флаг, если присуствует - видео будет повторяться в цикле
+        </li>
+      </ul>
+    
+      <p>
+        Атрибут <mark>preload</mark> указывает режим предварительной загрузки видео. 
+        Его значение влияет на то, какая иформация будет загружена. 
+        Значение по умолчанию зависит от браузера в котором была открыта веб-страница.
+      </p>
+
+      <ul>
+        <li>
+          <mark>none</mark> - не загружать видео заранее
+        </li>
+        <li>
+          <mark>metadata</mark> - загрузить служебную информацию (длительность и т. п.)
+        </li>
+        <li>
+          <mark>auto</mark> - заранее загружать всё видео
+        </li>
+      </ul>
+      
+    </section>
+<!--vodeo-formats-->
+    <section>
+      <a name="formats-video"></a>
+      <h3>Форматы видео</h3>
+
+      <p>
+        Загружать лишь один формат видеофайла недостаточно, некоторые браузеры могут его не поддерживать, 
+        и пользователь не сможет посмотреть видео. 
+        Есть несколько популярных видеоформатов которые необходимо предоставить браузеру на выбор: 
+        <mark>webm</mark>, <mark>mp4</mark> и <mark>ogg</mark>.
+      </p>
+
+      <p>
+        Для этого убираем атрибут <mark>src</mark> у тега <mark>&lt;video&gt;</mark> и 
+        добавляем новый тег 
+        <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element" target="_blank" rel="noopener noreferrer nofollow">
+          &lt;source&gt;
+        </a>
+         для каждого формата. 
+        В атрибуте <mark>src</mark> указываем адрес видеофайла, 
+        а в атрибуте <mark>type</mark> видеоформат. 
+        Браузер выберет из списка первый, который поддерживает и загрузит его, проигнорировав остальные.
+      </p>
+
+      <textarea name="code-format" id="code-format" cols="95" rows="19">
+<video
+  poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
+  width="640"
+  controls
+>
+  <source
+    src="http://techslides.com/demos/sample-videos/small.webm"
+    type="video/webm"
+  />
+  <source
+    src="http://techslides.com/demos/sample-videos/small.mp4"
+    type="video/mp4"
+  />
+  <source
+    src="http://techslides.com/demos/sample-videos/small.ogg"
+    type="video/ogg"
+  />
+</video>
+      </textarea>
+
+      <h4>ИНТЕРЕСНО</h4>
+
+      <p>
+        Конвертация видео и аудио в необходимые форматы это задача создателя контента, 
+        контент-менеджера или, в крайнем случае, разработчика.
+      </p>
+    </section>
+
+    <section>
+      <a name="audio"></a>
+      <h2>Аудио</h2>
+
+      <p>
+        Для разметки аудиоконтента используется парный тег 
+        <a href="https://html.spec.whatwg.org/multipage/media.html#the-audio-element" target="_blank" rel="noopener noreferrer nofollow">
+          &lt;audio&gt;
+        </a>
+        . Его использование очень похоже на 
+        <a href="https://html.spec.whatwg.org/multipage/media.html#the-video-element" target="_blank" rel="noopener noreferrer nofollow">
+          &lt;video&gt;
+        </a>
+        , 
+        но можно задать меньше атрибутов.
+      </p>
+
+      <textarea name="code-audio" id="code-audio" cols="95" rows="2">
+        <audio src="song.mp3" controls autoplay loop preload="auto"></audio>
+      </textarea>
+
+      <p>
+        Разберём атрибуты.
+      </p>
+
+      <ul>
+        <li>
+          <mark>src</mark> - указывает адрес аудиофайла
+        </li>
+        <li>
+          <mark>controls</mark> - атрибут-флаг, если присутствует - добавляются элементы управления аудио
+        </li>
+        <li>
+          <mark>autoplay</mark> - атрибут-флаг, если присутствует - проигрывание аудио начинается как только оно доступно
+        </li>
+        <li>
+          <mark>loop</mark> - атрибут-флаг, если присуствует - аудио будет повторяться в цикле
         </li>
       </ul>
 
-      <textarea name="code-simbols" id="code-simbols" cols="95" rows="4">
-<p>Все права защищены &copy; Lex, 2020</p>
-<p>Все права защищены &#169; Lex, 2020</p>
-<p>Все права защищены &#xa9; Lex, 2020</p>
-      </textarea>
-
       <p>
-        Символьные подстановки применяются не только для вставки символов которых нет на клавиатуре, 
-        но так же для символов имеющих специальное назначение в HTML. 
-        Например если нужно вывести на страницу текст, содержащий тэги как текст.
+        Атрибут <mark>preload</mark> указывает режим предварительной загрузки аудиофайла. 
+        Его значение влияет на то, какая иформация будет загружена. 
+        Значение по умолчанию зависит от браузера, в котором была открыта веб-страница.
       </p>
 
-      <textarea name="code-strong-1" id="code-strong-1" cols="95" rows="2">
-        <p>Для полужирного текста, выделите его тэгами <strong> и </strong>.</p>
-      </textarea>
-
-      <p>
-        Символы <mark>&lt;</mark> и <mark>&gt;</mark> это часть синтаксиса HTML, открывают и закрывют теги. 
-        Поэтому непосредственная вставка их в код страницы приведет к интерпретации 
-        <mark>&lt;strong&gt;</mark> и <mark>&lt;/strong&gt;</mark> как тэгов. 
-        В таком случае вместо символов <mark>&lt;</mark> и <mark>&gt;</mark> 
-        необходимо использовать символьные подстановки <mark>&amp;lt&semi;</mark> и <mark>&amp;gt&semi;</mark>.
-      </p>
-
-      <textarea name="code-strong-2" id="code-strong-2" cols="95" rows="4">
-<p>
-  Для полужирного текста выделите его тэгами &amp;lt&semi;strong&amp;gt&semi; и &amp;lt&semi;/strong&amp;gt&semi;.
-</p>
-      </textarea>
-
-      <p>
-        Есть 
-        <a href="https://dev.w3.org/html5/html-author/charref" target="_link" rel="noopener noreferrer nofollow">
-          официальная страница W3C
-        </a>
-         и 
-         <a href="https://www.toptal.com/designers/htmlarrows/symbols/" target="_blank" rel="noopener noreferrer nofollow">
-          сервис от Toptal
-         </a>
-         , где можно найти мнемонику для любого символа.
-      </p>
-
-      <h2>ИНТЕРЕСНО</h2>
-
-      <p>
-        Спецсимволы, не имеющие мнемоники, 
-        могут не отображаться вовсе или же отображаться некорректно в каких-то браузерах. 
-        В таком случае их заменяют на иконки (изображения).
-      </p>
+      <ul>
+        <li>
+          <mark>none</mark> - не загружать аудио заранее
+        </li>
+        <li>
+          <mark>metadata</mark> - загрузить служебную информацию (длительность и т. п.)
+        </li>
+        <li>
+          <mark>auto</mark> - заранее загружать весь аудиофайл
+        </li>
+      </ul>
       
+    </section>
+<!--audio-formats-->
+    <section>
+      <a name="formats-audio"></a>
+      <h3>Форматы аудио</h3>
+
+      <p>
+        С поддержкой форматов в браузере у аудио ситуация лучше.
+         Все современные браузеры гарантированно поддерживают один из двух форматов: 
+         <mark>mp3 </mark>или <mark>ogg</mark>.
+      </p>
+
+      <p>
+        Как и в случае с видео, убираем атрибут src и используем тег 
+        <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element" target="_blank" rel="noopener noreferrer nofollow">
+          &lt;source&gt;
+        </a>
+         с атрибутами 
+         <mark>src</mark> и <mark>type</mark>.
+      </p>
+
+      <textarea name="code-audio" id="code-audio" cols="95" rows="5">
+<audio controls>
+  <source src="song.mp3" type="audio/mp3" />
+  <source src="song.ogg" type="audio/ogg" />
+</audio>
+      </textarea>
+    </section>
+
+    <section>
+      <a name="old"></a>
+      <h2>Поддержка старых браузеров</h2>
+
+      <p>
+        Если браузер очень старый и не поддерживает HTML5 медиаконтент, нужно сказать об этом пользователю. 
+        Для этого внутри тегов <mark>&lt;video&gt;</mark> или <mark>&lt;audio&gt;</mark>, 
+        после всех тегов <mark>&lt;source&gt;</mark> добавим строку текста, 
+        которую браузер отобразит, если не поддерживает медиаконтент.
+      </p>
+
+      <textarea name="code-text" id="code-text" cols="95" rows="28">
+<video
+  poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
+  width="640"
+  controls
+>
+  <source
+    src="http://techslides.com/demos/sample-videos/small.webm"
+    type="video/webm"
+  />
+  <source
+    src="http://techslides.com/demos/sample-videos/small.mp4"
+    type="video/mp4"
+  />
+  <source
+    src="http://techslides.com/demos/sample-videos/small.ogg"
+    type="video/ogg"
+  />
+
+  Your browser does not support the <code>video</code> element.
+</video>
+
+<audio controls>
+  <source src="song.mp3" type="audio/mpeg" />
+  <source src="song.ogg" type="audio/ogg" />
+
+  Your browser does not support the <code>audio</code> element.
+</audio>
+      </textarea>
     </section>
   </main>
      
