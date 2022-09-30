@@ -13,171 +13,504 @@
   <header>
     <nav>
       <ul>
-        <li>
-          <a href="#syntax">Синтаксис</a>
-        </li>
-        <li>
-          <a href="#link-css">Подключение стилей</a>
-        </li>
-        <li>
-          <ul>
-            <li>
-              <a href="#inline-styles">Встроенные стили</a>
-            </li>
-            <li>
-              <a href="#embeded-styles">Встроенная таблица стилей</a>
-            </li>
-            <li>
-              <a href="#external-styles">Внешняя таблица стилей</a>
-            </li>
-          </ul>
-        </li>
-        
+           <li>
+            <a href="#tag-selector">Селектор элемента (тега)</a>
+           </li>
+           <li>
+            <a href="#class-selector">Селектор класса</a>
+           </li>
+           <li>
+            <ul>
+              <li>
+                <a href="#class-composition">Композиция классов</a>
+              </li>
+            </ul>
+           </li> 
+           <li>
+            <a href="#id-selector">Селектор идентификатора</a>
+           </li>
+           <li>
+            <a href="#descendant-selector">Селектор потомка</a>
+           </li>
+           <li>
+            <a href="#child-selector">Селектор ребёнка</a>
+           </li>
+           <li>
+            <a href="#attribute-selector">Селектор атрибута</a>
+           </li>
+           <li>
+            <ul>
+              <li>
+                <a href="#element-attribute">элемент[атрибут]</a>
+              </li>
+              <li>
+                <a href="#element-attribute-value">элемент[атрибут="значение"]</a>
+              </li>
+            </ul>
+           </li>    
       </ul>
     </nav>
   </header>
 
   <main>
-<!--introducing to CSS-->
+<!--selectors-->
     <section>
-      <h1>Введение в CSS</h1>
-      <dl>
-        <dt><strong>CSS (Cascading Style Sheets, каскадные таблицы стилей)</strong></dt>
-        <dd>
-          - это язык для описания и изменения внешнего вида элементов. 
-          HTML используется для определения структуры и семантики содержимого документа, а CSS для его оформления и позиционирования.
-        </dd>
-      </dl>
+      <h1>Селекторы</h1>
+
+      <p>
+        При помощи различных селекторов можно выбрать один или группу элементов. 
+        Селекторов 
+        <a href="https://code.tutsplus.com/ru/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank" rel="noopener noreferrer nofollow">
+          довольно много
+        </a>
+        , поэтому рассмотрим основные, которые могут применяться каждый день.
+      </p>
+
+      <img src="./img/css-selectors.png" alt="css-selectors" width="700">
     </section>
-<!--syntax-->
+<!--tag selector-->
     <section>
-      <a name="syntax"></a>
-      <h2>Синтаксис</h2>
+      <a name="tag-selector"></a>
+      <h2>Селектор элемента (тега)</h2>
 
       <p>
-        Блок CSS-кода называется правилом, которое состоит из селектора и группы объявлений в фигурных скобках.
+        Описывает к какому типу элементов будет применено CSS-правило. 
+        Селектор элемента недостаточно специфичный для того, чтобы стилизировать отдельные элементы, 
+        поэтому чаще всего применяется для оформления всех тегов одного типа на странице. 
+        Например <em>если у всех ссылок в документе нужно убрать подчёркивание</em>.
       </p>
 
-      <img src="./img/css-rule.png" alt="css rules" width="700">
+      <textarea name="tag-sel" id="tag-sel" cols="95" rows="10">
+/* Применится ко всем абзацам на странице */
+p {
+  font-size: 24px;
+}
 
-      <p>
-        Селектор указывает браузеру на то, к каким элементам нужно применить стили из этого правила. 
-        Каждое объявление состоит из пары <mark>свойство: значение;</mark>, 
-        где свойство и его значение разделяются двоеточием с пробелом и обязательно заканчиваются точкой с запятой. 
-        Они описывают что именно нужно сделать со стилями элемента.
-      </p>
-
-      <textarea name="css-rule" id="css-rule" cols="95" rows="6">
-селектор {
-  свойство: значение;
-  свойство: значение;
-  свойство: значение;
+/* Применится ко всем ссылкам на странице */
+a {
+  text-decoration: none;
 }
       </textarea>
     </section>
-<!--connecting styles-->
+<!--class selector-->
     <section>
-      <a name="link-css"></a>
-      <h2>Подключение стилей</h2>
+      <a name="class-selector"></a>
+      <h2>Селектор класса</h2>
 
       <p>
-        Есть три способа добавить стили к HTML-документу: встроенные стили (inline styles), 
-        встроенная таблица стилей (embedded stylesheet) и внешняя таблица стилей (external stylesheet). 
-        У каждого способа есть свои преимущества, недостатки, ограничения и сфера применения.
-      </p>
-    </section>
-<!--inline styles-->
-    <section>
-      <a name="inline-styles"></a>
-      <h3>Встроенные стили</h3>
-
-      <p>
-        Встроенные (инлайн) стили задаются тегу прямо в атрибуте <mark>style</mark>. Их невозможно масштабировать, 
-        сложно переопределять и использовать повторно, поэтому они применяются в очень редких случаях. 
-        Например, для динамических стилей которые устанавливаются во время выполнения JavaScript кода,
-         когда мы заранее не знаем какое будет значение свойства.
-      </p>
-
-      <textarea name="inline-css" id="inline-css" cols="95" rows="2">
-<p style="color:blue; font-size:24px;">Этот текст будет синим.</p>
-      </textarea>
-    </section>
-<!--embeded style sheet-->
-    <section>
-      <a name="embeded-styles"></a>
-      <h3>Встроенная таблица стилей</h3>
-
-      <p>
-        При таком подходе CSS-правила добавляются внутрь тега 
-        <a href="https://html.spec.whatwg.org/multipage/dom.html#the-style-attribute" target="_blank" rel="noopener noreferrer nofollow">
-          &lt;style&gt;
+        Основной селектор в современной разработке. Используется в связке с глобальным атрибутом <mark>class</mark>. 
+        Имя класса задаётся только на английском языке, и это обязательно существительное, описывающее что это за элемент. 
+        Для пополнения словарного запаса используйте 
+        <a href="https://github.com/yoksel/common-words" target="_blank" rel="noopener noreferrer nofollow">
+           справочник
         </a>
-         в шапке документа. 
-        Их невозможно использовать повторно на других страницах и сложно масштабировать и поддерживать.
+        , 
+        <a href="https://github.com/web-standards-ru/dictionary/blob/master/dictionary.md" target="_blank" rel="noopener noreferrer nofollow">
+          словарь терминов
+        </a>
+         и 
+         <a href="https://github.com/nicothin/idiomatic-pre-CSS/blob/gh-pages/words_and_abbreviations.md" target="_blank" rel="noopener noreferrer nofollow">
+          сокращения
+         </a>
+         .
       </p>
 
-      <textarea name="embeded-css" id="embeded-css" cols="95" rows="9">
-<head>
-  <style type="text/css">
-    p {
-      color: blue;
-      font-size: 24px;
-    }
-  </style>
-</head>
+      <textarea name="class-sel" id="class-sel" cols="95" rows="6">
+<h6 class="title">Привет, я Mango.</h6>
+<p class="text">
+  Добро пожаловать на мою личную страницу. Тут можно посмотреть
+  <a class="link" href="">проекты</a>.
+</p>
       </textarea>
 
-      <h4>ИНТЕРЕСНО</h4>
+      <p>
+        В CSS используется селектор класса, 
+        чтобы задать стили для одного и более элементов с одинаковым значением атрибута <mark>class</mark> (именем класса). 
+        В селекторе, перед именем класса ставится точка <mark>.</mark>.
+      </p>
+
+      <textarea name="class-sel-1" id="class-sel-1" cols="95" rows="16">
+/* Применится ко всем тегам с классом title */
+.title {
+  font-weight: 500;
+}
+
+/* Применится ко всем тегам с классом text */
+.text {
+  color: brown;
+  font-size: 18px;
+}
+
+/* Применится ко всем тегам с классом link */
+.link {
+  text-decoration: none;
+}
+      </textarea>
+
+      <!--exampe result-->
+      <H5>RESULT</H5>
+      <h6 class="title">Привет, я Mango.</h6>
+      <p class="text">
+        Добро пожаловать на мою личную страницу. Тут можно посмотреть
+        <a class="link" href="">проекты</a>.
+      </p>
+
+      <h4>ВНИМАНИЕ</h4>
 
       <p>
-        Иногда этот подход используется для оптимизации скорости отрисовки страницы, 
-        добавляя самые важные стили прямо в HTML-документ. 
-        Эта продвинутая техника называется <mark>Critical CSS</mark>.
+        В имени класса используются только маленькие буквы и тире. Например, <mark>list</mark>, <mark>list-item</mark>, <mark>logo-image</mark> и т. д. 
+        Подчёркивания <mark>list_item</mark>, заглавные буквы <mark>ListItem</mark> или цифры <mark>listitem27</mark> считаются дурным тоном.
       </p>
     </section>
-<!--external style sheet-->
+<!--class composition-->
     <section>
-      <a name="external-styles"></a>
-      <h3>Внешняя таблица стилей</h3>
+      <a name="class-composition"></a>
+      <h3>Композиция классов</h3>
 
       <p>
-        Внешний CSS-код легко масштабировать, поддерживать и использовать повторно на других страницах, 
-        поэтому это стандарт подключения стилей. 
-        В проекте создаётся отдельный файл стилей с расширением <mark>.css</mark> и подключается в HTML-документе.
+        У элемента может быть несколько классов, тогда они записываются через пробел.
       </p>
 
-      <textarea name="external-css" id="external-css" cols="95" rows="4">
-<head>
-  <link rel="stylesheet" href="./css/styles.css" />
-</head>
+      <textarea name="class-comp-fev" id="class-comp-fev" cols="95" rows="2">
+<element class="value1 value2 value3"></element>
       </textarea>
 
-      <ul>
-        <li>
-          На одном уровне с <mark>index.html</mark> создаётся папка
-          <mark>css</mark>, а внутри неё файл стилей
-          <mark>styles.css</mark>.
-        </li>
-        <li>
-          В теге 
-          <mark>&lt;head&gt;</mark>, используя тег 
-          <mark>&lt;link&gt;</mark>, созданный ранее файл подключается.
-        </li>
-        <li>
-          В атрибуте <mark>href</mark> указывается путь к файлу стилей относительно HTML-документа.
-        </li>
-        <li>
-          В атрибуте <mark>rel</mark> указывается тип подключаемого документа -
-          <mark>stylesheet</mark> (таблица стилей).
-          <mark></mark>
-        </li>
-      </ul>
+      <img src="./img/class-composition.png" alt="class-composition" width="700">
+
+      <p>
+        Это можно применять для комбинирования и повторного использования стилей. 
+        Создадим разметку и стили для компонента оповещений.
+      </p>
+
+      <textarea name="markup-and-styles" id="markup-and-styles" cols="95" rows="4">
+<p class="alert success">Пополнение счёта выполнено</p>
+<p class="alert warning">Внимание, будут изменены тарифы</p>
+<p class="alert error">Ошибка проведения транзакции</p>
+      </textarea>
+
+      <p>
+        В стилях описываем несколько правил, общие для всех оповещений и специфические для каждого типа.
+      </p>
+
+      <textarea name="rules-for-alerts" id="rules-for-alerts" cols="95" rows="19">
+/* Общие стили для всех типов оповещений */
+.alert {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Специфические стили для каждого типа */
+.success {
+  color: green;
+}
+
+.warning {
+  color: orange;
+}
+
+.error {
+  color: red;
+}
+      </textarea>
       
+      <p>
+        Вот рабочий пример.
+      </p>
+
+      <!--example in html-->
+      <p class="alert success">Account registration success</p>
+      <p class="alert warning">Attention, tariffs will be changed</p>
+      <p class="alert error">Transaction error</p>
+
+    </section>
+<!--ID selector-->
+    <section>
+      <a name="id-selector"></a>
+      <h2>Селектор идентификатора</h2>
+
+      <p>
+        Как и с классом, тегам можно задавать глобальный атрибут <mark>id</mark>. Отличие в том, 
+        что значение <mark>id</mark> должно быть уникальным на странице, 
+        то есть не может быть двух элементов с одинаковыми значениями идентификатора.
+      </p>
+
+      <textarea name="id-example" id="id-example" cols="95" rows="2">
+<h6 id="title">Заголовок страницы</h6>
+      </textarea>
+      
+      <p>
+        В CSS-селекторе, перед именем идентификатора, ставится символ решетки <mark>&#35</mark>
+      </p>
+
+      <textarea name="id-css-example" id="id-css-example" cols="95" rows="5">
+#title {
+  font-weight: 500;
+  color: orange;
+}
+      </textarea>
+
+      <!--example result-->
+      <h5>RESULT</h5>
+      <h6 id="title">Заголовок страницы</h6>
+
       <h4>ПОЛЕЗНО</h4>
 
       <p>
-        Можно подключить сколько угодно CSS-файлов, добавляя для каждого тег <mark>&lt;link&gt;</mark>.
+        Не используйте идентификаторы для оформления. 
+        Правило уникальности значения делает повторное использование стилей невозможным. 
+        Идентификаторы предназначены для «якорей».
       </p>
+    </section>
+<!--descendant selector-->
+    <section>
+      <a name="descendant-selector"></a>
+      <h2>Селектор потомка</h2>
+
+      <p>
+        Селектор потомка, или контекстный селектор, применяет стили к детям и потомкам элемента при любой глубине вложенности.
+      </p>
+
+      <textarea name="desc-exampl" id="desc-exampl" cols="95" rows="14">
+<a href="">Читайте наш блог!</a>
+
+<ul class="social-links">
+  <li>
+    <a href="">Twitter</a>
+  </li>
+  <li>
+    <a href="">Instagram</a>
+  </li>
+  <li>
+    <a href="">Facebook</a>
+  </li>
+</ul>
+      </textarea>
+
+      <p>
+        Например вместо того, чтобы задавать стиль всем ссылкам, 
+        нужно изменить стили только тех, которые находятся внутри списка с классом <mark>social-links</mark>.
+      </p>
+
+      <textarea name="descendant-exampl" id="descendant-exampl" cols="95" rows="13">
+/* ❌ Применится ко всем ссылкам в документе */
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* ✅ Применится только к ссылкам, которые лежат внутри тега с классом social-links */
+.social-links a {
+  color: blue;
+  text-decoration: none;
+}
+      </textarea>
+
+      <!-- example result-->
+      <h5>RESULT</h5>
+      <a href="">Читайте наш блог!</a>
+
+<ul class="social-links">
+  <li>
+    <a href="">Twitter</a>
+  </li>
+  <li>
+    <a href="">Instagram</a>
+  </li>
+  <li>
+    <a href="">Facebook</a>
+  </li>
+</ul>
+    </section>
+<!--child selector-->
+    <section>
+      <a name="child-selector"></a>
+      <h2>Селектор ребёнка</h2>
+
+      <p>
+        Ещё один распространённый селектор, 
+        который позволяет выбрать только непосредственного ребёнка внутри родительского элемента. 
+        Используем разметку для многоуровневого меню магазина, 
+        в котором необходимо стилизировать теги <mark>&lt;li&gt;</mark> в списке с классом <mark>menu</mark>, но не <mark>submenu</mark>.
+      </p>
+
+      <textarea name="child-sel-html" id="child-sel-html" cols="95" rows="27">
+<ul class="menu">
+  <li>
+    Комьютеры и комплектующие
+    <ul class="submenu">
+      <li>Процессоры</li>
+      <li>Мониторы</li>
+      <li>Видеокарты</li>
+    </ul>
+  </li>
+  <li>
+    Бытовая техника
+    <ul class="submenu">
+      <li>Холодильники</li>
+      <li>Телевизоры</li>
+      <li>Стиральные машины</li>
+    </ul>
+  </li>
+  <li>
+    Товары для дома
+    <ul class="submenu">
+      <li>Кресла</li>
+      <li>Матрасы</li>
+      <li>Электрокамины</li>
+    </ul>
+  </li>
+</ul>
+      </textarea>
+
+      <p>
+        Если использовать селектор потомка (контекстный), 
+        то CSS-правило применится ко всем тегам <mark>&lt;li&gt;</mark>, и красная рамка будет у каждого.
+      </p>
+
+      <textarea name="child-sel-css-wrong" id="child-sel-css-wrong" cols="95" rows="6">
+/* ❌ Не решает задачу */
+.menu li {
+  border: 1px solid tomato;
+}
+      </textarea>
+
+      <p>
+        Селектор ребёнка помогает решить эту проблему, выбрав только те <mark>&lt;li&gt;</mark>, 
+        которые являются детьми (первая вложенность) списка <mark>ul.menu</mark>.
+      </p>
+
+      <textarea name="child-sel-css-true" id="child-sel-css-true" cols="95" rows="6">
+/* ✅ То что нужно */
+.menu > li {
+  border: 1px solid tomato;
+}
+      </textarea>
+
+      <!--example result-->
+      <h5>RESULT</h5>
+      <ul class="menu">
+  <li>
+    Комьютеры и комплектующие
+    <ul class="submenu">
+      <li>Процессоры</li>
+      <li>Мониторы</li>
+      <li>Видеокарты</li>
+    </ul>
+  </li>
+  <li>
+    Бытовая техника
+    <ul class="submenu">
+      <li>Холодильники</li>
+      <li>Телевизоры</li>
+      <li>Стиральные машины</li>
+    </ul>
+  </li>
+  <li>
+    Товары для дома
+    <ul class="submenu">
+      <li>Кресла</li>
+      <li>Матрасы</li>
+      <li>Электрокамины</li>
+    </ul>
+  </li>
+</ul>
+
+    </section>
+<!--attribute selector-->
+    <section>
+      <a name="attribute-selector"></a>
+      <h2>Селектор атрибута</h2>
+
+      <p>
+        Позволяет применить стили к элементам с определённым атрибутом или его значением.
+      </p>
+    </section>
+<!--element attribute-->
+    <section>
+      <a name="element-attribute"></a>
+      <h3>элемент[атрибут]</h3>
+
+      <p>
+        Применит стили ко всем элементам у которых есть указанный атрибут.
+      </p>
+
+      <textarea name="el-attr-ex" id="el-attr-ex" cols="95" rows="10">
+<a href="https://htmlreference.io" title="Справочник тегов">
+  htmlreference.io
+</a>
+
+<a href="https://cssreference.io" title="Справочник стилей">
+  cssreference.io
+</a>
+
+<a href="https://www.youtube.com">YouTube </a>
+      </textarea>
+
+      <p>
+        Выберет все ссылки с атрибутом <mark>title</mark>.
+      </p>
+
+      <textarea name="title-set" id="title-set" cols="95" rows="4">
+a[title] {
+  color: teal;
+}
+      </textarea>
+    </section>
+<!--element attribute value-->
+    <section>
+      <a name="element-attribute-value"></a>
+      <h3>элемент[атрибут="значение"]</h3>
+
+      <p>
+        Применит стили ко всем элементам, у которых есть атрибут с указанным значением.
+      </p>
+
+      <textarea name="el-attr-val" id="el-attr-val" cols="95" rows="10">
+<a href="https://htmlreference.io" title="Справочник тегов">
+  htmlreference.io
+</a>
+
+<a href="https://cssreference.io" title="Справочник стилей">
+  cssreference.io
+</a>
+
+<a href="https://www.youtube.com">YouTube</a>
+      </textarea>
+      
+      <p>
+        Выберет все ссылки с атрибутом <mark>href</mark> и соотвествующим значением.
+      </p>
+
+      <textarea name="el-attr-val-href" id="el-attr-val-href" cols="95" rows="16">
+/* Непривычное форматирование фигурных скобок это нормально */
+a[href="https://htmlreference.io"]
+{
+  color: teal;
+}
+
+a[href="https://cssreference.io"]
+{
+  color: orange;
+}
+
+a[href="https://www.youtube.com"]
+{
+  color: tomato;
+}
+      </textarea>
+
+      <h5>RESULT</h5>
+      <!--example result-->
+      <a href="https://htmlreference.io" title="Справочник тегов">
+        htmlreference.io
+      </a>
+
+      <a href="https://cssreference.io" title="Справочник стилей">
+        cssreference.io
+      </a>
+
+      <a href="https://www.youtube.com">YouTube</a>
+
     </section>
   </main>
      

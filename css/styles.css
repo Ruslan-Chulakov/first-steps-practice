@@ -1,0 +1,102 @@
+/*example in css*/
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.alert {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.success {
+    color: green;
+}
+
+.warning {
+    color: orange;
+}
+
+.error {
+    color: red;
+}
+
+/* text width*/
+
+p {
+    width: 735px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: auto;
+}
+
+/*nav*/
+nav {
+    text-align: left;
+}
+
+/*section padding*/
+
+section {
+    padding-top: 60px;
+}
+
+
+/* E X A M P L E S */
+
+/* Применится ко всем тегам с классом title */
+.title {
+    font-weight: 500;
+}
+
+/* Применится ко всем тегам с классом text */
+.text {
+    color: brown;
+    font-size: 18px;
+}
+
+/* Применится ко всем тегам с классом link */
+.link {
+    text-decoration: none;
+}
+
+/*one more*/
+
+#title {
+    font-weight: 500;
+    color: orange;
+}
+
+/* ✅ Применится только к ссылкам, которые лежат внутри тега с классом social-links */
+.social-links a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* ✅ То что нужно */
+.menu>li {
+    border: 1px solid tomato;
+}
+
+
+
+
+
+
+
+
+/* Непривычное форматирование фигурных скобок это нормально */
+a[href="https://htmlreference.io"] {
+    color: teal;
+}
+
+a[href="https://cssreference.io"] {
+    color: orange;
+}
+
+a[href="https://www.youtube.com"] {
+    color: tomato;
+}
+
