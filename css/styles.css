@@ -42,61 +42,80 @@ nav {
 section {
     padding-top: 60px;
 }
+/*E X A M P L E S  I N  D A  H O U S E*/
 
-
-/* E X A M P L E S */
-
-/* Применится ко всем тегам с классом title */
-.title {
-    font-weight: 500;
-}
-
-/* Применится ко всем тегам с классом text */
-.text {
-    color: brown;
-    font-size: 18px;
-}
-
-/* Применится ко всем тегам с классом link */
 .link {
-    text-decoration: none;
-}
-
-/*one more*/
-
-#title {
-    font-weight: 500;
-    color: orange;
-}
-
-/* ✅ Применится только к ссылкам, которые лежат внутри тега с классом social-links */
-.social-links a {
-    color: blue;
-    text-decoration: none;
-}
-
-/* ✅ То что нужно */
-.menu>li {
-    border: 1px solid tomato;
-}
-
-
-
-
-
-
-
-
-/* Непривычное форматирование фигурных скобок это нормально */
-a[href="https://htmlreference.io"] {
     color: teal;
 }
 
-a[href="https://cssreference.io"] {
-    color: orange;
-}
-
-a[href="https://www.youtube.com"] {
+.link:hover {
     color: tomato;
 }
 
+
+/*Добавим ссылке внутри списка базовый стиль и стиль при наведении.*/
+
+
+.social-links .link {
+    color: teal;
+}
+
+/* Два и более селекторов разделяются запятой */
+.social-links .link:hover,
+.social-links .link:focus {
+    color: orange;
+}
+
+/*active css*/
+
+
+.social-links .link {
+    color: teal;
+}
+
+.social-links .link:hover,
+.social-links .link:focus {
+    color: orange;
+}
+
+.social-links .link:active {
+    color: red;
+}
+
+/*visited css*/
+
+.social-links .link {
+    color: teal;
+}
+
+.social-links .link:hover,
+.social-links .link:focus {
+    color: orange;
+}
+
+.social-links .link:active {
+    color: red;
+}
+
+.social-links .link:visited {
+    color: green;
+}
+
+
+/* hover table*/
+
+.schedule-body>tr:hover {
+    background-color: tomato;
+    color: white;
+}
+
+/* Оформление таблицы */
+.schedule {
+    border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+    padding: 8px;
+    border: 1px solid #212121;
+}

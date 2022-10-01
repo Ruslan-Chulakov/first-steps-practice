@@ -13,506 +13,404 @@
   <header>
     <nav>
       <ul>
-           <li>
-            <a href="#tag-selector">Селектор элемента (тега)</a>
-           </li>
-           <li>
-            <a href="#class-selector">Селектор класса</a>
-           </li>
-           <li>
-            <ul>
-              <li>
-                <a href="#class-composition">Композиция классов</a>
-              </li>
-            </ul>
-           </li> 
-           <li>
-            <a href="#id-selector">Селектор идентификатора</a>
-           </li>
-           <li>
-            <a href="#descendant-selector">Селектор потомка</a>
-           </li>
-           <li>
-            <a href="#child-selector">Селектор ребёнка</a>
-           </li>
-           <li>
-            <a href="#attribute-selector">Селектор атрибута</a>
-           </li>
-           <li>
-            <ul>
-              <li>
-                <a href="#element-attribute">элемент[атрибут]</a>
-              </li>
-              <li>
-                <a href="#element-attribute-value">элемент[атрибут="значение"]</a>
-              </li>
-            </ul>
-           </li>    
+        <li>
+          <a href="#hover">Псевдокласс <mark>:hover</mark></a>
+        </li>
+        <li>
+          <a href="#focus">Псевдокласс <mark>:focus</mark></a>
+        </li>
+        <li>
+          <a href="#active">Псевдокласс <mark>:active</mark></a>
+        </li>
+        <li>
+          <a href="#visited">Псевдокласс <mark>:visited</mark></a>
+        </li>
+        <li>
+          <a href="#hover-table">Ховер и таблицы</a>
+        </li>
+        <li>
+          <a href="#cursor">Свойство <mark>cursor</mark></a>
+        </li>           
       </ul>
     </nav>
   </header>
-
   <main>
-<!--selectors-->
     <section>
-      <h1>Селекторы</h1>
+      <a name="pseudo-classes"></a>
+      <h1>Псевдоклассы состояния</h1>
 
       <p>
-        При помощи различных селекторов можно выбрать один или группу элементов. 
-        Селекторов 
-        <a href="https://code.tutsplus.com/ru/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank" rel="noopener noreferrer nofollow">
-          довольно много
-        </a>
-        , поэтому рассмотрим основные, которые могут применяться каждый день.
+        Селекторы состояния используются для 
+        применения стилей к интерактивным элементам при определённом событии, 
+        например наведении курсора по ссылке или фокусировке с клавиатуры.
       </p>
-
-      <img src="./img/css-selectors.png" alt="css-selectors" width="700">
-    </section>
-<!--tag selector-->
-    <section>
-      <a name="tag-selector"></a>
-      <h2>Селектор элемента (тега)</h2>
-
+      
       <p>
-        Описывает к какому типу элементов будет применено CSS-правило. 
-        Селектор элемента недостаточно специфичный для того, чтобы стилизировать отдельные элементы, 
-        поэтому чаще всего применяется для оформления всех тегов одного типа на странице. 
-        Например <em>если у всех ссылок в документе нужно убрать подчёркивание</em>.
+        Псевдокласс определяет конкретное состояние элемента и прикреплён к селектору тега, класса и т. п. 
+        Пробела между селектором и псевдоклассом нет, 
+        чтобы показать, что они связаны друг с другом. Если добавить пробел, 
+        то псевдокласс применится ко всем элементам в документе.
       </p>
-
-      <textarea name="tag-sel" id="tag-sel" cols="95" rows="10">
-/* Применится ко всем абзацам на странице */
-p {
-  font-size: 24px;
-}
-
-/* Применится ко всем ссылкам на странице */
-a {
-  text-decoration: none;
+      <textarea name="sel-pseudo" id="sel-pseudo" cols="95" rows="4">
+селектор:псевдокласс {
+  /* Свойства */
 }
       </textarea>
     </section>
-<!--class selector-->
+<!--Псевдокласс :hover-->
     <section>
-      <a name="class-selector"></a>
-      <h2>Селектор класса</h2>
+      <a name="hover"></a>
+      <h2>Псевдокласс <mark>:hover</mark></h2>
 
       <p>
-        Основной селектор в современной разработке. Используется в связке с глобальным атрибутом <mark>class</mark>. 
-        Имя класса задаётся только на английском языке, и это обязательно существительное, описывающее что это за элемент. 
-        Для пополнения словарного запаса используйте 
-        <a href="https://github.com/yoksel/common-words" target="_blank" rel="noopener noreferrer nofollow">
-           справочник
-        </a>
-        , 
-        <a href="https://github.com/web-standards-ru/dictionary/blob/master/dictionary.md" target="_blank" rel="noopener noreferrer nofollow">
-          словарь терминов
-        </a>
-         и 
-         <a href="https://github.com/nicothin/idiomatic-pre-CSS/blob/gh-pages/words_and_abbreviations.md" target="_blank" rel="noopener noreferrer nofollow">
-          сокращения
-         </a>
-         .
+        Активируется когда курсор мыши находится в пределах элемента, 
+        например при наведении мыши на ссылку или любой другой элемент.
       </p>
-
-      <textarea name="class-sel" id="class-sel" cols="95" rows="6">
-<h6 class="title">Привет, я Mango.</h6>
-<p class="text">
-  Добро пожаловать на мою личную страницу. Тут можно посмотреть
-  <a class="link" href="">проекты</a>.
+       <textarea name="hover-html" id="hover-html" cols="95" rows="5">
+<p>
+  Отличную шпаргалку по тегам можно найти
+  <a class="link" href="https://htmlreference.io">по ссылке</a>.
 </p>
-      </textarea>
+       </textarea>
 
-      <p>
-        В CSS используется селектор класса, 
-        чтобы задать стили для одного и более элементов с одинаковым значением атрибута <mark>class</mark> (именем класса). 
-        В селекторе, перед именем класса ставится точка <mark>.</mark>.
-      </p>
+       <p>
+        Добавим ссылке базовый стиль и стиль при наведении.
+       </p>
 
-      <textarea name="class-sel-1" id="class-sel-1" cols="95" rows="16">
-/* Применится ко всем тегам с классом title */
-.title {
-  font-weight: 500;
-}
-
-/* Применится ко всем тегам с классом text */
-.text {
-  color: brown;
-  font-size: 18px;
-}
-
-/* Применится ко всем тегам с классом link */
+       <textarea name="hover-css" id="hover-css" cols="95" rows="8">
 .link {
-  text-decoration: none;
+  color: teal;
 }
-      </textarea>
 
-      <!--exampe result-->
-      <H5>RESULT</H5>
-      <h6 class="title">Привет, я Mango.</h6>
-      <p class="text">
-        Добро пожаловать на мою личную страницу. Тут можно посмотреть
-        <a class="link" href="">проекты</a>.
+.link:hover {
+  color: tomato;
+}
+       </textarea>
+
+       <h4>RESULT:</h4>
+
+       <p>
+        Отличную шпаргалку по тегам можно найти
+        <a class="link" href="https://htmlreference.io">по ссылке</a>.
       </p>
 
-      <h4>ВНИМАНИЕ</h4>
+       <p>
+        Псевдоклассы можно применять к любым селекторам, в том числе контекстным.
+       </p>
 
-      <p>
-        В имени класса используются только маленькие буквы и тире. Например, <mark>list</mark>, <mark>list-item</mark>, <mark>logo-image</mark> и т. д. 
-        Подчёркивания <mark>list_item</mark>, заглавные буквы <mark>ListItem</mark> или цифры <mark>listitem27</mark> считаются дурным тоном.
-      </p>
+       <textarea name="hover-html-context" id="hover-html-context" cols="95" rows="8">
+        <ul class="social-links">
+          <li><a class="link" href="https://twitter.com">Twitter</a></li>
+          <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
+          <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
+        </ul>
+       </textarea>
+
+       <p>
+        Добавим ссылке внутри списка базовый стиль и стиль при наведении.
+       </p>
+
+       <textarea name="hover-css-context" id="hover-css-context" cols="95" rows="8">
+        .social-links .link {
+          color: teal;
+        }
+
+        .social-links .link:hover {
+          color: tomato;
+        }
+       </textarea>
+
+       <h4>RESULT:</h4>
+        <ul class="social-links">
+          <li><a class="link" href="https://twitter.com">Twitter</a></li>
+          <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
+          <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
+        </ul>
+
+        <h3>ПОЛЕЗНО</h3>
+
+        <p>
+          Такой селектор читается как «При ховере по элементам с классом <mark>link</mark>, 
+          которые находятся внутри элемента с классом <mark>social-links</mark>». То есть читаются селекторы справа налево.
+        </p>
     </section>
-<!--class composition-->
+<!--Псевдокласс :focus-->
     <section>
-      <a name="class-composition"></a>
-      <h3>Композиция классов</h3>
+      <a name="focus"></a>
+      <h2>Псевдокласс <mark>:focus</mark></h2>
 
       <p>
-        У элемента может быть несколько классов, тогда они записываются через пробел.
+        Активируется когда интерактивный элемент (ссылка, кнопка, поле формы) получает фокус при 
+        навигации по странице клавиатурой (клавишей <mark>Tab</mark>).
       </p>
 
-      <textarea name="class-comp-fev" id="class-comp-fev" cols="95" rows="2">
-<element class="value1 value2 value3"></element>
-      </textarea>
-
-      <img src="./img/class-composition.png" alt="class-composition" width="700">
-
-      <p>
-        Это можно применять для комбинирования и повторного использования стилей. 
-        Создадим разметку и стили для компонента оповещений.
-      </p>
-
-      <textarea name="markup-and-styles" id="markup-and-styles" cols="95" rows="4">
-<p class="alert success">Пополнение счёта выполнено</p>
-<p class="alert warning">Внимание, будут изменены тарифы</p>
-<p class="alert error">Ошибка проведения транзакции</p>
+      <textarea name="focus-html" id="focus-html" cols="95" rows="8">
+<ul class="social-links">
+  <li><a class="link" href="https://twitter.com">Twitter</a></li>
+  <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
+  <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
+</ul>
       </textarea>
 
       <p>
-        В стилях описываем несколько правил, общие для всех оповещений и специфические для каждого типа.
+        Добавим ссылке внутри списка базовый стиль и стиль при фокусе.
       </p>
 
-      <textarea name="rules-for-alerts" id="rules-for-alerts" cols="95" rows="19">
-/* Общие стили для всех типов оповещений */
-.alert {
-  font-size: 24px;
-  font-weight: 500;
+      <textarea name="focus-css" id="focus-css" cols="95" rows="8">
+.social-links .link {
+  color: teal;
 }
 
-/* Специфические стили для каждого типа */
-.success {
-  color: green;
+.social-links .link:focus {
+  color: orange;
+}
+      </textarea>
+
+      <p>
+        Для того, чтобы учесть наведение и фокусировку, стоит стилизировать сразу оба состояния. 
+        Это делается простым перечислением селекторов.
+      </p>
+      
+      <textarea name="focus-css-few" id="focus-css-few" cols="95" rows="10">
+.social-links .link {
+  color: teal;
 }
 
-.warning {
+/* Два и более селекторов разделяются запятой */
+.social-links .link:hover,
+.social-links .link:focus {
+  color: orange;
+}
+      </textarea>
+
+      <h4>RESULT:</h4>
+
+      <ul class="social-links">
+        <li><a class="link" href="https://twitter.com">Twitter</a></li>
+        <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
+        <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
+      </ul>
+    </section>
+<!--Псевдокласс :active-->
+    <section>
+      <a name="active"></a>
+      <h2>Псевдокласс <mark>:active</mark></h2>
+
+      <p>
+        Происходит при активации элемента. Например, ссылка становится активной, если навести на неё курсор и щёлкнуть мышкой. 
+        Несмотря на то, что активным может стать практически любой элемент, псевдокласс <mark>:active</mark> используется в основном для ссылок и кнопок.
+      </p>
+
+      <textarea name="active-html" id="active-html" cols="95" rows="6">
+<ul class="social-links">
+  <li><a class="link" href="https://twitter.com">Twitter</a></li>
+  <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
+  <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
+</ul>
+      </textarea>
+      <textarea name="active-css" id="active-css" cols="95" rows="13">
+.social-links .link {
+  color: teal;
+}
+
+.social-links .link:hover,
+.social-links .link:focus {
   color: orange;
 }
 
-.error {
+.social-links .link:active {
   color: red;
 }
       </textarea>
-      
-      <p>
-        Вот рабочий пример.
-      </p>
 
-      <!--example in html-->
-      <p class="alert success">Account registration success</p>
-      <p class="alert warning">Attention, tariffs will be changed</p>
-      <p class="alert error">Transaction error</p>
-
+      <h4>RESULT:</h4>
+      <ul class="social-links">
+        <li><a class="link" href="https://twitter.com">Twitter</a></li>
+        <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
+        <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
+      </ul>
     </section>
-<!--ID selector-->
+<!--Псевдокласс :visited-->
     <section>
-      <a name="id-selector"></a>
-      <h2>Селектор идентификатора</h2>
+      <a name="visited"></a>
+      <h2>Псевдокласс <mark>:visited</mark></h2>
 
       <p>
-        Как и с классом, тегам можно задавать глобальный атрибут <mark>id</mark>. Отличие в том, 
-        что значение <mark>id</mark> должно быть уникальным на странице, 
-        то есть не может быть двух элементов с одинаковыми значениями идентификатора.
+        Этот псевдокласс активируется на ссылках, которые уже были посещены. 
+        По умолчанию ссылки отображаются синими и при посещении становятся фиолетовыми.
       </p>
 
-      <textarea name="id-example" id="id-example" cols="95" rows="2">
-<h6 id="title">Заголовок страницы</h6>
-      </textarea>
-      
-      <p>
-        В CSS-селекторе, перед именем идентификатора, ставится символ решетки <mark>&#35</mark>
-      </p>
-
-      <textarea name="id-css-example" id="id-css-example" cols="95" rows="5">
-#title {
-  font-weight: 500;
-  color: orange;
-}
-      </textarea>
-
-      <!--example result-->
-      <h5>RESULT</h5>
-      <h6 id="title">Заголовок страницы</h6>
-
-      <h4>ПОЛЕЗНО</h4>
-
-      <p>
-        Не используйте идентификаторы для оформления. 
-        Правило уникальности значения делает повторное использование стилей невозможным. 
-        Идентификаторы предназначены для «якорей».
-      </p>
-    </section>
-<!--descendant selector-->
-    <section>
-      <a name="descendant-selector"></a>
-      <h2>Селектор потомка</h2>
-
-      <p>
-        Селектор потомка, или контекстный селектор, применяет стили к детям и потомкам элемента при любой глубине вложенности.
-      </p>
-
-      <textarea name="desc-exampl" id="desc-exampl" cols="95" rows="14">
-<a href="">Читайте наш блог!</a>
-
+      <textarea name="visited-html" id="visited-html" cols="95" rows="10">
 <ul class="social-links">
-  <li>
-    <a href="">Twitter</a>
-  </li>
-  <li>
-    <a href="">Instagram</a>
-  </li>
-  <li>
-    <a href="">Facebook</a>
-  </li>
+  <li><a href="https://twitter.com" class="link">Twitter</a></li>
+  <li><a href="https://www.instagram.com" class="link">Instagram</a></li>
+  <li><a href="https://www.facebook.com" class="link">Facebook</a></li>
 </ul>
       </textarea>
-
-      <p>
-        Например вместо того, чтобы задавать стиль всем ссылкам, 
-        нужно изменить стили только тех, которые находятся внутри списка с классом <mark>social-links</mark>.
-      </p>
-
-      <textarea name="descendant-exampl" id="descendant-exampl" cols="95" rows="13">
-/* ❌ Применится ко всем ссылкам в документе */
-a {
-  color: blue;
-  text-decoration: none;
-}
-
-/* ✅ Применится только к ссылкам, которые лежат внутри тега с классом social-links */
-.social-links a {
-  color: blue;
-  text-decoration: none;
-}
-      </textarea>
-
-      <!-- example result-->
-      <h5>RESULT</h5>
-      <a href="">Читайте наш блог!</a>
-
-<ul class="social-links">
-  <li>
-    <a href="">Twitter</a>
-  </li>
-  <li>
-    <a href="">Instagram</a>
-  </li>
-  <li>
-    <a href="">Facebook</a>
-  </li>
-</ul>
-    </section>
-<!--child selector-->
-    <section>
-      <a name="child-selector"></a>
-      <h2>Селектор ребёнка</h2>
-
-      <p>
-        Ещё один распространённый селектор, 
-        который позволяет выбрать только непосредственного ребёнка внутри родительского элемента. 
-        Используем разметку для многоуровневого меню магазина, 
-        в котором необходимо стилизировать теги <mark>&lt;li&gt;</mark> в списке с классом <mark>menu</mark>, но не <mark>submenu</mark>.
-      </p>
-
-      <textarea name="child-sel-html" id="child-sel-html" cols="95" rows="27">
-<ul class="menu">
-  <li>
-    Комьютеры и комплектующие
-    <ul class="submenu">
-      <li>Процессоры</li>
-      <li>Мониторы</li>
-      <li>Видеокарты</li>
-    </ul>
-  </li>
-  <li>
-    Бытовая техника
-    <ul class="submenu">
-      <li>Холодильники</li>
-      <li>Телевизоры</li>
-      <li>Стиральные машины</li>
-    </ul>
-  </li>
-  <li>
-    Товары для дома
-    <ul class="submenu">
-      <li>Кресла</li>
-      <li>Матрасы</li>
-      <li>Электрокамины</li>
-    </ul>
-  </li>
-</ul>
-      </textarea>
-
-      <p>
-        Если использовать селектор потомка (контекстный), 
-        то CSS-правило применится ко всем тегам <mark>&lt;li&gt;</mark>, и красная рамка будет у каждого.
-      </p>
-
-      <textarea name="child-sel-css-wrong" id="child-sel-css-wrong" cols="95" rows="6">
-/* ❌ Не решает задачу */
-.menu li {
-  border: 1px solid tomato;
-}
-      </textarea>
-
-      <p>
-        Селектор ребёнка помогает решить эту проблему, выбрав только те <mark>&lt;li&gt;</mark>, 
-        которые являются детьми (первая вложенность) списка <mark>ul.menu</mark>.
-      </p>
-
-      <textarea name="child-sel-css-true" id="child-sel-css-true" cols="95" rows="6">
-/* ✅ То что нужно */
-.menu > li {
-  border: 1px solid tomato;
-}
-      </textarea>
-
-      <!--example result-->
-      <h5>RESULT</h5>
-      <ul class="menu">
-  <li>
-    Комьютеры и комплектующие
-    <ul class="submenu">
-      <li>Процессоры</li>
-      <li>Мониторы</li>
-      <li>Видеокарты</li>
-    </ul>
-  </li>
-  <li>
-    Бытовая техника
-    <ul class="submenu">
-      <li>Холодильники</li>
-      <li>Телевизоры</li>
-      <li>Стиральные машины</li>
-    </ul>
-  </li>
-  <li>
-    Товары для дома
-    <ul class="submenu">
-      <li>Кресла</li>
-      <li>Матрасы</li>
-      <li>Электрокамины</li>
-    </ul>
-  </li>
-</ul>
-
-    </section>
-<!--attribute selector-->
-    <section>
-      <a name="attribute-selector"></a>
-      <h2>Селектор атрибута</h2>
-
-      <p>
-        Позволяет применить стили к элементам с определённым атрибутом или его значением.
-      </p>
-    </section>
-<!--element attribute-->
-    <section>
-      <a name="element-attribute"></a>
-      <h3>элемент[атрибут]</h3>
-
-      <p>
-        Применит стили ко всем элементам у которых есть указанный атрибут.
-      </p>
-
-      <textarea name="el-attr-ex" id="el-attr-ex" cols="95" rows="10">
-<a href="https://htmlreference.io" title="Справочник тегов">
-  htmlreference.io
-</a>
-
-<a href="https://cssreference.io" title="Справочник стилей">
-  cssreference.io
-</a>
-
-<a href="https://www.youtube.com">YouTube </a>
-      </textarea>
-
-      <p>
-        Выберет все ссылки с атрибутом <mark>title</mark>.
-      </p>
-
-      <textarea name="title-set" id="title-set" cols="95" rows="4">
-a[title] {
-  color: teal;
-}
-      </textarea>
-    </section>
-<!--element attribute value-->
-    <section>
-      <a name="element-attribute-value"></a>
-      <h3>элемент[атрибут="значение"]</h3>
-
-      <p>
-        Применит стили ко всем элементам, у которых есть атрибут с указанным значением.
-      </p>
-
-      <textarea name="el-attr-val" id="el-attr-val" cols="95" rows="10">
-<a href="https://htmlreference.io" title="Справочник тегов">
-  htmlreference.io
-</a>
-
-<a href="https://cssreference.io" title="Справочник стилей">
-  cssreference.io
-</a>
-
-<a href="https://www.youtube.com">YouTube</a>
-      </textarea>
-      
-      <p>
-        Выберет все ссылки с атрибутом <mark>href</mark> и соотвествующим значением.
-      </p>
-
-      <textarea name="el-attr-val-href" id="el-attr-val-href" cols="95" rows="16">
-/* Непривычное форматирование фигурных скобок это нормально */
-a[href="https://htmlreference.io"]
-{
+      <textarea name="visited-css" id="visited-css" cols="95" rows="17">
+.social-links .link {
   color: teal;
 }
 
-a[href="https://cssreference.io"]
-{
+.social-links .link:hover,
+.social-links .link:focus {
   color: orange;
 }
 
-a[href="https://www.youtube.com"]
-{
-  color: tomato;
+.social-links .link:active {
+  color: red;
+}
+
+.social-links .link:visited {
+  color: green;
+}
+      </textarea>
+    </section>
+<!--Ховер и таблицы-->
+    <section>
+      <a name="hover-table"></a>
+      <h2>Ховер и таблицы</h2>
+
+      <p>
+        Псевдокласс <mark>:hover</mark> не обязательно должен применяться к ссылкам, его можно добавлять и к другим элементам документа. 
+        Например, к строкам или ячейкам таблицы, чтобы они меняли цвет фона при наведении курсора мыши.
+      </p>
+
+      <textarea name="hov-table-html" id="hov-table-html" cols="95" rows="28">
+<table class="schedule">
+  <thead>
+    <tr>
+      <th>Номер</th>
+      <th>Маршрут</th>
+      <th>Время в пути</th>
+    </tr>
+  </thead>
+
+  <tbody class="schedule-body">
+    <tr>
+      <td>433</td>
+      <td>Киев - Ковель</td>
+      <td>5 часов</td>
+    </tr>
+    <tr>
+      <td>701</td>
+      <td>Харьков - Днепр</td>
+      <td>7 часов</td>
+    </tr>
+    <tr>
+      <td>258</td>
+      <td>Львов - Одесса</td>
+      <td>4 часа</td>
+    </tr>
+  </tbody>
+</table>
+      </textarea>
+
+      <p>
+        Добавим базовое оформление таблицы и стили для ховера по строкам.
+      </p>
+      <textarea name="hov-table-css" id="hov-table-css" cols="95" rows="16">
+.schedule-body > tr:hover {
+  background-color: tomato;
+  color: white;
+}
+
+/* Оформление таблицы */
+.schedule {
+  border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+  padding: 8px;
+  border: 1px solid #212121;
 }
       </textarea>
 
-      <h5>RESULT</h5>
-      <!--example result-->
-      <a href="https://htmlreference.io" title="Справочник тегов">
-        htmlreference.io
-      </a>
+      <h4>RESULT:</h4>
+      <table class="schedule">
+  <thead>
+    <tr>
+      <th>Номер</th>
+      <th>Маршрут</th>
+      <th>Время в пути</th>
+    </tr>
+  </thead>
 
-      <a href="https://cssreference.io" title="Справочник стилей">
-        cssreference.io
-      </a>
-
-      <a href="https://www.youtube.com">YouTube</a>
+  <tbody class="schedule-body">
+    <tr>
+      <td>433</td>
+      <td>Киев - Ковель</td>
+      <td>5 часов</td>
+    </tr>
+    <tr>
+      <td>701</td>
+      <td>Харьков - Днепр</td>
+      <td>7 часов</td>
+    </tr>
+    <tr>
+      <td>258</td>
+      <td>Львов - Одесса</td>
+      <td>4 часа</td>
+    </tr>
+  </tbody>
+</table>
 
     </section>
+<!--Свойство cursor-->
+    <section>
+      <a name="cursor"></a>
+      <h2>Свойство <mark>cursor</mark></h2>
+
+      <p>
+        Устанавливает тип указателя мыши, когда он находится в пределах элемента. Вид курсора зависит от операционной системы и её настроек. Менять тип курсора просто так плохая идея, это только запутает пользователя, 
+        когда вместо привычной руки или лупы он увидит что-то другое. В большинстве случаев лучше оставить всё как есть.
+      </p>
+
+      <p>
+        Наводите мышкой на текст (значения свойства) и курсор будет изменять свой вид.
+      </p>
+
+      <ul>
+        <li>auto</li>
+        <li>default</li>
+        <li>none</li>
+        <li>context-menu</li>
+        <li>help</li>
+        <li>pointer</li>
+        <li>progress</li>
+        <li>wait</li>
+        <li>cell</li>
+        <li>crosshair</li>
+        <li>text</li>
+        <li>vertical-text</li>
+        <li>alias</li>
+        <li>copy</li>
+        <li>move</li>
+        <li>no-drop</li>
+        <li>not-allowed</li>
+        <li>all-scroll</li>
+        <li>col-resize</li>
+        <li>row-resize</li>
+        <li>n-resize</li>
+        <li>s-resize</li>
+        <li>e-resize</li>
+        <li>w-resize</li>
+        <li>ns-resize</li>
+        <li>ew-resize</li>
+        <li>ne-resize</li>
+        <li>nw-resize</li>
+        <li>se-resize</li>
+        <li>sw-resize</li>
+        <li>nesw-resize</li>
+        <li>nwse-resize</li>
+      </ul>
+    </section>
+
   </main>
-     
+  <footer>
+    <a href="#pseudo-clases">Вверх</a>
+
+  </footer>
 </body>
 </html>
