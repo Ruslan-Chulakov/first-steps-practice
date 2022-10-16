@@ -4,412 +4,263 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Training-manual</title>
 </head>
 
 
 <body>
   <header>
-    <nav>
-      <ul>
-        <li>
-          <a href="#hover">Псевдокласс <mark>:hover</mark></a>
+    <nav class="nav">
+      <a name="nav-anchor"></a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#text-color-link">Цвет текста</a>
         </li>
-        <li>
-          <a href="#focus">Псевдокласс <mark>:focus</mark></a>
+        <li class="nav-item">
+          <a href="#bg-color-anchor">Цвет фона</a>
         </li>
-        <li>
-          <a href="#active">Псевдокласс <mark>:active</mark></a>
+        <li class="nav-item">
+          <a href="#named-colors-anchor">Именованные цвета</a>
         </li>
-        <li>
-          <a href="#visited">Псевдокласс <mark>:visited</mark></a>
+        <li class="nav-item">
+          <a href="#rgb-anchor">RGB</a>
         </li>
-        <li>
-          <a href="#hover-table">Ховер и таблицы</a>
+        <li class="nav-item">
+          <a href="#hexadecimal-anchor">Hexadecimal</a>
         </li>
-        <li>
-          <a href="#cursor">Свойство <mark>cursor</mark></a>
-        </li>           
+        <li class="nav-item">
+          <a href="#transparent-anchor">Прозрачность цвета</a>
+        </li>
       </ul>
+      
     </nav>
   </header>
-  <main>
-    <section>
-      <a name="pseudo-classes"></a>
-      <h1>Псевдоклассы состояния</h1>
-
-      <p>
-        Селекторы состояния используются для 
-        применения стилей к интерактивным элементам при определённом событии, 
-        например наведении курсора по ссылке или фокусировке с клавиатуры.
-      </p>
-      
-      <p>
-        Псевдокласс определяет конкретное состояние элемента и прикреплён к селектору тега, класса и т. п. 
-        Пробела между селектором и псевдоклассом нет, 
-        чтобы показать, что они связаны друг с другом. Если добавить пробел, 
-        то псевдокласс применится ко всем элементам в документе.
-      </p>
-      <textarea name="sel-pseudo" id="sel-pseudo" cols="95" rows="4">
-селектор:псевдокласс {
-  /* Свойства */
-}
-      </textarea>
-    </section>
-<!--Псевдокласс :hover-->
-    <section>
-      <a name="hover"></a>
-      <h2>Псевдокласс <mark>:hover</mark></h2>
-
-      <p>
-        Активируется когда курсор мыши находится в пределах элемента, 
-        например при наведении мыши на ссылку или любой другой элемент.
-      </p>
-       <textarea name="hover-html" id="hover-html" cols="95" rows="5">
-<p>
-  Отличную шпаргалку по тегам можно найти
-  <a class="link" href="https://htmlreference.io">по ссылке</a>.
+  <main>    
+      <section class="section">
+        <div class="container">
+           <h1>
+            Работа с цветом
+            <a name="main-title"></a>
+          </h1> 
+        </div>   
+      </section>
+      <section class="text-color">
+        <div class="container">
+          <h2>Цвет текста
+          <a name="text-color-link"></a>
+          </h2>
+          <p>
+            При помощи свойства <span class="span-bg-color">color</span> можно изменить цвет текста элемента. 
+            Современные браузеры поддерживают несколько основных способов описания цвета: ключевые слова, rgb и hex.
+          </p>
+          <textarea name="" id="" cols="95" rows="6">
+<p class="text">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+  cumque fuga facere labore quo id necessitatibus quaerat rerum.
 </p>
-       </textarea>
-
-       <p>
-        Добавим ссылке базовый стиль и стиль при наведении.
-       </p>
-
-       <textarea name="hover-css" id="hover-css" cols="95" rows="8">
-.link {
-  color: teal;
-}
-
-.link:hover {
+          </textarea>
+          <textarea name="" id="" cols="95" rows="4">
+.text {
   color: tomato;
 }
-       </textarea>
-
-       <h4>RESULT:</h4>
-
-       <p>
-        Отличную шпаргалку по тегам можно найти
-        <a class="link" href="https://htmlreference.io">по ссылке</a>.
-      </p>
-
-       <p>
-        Псевдоклассы можно применять к любым селекторам, в том числе контекстным.
-       </p>
-
-       <textarea name="hover-html-context" id="hover-html-context" cols="95" rows="8">
-        <ul class="social-links">
-          <li><a class="link" href="https://twitter.com">Twitter</a></li>
-          <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
-          <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
-        </ul>
-       </textarea>
-
-       <p>
-        Добавим ссылке внутри списка базовый стиль и стиль при наведении.
-       </p>
-
-       <textarea name="hover-css-context" id="hover-css-context" cols="95" rows="8">
-        .social-links .link {
-          color: teal;
-        }
-
-        .social-links .link:hover {
-          color: tomato;
-        }
-       </textarea>
-
-       <h4>RESULT:</h4>
-        <ul class="social-links">
-          <li><a class="link" href="https://twitter.com">Twitter</a></li>
-          <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
-          <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
-        </ul>
-
-        <h3>ПОЛЕЗНО</h3>
-
-        <p>
-          Такой селектор читается как «При ховере по элементам с классом <mark>link</mark>, 
-          которые находятся внутри элемента с классом <mark>social-links</mark>». То есть читаются селекторы справа налево.
-        </p>
-    </section>
-<!--Псевдокласс :focus-->
-    <section>
-      <a name="focus"></a>
-      <h2>Псевдокласс <mark>:focus</mark></h2>
-
-      <p>
-        Активируется когда интерактивный элемент (ссылка, кнопка, поле формы) получает фокус при 
-        навигации по странице клавиатурой (клавишей <mark>Tab</mark>).
-      </p>
-
-      <textarea name="focus-html" id="focus-html" cols="95" rows="8">
-<ul class="social-links">
-  <li><a class="link" href="https://twitter.com">Twitter</a></li>
-  <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
-  <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
-</ul>
-      </textarea>
-
-      <p>
-        Добавим ссылке внутри списка базовый стиль и стиль при фокусе.
-      </p>
-
-      <textarea name="focus-css" id="focus-css" cols="95" rows="8">
-.social-links .link {
-  color: teal;
-}
-
-.social-links .link:focus {
-  color: orange;
-}
-      </textarea>
-
-      <p>
-        Для того, чтобы учесть наведение и фокусировку, стоит стилизировать сразу оба состояния. 
-        Это делается простым перечислением селекторов.
-      </p>
-      
-      <textarea name="focus-css-few" id="focus-css-few" cols="95" rows="10">
-.social-links .link {
-  color: teal;
-}
-
-/* Два и более селекторов разделяются запятой */
-.social-links .link:hover,
-.social-links .link:focus {
-  color: orange;
-}
-      </textarea>
-
-      <h4>RESULT:</h4>
-
-      <ul class="social-links">
-        <li><a class="link" href="https://twitter.com">Twitter</a></li>
-        <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
-        <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
-      </ul>
-    </section>
-<!--Псевдокласс :active-->
-    <section>
-      <a name="active"></a>
-      <h2>Псевдокласс <mark>:active</mark></h2>
-
-      <p>
-        Происходит при активации элемента. Например, ссылка становится активной, если навести на неё курсор и щёлкнуть мышкой. 
-        Несмотря на то, что активным может стать практически любой элемент, псевдокласс <mark>:active</mark> используется в основном для ссылок и кнопок.
-      </p>
-
-      <textarea name="active-html" id="active-html" cols="95" rows="6">
-<ul class="social-links">
-  <li><a class="link" href="https://twitter.com">Twitter</a></li>
-  <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
-  <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
-</ul>
-      </textarea>
-      <textarea name="active-css" id="active-css" cols="95" rows="13">
-.social-links .link {
-  color: teal;
-}
-
-.social-links .link:hover,
-.social-links .link:focus {
-  color: orange;
-}
-
-.social-links .link:active {
-  color: red;
-}
-      </textarea>
-
-      <h4>RESULT:</h4>
-      <ul class="social-links">
-        <li><a class="link" href="https://twitter.com">Twitter</a></li>
-        <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
-        <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
-      </ul>
-    </section>
-<!--Псевдокласс :visited-->
-    <section>
-      <a name="visited"></a>
-      <h2>Псевдокласс <mark>:visited</mark></h2>
-
-      <p>
-        Этот псевдокласс активируется на ссылках, которые уже были посещены. 
-        По умолчанию ссылки отображаются синими и при посещении становятся фиолетовыми.
-      </p>
-
-      <textarea name="visited-html" id="visited-html" cols="95" rows="10">
-<ul class="social-links">
-  <li><a href="https://twitter.com" class="link">Twitter</a></li>
-  <li><a href="https://www.instagram.com" class="link">Instagram</a></li>
-  <li><a href="https://www.facebook.com" class="link">Facebook</a></li>
-</ul>
-      </textarea>
-      <textarea name="visited-css" id="visited-css" cols="95" rows="17">
-.social-links .link {
-  color: teal;
-}
-
-.social-links .link:hover,
-.social-links .link:focus {
-  color: orange;
-}
-
-.social-links .link:active {
-  color: red;
-}
-
-.social-links .link:visited {
-  color: green;
-}
-      </textarea>
-    </section>
-<!--Ховер и таблицы-->
-    <section>
-      <a name="hover-table"></a>
-      <h2>Ховер и таблицы</h2>
-
-      <p>
-        Псевдокласс <mark>:hover</mark> не обязательно должен применяться к ссылкам, его можно добавлять и к другим элементам документа. 
-        Например, к строкам или ячейкам таблицы, чтобы они меняли цвет фона при наведении курсора мыши.
-      </p>
-
-      <textarea name="hov-table-html" id="hov-table-html" cols="95" rows="28">
-<table class="schedule">
-  <thead>
-    <tr>
-      <th>Номер</th>
-      <th>Маршрут</th>
-      <th>Время в пути</th>
-    </tr>
-  </thead>
-
-  <tbody class="schedule-body">
-    <tr>
-      <td>433</td>
-      <td>Киев - Ковель</td>
-      <td>5 часов</td>
-    </tr>
-    <tr>
-      <td>701</td>
-      <td>Харьков - Днепр</td>
-      <td>7 часов</td>
-    </tr>
-    <tr>
-      <td>258</td>
-      <td>Львов - Одесса</td>
-      <td>4 часа</td>
-    </tr>
-  </tbody>
-</table>
-      </textarea>
-
-      <p>
-        Добавим базовое оформление таблицы и стили для ховера по строкам.
-      </p>
-      <textarea name="hov-table-css" id="hov-table-css" cols="95" rows="16">
-.schedule-body > tr:hover {
+          </textarea>
+          <h3>ПОЛЕЗНО</h3>
+          <p>
+            На сервисе 
+            <a href="https://htmlcolorcodes.com/color-picker/" rel="noopener noreferrer nofollow" class="resource-link">
+              htmlcolorcodes.com
+            </a> 
+            можно посмотреть значения цветов в разных форматах.
+          </p>
+        </div>        
+      </section>
+      <section class="background-color">
+        <div class="container">
+          <h2>
+            Цвет фона
+            <a name="bg-color-anchor"></a>
+          </h2>
+          <p>
+            Свойство 
+            <span class="span-bg-color">background-color</span> 
+            позволяет изменить цвет фона элемента.
+          </p>
+          <textarea name="" id="" cols="95" rows="6" class="html">
+<p class="text">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+  cumque fuga facere labore quo id necessitatibus quaerat rerum.
+</p>
+          </textarea>
+          <textarea name="" id="" cols="95" rows="5" class="css">
+.text {
   background-color: tomato;
   color: white;
 }
+          </textarea>
+        </div>     
+      </section>
+      <section class="named-colors">
+        <div class="container">
+          <h2>Именованные цвета
+            <a name="named-colors-anchor"></a>
+          </h2>
+          <p>
+            Для описания цвета в стилях можно использовать 
+            <a href="https://htmlcolorcodes.com/color-names/" class="resource-link" rel="noopener noreferrer nofollow">
+              набор зарезервированных слов.
+            </a>
+            В современной веб-разработке они уже не используются, 
+            но бывают полезными если нужно быстро поставить какой-то цвет.
+          </p>
+          <textarea name="" id="" cols="95" rows="4" class="css">
+p {
+  color: tomato;
+}
+          </textarea>
+        </div>
+      </section>
 
-/* Оформление таблицы */
-.schedule {
-  border-collapse: collapse;
+      <section class="rgb">
+        <div class="container">
+          <h2>RGB
+            <a name="rgb-anchor"></a>
+          </h2>
+          <p>
+            Есть три основные цвета: 
+            <span class="span-red">красный</span>, <span class="span-green">зелёный</span> и <span class="span-blue">синий</span>. 
+            Смешивая их в различных пропорциях можно получить любой другой цвет.
+          </p>
+          <img src="./img/rgb-chart.png" alt="rgb palitra" width="500">
+          <p>
+            В этом формате для задания значения используется функция 
+            <span class="span-bg-color">rgb()</span>
+            ,
+             в которой указывается доля каждого из трёх основных цветов,
+             после чего они смешиваются и получается нужный цвет.
+          </p>
+          <textarea name="" id="" cols="95" rows="2" class="mark">
+            rgb(красный, зелёный, синий)
+          </textarea>
+          <p>
+            Диапазон значений можно указывать числами 
+            от <span class="span-bg-color">0</span> 
+            (полное отсутствие цвета) до
+            <span class="span-bg-color">255</span> 
+            (максимальная доля). 
+            Это основный способ задания RGB-цвета.
+          </p>
+          <textarea name="" id="" cols="95" rows="5" class="css">
+/* Чистый красный цвет: 255 красного, 0 зеленого, 0 синего */
+p {
+  color: rgb(255, 0, 0);
+}
+          </textarea>
+          <p>
+            Или процентами от 
+            <span class="span-bg-color">0%</span>  
+            до 
+            <span class="span-bg-color">100%.</span>
+          </p>
+          <textarea name="" id="" cols="95" rows="5" class="css">
+/* Чистый красный цвет: 100% красного, 0% зеленого, 0% синего */
+p {
+  color: rgb(100%, 0%, 0%);
+}
+          </textarea>
+        </div>       
+      </section>
+
+      <section class="hexadecimal">
+        <div class="container">
+          <h2>Hexadecimal
+            <a name="hexadecimal-anchor"></a>
+          </h2>
+          <p>
+            Это описание цвета основано на записи числа в шестнадцатеричной системе счисления. 
+            Доля каждого из трёх основных цветов описывается двумя цифрами.
+          </p>
+          <img src="./img/hex-color-format.jpg" alt="hexadecimal format" width="500">
+          <p>
+            В качестве цифр этой системы счисления используется набор цифр от 
+             <span class="span-bg-color">0</span> 
+            до
+            <span class="span-bg-color">9</span>
+            и латинские буквы от 
+            <span class="span-bg-color">A</span> 
+            до 
+            <span class="span-bg-color">F</span>
+            в нижнем или верхнем регистре.
+          </p>
+          <ul class="hexadecimal-list">
+            <li>
+              <span class="span-bg-color">0</span> - самая маленькая доля цвета
+            </li>
+            <li>
+              <span class="span-bg-color">f</span> - самая большая доля цвета
+            </li>
+          </ul>
+          <textarea name="" id="" cols="95" rows="15" class="css">
+/* Чистый красный цвет: ff (100%) красного, 00 (0%) зеленого, 00 (0%) синего */
+p {
+  color: #ff0000;
 }
 
-.schedule th,
-.schedule td {
-  padding: 8px;
-  border: 1px solid #212121;
+/* Чистый зелёный цвет: 00 (0%) красного, ff (100%) зеленого, 00 (0%) синего */
+p {
+  color: #00ff00;
 }
-      </textarea>
 
-      <h4>RESULT:</h4>
-      <table class="schedule">
-  <thead>
-    <tr>
-      <th>Номер</th>
-      <th>Маршрут</th>
-      <th>Время в пути</th>
-    </tr>
-  </thead>
+/* Чистый синий цвет: 00 (0%) красного, 00 (0%) зеленого, ff (100%) синего */
+p {
+  color: #0000ff;
+}
+          </textarea>
+        </div>
+      </section>
 
-  <tbody class="schedule-body">
-    <tr>
-      <td>433</td>
-      <td>Киев - Ковель</td>
-      <td>5 часов</td>
-    </tr>
-    <tr>
-      <td>701</td>
-      <td>Харьков - Днепр</td>
-      <td>7 часов</td>
-    </tr>
-    <tr>
-      <td>258</td>
-      <td>Львов - Одесса</td>
-      <td>4 часа</td>
-    </tr>
-  </tbody>
-</table>
-
-    </section>
-<!--Свойство cursor-->
-    <section>
-      <a name="cursor"></a>
-      <h2>Свойство <mark>cursor</mark></h2>
-
-      <p>
-        Устанавливает тип указателя мыши, когда он находится в пределах элемента. Вид курсора зависит от операционной системы и её настроек. Менять тип курсора просто так плохая идея, это только запутает пользователя, 
-        когда вместо привычной руки или лупы он увидит что-то другое. В большинстве случаев лучше оставить всё как есть.
-      </p>
-
-      <p>
-        Наводите мышкой на текст (значения свойства) и курсор будет изменять свой вид.
-      </p>
-
-      <ul>
-        <li>auto</li>
-        <li>default</li>
-        <li>none</li>
-        <li>context-menu</li>
-        <li>help</li>
-        <li>pointer</li>
-        <li>progress</li>
-        <li>wait</li>
-        <li>cell</li>
-        <li>crosshair</li>
-        <li>text</li>
-        <li>vertical-text</li>
-        <li>alias</li>
-        <li>copy</li>
-        <li>move</li>
-        <li>no-drop</li>
-        <li>not-allowed</li>
-        <li>all-scroll</li>
-        <li>col-resize</li>
-        <li>row-resize</li>
-        <li>n-resize</li>
-        <li>s-resize</li>
-        <li>e-resize</li>
-        <li>w-resize</li>
-        <li>ns-resize</li>
-        <li>ew-resize</li>
-        <li>ne-resize</li>
-        <li>nw-resize</li>
-        <li>se-resize</li>
-        <li>sw-resize</li>
-        <li>nesw-resize</li>
-        <li>nwse-resize</li>
-      </ul>
-    </section>
+      <section class="transparent">
+        <div class="container">
+          <h2>Прозрачность цвета
+            <a name="transparent-anchor"></a>
+          </h2>
+          <p>
+            Основной способ добавления прозрачности цвета это функция <span class="span-bg-color">rgba()</span> . 
+            В отличии от <span class="span-bg-color">rgb()</span> ещё добавляется прозрачность (альфа канал).
+          </p>
+          <textarea name="" id="" cols="95" rows="2" class="inf">
+            rgba(красный, зелёный, синий, альфа)
+          </textarea>
+          <p>
+            Чаще всего прозрачность задаётся числом от <span class="span-bg-color">0</span>  (прозрачный) 
+            до <span class="span-bg-color">1</span> (не прозрачный).
+          </p>
+          <textarea name="" id="" cols="95" rows="5" class="css">
+/* Чистый красный цвет с прорачностью в 30% */
+p {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+          </textarea>
+          <p>
+            Но можно и процентами от <span class="span-bg-color">0%</span> (прозрачный) 
+            до <span class="span-bg-color">100%</span> (не прозрачный).
+          </p>
+          <textarea name="" id="" cols="95" rows="5" class="css">
+/* Чистый красный цвет с прорачностью в 30% */
+p {
+  background-color: rgba(100%, 0%, 0%, 30%);
+}
+          </textarea>
+        </div>
+      </section>
+    
+   
 
   </main>
   <footer>
-    <a href="#pseudo-clases">Вверх</a>
+    <a href="#nav-anchor">Вверх</a>
 
   </footer>
 </body>
