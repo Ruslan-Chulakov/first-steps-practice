@@ -15,249 +15,604 @@
       <a name="nav-anchor"></a>
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="#text-color-link">Цвет текста</a>
+            <a href="#selector-cpecificity-anchor">Специфичность селекторов</a>
+            <ul>
+              <li>
+              <a href="#rank-four-anchor">Селекторы 4-го ранга</a>
+            </li>
+            <li>
+              <a href="#rank-three-anchor">Селекторы 3-го ранга</a>
+            </li>
+            <li>
+              <a href="#rank-two-anchor">Селекторы 2-го ранга</a>
+            </li>
+            <li>
+              <a href="#first-rank-anchor">Селекторы 1-го ранга</a>
+            </li>
+            <li>
+              <a href="#same-specificity-anchor">Одинаковая специфичность</a>
+            </li>
+            <li>
+              <a href="#avoiding-specificity-anchor">Избегаем специфичность</a>
+            </li>
+            <li>
+              <a href="#important-anchor">Ключевое слово !important</a>
+            </li>
+          </ul>  
         </li>
         <li class="nav-item">
-          <a href="#bg-color-anchor">Цвет фона</a>
-        </li>
-        <li class="nav-item">
-          <a href="#named-colors-anchor">Именованные цвета</a>
-        </li>
-        <li class="nav-item">
-          <a href="#rgb-anchor">RGB</a>
-        </li>
-        <li class="nav-item">
-          <a href="#hexadecimal-anchor">Hexadecimal</a>
-        </li>
-        <li class="nav-item">
-          <a href="#transparent-anchor">Прозрачность цвета</a>
-        </li>
+          <a href="#property-inheritance-anchor">Наследование свойств</a>
+          <ul>
+            <li>
+              <a href="#exeptions-anchor">Исключения</a>
+            </li>
+            <li>
+              <a href="#page-text-color-anchor ">Цвет текста страницы</a>
+            </li>
+          </ul>          
+        </li>        
       </ul>
       
     </nav>
   </header>
   <main>    
-      <section class="section">
+      <section class="main-section">
         <div class="container">
-           <h1>
-            Работа с цветом
-            <a name="main-title"></a>
-          </h1> 
-        </div>   
-      </section>
-      <section class="text-color">
-        <div class="container">
-          <h2>Цвет текста
-          <a name="text-color-link"></a>
-          </h2>
+          <h1>
+            Каскад стилей
+            <a name="style-cascade-anchor"></a>
+          </h1>
           <p>
-            При помощи свойства <span class="span-bg-color">color</span> можно изменить цвет текста элемента. 
-            Современные браузеры поддерживают несколько основных способов описания цвета: ключевые слова, rgb и hex.
+            <strong>Каскадирование</strong> - это механизм, 
+            который управляет конечными значениями свойств элемента, если к нему применяется несколько CSS-правил.
           </p>
-          <textarea name="" id="" cols="95" rows="6">
-<p class="text">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-  cumque fuga facere labore quo id necessitatibus quaerat rerum.
-</p>
-          </textarea>
-          <textarea name="" id="" cols="95" rows="4">
-.text {
-  color: tomato;
-}
-          </textarea>
-          <h3>ПОЛЕЗНО</h3>
-          <p>
-            На сервисе 
-            <a href="https://htmlcolorcodes.com/color-picker/" rel="noopener noreferrer nofollow" class="resource-link">
-              htmlcolorcodes.com
-            </a> 
-            можно посмотреть значения цветов в разных форматах.
-          </p>
-        </div>        
-      </section>
-      <section class="background-color">
-        <div class="container">
-          <h2>
-            Цвет фона
-            <a name="bg-color-anchor"></a>
-          </h2>
-          <p>
-            Свойство 
-            <span class="span-bg-color">background-color</span> 
-            позволяет изменить цвет фона элемента.
-          </p>
-          <textarea name="" id="" cols="95" rows="6" class="html">
-<p class="text">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-  cumque fuga facere labore quo id necessitatibus quaerat rerum.
-</p>
-          </textarea>
-          <textarea name="" id="" cols="95" rows="5" class="css">
-.text {
-  background-color: tomato;
-  color: white;
-}
-          </textarea>
-        </div>     
-      </section>
-      <section class="named-colors">
-        <div class="container">
-          <h2>Именованные цвета
-            <a name="named-colors-anchor"></a>
-          </h2>
-          <p>
-            Для описания цвета в стилях можно использовать 
-            <a href="https://htmlcolorcodes.com/color-names/" class="resource-link" rel="noopener noreferrer nofollow">
-              набор зарезервированных слов.
-            </a>
-            В современной веб-разработке они уже не используются, 
-            но бывают полезными если нужно быстро поставить какой-то цвет.
-          </p>
-          <textarea name="" id="" cols="95" rows="4" class="css">
-p {
-  color: tomato;
-}
-          </textarea>
-        </div>
-      </section>
-
-      <section class="rgb">
-        <div class="container">
-          <h2>RGB
-            <a name="rgb-anchor"></a>
-          </h2>
-          <p>
-            Есть три основные цвета: 
-            <span class="span-red">красный</span>, <span class="span-green">зелёный</span> и <span class="span-blue">синий</span>. 
-            Смешивая их в различных пропорциях можно получить любой другой цвет.
-          </p>
-          <img src="./img/rgb-chart.png" alt="rgb palitra" width="500">
-          <p>
-            В этом формате для задания значения используется функция 
-            <span class="span-bg-color">rgb()</span>
-            ,
-             в которой указывается доля каждого из трёх основных цветов,
-             после чего они смешиваются и получается нужный цвет.
-          </p>
-          <textarea name="" id="" cols="95" rows="2" class="mark">
-            rgb(красный, зелёный, синий)
-          </textarea>
-          <p>
-            Диапазон значений можно указывать числами 
-            от <span class="span-bg-color">0</span> 
-            (полное отсутствие цвета) до
-            <span class="span-bg-color">255</span> 
-            (максимальная доля). 
-            Это основный способ задания RGB-цвета.
-          </p>
-          <textarea name="" id="" cols="95" rows="5" class="css">
-/* Чистый красный цвет: 255 красного, 0 зеленого, 0 синего */
-p {
-  color: rgb(255, 0, 0);
-}
-          </textarea>
-          <p>
-            Или процентами от 
-            <span class="span-bg-color">0%</span>  
-            до 
-            <span class="span-bg-color">100%.</span>
-          </p>
-          <textarea name="" id="" cols="95" rows="5" class="css">
-/* Чистый красный цвет: 100% красного, 0% зеленого, 0% синего */
-p {
-  color: rgb(100%, 0%, 0%);
-}
-          </textarea>
-        </div>       
-      </section>
-
-      <section class="hexadecimal">
-        <div class="container">
-          <h2>Hexadecimal
-            <a name="hexadecimal-anchor"></a>
-          </h2>
-          <p>
-            Это описание цвета основано на записи числа в шестнадцатеричной системе счисления. 
-            Доля каждого из трёх основных цветов описывается двумя цифрами.
-          </p>
-          <img src="./img/hex-color-format.jpg" alt="hexadecimal format" width="500">
-          <p>
-            В качестве цифр этой системы счисления используется набор цифр от 
-             <span class="span-bg-color">0</span> 
-            до
-            <span class="span-bg-color">9</span>
-            и латинские буквы от 
-            <span class="span-bg-color">A</span> 
-            до 
-            <span class="span-bg-color">F</span>
-            в нижнем или верхнем регистре.
-          </p>
-          <ul class="hexadecimal-list">
+          <ul class="info-list">
             <li>
-              <span class="span-bg-color">0</span> - самая маленькая доля цвета
+              Если к элементу применяется несколько правил, их свойства комбинируются
             </li>
             <li>
-              <span class="span-bg-color">f</span> - самая большая доля цвета
+              Если в правилах есть одинаковые свойства с разными значениями, то они конфликтуют
             </li>
           </ul>
-          <textarea name="" id="" cols="95" rows="15" class="css">
-/* Чистый красный цвет: ff (100%) красного, 00 (0%) зеленого, 00 (0%) синего */
+          <textarea name="" id="" cols="95" rows="10" class="css">
+/* Каким будет цвет текста абзацев? */
 p {
-  color: #ff0000;
+  color: blue;
+  background-color: orange;
 }
 
-/* Чистый зелёный цвет: 00 (0%) красного, ff (100%) зеленого, 00 (0%) синего */
 p {
-  color: #00ff00;
-}
-
-/* Чистый синий цвет: 00 (0%) красного, 00 (0%) зеленого, ff (100%) синего */
-p {
-  color: #0000ff;
+  color: teal;
 }
           </textarea>
+          <p>
+            Для того, чтобы собрать финальные стили элемента и разрешить конфликты значений свойств, 
+            браузер использует два механизма: специфичность и наследование.
+          </p>
         </div>
       </section>
 
-      <section class="transparent">
+      <section class="selector-specificity">
         <div class="container">
-          <h2>Прозрачность цвета
-            <a name="transparent-anchor"></a>
+          <h2>
+            Специфичность селекторов
+            <a name="selector-specificity-anchor"></a>
           </h2>
           <p>
-            Основной способ добавления прозрачности цвета это функция <span class="span-bg-color">rgba()</span> . 
-            В отличии от <span class="span-bg-color">rgb()</span> ещё добавляется прозрачность (альфа канал).
+            Для каждого CSS-правила браузер вычисляет специфичность (вес) селектора. 
+            Если к элементу нужно применить свойства из разных правил, и есть конфликтующие (одинаковые) свойства, 
+            используется значение свойства из правила с наиболее высокой специфичностью селектора.
           </p>
-          <textarea name="" id="" cols="95" rows="2" class="inf">
-            rgba(красный, зелёный, синий, альфа)
+          <p>
+            Значение специфичности состоит из четырёх рангов, важность которых увеличивается справа налево.
+          </p>
+          <img src="./img/specificity.svg" alt="selector specificity" width="500">
+        </div>
+      </section>
+
+      <section class="rank-four-selectors">
+        <div class="container">
+          <h3>
+            Селекторы 4-го ранга
+            <a name="rank-four-anchor"></a>
+          </h3>
+          <p>
+            Каждый селектор элемента и псевдоэлемента добавляет единицу в четвёртый ранг.
+          </p>
+          <textarea name="" id="" cols="95" rows="11" class="html">
+<article>
+  <h1>Lorem ipsum dolor sit amet</h1>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+  <a href="">Читать дальше...</a>
+</article>
           </textarea>
           <p>
-            Чаще всего прозрачность задаётся числом от <span class="span-bg-color">0</span>  (прозрачный) 
-            до <span class="span-bg-color">1</span> (не прозрачный).
+            Цвет текста абзаца будет оранжевым, потому что специфичность второго правила выше.
           </p>
-          <textarea name="" id="" cols="95" rows="5" class="css">
-/* Чистый красный цвет с прорачностью в 30% */
+          <textarea name="" id="" cols="95" rows="11" class="css">
+/* Специфичность - 0 0 0 1 */
 p {
-  background-color: rgba(255, 0, 0, 0.3);
+  color: green;
 }
-          </textarea>
-          <p>
-            Но можно и процентами от <span class="span-bg-color">0%</span> (прозрачный) 
-            до <span class="span-bg-color">100%</span> (не прозрачный).
-          </p>
-          <textarea name="" id="" cols="95" rows="5" class="css">
-/* Чистый красный цвет с прорачностью в 30% */
-p {
-  background-color: rgba(100%, 0%, 0%, 30%);
+
+/* ✅ Специфичность - 0 0 0 2 */
+article > p {
+  color: orange;
 }
           </textarea>
         </div>
       </section>
-    
-   
 
+      <section class="rank-three-selector">
+        <div class="container">
+          <h3>
+            Селекторы 3-го ранга
+            <a name="rank-three-anchor"></a>
+          </h3>
+          <p>
+            Каждый селектор класса, атрибута и псевдокласса добавляет единицу в третий ранг.
+          </p>
+          <textarea name="" id="" cols="95" rows="10" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+  <a href="" class="post-link">Читать дальше...</a>
+</article>
+          </textarea>
+          <p>
+            Цвет текста заголовка будет оранжевым, потому что специфичность третьего правила выше.
+          </p>
+          <textarea name="" id="" cols="95" rows="16" class="css">
+/* Специфичность - 0 0 1 0 */
+.post-title {
+  color: green;
+}
+
+/* Специфичность - 0 0 1 1 */
+.post > h1 {
+  color: red;
+}
+
+/* ✅ Специфичность - 0 0 2 0 */
+.post > .post-title {
+  color: orange;
+}
+          </textarea>
+          <p>
+            Цвет текста ссылки будет коричневым, потому что специфичность пятого правила выше.
+          </p>
+          <textarea name="" id="" cols="95" rows="26" class="css">
+/* Специфичность - 0 0 0 1 */
+a {
+  color: green;
+}
+
+/* Специфичность - 0 0 1 0 */
+.post-link {
+  color: orange;
+}
+
+/* Специфичность - 0 0 1 1 */
+a.post-link {
+  color: blue;
+}
+
+/* Специфичность - 0 0 2 0 */
+.post > .post-link {
+  color: red;
+}
+
+/* ✅ Специфичность - 0 0 2 1 */
+.post > a.post-link {
+  color: brown;
+}
+          </textarea>
+        </div>
+      </section>
+
+      <!--Селекторы 2-го ранга-->
+      <section class="rank-two-selectors">
+        <div class="container">
+          <h3>
+            Селекторы 2-го ранга
+            <a name="rank-two-anchor"></a>
+          </h3>
+          <p>
+            Каждый селектор идентификатора добавляет единицу во второй ранг.
+          </p>
+          <textarea name="" id="" cols="95" rows="10" class="html">
+<article class="post">
+  <h1 class="post-title" id="title">Lorem ipsum dolor sit amet</h1>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+  <a href="" class="post-link">Читать дальше...</a>
+</article>
+          </textarea>
+          <p>
+            Цвет текста заголовка будет оранжевым, потому что специфичность второго правила выше.
+          </p>
+          <textarea name="" id="" cols="95" rows="11" class="css">
+/* Специфичность - 0 0 1 0 */
+.post-title {
+  color: green;
+}
+
+/* ✅ Специфичность - 0 1 0 0 */
+#title {
+  color: orange;
+}
+          </textarea>
+        </div>
+      </section>
+
+      <!--Селекторы 1-го ранга-->
+      <section class="first-rank-selectors">
+        <div class="container">
+          <h3>
+            Селекторы 1-го ранга
+            <a name="first-rank-anchor"></a>
+          </h3>
+          <p>
+            Встроенные стили добавляют единицу в первый ранг, 
+            имеют самую высокую специфичность, и переопределить их через CSS невозможно.
+          </p>
+          <textarea name="" id="" cols="95" rows="7" class="html">
+<!-- Специфичность такого стиля - 1 0 0 0 -->
+<p style="color: green;">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+  cumque fuga facere labore quo id necessitatibus quaerat rerum.
+</p>
+          </textarea>
+        </div>
+      </section>
+
+      <!--Одинаковая специфичность-->
+      <section class="same-specificity">
+        <div class="container">
+          <h3>
+            Одинаковая специфичность
+            <a name="same-specificity-anchor"></a>
+          </h3>
+          <p>
+            Если специфичность одинаковая, побеждает правило расположенное ниже в коде.
+          </p>
+          <textarea name="" id="" cols="95" rows="15" class="css">
+/* Три селектора элемента с одинаковой специфичностью */
+a {
+  color: teal;
+}
+
+a {
+  color: brown;
+}
+
+/* Так как это правило стоит ниже, ко всем ссылкам применится оранжевый цвет текста */
+a {
+  color: orange;
+}
+          </textarea>
+        </div>
+      </section>
+
+      <!--Избегаем специфичность-->
+      <section class="avoiding-specificity">
+        <div class="container">
+          <h3>
+            Избегаем специфичность
+            <a name="avoiding-specificity-anchor"></a>
+          </h3>
+          <p>
+            Если селектор выглядит как <span class="span-bg-color">A > B > C + X Y</span> , стоит задуматься. 
+            Чем проще селектор, тем меньше проблем со специфичностью. 
+            Возьмите за правило использовать селекторы класса. Атрибут <span class="span-bg-color">class</span> 
+            не только помогает избежать проблем со специфичностью, 
+            но и повышает читабельность HTML-разметки.
+          </p>
+          <p>
+            Первый подход это присвоение класса общему блоку-родителю и использование селекторов ребёнка и потомка.
+          </p>
+          <textarea name="" id="" cols="95" rows="10" class="html">
+<article class="post">
+  <h1>Lorem ipsum dolor sit amet</h1>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+  <a href="">Читать дальше...</a>
+</article>
+          </textarea>
+          <p>
+            Такой CSS хорошо работает когда разметка простая. Но при росте сложности разметки блока, 
+            удобная стилизация по селекторам тега становится невозможной. Например, если в посте будет 5 ссылок, 
+            а не одна, точечно выбрать какую-то ссылку не получится или селектор будет слишком сложный.
+          </p>
+          <textarea name="" id="" cols="95" rows="20" class="css">
+.post {
+  /* Стили статьи */
+}
+
+.post > h1 {
+  /* Стили заголовка */
+}
+
+.post > p {
+  /* Стили текста */
+}
+
+.post > a {
+  /* Стили ссылки */
+}
+
+.post > a:hover {
+  /* Стили ссылки при ховере */
+}
+          </textarea>
+          <p>
+            Второй подход это добавление описательных классов блоку-родителю и тегам внутри него.
+          </p>
+          <textarea name="" id="" cols="95" rows="10" class="html">
+<article class="post">
+  <h1 class="title">Lorem ipsum dolor sit amet</h1>
+  <p class="text">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+  <a class="link" href="">Читать дальше...</a>
+</article>
+          </textarea>
+          <p>
+            Такой CSS неплохо масштабируется и поддерживается. Это отправная точка для написания хорошего CSS. 
+            Тем не менее с ростом сложности разметки могут быть небольшие проблемы со специфичностью.
+          </p>
+          <textarea name="" id="" cols="95" rows="20" class="css">
+.post {
+  /* Стили статьи */
+}
+
+.post > .title {
+  /* Стили заголовка */
+}
+
+.post > .text {
+  /* Стили текста */
+}
+
+.post > .link {
+  /* Стили ссылки */
+}
+
+.post > .link:hover {
+  /* Стили ссылки при ховере */
+}
+          </textarea>
+          <p>
+            Третий подход заключается в задании 
+            очень специфичных классов блоку-родителю и каждому тегу 
+            внутри него по принципу <span class="span-bg-color">имя_родителя-имя_ребёнка</span>.
+          </p>
+          <textarea name="" id="" cols="95" rows="10" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p class="post-text">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+  <a href="" class="post-link">Читать дальше...</a>
+</article>
+          </textarea>
+          <p>
+            При этом подходе используются простые селекторы класса, не нужно думать о специфичности. 
+            Такой CSS хорошо масштабирутеся и поддерживается.
+             В современной разработке при написании стилей используются вариации этого подхода.
+          </p>
+          <textarea name="" id="" cols="95" rows="20" class="css">
+.post {
+  /* Стили статьи */
+}
+
+.post-title {
+  /* Стили заголовка */
+}
+
+.post-text {
+  /* Стили текста */
+}
+
+.post-link {
+  /* Стили ссылки */
+}
+
+.post-link:hover {
+  /* Стили ссылки при ховере */
+}
+          </textarea>
+          <h4>
+            ПОЛЕЗНО
+          </h4>
+          <p>
+            Не стоит ограничивать себя в выборе лишь одного подхода. Все три метода 
+            именования разметки классами и написания стилей можно использовать вместе, 
+            в зависимости от ситуации.
+          </p>
+        </div>
+      </section>
+
+      <!--Ключевое слово !important-->
+      <section class="keyword-important">
+        <div class="container">
+          <h3>
+            Ключевое слово <span class="span-bg-color">!important</span>
+            <a name="important-anchor"></a>
+          </h3>
+          <p>
+            Специфичность правила можно повысить при помощи ключевого слова
+            <span class="span-bg-color">!important</span> , добавив его после значения свойства.
+          </p>
+          <textarea name="" id="" cols="95" rows="6" class="html">
+<p class="text" id="text-id">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+  cumque fuga facere labore quo id necessitatibus quaerat rerum.
+</p>
+          </textarea>
+          <p>
+            Значение такого свойства приоритетнее всех остальных, и цвет текста абзаца будет оранжевый.
+          </p>
+          <textarea name="" id="" cols="95" rows="8" class="css">
+p {
+  color: orange !important;
+}
+
+p#text-id.text {
+  color: blue;
+}
+          </textarea>
+          <h4>
+            ВНИМАНИЕ
+          </h4>
+          <p>
+            Крайне не рекомендуется использовать <span class="span-bg-color">!important</span> в современной разработке. 
+            Единственный приемлемый случай это переопределение значения свойства, 
+            если нет прямого доступа к файлу со стилями, например стиль из библиотеки.
+          </p>
+        </div>
+      </section>
+
+      <!--Наследование свойств-->
+      <section class="property-inheritance">
+        <div class="container">
+          <h2>
+            Наследование свойств
+            <a name="property-inheritance-anchor"></a>
+          </h2>
+          <p>
+            Генетическое наследование привычно видеть в жизни. Например, 
+            у высоких родителей чаще всего высокие дети, часто передаётся цвет волос и так далее. 
+            Нечто подобное есть и в CSS. Если установить зелёный цвет текста родителю, 
+            то, если какое-либо правило не переопределит это значение, 
+            цвет текста всех его потомков также будет зелёным.
+          </p>
+          <p>
+            Наследование это механизм, при помощи которого значения определённых свойств передаются 
+            от предка к его потомкам. Наследуются, в основном, свойства оформления текста, 
+            например, цвет. Это удобно, 
+            так как не нужно задавать повторяющиеся стили для каждого потомка в отдельности.
+          </p>
+          <textarea name="" id="" cols="95" rows="10" class="html">
+<article class="post">
+  <h1>Популярное за этот месяц</h1>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+  <a href="">Читать дальше...</a>
+</article>
+          </textarea>
+          <p>
+            Сделаем весь текст поста зелёного цвета.
+          </p>
+          <textarea name="" id="" cols="95" rows="4" class="css">
+.post {
+  color: green;
+}
+          </textarea>
+          <p>
+            В инструментах разработчика на вкладке <span class="span-bg-color">Styles</span>  
+            в самом низу увидим наследование для абзаца и заголовка.
+          </p>
+          <img src="./img/inheritance.png" alt="inheritance in developers tools" width="700">
+          <p>
+            В жизни не все атрибуты родителей передаются детям. То же самое и в CSS, 
+            не каждое свойство по умолчанию наследуется потомками. Фактически, 
+            если бы все свойства были унаследованы, эффект был бы аналогичен отсутствию наследования вообще, 
+            и пришлось бы написать 
+            очень много CSS для сброса стилей унаследованных от родителя, чтобы переопределить это поведение.
+          </p>
+        </div>
+      </section>
+
+      <!--Исключения-->
+      <section class="exeptions">
+        <div class="container">
+          <h3>
+            Исключения
+            <a name="exeptions-anchor"></a>
+          </h3>
+          <p>
+            Не все элементы наследуют значение свойств от предков. Например, ссылка не наследует цвет текста.
+          </p>
+          <textarea name="" id="" cols="95" rows="10" class="html">
+<article class="post">
+  <h1>Популярное за этот месяц</h1>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+  <a href="" class="post-link">Читать дальше...</a>
+</article>
+          </textarea>
+          <p>
+            Если необходимо чтобы в посте она была такого же цвета как и весь текст, 
+            можно использовать специальное значение 
+            <span class="span-bg-color">inherit</span>  для свойства 
+            <span class="span-bg-color">color</span> , чтобы не дублировать цвет в двух местах.
+          </p>
+          <textarea name="" id="" cols="95" rows="8" class="css">
+.post {
+  color: green;
+}
+
+.post-link {
+  color: inherit;
+}
+          </textarea>
+          <h4>
+            ПОЛЕЗНО
+          </h4>
+          <p>
+            Значение <span class="span-bg-color">inherit</span>  говорит браузеру о том, что необходимо унаследовать значение свойства от предка. 
+            Для цвета предпочтительнее использовать значение <span class="span-bg-color">currentColor</span>  (текущий цвет).
+          </p>
+        </div>
+      </section>
+
+      <!--Цвет текста страницы-->
+      <section class="page-text-color">
+        <div class="container">
+          <h3>
+            Цвет текста страницы
+            <a name="page-text-color-anchor"></a>
+          </h3>
+          <p>
+            Для того, чтобы задать базовый (доминантный) цвет текста всего документа, создаём правило для 
+            тега <span class="span-bg-color">&lt;body&gt;</span>  и добавляем свойство 
+            <span class="span-bg-color">color</span> . 
+            Этот цвет будет унаследован всем текстовым контентом, кроме ссылок.
+          </p>
+          <textarea name="" id="" cols="95" rows="4" class="css">
+body {
+  color: #2a2a2a;
+}
+          </textarea>
+        </div>
+      </section>
   </main>
   <footer>
     <a href="#nav-anchor">Вверх</a>

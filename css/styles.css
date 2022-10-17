@@ -23,6 +23,14 @@ img {
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
 .container {
     width: 750px;
     padding-left: 15px;
@@ -42,18 +50,6 @@ img {
     background-color: var(--span-bg-color);
 }
 
-.span-red {
-    background-color: var(--red);
-}
-
-.span-green {
-    background-color: var(--green);
-}
-
-.span-blue {
-    background-color: var(--blue);
-}
-
 .nav {
     padding-left: 15px;
     padding-right: 15px;
@@ -68,10 +64,10 @@ img {
     justify-content: center;
 }
 
-.hexadecimal-list {
-    list-style: inside;
-}
-
 .nav-item:not(:last-child) {
     margin-right: 50px;
+}
+
+.info-list {
+    list-style: inside;
 }
