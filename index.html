@@ -15,604 +15,280 @@
       <a name="nav-anchor"></a>
       <ul class="nav-list">
         <li class="nav-item">
-            <a href="#selector-cpecificity-anchor">Специфичность селекторов</a>
-            <ul>
-              <li>
-              <a href="#rank-four-anchor">Селекторы 4-го ранга</a>
-            </li>
-            <li>
-              <a href="#rank-three-anchor">Селекторы 3-го ранга</a>
-            </li>
-            <li>
-              <a href="#rank-two-anchor">Селекторы 2-го ранга</a>
-            </li>
-            <li>
-              <a href="#first-rank-anchor">Селекторы 1-го ранга</a>
-            </li>
-            <li>
-              <a href="#same-specificity-anchor">Одинаковая специфичность</a>
-            </li>
-            <li>
-              <a href="#avoiding-specificity-anchor">Избегаем специфичность</a>
-            </li>
-            <li>
-              <a href="#important-anchor">Ключевое слово !important</a>
-            </li>
-          </ul>  
+          <a href="#css-variables">CSS-переменные</a>
         </li>
-        <li class="nav-item">
-          <a href="#property-inheritance-anchor">Наследование свойств</a>
-          <ul>
-            <li>
-              <a href="#exeptions-anchor">Исключения</a>
-            </li>
-            <li>
-              <a href="#page-text-color-anchor ">Цвет текста страницы</a>
-            </li>
-          </ul>          
-        </li>        
+        <li><a href="#variable-declaration-anchor">Объявление переменной </a>
+        </li>
+        <li> 
+          <a href="#using-variable-anchor">Использование переменной</a>
+        </li>
+        <li>
+          <a href="#reserve-values-anchor">Резервные значения</a>
+        </li>
+        <li>
+          <a href="#area-of-visibility-anchor">Область видимости</a>
+        </li>
+        <li>
+          <a href="#redefining-values-anchor">Переопределение значений</a>
+        </li>
+                
       </ul>
       
     </nav>
   </header>
-  <main>    
+  <main>  
+
+    <!--CSS-переменные-->  
       <section class="main-section">
         <div class="container">
           <h1>
-            Каскад стилей
-            <a name="style-cascade-anchor"></a>
+            CSS-переменные
+            <a name="css-variables"></a>
           </h1>
           <p>
-            <strong>Каскадирование</strong> - это механизм, 
-            который управляет конечными значениями свойств элемента, если к нему применяется несколько CSS-правил.
+            Пользовательские свойства (CSS Custom Properties), также известные как CSS-переменные 
+            - это контейнеры для значений, определённые в CSS-документе с целью повторного использования. 
+            CSS-переменные упрощают использование и изменение повторяющихся значений в файле стилей. 
+            Они поддерживаются браузером нативно и не требуют никаких дополнительных инструментов.
           </p>
-          <ul class="info-list">
-            <li>
-              Если к элементу применяется несколько правил, их свойства комбинируются
-            </li>
-            <li>
-              Если в правилах есть одинаковые свойства с разными значениями, то они конфликтуют
-            </li>
-          </ul>
-          <textarea name="" id="" cols="95" rows="10" class="css">
-/* Каким будет цвет текста абзацев? */
-p {
-  color: blue;
-  background-color: orange;
-}
-
-p {
-  color: teal;
-}
+          <textarea name="" id="" cols="95" rows="4" class="html">
+<section class="section">
+  <h1 class="section-title">Section title</h1>
+</section>
           </textarea>
-          <p>
-            Для того, чтобы собрать финальные стили элемента и разрешить конфликты значений свойств, 
-            браузер использует два механизма: специфичность и наследование.
-          </p>
-        </div>
-      </section>
-
-      <section class="selector-specificity">
-        <div class="container">
-          <h2>
-            Специфичность селекторов
-            <a name="selector-specificity-anchor"></a>
-          </h2>
-          <p>
-            Для каждого CSS-правила браузер вычисляет специфичность (вес) селектора. 
-            Если к элементу нужно применить свойства из разных правил, и есть конфликтующие (одинаковые) свойства, 
-            используется значение свойства из правила с наиболее высокой специфичностью селектора.
-          </p>
-          <p>
-            Значение специфичности состоит из четырёх рангов, важность которых увеличивается справа налево.
-          </p>
-          <img src="./img/specificity.svg" alt="selector specificity" width="500">
-        </div>
-      </section>
-
-      <section class="rank-four-selectors">
-        <div class="container">
-          <h3>
-            Селекторы 4-го ранга
-            <a name="rank-four-anchor"></a>
-          </h3>
-          <p>
-            Каждый селектор элемента и псевдоэлемента добавляет единицу в четвёртый ранг.
-          </p>
-          <textarea name="" id="" cols="95" rows="11" class="html">
-<article>
-  <h1>Lorem ipsum dolor sit amet</h1>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-  <a href="">Читать дальше...</a>
-</article>
-          </textarea>
-          <p>
-            Цвет текста абзаца будет оранжевым, потому что специфичность второго правила выше.
-          </p>
-          <textarea name="" id="" cols="95" rows="11" class="css">
-/* Специфичность - 0 0 0 1 */
-p {
-  color: green;
-}
-
-/* ✅ Специфичность - 0 0 0 2 */
-article > p {
-  color: orange;
-}
-          </textarea>
-        </div>
-      </section>
-
-      <section class="rank-three-selector">
-        <div class="container">
-          <h3>
-            Селекторы 3-го ранга
-            <a name="rank-three-anchor"></a>
-          </h3>
-          <p>
-            Каждый селектор класса, атрибута и псевдокласса добавляет единицу в третий ранг.
-          </p>
-          <textarea name="" id="" cols="95" rows="10" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-  <a href="" class="post-link">Читать дальше...</a>
-</article>
-          </textarea>
-          <p>
-            Цвет текста заголовка будет оранжевым, потому что специфичность третьего правила выше.
-          </p>
-          <textarea name="" id="" cols="95" rows="16" class="css">
-/* Специфичность - 0 0 1 0 */
-.post-title {
-  color: green;
-}
-
-/* Специфичность - 0 0 1 1 */
-.post > h1 {
-  color: red;
-}
-
-/* ✅ Специфичность - 0 0 2 0 */
-.post > .post-title {
-  color: orange;
-}
-          </textarea>
-          <p>
-            Цвет текста ссылки будет коричневым, потому что специфичность пятого правила выше.
-          </p>
-          <textarea name="" id="" cols="95" rows="26" class="css">
-/* Специфичность - 0 0 0 1 */
-a {
-  color: green;
-}
-
-/* Специфичность - 0 0 1 0 */
-.post-link {
-  color: orange;
-}
-
-/* Специфичность - 0 0 1 1 */
-a.post-link {
-  color: blue;
-}
-
-/* Специфичность - 0 0 2 0 */
-.post > .post-link {
-  color: red;
-}
-
-/* ✅ Специфичность - 0 0 2 1 */
-.post > a.post-link {
-  color: brown;
-}
-          </textarea>
-        </div>
-      </section>
-
-      <!--Селекторы 2-го ранга-->
-      <section class="rank-two-selectors">
-        <div class="container">
-          <h3>
-            Селекторы 2-го ранга
-            <a name="rank-two-anchor"></a>
-          </h3>
-          <p>
-            Каждый селектор идентификатора добавляет единицу во второй ранг.
-          </p>
-          <textarea name="" id="" cols="95" rows="10" class="html">
-<article class="post">
-  <h1 class="post-title" id="title">Lorem ipsum dolor sit amet</h1>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-  <a href="" class="post-link">Читать дальше...</a>
-</article>
-          </textarea>
-          <p>
-            Цвет текста заголовка будет оранжевым, потому что специфичность второго правила выше.
-          </p>
-          <textarea name="" id="" cols="95" rows="11" class="css">
-/* Специфичность - 0 0 1 0 */
-.post-title {
-  color: green;
-}
-
-/* ✅ Специфичность - 0 1 0 0 */
-#title {
-  color: orange;
-}
-          </textarea>
-        </div>
-      </section>
-
-      <!--Селекторы 1-го ранга-->
-      <section class="first-rank-selectors">
-        <div class="container">
-          <h3>
-            Селекторы 1-го ранга
-            <a name="first-rank-anchor"></a>
-          </h3>
-          <p>
-            Встроенные стили добавляют единицу в первый ранг, 
-            имеют самую высокую специфичность, и переопределить их через CSS невозможно.
-          </p>
-          <textarea name="" id="" cols="95" rows="7" class="html">
-<!-- Специфичность такого стиля - 1 0 0 0 -->
-<p style="color: green;">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-  cumque fuga facere labore quo id necessitatibus quaerat rerum.
-</p>
-          </textarea>
-        </div>
-      </section>
-
-      <!--Одинаковая специфичность-->
-      <section class="same-specificity">
-        <div class="container">
-          <h3>
-            Одинаковая специфичность
-            <a name="same-specificity-anchor"></a>
-          </h3>
-          <p>
-            Если специфичность одинаковая, побеждает правило расположенное ниже в коде.
-          </p>
           <textarea name="" id="" cols="95" rows="15" class="css">
-/* Три селектора элемента с одинаковой специфичностью */
-a {
-  color: teal;
+.section {
+  /* Другие стили */
+  border: 2px solid #3f51b5;
 }
 
-a {
-  color: brown;
+.section-title {
+  /* Другие стили */
+  color: #3f51b5;
 }
 
-/* Так как это правило стоит ниже, ко всем ссылкам применится оранжевый цвет текста */
-a {
-  color: orange;
-}
-          </textarea>
-        </div>
-      </section>
-
-      <!--Избегаем специфичность-->
-      <section class="avoiding-specificity">
-        <div class="container">
-          <h3>
-            Избегаем специфичность
-            <a name="avoiding-specificity-anchor"></a>
-          </h3>
-          <p>
-            Если селектор выглядит как <span class="span-bg-color">A > B > C + X Y</span> , стоит задуматься. 
-            Чем проще селектор, тем меньше проблем со специфичностью. 
-            Возьмите за правило использовать селекторы класса. Атрибут <span class="span-bg-color">class</span> 
-            не только помогает избежать проблем со специфичностью, 
-            но и повышает читабельность HTML-разметки.
-          </p>
-          <p>
-            Первый подход это присвоение класса общему блоку-родителю и использование селекторов ребёнка и потомка.
-          </p>
-          <textarea name="" id="" cols="95" rows="10" class="html">
-<article class="post">
-  <h1>Lorem ipsum dolor sit amet</h1>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-  <a href="">Читать дальше...</a>
-</article>
-          </textarea>
-          <p>
-            Такой CSS хорошо работает когда разметка простая. Но при росте сложности разметки блока, 
-            удобная стилизация по селекторам тега становится невозможной. Например, если в посте будет 5 ссылок, 
-            а не одна, точечно выбрать какую-то ссылку не получится или селектор будет слишком сложный.
-          </p>
-          <textarea name="" id="" cols="95" rows="20" class="css">
-.post {
-  /* Стили статьи */
-}
-
-.post > h1 {
-  /* Стили заголовка */
-}
-
-.post > p {
-  /* Стили текста */
-}
-
-.post > a {
-  /* Стили ссылки */
-}
-
-.post > a:hover {
-  /* Стили ссылки при ховере */
+.section-title::before {
+  /* Другие стили */
+  background-color: #3f51b5;
 }
           </textarea>
           <p>
-            Второй подход это добавление описательных классов блоку-родителю и тегам внутри него.
-          </p>
-          <textarea name="" id="" cols="95" rows="10" class="html">
-<article class="post">
-  <h1 class="title">Lorem ipsum dolor sit amet</h1>
-  <p class="text">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-  <a class="link" href="">Читать дальше...</a>
-</article>
-          </textarea>
-          <p>
-            Такой CSS неплохо масштабируется и поддерживается. Это отправная точка для написания хорошего CSS. 
-            Тем не менее с ростом сложности разметки могут быть небольшие проблемы со специфичностью.
-          </p>
-          <textarea name="" id="" cols="95" rows="20" class="css">
-.post {
-  /* Стили статьи */
-}
-
-.post > .title {
-  /* Стили заголовка */
-}
-
-.post > .text {
-  /* Стили текста */
-}
-
-.post > .link {
-  /* Стили ссылки */
-}
-
-.post > .link:hover {
-  /* Стили ссылки при ховере */
-}
-          </textarea>
-          <p>
-            Третий подход заключается в задании 
-            очень специфичных классов блоку-родителю и каждому тегу 
-            внутри него по принципу <span class="span-bg-color">имя_родителя-имя_ребёнка</span>.
-          </p>
-          <textarea name="" id="" cols="95" rows="10" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p class="post-text">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-  <a href="" class="post-link">Читать дальше...</a>
-</article>
-          </textarea>
-          <p>
-            При этом подходе используются простые селекторы класса, не нужно думать о специфичности. 
-            Такой CSS хорошо масштабирутеся и поддерживается.
-             В современной разработке при написании стилей используются вариации этого подхода.
-          </p>
-          <textarea name="" id="" cols="95" rows="20" class="css">
-.post {
-  /* Стили статьи */
-}
-
-.post-title {
-  /* Стили заголовка */
-}
-
-.post-text {
-  /* Стили текста */
-}
-
-.post-link {
-  /* Стили ссылки */
-}
-
-.post-link:hover {
-  /* Стили ссылки при ховере */
-}
-          </textarea>
-          <h4>
-            ПОЛЕЗНО
-          </h4>
-          <p>
-            Не стоит ограничивать себя в выборе лишь одного подхода. Все три метода 
-            именования разметки классами и написания стилей можно использовать вместе, 
-            в зависимости от ситуации.
+            В приведённом примере значение <span class="span-bg-color">#3f51b5</span>  встречается трижды. 
+            Допустим это главный цвет бренда, который постоянно используется на разных страницах сайта. 
+            Если поменяется цвет бренда, нам будет необходимо везде заменить это значение, 
+            а в большом проекте это могут быть сотни мест. 
+            Лучшее, что мы сможем сделать - использовать поиск и замену.
           </p>
         </div>
       </section>
 
-      <!--Ключевое слово !important-->
-      <section class="keyword-important">
-        <div class="container">
-          <h3>
-            Ключевое слово <span class="span-bg-color">!important</span>
-            <a name="important-anchor"></a>
-          </h3>
-          <p>
-            Специфичность правила можно повысить при помощи ключевого слова
-            <span class="span-bg-color">!important</span> , добавив его после значения свойства.
-          </p>
-          <textarea name="" id="" cols="95" rows="6" class="html">
-<p class="text" id="text-id">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-  cumque fuga facere labore quo id necessitatibus quaerat rerum.
-</p>
-          </textarea>
-          <p>
-            Значение такого свойства приоритетнее всех остальных, и цвет текста абзаца будет оранжевый.
-          </p>
-          <textarea name="" id="" cols="95" rows="8" class="css">
-p {
-  color: orange !important;
+    <!--Объявление переменной-->
+    <section class="variable-declaration">
+      <div class="container">
+        <h2>
+          Объявление переменной
+          <a name="variable-declaration-anchor"></a>
+        </h2>
+        <p>
+          На помощь приходят CSS-переменные. 
+          Имя переменной чувствительно к регистру и может содержать латинские буквы,
+           цифры, подчеркивания и тире. Создадим переменную 
+          <span class="span-bg-color">--brand-color</span>  для хранения цвета бренда 
+          <span class="span-bg-color">(#3f51b5)</span>  и будем её использовать.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="css">
+:root {
+  --brand-color: #3f51b5;
+}
+        </textarea>
+        <p>
+          Глобальные переменные, доступные в любом другом правиле, определяются в селекторе 
+          :root - более специфичном селекторе элемента <span class="span-bg-color">&lt;html&gt;</span> . 
+          Объявление переменной начинается с двойного дефиса  <span class="span-bg-color">--</span> 
+          за которым следует её имя в произвольной нотации. Например, 
+          <span class="span-bg-color">brand-color</span> или  <span class="span-bg-color">brandColor</span> 
+          - это валидные имена переменной, 
+          главное чтобы все переменные в проекте были в одинаковой нотации. 
+          Имя и значение разделяется двоеточием, а в конце объявления ставится точка с запятой.
+        </p>
+        <h3>
+          ИНТЕРЕСНО
+        </h3>
+        <p>
+          Объявление переменной это создание нового CSS-свойства, которое наследуется и поэтому доступно везде, 
+          так как любой элемент это потомок элемента <span class="span-bg-color">&lt;html&gt;</span>.
+        </p>
+      </div>
+    </section>
+
+    <!--Использование переменной-->
+    <section class="using-variable">
+      <div class="container">
+        <h2>
+          Использование переменной
+          <a name="using-variable-anchor"></a>
+        </h2>
+        <p>
+          Для получения доступа к значению переменной применяется встроенная функция 
+          <span class="span-bg-color">var()</span> , которой первым аргументом передаётся имя переменной.
+        </p>
+        <textarea name="" id="" cols="95" rows="19" class="css">
+:root {
+  --brand-color: #3f51b5;
 }
 
-p#text-id.text {
-  color: blue;
-}
-          </textarea>
-          <h4>
-            ВНИМАНИЕ
-          </h4>
-          <p>
-            Крайне не рекомендуется использовать <span class="span-bg-color">!important</span> в современной разработке. 
-            Единственный приемлемый случай это переопределение значения свойства, 
-            если нет прямого доступа к файлу со стилями, например стиль из библиотеки.
-          </p>
-        </div>
-      </section>
-
-      <!--Наследование свойств-->
-      <section class="property-inheritance">
-        <div class="container">
-          <h2>
-            Наследование свойств
-            <a name="property-inheritance-anchor"></a>
-          </h2>
-          <p>
-            Генетическое наследование привычно видеть в жизни. Например, 
-            у высоких родителей чаще всего высокие дети, часто передаётся цвет волос и так далее. 
-            Нечто подобное есть и в CSS. Если установить зелёный цвет текста родителю, 
-            то, если какое-либо правило не переопределит это значение, 
-            цвет текста всех его потомков также будет зелёным.
-          </p>
-          <p>
-            Наследование это механизм, при помощи которого значения определённых свойств передаются 
-            от предка к его потомкам. Наследуются, в основном, свойства оформления текста, 
-            например, цвет. Это удобно, 
-            так как не нужно задавать повторяющиеся стили для каждого потомка в отдельности.
-          </p>
-          <textarea name="" id="" cols="95" rows="10" class="html">
-<article class="post">
-  <h1>Популярное за этот месяц</h1>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-  <a href="">Читать дальше...</a>
-</article>
-          </textarea>
-          <p>
-            Сделаем весь текст поста зелёного цвета.
-          </p>
-          <textarea name="" id="" cols="95" rows="4" class="css">
-.post {
-  color: green;
-}
-          </textarea>
-          <p>
-            В инструментах разработчика на вкладке <span class="span-bg-color">Styles</span>  
-            в самом низу увидим наследование для абзаца и заголовка.
-          </p>
-          <img src="./img/inheritance.png" alt="inheritance in developers tools" width="700">
-          <p>
-            В жизни не все атрибуты родителей передаются детям. То же самое и в CSS, 
-            не каждое свойство по умолчанию наследуется потомками. Фактически, 
-            если бы все свойства были унаследованы, эффект был бы аналогичен отсутствию наследования вообще, 
-            и пришлось бы написать 
-            очень много CSS для сброса стилей унаследованных от родителя, чтобы переопределить это поведение.
-          </p>
-        </div>
-      </section>
-
-      <!--Исключения-->
-      <section class="exeptions">
-        <div class="container">
-          <h3>
-            Исключения
-            <a name="exeptions-anchor"></a>
-          </h3>
-          <p>
-            Не все элементы наследуют значение свойств от предков. Например, ссылка не наследует цвет текста.
-          </p>
-          <textarea name="" id="" cols="95" rows="10" class="html">
-<article class="post">
-  <h1>Популярное за этот месяц</h1>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-  <a href="" class="post-link">Читать дальше...</a>
-</article>
-          </textarea>
-          <p>
-            Если необходимо чтобы в посте она была такого же цвета как и весь текст, 
-            можно использовать специальное значение 
-            <span class="span-bg-color">inherit</span>  для свойства 
-            <span class="span-bg-color">color</span> , чтобы не дублировать цвет в двух местах.
-          </p>
-          <textarea name="" id="" cols="95" rows="8" class="css">
-.post {
-  color: green;
+.section {
+  /* Другие стили */
+  border: 2px solid var(--brand-color);
 }
 
-.post-link {
-  color: inherit;
+.section-title {
+  /* Другие стили */
+  color: var(--brand-color);
 }
-          </textarea>
-          <h4>
-            ПОЛЕЗНО
-          </h4>
-          <p>
-            Значение <span class="span-bg-color">inherit</span>  говорит браузеру о том, что необходимо унаследовать значение свойства от предка. 
-            Для цвета предпочтительнее использовать значение <span class="span-bg-color">currentColor</span>  (текущий цвет).
-          </p>
-        </div>
-      </section>
 
-      <!--Цвет текста страницы-->
-      <section class="page-text-color">
-        <div class="container">
-          <h3>
-            Цвет текста страницы
-            <a name="page-text-color-anchor"></a>
-          </h3>
-          <p>
-            Для того, чтобы задать базовый (доминантный) цвет текста всего документа, создаём правило для 
-            тега <span class="span-bg-color">&lt;body&gt;</span>  и добавляем свойство 
-            <span class="span-bg-color">color</span> . 
-            Этот цвет будет унаследован всем текстовым контентом, кроме ссылок.
-          </p>
-          <textarea name="" id="" cols="95" rows="4" class="css">
+.section-title::before {
+  /* Другие стили */
+  background-color: var(--brand-color);
+}
+        </textarea>
+        <p>
+          Кода стало не намного больше, но он более гибкий и читабельный. Если необходимо изменить цвет бренда, 
+          достаточно заменить значение переменной <span class="span-bg-color">--brand-color</span>  и цвет изменится везде где она используется.
+        </p>
+        <h3>
+          ПОЛЕЗНО
+        </h3>
+        <p>
+          CSS-переменные применяются не только для хранения палитры цветов проекта, 
+          в них можно хранить что угодно. Например стандартные размеры шрифта, радиус скругления рамок, 
+          общие отступы и поля, ширины контейнера, точки перелома для адаптивной вёрстки и т. п. 
+          То есть любые значения, 
+          которые используются повторно в разных CSS-правилах.
+        </p>
+      </div>
+    </section>
+
+    <!--Резервные значения-->
+    <section class="reserve-values">
+      <div class="container">
+        <h2>
+          Резервные значения
+          <a name="reserve-values-anchor"></a>
+        </h2>
+        <p>
+          Функция <span class="span-bg-color">var(имя_переменной, фолбэк)</span>  может принимать 
+          два значения. Второй аргумент это фолбэк - значение, 
+          которое будет использоваться если переменная, переданная первым аргументом, не определена.
+        </p>
+        <textarea name="" id="" cols="95" rows="12" class="css">
+.section {
+  border: 2px solid var(--brand-color, orange);
+}
+
+.section-title {
+  color: var(--brand-color, black);
+}
+
+.section-title::before {
+  background-color: var(--brand-color, tomato);
+}
+        </textarea>
+        <h3>
+          ПОЛЕЗНО
+        </h3>
+        <p>
+          Возможность передать значение по умолчанию это в первую очередь <b>возможность</b>, а не обязательное 
+          требование при использовании CSS-переменных. Нет необходимости везде указывать фолбэк.
+        </p>
+      </div>
+    </section>
+
+    <!--Область видимости-->
+    <section class="area-of-visibility">
+      <div class="container">
+        <h2>
+          Область видимости
+          <a name="area-of-visibility-anchor"></a>
+        </h2>
+        <p>
+          Переменная <span class="span-bg-color">--brand-color</span>  
+          глобальная, потому что определена в <span class="span-bg-color">:root</span> , 
+          то есть доступна в любом другом элементе. 
+          Если значение будет использоваться только в определённой части страницы, 
+          можно создавать переменные с локальной областью видимости. 
+          Они будут доступны только для того элемента и его потомков, в котором были объявлены.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="html">
+<div class="alert">
+  <p class="alert-text">Alert text</p>
+  <svg class="alert-icon"></svg>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="14" class="css">
+.alert {
+  --alert-text-color: black;
+  --alert-accent-color: tomato;
+}
+
+.alert-text {
+  color: var(--alert-text-color);
+  border: 1px solid var(--alert-accent-color);
+}
+
+.alert-icon {
+  background-color: var(--alert-accent-color);
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Переопределение значений-->
+    <section class="redefining-values">
+      <div class="container">
+        <h2>
+          Переопределение значений
+          <a name="redefining-values-anchor"></a>
+        </h2>
+        <p>
+          Переменные можно переопределять локально другими значениями. 
+          Для этого необходимо объявить переменную 
+          с таким же именем, что и в предке и задать ей необходимое значение.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="html">
+<div class="alert">Default</div>
+<div class="alert success">Success</div>
+<div class="alert warning">Warning</div>
+<div class="alert error">Error</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="23" class="css">
 body {
-  color: #2a2a2a;
+  font-family: sans-serif;
+  line-height: 1.5;
 }
-          </textarea>
-        </div>
-      </section>
+
+.alert {
+  --alert-text-color: black;
+
+  color: var(--alert-text-color);
+}
+
+.alert.success {
+  --alert-text-color: green;
+}
+
+.alert.warning {
+  --alert-text-color: orange;
+}
+
+.alert.error {
+  --alert-text-color: red;
+}
+        </textarea>
+      </div>
+    </section>
+        
+          
   </main>
   <footer>
     <a href="#nav-anchor">Вверх</a>
