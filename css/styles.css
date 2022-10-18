@@ -1,8 +1,9 @@
 :root {
     --span-bg-color: grey;
-    --red: red;
-    --green: green;
-    --blue: blue;
+    --values-bgc: aquamarine;
+    --html-bgc: yellowgreen;
+    --css-bgc: blueviolet;
+    --bgc: orange;
 }
 
 *,
@@ -25,10 +26,27 @@ img {
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+a:focus, a:hover {
+    text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
+}
+
+.header {
+    background-color: var(--bgc);
+}
+
+.footer {
+    background-color: var(--bgc);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 .container {
@@ -48,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .span-bg-color {
     background-color: var(--span-bg-color);
+    border-radius: 3px;
 }
 
 .nav {
@@ -62,12 +81,25 @@ h1, h2, h3, h4, h5, h6 {
 .nav-list {
     display: flex;
     justify-content: center;
+    gap: 70px;
 }
 
-.nav-item:not(:last-child) {
-    margin-right: 50px;
+.list-in-list {
+    padding-top: 15px;
 }
 
 .info-list {
     list-style: inside;
+}
+
+.values {
+    background-color: var(--values-bgc);
+}
+
+.html {
+    background-color: var(--html-bgc);
+}
+
+.css {
+    background-color: var(--css-bgc);
 }

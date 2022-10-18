@@ -10,287 +10,928 @@
 
 
 <body>
-  <header>
+  <header class="header">
     <nav class="nav">
       <a name="nav-anchor"></a>
       <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#css-variables">CSS-переменные</a>
+        <li class="nav-list-item"><a href="#content-decoration-anchor">Оформление текста</a>
+          <ul class="list-in-list">
+            <li><a href="#text-decoration-anchor">Свойство text-decoration</a></li>
+            <li><a href="#text-transform-anchor">Свойство text-transform</a></li>
+            <li><a href="#text-align-anchor">Свойство text-align</a></li>
+            <li><a href="#text-indent-anchor">Свойство text-indent</a></li>
+            <li><a href="#line-height-anchor">Свойство line-height</a></li>
+            <li><a href="#letter-spacing-anchor">Свойство letter-spacing</a></li>
+            <li><a href="#word-spacing-anchor">Свойство word-spacing</a></li>
+            <li><a href="#text-shadow-anchor">Свойство text-shadow</a></li>
+            <li><a href="#layered-shadow-anchor">Многослойная тень</a></li>
+            <li><a href="#white-space-anchor">Свойство white-space</a></li>
+          </ul>
         </li>
-        <li><a href="#variable-declaration-anchor">Объявление переменной </a>
-        </li>
-        <li> 
-          <a href="#using-variable-anchor">Использование переменной</a>
-        </li>
-        <li>
-          <a href="#reserve-values-anchor">Резервные значения</a>
-        </li>
-        <li>
-          <a href="#area-of-visibility-anchor">Область видимости</a>
-        </li>
-        <li>
-          <a href="#redefining-values-anchor">Переопределение значений</a>
-        </li>
-                
+          <li class="nav-list-item"><a href="#font-properties-anchor">Свойства шрифта</a>
+            <ul class="list-in-list">
+              <li><a href="#font-size-anchor">Свойство font-size</a></li>
+              <li><a href="#font-weight-anchor">Свойство font-weight</a></li>
+              <li><a href="#font-style-anchor">Свойство font-style</a></li>
+              <li><a href="#font-family-anchor">Свойство font-family</a></li>
+            </ul>
+          </li>
+          <li class="nav-list-item">
+            <a href="#pseudo-elements-anchor">Псевдоэлементы текста</a>
+            <ul class="list-in-list">
+              <li><a href="#first-letter-anchor">Псевдоэлемент ::first-letter</a></li>
+              <li><a href="#selection-anchor">Псевдоэлемент ::selection</a></li>
+            </ul>
+          </li>
+          <li class="nav-list-item"><a href="#custom-fonts-anchor">Нестандартные шрифты</a>
+            <ul class="list-in-list">
+              <li><a href="#google-fonts-anchor">Сервис Google Fonts</a></li>
+              <li><a href="#font-face-anchor">Директива @font-face</a></li>
+            </ul>
+          </li>
       </ul>
+
       
     </nav>
   </header>
-  <main>  
+  <main>
+    <section class="main-section">
+      <div class="container">
+        <h1>Текст и шрифт</h1>
+      </div>
+    </section>
 
-    <!--CSS-переменные-->  
-      <section class="main-section">
-        <div class="container">
-          <h1>
-            CSS-переменные
-            <a name="css-variables"></a>
-          </h1>
-          <p>
-            Пользовательские свойства (CSS Custom Properties), также известные как CSS-переменные 
-            - это контейнеры для значений, определённые в CSS-документе с целью повторного использования. 
-            CSS-переменные упрощают использование и изменение повторяющихся значений в файле стилей. 
-            Они поддерживаются браузером нативно и не требуют никаких дополнительных инструментов.
-          </p>
-          <textarea name="" id="" cols="95" rows="4" class="html">
-<section class="section">
-  <h1 class="section-title">Section title</h1>
-</section>
-          </textarea>
-          <textarea name="" id="" cols="95" rows="15" class="css">
-.section {
-  /* Другие стили */
-  border: 2px solid #3f51b5;
-}
-
-.section-title {
-  /* Другие стили */
-  color: #3f51b5;
-}
-
-.section-title::before {
-  /* Другие стили */
-  background-color: #3f51b5;
-}
-          </textarea>
-          <p>
-            В приведённом примере значение <span class="span-bg-color">#3f51b5</span>  встречается трижды. 
-            Допустим это главный цвет бренда, который постоянно используется на разных страницах сайта. 
-            Если поменяется цвет бренда, нам будет необходимо везде заменить это значение, 
-            а в большом проекте это могут быть сотни мест. 
-            Лучшее, что мы сможем сделать - использовать поиск и замену.
-          </p>
-        </div>
-      </section>
-
-    <!--Объявление переменной-->
-    <section class="variable-declaration">
+    <!--Оформление текста-->
+    <section class="content-decoration">
       <div class="container">
         <h2>
-          Объявление переменной
-          <a name="variable-declaration-anchor"></a>
+          Оформление текста
+          <a name="content-decoration-anchor"></a>
         </h2>
         <p>
-          На помощь приходят CSS-переменные. 
-          Имя переменной чувствительно к регистру и может содержать латинские буквы,
-           цифры, подчеркивания и тире. Создадим переменную 
-          <span class="span-bg-color">--brand-color</span>  для хранения цвета бренда 
-          <span class="span-bg-color">(#3f51b5)</span>  и будем её использовать.
+          Текст это основной контент веб-страниц, 
+          и для его оформления существуют разнообразные CSS-свойства, которые применяются повседневно.
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство text-decoration-->
+    <section class="text-decoration">
+      <div class="container">
+        <h3>
+          Свойство <span class="span-bg-color">text-decoration</span> 
+          <a name="text-decoration-anchor"></a>
+        </h3>
+        <p>
+          Задаёт различное оформительное подчёркивание и другие эффекты текста.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+text-decoration: none | underline | line-through | overline
+        </textarea>
+        <p>
+          Таблица стилей от браузера устанавливает большинству элементов значение <span class="span-bg-color">none</span>, 
+          то есть отключено. А вот, например, у ссылок по умолчанию указано <span class="span-bg-color">underline</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="8" class="html">
+<h1 class="title">Iste odit similique sit</h1>
+<p class="text">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+  <span>veritatis nihil alias iste</span> odit similique sit eius optio veniam,
+  impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
+</p>
+<a href="" class="link">Читать дальше...</a>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="8" class="css">
+.text > span {
+  text-decoration: line-through;
+}
+
+.link {
+  text-decoration: none;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство text-transform-->
+    <section class="text-transform">
+      <div class="container">
+        <h3>
+          Свойство <span class="span-bg-color">text-transform</span> 
+          <a name="text-transform-anchor"></a>
+        </h3>
+        <p>
+          Управляет регистром символов в тексте, например сделать все буквы заглавными или прописными. 
+          В разметке текст всегда набирается согласно правилам языка. После чего, 
+          при помощи <span class="span-bg-color">text-transform</span>,
+          приводится к нужному виду, потому что всё оформление должно быть в CSS.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+text-transform: none | uppercase | lowercase | capitalize
+        </textarea>
+        <p>
+          Создадим разметку меню навигации, 
+          текст пунктов которой в макете нарисован заглавными буквами.
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<ul class="site-nav">
+  <li><a href="" class="link">Blog</a></li>
+  <li><a href="" class="link">Workshops</a></li>
+  <li><a href="" class="link">Podcasts</a></li>
+  <li><a href="" class="link">About</a></li>
+</ul>
+        </textarea>
+        <p>
+          Теперь в стилях делаем все буквы текста ссылок заглавными.
         </p>
         <textarea name="" id="" cols="95" rows="4" class="css">
-:root {
-  --brand-color: #3f51b5;
+.site-nav .link {
+  text-transform: uppercase;
 }
         </textarea>
-        <p>
-          Глобальные переменные, доступные в любом другом правиле, определяются в селекторе 
-          :root - более специфичном селекторе элемента <span class="span-bg-color">&lt;html&gt;</span> . 
-          Объявление переменной начинается с двойного дефиса  <span class="span-bg-color">--</span> 
-          за которым следует её имя в произвольной нотации. Например, 
-          <span class="span-bg-color">brand-color</span> или  <span class="span-bg-color">brandColor</span> 
-          - это валидные имена переменной, 
-          главное чтобы все переменные в проекте были в одинаковой нотации. 
-          Имя и значение разделяется двоеточием, а в конце объявления ставится точка с запятой.
-        </p>
-        <h3>
-          ИНТЕРЕСНО
-        </h3>
-        <p>
-          Объявление переменной это создание нового CSS-свойства, которое наследуется и поэтому доступно везде, 
-          так как любой элемент это потомок элемента <span class="span-bg-color">&lt;html&gt;</span>.
-        </p>
       </div>
     </section>
 
-    <!--Использование переменной-->
-    <section class="using-variable">
+    <!--Свойство text-align-->
+    <section class="text-align">
       <div class="container">
-        <h2>
-          Использование переменной
-          <a name="using-variable-anchor"></a>
-        </h2>
-        <p>
-          Для получения доступа к значению переменной применяется встроенная функция 
-          <span class="span-bg-color">var()</span> , которой первым аргументом передаётся имя переменной.
-        </p>
-        <textarea name="" id="" cols="95" rows="19" class="css">
-:root {
-  --brand-color: #3f51b5;
-}
-
-.section {
-  /* Другие стили */
-  border: 2px solid var(--brand-color);
-}
-
-.section-title {
-  /* Другие стили */
-  color: var(--brand-color);
-}
-
-.section-title::before {
-  /* Другие стили */
-  background-color: var(--brand-color);
-}
-        </textarea>
-        <p>
-          Кода стало не намного больше, но он более гибкий и читабельный. Если необходимо изменить цвет бренда, 
-          достаточно заменить значение переменной <span class="span-bg-color">--brand-color</span>  и цвет изменится везде где она используется.
-        </p>
         <h3>
-          ПОЛЕЗНО
+          Свойство <span class="span-bg-color">text-align</span> 
+          <a name="text-align-anchor"></a>
         </h3>
         <p>
-          CSS-переменные применяются не только для хранения палитры цветов проекта, 
-          в них можно хранить что угодно. Например стандартные размеры шрифта, радиус скругления рамок, 
-          общие отступы и поля, ширины контейнера, точки перелома для адаптивной вёрстки и т. п. 
-          То есть любые значения, 
-          которые используются повторно в разных CSS-правилах.
+          Управляет выравниванием текстового содержимого элемента по горизонтали.
         </p>
-      </div>
-    </section>
-
-    <!--Резервные значения-->
-    <section class="reserve-values">
-      <div class="container">
-        <h2>
-          Резервные значения
-          <a name="reserve-values-anchor"></a>
-        </h2>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+text-align: left | right | center | justify
+        </textarea>
         <p>
-          Функция <span class="span-bg-color">var(имя_переменной, фолбэк)</span>  может принимать 
-          два значения. Второй аргумент это фолбэк - значение, 
-          которое будет использоваться если переменная, переданная первым аргументом, не определена.
+          По умолчанию текст выравнивается по левому краю (значение <span class="span-bg-color">left</span>).
+        </p>
+        <textarea name="" id="" cols="95" rows="15" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p class="post-text align-right">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+
+  <p class="post-text align-justify">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+</article>
+        </textarea>
+        <p>
+          Центриуерм текст заголовка и выравняем текст абзацев по правому краю и равномерно.
         </p>
         <textarea name="" id="" cols="95" rows="12" class="css">
-.section {
-  border: 2px solid var(--brand-color, orange);
+.post-title {
+  text-align: center;
 }
 
-.section-title {
-  color: var(--brand-color, black);
+.align-right {
+  text-align: right;
 }
 
-.section-title::before {
-  background-color: var(--brand-color, tomato);
+.align-justify {
+  text-align: justify;
 }
         </textarea>
+        <h4>
+          ВНИМАНИЕ
+        </h4>
+        <p>
+          Использование значения <span class="span-bg-color">justify</span> не самая лучшая идея. 
+          Хотя текст и прижимается к левой и правой границе блока равномерно, 
+          его читабельность сильно падает. Всё потому, 
+          что пробелы между словами становятся разной ширины, а это негативно влияет на восприятие текста.
+        </p>  
+      </div>
+    </section>
+
+    <!--Свойство text-indent-->
+    <section class="text-indent">
+      <div class="container">
         <h3>
-          ПОЛЕЗНО
+          Свойство <span class="span-bg-color">text-indent</span>
+          <a name="text-indent-anchor"></a> 
         </h3>
         <p>
-          Возможность передать значение по умолчанию это в первую очередь <b>возможность</b>, а не обязательное 
-          требование при использовании CSS-переменных. Нет необходимости везде указывать фолбэк.
+          Устанавливает величину отступа первой строки блока текста, 
+          например абзаца. Не влияет на все остальные строки кроме первой.
         </p>
-      </div>
-    </section>
-
-    <!--Область видимости-->
-    <section class="area-of-visibility">
-      <div class="container">
-        <h2>
-          Область видимости
-          <a name="area-of-visibility-anchor"></a>
-        </h2>
-        <p>
-          Переменная <span class="span-bg-color">--brand-color</span>  
-          глобальная, потому что определена в <span class="span-bg-color">:root</span> , 
-          то есть доступна в любом другом элементе. 
-          Если значение будет использоваться только в определённой части страницы, 
-          можно создавать переменные с локальной областью видимости. 
-          Они будут доступны только для того элемента и его потомков, в котором были объявлены.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="html">
-<div class="alert">
-  <p class="alert-text">Alert text</p>
-  <svg class="alert-icon"></svg>
-</div>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+text-indent: значение | проценты | inherit
         </textarea>
-        <textarea name="" id="" cols="95" rows="14" class="css">
-.alert {
-  --alert-text-color: black;
-  --alert-accent-color: tomato;
-}
-
-.alert-text {
-  color: var(--alert-text-color);
-  border: 1px solid var(--alert-accent-color);
-}
-
-.alert-icon {
-  background-color: var(--alert-accent-color);
+        <p>
+          В качестве значений принимаются любые единицы длины, например пиксели (<span class="span-bg-color">px</span>). 
+          При задании значения в процентах, отступ вычисляется в зависимости от ширины блока.
+        </p>
+        <textarea name="" id="" cols="95" rows="11" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p class="post-text">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.Obcaecati
+    commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
+    impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+</article>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.post-text {
+  text-indent: 100px;
 }
         </textarea>
       </div>
     </section>
 
-    <!--Переопределение значений-->
-    <section class="redefining-values">
+    <!--Свойство line-height-->
+    <section class="line-height">
       <div class="container">
-        <h2>
-          Переопределение значений
-          <a name="redefining-values-anchor"></a>
-        </h2>
+        <h3>
+          Свойство <span class="span-bg-color">line-height</span>
+          <a name="line-height-anchor"></a>
+        </h3>
         <p>
-          Переменные можно переопределять локально другими значениями. 
-          Для этого необходимо объявить переменную 
-          с таким же именем, что и в предке и задать ей необходимое значение.
+          Устанавливает межстрочный интервал (интерлиньяж, высоту строки) текста. По умолчанию расстояние между 
+          строками зависит от вида шрифта и его размеров, и определяется браузером автоматически.
         </p>
-        <textarea name="" id="" cols="95" rows="5" class="html">
-<div class="alert">Default</div>
-<div class="alert success">Success</div>
-<div class="alert warning">Warning</div>
-<div class="alert error">Error</div>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+line-height: множитель | значение | проценты | normal | inherit
         </textarea>
-        <textarea name="" id="" cols="95" rows="23" class="css">
-body {
-  font-family: sans-serif;
+        <p>
+          Значение можно задавать абсолютными или относительными единицами и множителем. 
+          Лучше всего устанавливать значение в виде множителя, 
+          тогда интерлиньяж рассчитывается от текущего размера шрифта текста.
+        </p>
+        <textarea name="" id="" cols="95" rows="8" class="html">
+<p class="text">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+  cumque fuga facere labore quo id necessitatibus quaerat rerum.Obcaecati
+  commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
+  impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
+</p>
+        </textarea>
+        <p>
+          Например, если в макете размер шрифта <span class="span-bg-color">16px</span> 
+          а интерлиньяж <span class="span-bg-color">24px</span>, 
+          просто делим <span class="span-bg-color">24</span> на <span class="span-bg-color">16</span>
+           и получаем множитель <span class="span-bg-color">1.5.</span> Использование 
+          множителя гарантирует равномерное масштабирование межстрочного 
+          интервала при изменении размера текста.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="css">
+.text {
+  font-size: 16px;
   line-height: 1.5;
 }
+        </textarea>
+      </div>
+    </section>
 
-.alert {
-  --alert-text-color: black;
-
-  color: var(--alert-text-color);
+    <!--Свойство letter-spacing-->
+    <section class="letter-spacing">
+      <div class="container">
+        <h3>
+          Свойство letter-spacing
+          <a name="letter-spacing-anchor"></a>
+        </h3>
+        <p>
+          Определяет интервал между символами. По умолчанию расстояние между символами 
+          устанавливается исходя из типа и вида шрифта, его размеров и настроек операционной системы.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+letter-spacing: значение | normal | inherit
+        </textarea>
+        <p>
+          Иногда дизайнеры устанавливают нестандартное значение межсимвольного расстояния, 
+          и именно для этого существует свойство <span class="span-bg-color">letter-spacing</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="11" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p class="post-text">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+    cumque fuga facere labore quo id necessitatibus quaerat rerum.Obcaecati
+    commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
+    impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
+  </p>
+</article>
+        </textarea>
+        <p>
+          Для наглядности зададим большие значения <span class="span-bg-color">letter-spacing</span> 
+          тексту заголовка и абзаца.
+        </p>
+        <textarea name="" id="" cols="95" rows="8" class="css">
+.post-title {
+  letter-spacing: 10px;
 }
 
-.alert.success {
-  --alert-text-color: green;
-}
-
-.alert.warning {
-  --alert-text-color: orange;
-}
-
-.alert.error {
-  --alert-text-color: red;
+.post-text {
+  letter-spacing: 5px;
 }
         </textarea>
       </div>
     </section>
-        
-          
+
+    <!--Свойство word-spacing-->
+    <section class="word-spacing">
+      <div class="container">
+        <h3>
+          Свойство <span class="span-bg-color">word-spacing</span>
+          <a name="word-spacing-anchor"></a>
+        </h3>
+        <p>
+          Определяет интервал между словами. По умолчанию расстояние между 
+          словами устанавливается исходя из типа и вида шрифта, 
+          его размеров и настроек операционной системы.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+word-spacing: значение | normal | inherit
+        </textarea>
+        <h4>
+          ИНТЕРЕСНО
+        </h4>
+        <p>
+          Свойство <span class="span-bg-color">word-spacing</span> 
+          относится к группе свойств оформления текста, которые применяются довольно редко.
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство text-shadow-->
+    <section class="text-shadow">
+      <div class="container">
+        <h3>
+          Свойство text-shadow <span class="span-bg-color"></span>
+          <a name="text-shadow-anchor"></a>
+        </h3>
+        <p>
+          Контролирует тень текста, а также устанавливает её параметры: цвет, смещение и радиус размытия.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+text-shadow: <смещение по x>, <смещение по y>, <радиус размытия>, <цвет>
+        </textarea>
+        <ul class="info-list">
+          <li><span class="span-bg-color">цвет</span> - задаётся в любом формате. По умолчанию цвет тени совпадает с цветом текста.</li>
+          <li><span class="span-bg-color">смещение по x</span> - сдвиг тени по горизонтали относительно текста. Положительное значение задает сдвиг тени вправо, отрицательное - влево.</li>
+          <li><span class="span-bg-color">смещение по y</span> - сдвиг тени по вертикали относительно текста. Положительное значение задает сдвиг тени вниз, отрицательное - вверх.</li>
+          <li><span class="span-bg-color">радиус размытия</span> - чем больше значение, тем сильнее тень размывается и становится светлее. По умолчанию, если не задан, будет равен <span class="span-bg-color">0</span>.</li>          
+        </ul>
+        <textarea name="" id="" cols="95" rows="2" class="html">
+<h1 class="title">Fusce posuere ligula elementum purus</h1>
+        </textarea>
+        <p>
+          Сделаем белый текст с тёмной тенью. 
+          Для этого установим смещение по осям X и Y в <span class="span-bg-color">2px</span>, 
+          радиус размытия <span class="span-bg-color">4px</span> и чёрный цвет тени.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="css">
+.title {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+}
+        </textarea>
+        <h4>
+          Многослойная тень
+          <a name="layered-shadow-anchor"></a>
+        </h4>
+        <p>
+          На один элемент можно добавить несколько теней, 
+          указав их через запятую. Получается многослойный пирог из теней.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="html">
+<h1 class="title">Fusce posuere ligula elementum purus</h1>
+        </textarea>
+        <p>
+          Порядок отображения следующий - первая тень в списке размещается на самом верху, 
+          последняя - в самом низу. 
+          То есть, чем раньше указана тень, тем выше она в слоях, 
+          и будет визуально перекрывать все последующие.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="css">
+.title {
+  color: #ffffff;
+  text-shadow: 2px 2px 20px #ff0000, 5px 5px 5px #000000;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство white-space-->
+    <section class="white-space">
+      <div class="container">
+        <h3>
+          Свойство <span class="span-bg-color">white-space</span>
+          <a name="white-space-anchor"></a>
+        </h3>
+        <p>
+          По умолчанию браузер игнорирует больше одного пробела и переноса строки 
+          в HTML-разметке. Свойство <span class="span-bg-color">white-space</span>, 
+          как и тег <span class="span-bg-color">&lt;pre&gt;</span>, 
+          но более гибко, управляет форматированием пробелов и переносов текста.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+white-space: normal | nowrap | pre | pre-wrap
+        </textarea>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Свойства шрифта-->
+    <section class="font-properties">
+      <div class="container">
+        <h2>
+          Свойства шрифта
+          <a name="font-properties-anchor"></a>
+        </h2>
+      </div>
+    </section>
+
+    <!--Свойство font-size-->
+    <section class="font-size">
+      <div class="container">
+        <h3>
+          Свойство <span class="span-bg-color">font-size</span>
+          <a name="font-size-anchor"></a>
+        </h3>
+        <p>
+          Задаёт размер шрифта элемента в абсолютных или относительных единицах измерения. 
+          Пока что ограничимся абсолютными единицами - <span class="span-bg-color">px</span> (пикселями).
+        </p>
+        <textarea name="" id="" cols="95" rows="6" class="html">
+<p class="text">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+  cumque fuga facere labore quo id necessitatibus quaerat rerum.
+</p>
+        </textarea>
+        <p>
+          По умолчанию размер шрифта абзацев, который установлен в таблице стилей браузера, 
+          равен <span class="span-bg-color">16px</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.text {
+  font-size: 20px;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство font-weight-->
+    <section class="font-weight">
+      <div class="container">
+        <h3>
+          Свойство <span class="span-bg-color">font-weight</span>
+          <a name="font-weight-anchor"></a>
+        </h3>
+        <p>
+          Контролирует толщину начертания (жирность, вес) букв шрифта. 
+          Значение свойства можно задавать набором зарезервированных слов или цифрами 
+          от <span class="span-bg-color">100</span> до <span class="span-bg-color">900</span> с шагом в 
+          <span class="span-bg-color">100</span>, 
+          которые задают степень толщины глифа от тонкого <span class="span-bg-color">100</span> 
+          до толстого <span class="span-bg-color">900</span>.
+        </p>
+        <img src="./img/font-weight.png" alt="font weight examples" weight="700">
+        <textarea name="" id="" cols="95" rows="2" class="values">
+font-weight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+        </textarea>
+        <p>
+          Ключевые слова привязаны к цифрам, например <span class="span-bg-color">normal</span> - это 
+          <span class="span-bg-color">400</span>, а <span class="span-bg-color">bold</span> 
+          - это <span class="span-bg-color">700</span>. 
+          В разработке используются только цифры, из-за возможности задать одинаково точный вес во всех браузерах.
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<h1 class="title">Iste odit similique sit</h1>
+<p class="text">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+  cumque fuga facere labore quo id necessitatibus quaerat rerum.
+</p>
+        </textarea>
+        <p>
+          По умолчанию, вес шрифта абзацев, 
+          который установлен в таблице стилей браузера, равен <span class="span-bg-color">400</span>, 
+          а вес заголовков <span class="span-bg-color">700</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="9" class="css">
+/* Поменяем местами жирность текста заголовка и абзаца */
+.title {
+  font-weight: 400;
+}
+
+.text {
+  font-weight: 700;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство font-style-->
+    <section class="font-style">
+      <div class="container">
+        <h3>
+          Свойство <span class="span-bg-color">font-style</span>
+          <a name="font-style-anchor"></a>
+        </h3>
+        <p>
+          Задаёт начертание текста, например можно сделать текст наклонным.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+font-style: normal | italic | oblique | initial | inherit
+        </textarea>
+        <p>
+          Из всех значений используют только два.
+        </p>
+        <ul class="info-list">
+          <li><span class="span-bg-color">normal</span> - значение по умолчанию у большинства тегов</li>
+          <li><span class="span-bg-color">italic</span> - текст с курсивом (наклоном)</li>
+        </ul>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<h1 сlass="title">Iste odit similique sit</h1>
+<p class="text">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
+  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
+  cumque fuga facere labore quo id necessitatibus quaerat rerum.
+</p>
+        </textarea>
+        <p>
+          Сделаем текст заголовка наклонным.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.title {
+  font-style: italic;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство font-family-->
+    <section class="font-family">
+      <div class="container">
+        <h3>
+          Свойство <span class="span-bg-color">font-family</span>
+          <a name="font-family-anchor"></a>
+        </h3>
+        <p>
+          <strong>Шрифт</strong> — это набор типографских литер, цифр и специальных знаков 
+          определенного стиля для набора текста.
+        </p>
+        <p>
+          Шрифты делят на несколько основных групп (семейств): шрифты с засечками (serif), 
+          шрифты без засечек (sans-serif), моноширинные (monospace), декоративные и рукописные. 
+          MacOS, Linux и Windows содержат набор стандартных шрифтов из каждого семейства. По умолчанию, 
+          если никакой другой шрифт не задан, браузер использует 
+          <span class="span-bg-color">Times New Roman</span>  из семейства с засечками (serif).
+        </p>
+        <p>
+          Посмотреть каким шрифтом отрисован текст элемента можно в инструментах разработчика на вкладке 
+          <span class="span-bg-color">Computed</span>.
+        </p>
+        <img src="./img/rendered-font.png" alt="font family information" width="700">
+        <p>
+          Свойство <span class="span-bg-color">font-family</span> задаёт шрифт текста элемента. 
+          Через запятую можно перечислить произвольное количество шрифтов, которые браузер, 
+          в порядке слева направо, попытается найти в системе пользователя и применить первый найденный.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="css">
+body {
+  font-family: 'Helvetica Neue', 'Roboto', 'Verdana', 'Tahoma', sans-serif;
+}
+        </textarea>
+        <p>
+          В конце списка всегда указывается семейство шрифтов, 
+          на тот случай если ни одного перечисленного шрифта не найдено. 
+          Тогда применится стандартный шрифт из этого семейства, 
+          который есть в системе пользователя.
+        </p>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Псевдоэлементы текста-->
+    <section class="pseudo-elements">
+      <div class="container">
+        <h2>
+          Псевдоэлементы текста
+          <a name="pseudo-elements-anchor"></a>
+        </h2>
+      </div>
+    </section>
+
+    <!--Псевдоэлемент ::first-letter-->
+    <section class="first-letter">
+      <div class="container">
+        <h3>
+          Псевдоэлемент <span class="span-bg-color">::first-letter</span>
+          <a name="first-letter-anchor"></a>
+        </h3>
+        <p>
+          Управляет стилем первого символа в тексте элемента, к которому добавляется. 
+          К этому псевдоэлементу можно применить только свойства оформления шрифта, цвета, фона, а также геометрии элемента.
+        </p>
+        <textarea name="" id="" cols="95" rows="3" class="css">
+элемент::first-letter {
+}
+        </textarea>
+        <p>
+          Например, можно выделить первые буквы каждого абзаца стихотворения.
+        </p>
+        <textarea name="" id="" cols="95" rows="21" class="html">
+<pre>
+  А ты когда-то слушал тишину?
+  Как жаль, что ничего ты не услышал,
+  Лишь тронь её беззвучную струну,
+  И ты поймёшь, что можно даже тише.
+</pre>
+
+<pre>
+  А ты когда-то спорил с тишиной?
+  И не пытайся, я однажды спорил,
+  Как будто смыло штормовой волной,
+  Противоречия всех моих историй.
+</pre>
+
+<pre>
+  А ты когда-то видел тишину?
+  Как идёт дождь, или летают птицы,
+  А может видел ночью синеву,
+  Или улыбку на любимых лицах.
+</pre>
+        </textarea>
+        <p>
+          Добавим стили для псевдоэлемента  <span class="span-bg-color">::first-letter</span> 
+          тега <span class="span-bg-color">pre</span>. Изменим шрифт, размер шрифта и цвет.
+        </p>
+        <textarea name="" id="" cols="95" rows="12" class="css">
+pre {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  color: #2a2a2a;
+  font-size: 16px;
+}
+
+pre::first-letter {
+  font-family: 'Tahoma', serif;
+  font-size: 32px;
+  color: #f44336;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Псевдоэлемент ::selection-->
+    <section class="selection">
+      <div class="container">
+        <h3>
+          Псевдоэлемент <span class="span-bg-color">::selection</span>
+          <a name="selection-anchor"></a>
+        </h3>
+        <p>
+          Управляет стилем выделения текста элемента, переопределяя стандартные значения из таблицы стилей браузера. 
+          В оформлении можно использовать только свойства <span class="span-bg-color">color</span> и 
+          <span class="span-bg-color">background-color</span>. Выделите мышкой часть текста примера.
+        </p>
+        <textarea name="" id="" cols="95" rows="21" class="html">
+<pre>
+  Wyatt resteth here, that quick could never rest;
+  Whose heavenly gifts increased by disdain,
+  And virtue sank the deeper in his breast;
+  Such profit he by envy could obtain.
+</pre>
+
+<pre>
+  A head where wisdom mysteries did frame,
+  Whose hammers beat still in that lively brain
+  As on a stithy where that some work of fame
+  Was daily wrought, to turn to Britain's gain.
+</pre>
+
+<pre>
+  A visage stern and mild, where both did grow,
+  Vice to contemn, in virtue to rejoice;
+  Amid great storms, whom grace assured so
+  To live upright and smile at fortune's choice.
+</pre>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="18" class="css">
+pre {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  color: #2a2a2a;
+  font-size: 16px;
+}
+
+pre::first-letter {
+  font-family: 'Tahoma', serif;
+  font-size: 32px;
+  color: #f44336;
+}
+
+/* Let's add text selection styles for each paragraph of the poem. */
+pre::selection {
+  color: #ffffff;
+  background-color: #3f51b5;
+}
+        </textarea>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Нестандартные шрифты-->
+    <section class="custom fonts">
+      <div class="container">
+        <h2>
+          Нестандартные шрифты
+          <a name="custom-fonts-anchor"></a>
+        </h2>
+        <p>
+          Шрифт помогает сделать сайт ярким и запоминающимся. Миллионы сайтов с одним шрифтом «Times New Roman» 
+          были бы, наверное, слишком скучны. Поэтому дизайнеры создают свои шрифты, 
+          а разработчики могут использовать их в проектах.
+        </p>
+        <h4>
+          ИНТЕРЕСНО
+        </h4>
+        <p>
+          Шрифты делятся на платные и бесплатные. Лицензию платного шрифта необходимо покупать, а использовать 
+          его без лицензии чревато нарушением авторских прав. Есть много красивых бесплатных шрифтов, которые находятся в общем доступе.
+        </p>
+      </div>
+    </section>
+
+    <!--Сервис Google Fonts-->
+    <section class="google-fonts">
+      <div class="container">
+        <h3>
+          Сервис Google Fonts
+          <a name="google-fonts-anchor"></a>
+        </h3>
+        <p>
+          <a href="https://fonts.google.com/" class="resource-link" rel="noopener nofollow noreferrer" target="_blank">Google Fonts</a>  
+          это хранилище огромного количества бесплатных шрифтов. Всё что необходимо сделать, 
+          это найти понравившийся шрифт, получить на него ссылку и подключить в своём HTML-файле как еще одну таблицу стилей.
+        </p>
+        <p>
+          Скопируйте и вставьте следующий HTML-код в свой файл разметки и откройте страницу в браузере. 
+          Текст, отрисованный нестандартным шрифтом, 
+          не отличается ничем, кроме внешнего вида, поэтому для его оформления можно использовать любые CSS-свойства.
+        </p>
+        <textarea name="" id="" cols="95" rows="18" class="html">
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .title {
+        font-family: 'Tangerine', cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Making the Web Beautiful!</h1>
+  </body>
+</html>
+        </textarea>
+        <p>
+          Для того, чтобы подключить нестандартный бесплатный шрифт с сервиса Google Fonts, 
+          переходим по ссылке и попадаем на 
+          <a href="https://fonts.google.com/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">страницу поиска</a> .
+        </p>
+        <img src="./img/font-step-1.png" alt="google fonts search system" width="700">
+        <p>
+          Можно пролистывать галерею шрифтов и искать понравившийся, 
+          или, если имя шрифта известно, ввести его в поле поиска и нажать на карточку шрифта.
+        </p>
+        <img src="./img/font-step-2.png" alt="goggle fonts galery" width="700">
+        <p>
+          На странице шрифта выбираем необходимый вес. Выбирать все доступные жирности не нужно, чем больше вариантов, 
+          тем тяжелее будет файл шрифта, и тем дольше будет загружаться ваша веб-страница. 
+          Тоже самое и с количеством шрифтов, обычно ограничиваются одним, максимум двумя шрифтами для всего сайта.
+        </p>
+        <h4>
+          ВНИМАНИЕ
+        </h4>
+        <p>
+          Не все шрифты поддерживают полный диапазон жирностей 
+          (от <span class="span-bg-color">100</span> до <span class="span-bg-color">900</span>) и начертаний (стандартный или курсив). 
+          Дизайнер создаёт набор самых популярных значений. 
+          Если шрифт не поддерживает определённый вес, браузер будет отрисовывать его ближайшей доступной жирностью.
+        </p>
+        <p>
+          Нам нужен только вес <span class="span-bg-color">700</span>, потому что мы подключаем шрифт для заголовков.
+        </p>
+        <img src="./img/font-step-3.png" alt="choose of google font weight" width="700">
+        <p>
+          На вкладке <span class="span-bg-color">Embed</span> копируем тег <span class="span-bg-color">&lt;link&gt;</span>, 
+          в котором указана ссылка на таблицу стилей шрифта, и добавляем её в шапку своего 
+          HTML-документа, перед остальными стилями.
+        </p>
+        <img src="./img/font-step-4.png" alt="embed link on google fonts" width="700">
+        <p>
+          Теперь в файле стилей можно использовать шрифт <span class="span-bg-color">Tangerine</span> 
+          указав его в свойстве <span class="span-bg-color">font-family</span>.
+        </p>
+      </div>
+    </section>
+
+    <!--Директива @font-face-->
+    <section class="font-face">
+      <div class="container">
+        <h3>
+          Директива <span class="span-bg-color">@font-face</span>
+          <a name="font-face-anchor"></a>
+        </h3>
+        <p>
+          Давайте разберёмся что именно мы подключили к HTML-документу в прошлой секции.
+        </p>
+        <img src="./img/font-face.png" alt="connected fonts in developers tools" width="700">
+        <ol>
+          <li>Открываем инструменты разработчика и переходим на вкладку «Network».</li>
+          <li>Выбираем фильтр «CSS», чтобы отображались только файлы стилей.</li>
+          <li>Кликаем по файлу от Google Fonts.</li>
+          <li>Выбираем вкладку «Preview», в которой отображается содержимое файла.</li>
+        </ol>
+        <textarea name="" id="" cols="95" rows="14" class="css">
+/* latin */
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Tangerine Bold'), local('Tangerine-Bold'),
+    url(https://fonts.gstatic.com/s/tangerine/v12/Iurd6Y5j_oScZZow4VO5srNZi5FNym499g.woff2)
+      format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+        </textarea>
+        <p>
+          Итак, Google Fonts вернул нам самый обычный CSS-файл, в котором есть директива 
+          <span class="span-bg-color">@font-face</span> - объявление шрифта. Эта директива позволяет указать параметры подключаемого шрифта.
+        </p>
+        <ul>
+          <li><span class="span-bg-color">font-family</span> - локальное имя для использования в нашем CSS-коде.</li>
+          <li><span class="span-bg-color">font-style</span> - тип начертаний (обычный, курсив и т. п.).</li>
+          <li><span class="span-bg-color">font-weight</span> - вес подключаемого шрифта.</li>
+          <li><span class="span-bg-color">font-display</span> - управляет отображеним текста во время загрузки шрифта.</li>
+          <li><span class="span-bg-color">src</span> - ссылка на сам файл шрифта и уточнение его типа, обычно woff или woff2. В нашем случае файл шрифта лежит на серверах Google, но это может быть и локальный шрифт, который хранится в файлах проекта.</li>
+          <li><span class="span-bg-color">unicode-range</span> - указывает набор необходимых символов в шрифте из таблицы символов <a href="https://unicode-table.com/en/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Unicode</a> . Загружать все символы излишне, чем их меньше, тем быстрее загрузится шрифт.</li>
+        </ul>
+        <h4>
+          ПОЛЕЗНО
+        </h4>
+        <p>
+          Все известные человечеству символы (языков, математические знаки и т. п.) собраны и описаны стандартом, называемым Unicode, 
+          в котором каждый символ имеет имя (например, «latin capital letter a») и код (code point) — число от <span class="span-bg-color">0</span> до <span class="span-bg-color">10FFFF</span>.
+        </p>
+      </div>
+    </section>
   </main>
-  <footer>
+
+
+
+
+
+
+
+
+
+
+  <!--F O O T E R-->
+  <footer class="footer">
     <a href="#nav-anchor">Вверх</a>
 
   </footer>
