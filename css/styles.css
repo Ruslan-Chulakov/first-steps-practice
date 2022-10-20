@@ -1,9 +1,10 @@
 :root {
-    --span-bg-color: grey;
+    --mark: grey;
     --values-bgc: aquamarine;
     --html-bgc: yellowgreen;
     --css-bgc: blueviolet;
     --bgc: orange;
+    --js-bgc: silver;
 }
 
 *,
@@ -15,6 +16,7 @@
 ul {
     list-style: none;
     padding-left: 0;
+    margin: 0;
 }
 
 img {
@@ -41,31 +43,34 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--bgc);
 }
 
-.footer {
-    background-color: var(--bgc);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 150px;
-    padding-right: 150px;
-}
+
 
 .container {
     width: 750px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
-    Margin-right: auto;
+    margin-right: auto;
     padding-top: 30px;
     padding-bottom: 30px;
+    border-bottom: 3px solid maroon;
+}
+
+section:nth-child(2n) {
+    background-color: rgba(192, 192, 192, .2);
+}
+
+section:nth-child(2n+1) {
+    background-color: rgba(192, 192, 192, .1);
 }
 
 .resource-link {
     text-decoration: none;
-    color: var(--span-bg-color)
+    color: var(--mark)
 }
 
-.span-bg-color {
-    background-color: var(--span-bg-color);
+.mark {
+    background-color: var(--mark);
     border-radius: 3px;
 }
 
@@ -73,15 +78,21 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
-    Margin-right: auto;
+    margin-right: auto;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-
-.nav-list {
     display: flex;
     justify-content: center;
     gap: 70px;
+}
+
+.nav-list {
+   
+}
+
+.chapter-link {
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
 .list-in-list {
@@ -102,4 +113,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .css {
     background-color: var(--css-bgc);
+}
+
+.js {
+    background-color: var(--js-bgc)
+}
+
+
+
+.footer {
+    background-color: var(--bgc);
+    text-align: center;
+}
+
+.footer-batton {
+    display: block;
+    margin: 0 auto;
+    padding: 50px 100px;
 }

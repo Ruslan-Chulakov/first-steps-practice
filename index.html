@@ -11,912 +11,2032 @@
 
 <body>
   <header class="header">
-    <nav class="nav">
-      <a name="nav-anchor"></a>
+    <a name="nav-anchor"></a>
+    <nav class="nav"> 
       <ul class="nav-list">
-        <li class="nav-list-item"><a href="#content-decoration-anchor">Оформление текста</a>
-          <ul class="list-in-list">
-            <li><a href="#text-decoration-anchor">Свойство text-decoration</a></li>
-            <li><a href="#text-transform-anchor">Свойство text-transform</a></li>
-            <li><a href="#text-align-anchor">Свойство text-align</a></li>
-            <li><a href="#text-indent-anchor">Свойство text-indent</a></li>
-            <li><a href="#line-height-anchor">Свойство line-height</a></li>
-            <li><a href="#letter-spacing-anchor">Свойство letter-spacing</a></li>
-            <li><a href="#word-spacing-anchor">Свойство word-spacing</a></li>
-            <li><a href="#text-shadow-anchor">Свойство text-shadow</a></li>
-            <li><a href="#layered-shadow-anchor">Многослойная тень</a></li>
-            <li><a href="#white-space-anchor">Свойство white-space</a></li>
+        <li><a href="#block-model-anchor" class="chapter-link">Блочная модель</a>
+          <ul>
+            <li><a href="#width-and-height-anchor">Свойства width и height</a></li>
+            <li><a href="#box-sizing-anchor">Свойство box-sizing</a>
+            <ul>
+              <li><a href="#content-box-anchor">Значение content-box</a></li>
+              <li><a href="#border-box-anchor">Значение border-box</a></li>
+              <li><a href="#global-border-box-anchor">Глобальный border-box</a></li>
+            </ul>
+            </li>
+            <li><a href="#normalize-anchor">Нормализация стилей</a></li>
           </ul>
         </li>
-          <li class="nav-list-item"><a href="#font-properties-anchor">Свойства шрифта</a>
-            <ul class="list-in-list">
-              <li><a href="#font-size-anchor">Свойство font-size</a></li>
-              <li><a href="#font-weight-anchor">Свойство font-weight</a></li>
-              <li><a href="#font-style-anchor">Свойство font-style</a></li>
-              <li><a href="#font-family-anchor">Свойство font-family</a></li>
-            </ul>
-          </li>
-          <li class="nav-list-item">
-            <a href="#pseudo-elements-anchor">Псевдоэлементы текста</a>
-            <ul class="list-in-list">
-              <li><a href="#first-letter-anchor">Псевдоэлемент ::first-letter</a></li>
-              <li><a href="#selection-anchor">Псевдоэлемент ::selection</a></li>
-            </ul>
-          </li>
-          <li class="nav-list-item"><a href="#custom-fonts-anchor">Нестандартные шрифты</a>
-            <ul class="list-in-list">
-              <li><a href="#google-fonts-anchor">Сервис Google Fonts</a></li>
-              <li><a href="#font-face-anchor">Директива @font-face</a></li>
-            </ul>
-          </li>
       </ul>
 
-      
+      <ul class="nav-list">
+        <li><a href="#element-geometry-anchor" class="chapter-link">Геометрия элемента</a>
+          <ul>
+            <li><a href="#padding-anchor">Свойство padding</a></li>
+            <li><a href="#margin-anchor">Свойство margin</a>
+              <ul>
+                <li><a href="#collapsing-anchor">Схлопывание вертикальных отступов</a></li>
+                <li><a href="#loss-anchor">Выпадение вертикальных отступов</a></li>
+              </ul>
+            </li>
+            <li><a href="#border-anchor">Свойство border</a>
+              <ul>
+                <li><a href="#individual-border-anchor">Индивидуальные рамки</a></li>
+                <li><a href="#border-radius">Закруглённая рамка</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav-list">
+        <li><a href="#element-types" class="chapter-link">Типы элементов</a>
+          <ul>
+            <li><a href="#block-level-anchor">Блочные элементы (block-level)</a>
+              <ul>
+                <li><a href="#fixed-width-anchor">Фиксированная ширина</a></li>
+                <li><a href="#horizontal-centering-anchor">Горизонтальное центрирование блочных элементов</a></li>
+                <li><a href="#element-container-anchor">Элемент-контейнер</a></li>
+              </ul>
+            </li>
+            <li><a href="#inline-anchor">Строчные элементы (inline)</a>
+              <ul>
+                <li><a href="#inline-gap-anchor">Зазор у строчных элементов</a></li>
+                <li><a href="#inline-margin-border-anchor">Особенности вертикальных полей и рамок</a></li>
+              </ul>            
+            </li>
+            <li><a href="#inline-block-anchor">Строчно-блочные элементы (inlineblock)</a></li>
+            <li><a href="#display-none-anchor">Прячем элементы</a></li>
+          </ul>
+        </li>       
+      </ul>
+
+      <ul class="nav-list">
+        <li><a href="#structure-pseudoclasses-anchor" class="chapter-link">Структурные псевдоклассы</a>
+          <ul>
+            <li><a href="first-last-child-anchor">Псевдоклассы :first-child и :last-child</a></li>
+            <li><a href="#not-anchor">Псевдокласс :not(selector)</a></li>
+            <li><a href="#nth-child-anchor">Псевдокласс :nth-child(an+b)</a>
+              <ul>
+                <li><a href="#n-element-anchor">N-й элемент</a></li>
+                <li><a href="#even-odd-anchor">Чётные и нечётные элементы</a></li>
+                <li><a href="#from-nth-anchor">От N-го элемента</a></li>
+                <li><a href="#to-nth-anchor">До N-го элемента</a></li>
+                <li><a href="#every-nth-anchor">Каждый N-й элемент</a></li>
+              </ul>
+            </li>
+            <li><a href="#nth-last-anchor">Псевдокласс :nth-last-child(an+b)</a>
+              <ul>
+                <li><a href="#nth-last-child-anchor">N-й элемент</a></li>
+                <li><a href="#to-nth-last-anchor">До N-го элемента</a></li>
+              </ul>
+            </li>
+            <li><a href="#additional-pseudoclasses-anchor">Дополнительные псевдоклассы</a></li>
+          </ul>
+        </li>
+      </ul>
+        
     </nav>
   </header>
   <main>
+    
     <section class="main-section">
       <div class="container">
-        <h1>Текст и шрифт</h1>
-      </div>
-    </section>
-
-    <!--Оформление текста-->
-    <section class="content-decoration">
-      <div class="container">
-        <h2>
-          Оформление текста
-          <a name="content-decoration-anchor"></a>
-        </h2>
+        <h1>
+          Блочная модель
+          <a name="block-model-anchor"></a>
+        </h1>
         <p>
-          Текст это основной контент веб-страниц, 
-          и для его оформления существуют разнообразные CSS-свойства, которые применяются повседневно.
+          В блочной модели любой элемент это прямоугольный контейнер, не зависимо от того,
+          как он визуально представлен на странице. У элемента есть область содержимого и
+          необязательные поля, отступы и рамка (граница).
         </p>
-      </div>
-    </section>
-
-    <!--Свойство text-decoration-->
-    <section class="text-decoration">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">text-decoration</span> 
-          <a name="text-decoration-anchor"></a>
-        </h3>
-        <p>
-          Задаёт различное оформительное подчёркивание и другие эффекты текста.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-text-decoration: none | underline | line-through | overline
-        </textarea>
-        <p>
-          Таблица стилей от браузера устанавливает большинству элементов значение <span class="span-bg-color">none</span>, 
-          то есть отключено. А вот, например, у ссылок по умолчанию указано <span class="span-bg-color">underline</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="8" class="html">
-<h1 class="title">Iste odit similique sit</h1>
-<p class="text">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-  <span>veritatis nihil alias iste</span> odit similique sit eius optio veniam,
-  impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
-</p>
-<a href="" class="link">Читать дальше...</a>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="8" class="css">
-.text > span {
-  text-decoration: line-through;
-}
-
-.link {
-  text-decoration: none;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство text-transform-->
-    <section class="text-transform">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">text-transform</span> 
-          <a name="text-transform-anchor"></a>
-        </h3>
-        <p>
-          Управляет регистром символов в тексте, например сделать все буквы заглавными или прописными. 
-          В разметке текст всегда набирается согласно правилам языка. После чего, 
-          при помощи <span class="span-bg-color">text-transform</span>,
-          приводится к нужному виду, потому что всё оформление должно быть в CSS.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-text-transform: none | uppercase | lowercase | capitalize
-        </textarea>
-        <p>
-          Создадим разметку меню навигации, 
-          текст пунктов которой в макете нарисован заглавными буквами.
-        </p>
-        <textarea name="" id="" cols="95" rows="7" class="html">
-<ul class="site-nav">
-  <li><a href="" class="link">Blog</a></li>
-  <li><a href="" class="link">Workshops</a></li>
-  <li><a href="" class="link">Podcasts</a></li>
-  <li><a href="" class="link">About</a></li>
-</ul>
-        </textarea>
-        <p>
-          Теперь в стилях делаем все буквы текста ссылок заглавными.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="css">
-.site-nav .link {
-  text-transform: uppercase;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство text-align-->
-    <section class="text-align">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">text-align</span> 
-          <a name="text-align-anchor"></a>
-        </h3>
-        <p>
-          Управляет выравниванием текстового содержимого элемента по горизонтали.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-text-align: left | right | center | justify
-        </textarea>
-        <p>
-          По умолчанию текст выравнивается по левому краю (значение <span class="span-bg-color">left</span>).
-        </p>
-        <textarea name="" id="" cols="95" rows="15" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p class="post-text align-right">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-
-  <p class="post-text align-justify">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-</article>
-        </textarea>
-        <p>
-          Центриуерм текст заголовка и выравняем текст абзацев по правому краю и равномерно.
-        </p>
-        <textarea name="" id="" cols="95" rows="12" class="css">
-.post-title {
-  text-align: center;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.align-justify {
-  text-align: justify;
-}
-        </textarea>
-        <h4>
-          ВНИМАНИЕ
-        </h4>
-        <p>
-          Использование значения <span class="span-bg-color">justify</span> не самая лучшая идея. 
-          Хотя текст и прижимается к левой и правой границе блока равномерно, 
-          его читабельность сильно падает. Всё потому, 
-          что пробелы между словами становятся разной ширины, а это негативно влияет на восприятие текста.
-        </p>  
-      </div>
-    </section>
-
-    <!--Свойство text-indent-->
-    <section class="text-indent">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">text-indent</span>
-          <a name="text-indent-anchor"></a> 
-        </h3>
-        <p>
-          Устанавливает величину отступа первой строки блока текста, 
-          например абзаца. Не влияет на все остальные строки кроме первой.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-text-indent: значение | проценты | inherit
-        </textarea>
-        <p>
-          В качестве значений принимаются любые единицы длины, например пиксели (<span class="span-bg-color">px</span>). 
-          При задании значения в процентах, отступ вычисляется в зависимости от ширины блока.
-        </p>
-        <textarea name="" id="" cols="95" rows="11" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p class="post-text">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.Obcaecati
-    commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
-    impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-</article>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="4" class="css">
-.post-text {
-  text-indent: 100px;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство line-height-->
-    <section class="line-height">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">line-height</span>
-          <a name="line-height-anchor"></a>
-        </h3>
-        <p>
-          Устанавливает межстрочный интервал (интерлиньяж, высоту строки) текста. По умолчанию расстояние между 
-          строками зависит от вида шрифта и его размеров, и определяется браузером автоматически.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-line-height: множитель | значение | проценты | normal | inherit
-        </textarea>
-        <p>
-          Значение можно задавать абсолютными или относительными единицами и множителем. 
-          Лучше всего устанавливать значение в виде множителя, 
-          тогда интерлиньяж рассчитывается от текущего размера шрифта текста.
-        </p>
-        <textarea name="" id="" cols="95" rows="8" class="html">
-<p class="text">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-  cumque fuga facere labore quo id necessitatibus quaerat rerum.Obcaecati
-  commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
-  impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
-</p>
-        </textarea>
-        <p>
-          Например, если в макете размер шрифта <span class="span-bg-color">16px</span> 
-          а интерлиньяж <span class="span-bg-color">24px</span>, 
-          просто делим <span class="span-bg-color">24</span> на <span class="span-bg-color">16</span>
-           и получаем множитель <span class="span-bg-color">1.5.</span> Использование 
-          множителя гарантирует равномерное масштабирование межстрочного 
-          интервала при изменении размера текста.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="css">
-.text {
-  font-size: 16px;
-  line-height: 1.5;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство letter-spacing-->
-    <section class="letter-spacing">
-      <div class="container">
-        <h3>
-          Свойство letter-spacing
-          <a name="letter-spacing-anchor"></a>
-        </h3>
-        <p>
-          Определяет интервал между символами. По умолчанию расстояние между символами 
-          устанавливается исходя из типа и вида шрифта, его размеров и настроек операционной системы.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-letter-spacing: значение | normal | inherit
-        </textarea>
-        <p>
-          Иногда дизайнеры устанавливают нестандартное значение межсимвольного расстояния, 
-          и именно для этого существует свойство <span class="span-bg-color">letter-spacing</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="11" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p class="post-text">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-    veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-    cumque fuga facere labore quo id necessitatibus quaerat rerum.Obcaecati
-    commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
-    impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
-  </p>
-</article>
-        </textarea>
-        <p>
-          Для наглядности зададим большие значения <span class="span-bg-color">letter-spacing</span> 
-          тексту заголовка и абзаца.
-        </p>
-        <textarea name="" id="" cols="95" rows="8" class="css">
-.post-title {
-  letter-spacing: 10px;
-}
-
-.post-text {
-  letter-spacing: 5px;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство word-spacing-->
-    <section class="word-spacing">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">word-spacing</span>
-          <a name="word-spacing-anchor"></a>
-        </h3>
-        <p>
-          Определяет интервал между словами. По умолчанию расстояние между 
-          словами устанавливается исходя из типа и вида шрифта, 
-          его размеров и настроек операционной системы.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-word-spacing: значение | normal | inherit
-        </textarea>
-        <h4>
-          ИНТЕРЕСНО
-        </h4>
-        <p>
-          Свойство <span class="span-bg-color">word-spacing</span> 
-          относится к группе свойств оформления текста, которые применяются довольно редко.
-        </p>
-      </div>
-    </section>
-
-    <!--Свойство text-shadow-->
-    <section class="text-shadow">
-      <div class="container">
-        <h3>
-          Свойство text-shadow <span class="span-bg-color"></span>
-          <a name="text-shadow-anchor"></a>
-        </h3>
-        <p>
-          Контролирует тень текста, а также устанавливает её параметры: цвет, смещение и радиус размытия.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-text-shadow: <смещение по x>, <смещение по y>, <радиус размытия>, <цвет>
-        </textarea>
+        <img src="./img/box-model.png" alt="box model" width="700">
         <ul class="info-list">
-          <li><span class="span-bg-color">цвет</span> - задаётся в любом формате. По умолчанию цвет тени совпадает с цветом текста.</li>
-          <li><span class="span-bg-color">смещение по x</span> - сдвиг тени по горизонтали относительно текста. Положительное значение задает сдвиг тени вправо, отрицательное - влево.</li>
-          <li><span class="span-bg-color">смещение по y</span> - сдвиг тени по вертикали относительно текста. Положительное значение задает сдвиг тени вниз, отрицательное - вверх.</li>
-          <li><span class="span-bg-color">радиус размытия</span> - чем больше значение, тем сильнее тень размывается и становится светлее. По умолчанию, если не задан, будет равен <span class="span-bg-color">0</span>.</li>          
-        </ul>
-        <textarea name="" id="" cols="95" rows="2" class="html">
-<h1 class="title">Fusce posuere ligula elementum purus</h1>
-        </textarea>
-        <p>
-          Сделаем белый текст с тёмной тенью. 
-          Для этого установим смещение по осям X и Y в <span class="span-bg-color">2px</span>, 
-          радиус размытия <span class="span-bg-color">4px</span> и чёрный цвет тени.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="css">
-.title {
-  color: #ffffff;
-  text-shadow: 2px 2px 4px #000000;
+          <li>
+            <strong>Область содержимого (content)</strong> - это контент элемента, например текст,
+            изображение, видео или вложенные элементы. По умолчанию высота области
+            содержимого определяется контентом, ширина - типом элемента (блочный или
+            строчный).
+          </li>
+          <li>
+            <strong>Внутреннее поле (padding)</strong> - это расстояние между контентом элемента и его
+            рамкой (border). Используется для декоративных эффектов. Нельзя задавать
+            отрицательные значения.
+          </li>
+          <li>
+            <strong>Рамка (border)</strong> - граница элемента, по умолчанию её ширина равна нулю. Если
+            цвет рамки не задан, она принимает цвет основного содержимого, например
+            текста.
+          </li>
+          <li>
+            <strong>Внешний отступ (margin)</strong> - добавляет отступ снаружи элемента, от внешней
+            границы (рамки) до соседних элементов, тем самым разделяя их на странице.
+            Может принимать отрицательные значения. Фон элемента никогда не
+            распостраняется на внешний отступ.
+          </li>
+          <textarea name="" id="" cols="95" rows="4" class="html">
+<p class="excerpt">This is the content of an element, such as text, image, video, or
+nested elements. By default, the height of the content area is determined by the
+content, and the width is determined by the element type.</p>
+          </textarea>
+          <textarea name="" id="" cols="95" rows="13" class="css">
+.excerpt {
+ /* Sets the border */
+ border: 2px dashed #2196F3;
+ /* Adds an inner padding */
+ padding: 15px;
+ /* Sets outer margins */
+ margin: 20px;
 }
-        </textarea>
-        <h4>
-          Многослойная тень
-          <a name="layered-shadow-anchor"></a>
-        </h4>
-        <p>
-          На один элемент можно добавить несколько теней, 
-          указав их через запятую. Получается многослойный пирог из теней.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="html">
-<h1 class="title">Fusce posuere ligula elementum purus</h1>
-        </textarea>
-        <p>
-          Порядок отображения следующий - первая тень в списке размещается на самом верху, 
-          последняя - в самом низу. 
-          То есть, чем раньше указана тень, тем выше она в слоях, 
-          и будет визуально перекрывать все последующие.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="css">
-.title {
-  color: #ffffff;
-  text-shadow: 2px 2px 20px #ff0000, 5px 5px 5px #000000;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство white-space-->
-    <section class="white-space">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">white-space</span>
-          <a name="white-space-anchor"></a>
-        </h3>
-        <p>
-          По умолчанию браузер игнорирует больше одного пробела и переноса строки 
-          в HTML-разметке. Свойство <span class="span-bg-color">white-space</span>, 
-          как и тег <span class="span-bg-color">&lt;pre&gt;</span>, 
-          но более гибко, управляет форматированием пробелов и переносов текста.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-white-space: normal | nowrap | pre | pre-wrap
-        </textarea>
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-    <!--Свойства шрифта-->
-    <section class="font-properties">
-      <div class="container">
-        <h2>
-          Свойства шрифта
-          <a name="font-properties-anchor"></a>
-        </h2>
-      </div>
-    </section>
-
-    <!--Свойство font-size-->
-    <section class="font-size">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">font-size</span>
-          <a name="font-size-anchor"></a>
-        </h3>
-        <p>
-          Задаёт размер шрифта элемента в абсолютных или относительных единицах измерения. 
-          Пока что ограничимся абсолютными единицами - <span class="span-bg-color">px</span> (пикселями).
-        </p>
-        <textarea name="" id="" cols="95" rows="6" class="html">
-<p class="text">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-  cumque fuga facere labore quo id necessitatibus quaerat rerum.
-</p>
-        </textarea>
-        <p>
-          По умолчанию размер шрифта абзацев, который установлен в таблице стилей браузера, 
-          равен <span class="span-bg-color">16px</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="css">
-.text {
-  font-size: 20px;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство font-weight-->
-    <section class="font-weight">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">font-weight</span>
-          <a name="font-weight-anchor"></a>
-        </h3>
-        <p>
-          Контролирует толщину начертания (жирность, вес) букв шрифта. 
-          Значение свойства можно задавать набором зарезервированных слов или цифрами 
-          от <span class="span-bg-color">100</span> до <span class="span-bg-color">900</span> с шагом в 
-          <span class="span-bg-color">100</span>, 
-          которые задают степень толщины глифа от тонкого <span class="span-bg-color">100</span> 
-          до толстого <span class="span-bg-color">900</span>.
-        </p>
-        <img src="./img/font-weight.png" alt="font weight examples" weight="700">
-        <textarea name="" id="" cols="95" rows="2" class="values">
-font-weight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
-        </textarea>
-        <p>
-          Ключевые слова привязаны к цифрам, например <span class="span-bg-color">normal</span> - это 
-          <span class="span-bg-color">400</span>, а <span class="span-bg-color">bold</span> 
-          - это <span class="span-bg-color">700</span>. 
-          В разработке используются только цифры, из-за возможности задать одинаково точный вес во всех браузерах.
-        </p>
-        <textarea name="" id="" cols="95" rows="7" class="html">
-<h1 class="title">Iste odit similique sit</h1>
-<p class="text">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-  cumque fuga facere labore quo id necessitatibus quaerat rerum.
-</p>
-        </textarea>
-        <p>
-          По умолчанию, вес шрифта абзацев, 
-          который установлен в таблице стилей браузера, равен <span class="span-bg-color">400</span>, 
-          а вес заголовков <span class="span-bg-color">700</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="9" class="css">
-/* Поменяем местами жирность текста заголовка и абзаца */
-.title {
-  font-weight: 400;
-}
-
-.text {
-  font-weight: 700;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство font-style-->
-    <section class="font-style">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">font-style</span>
-          <a name="font-style-anchor"></a>
-        </h3>
-        <p>
-          Задаёт начертание текста, например можно сделать текст наклонным.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-font-style: normal | italic | oblique | initial | inherit
-        </textarea>
-        <p>
-          Из всех значений используют только два.
-        </p>
-        <ul class="info-list">
-          <li><span class="span-bg-color">normal</span> - значение по умолчанию у большинства тегов</li>
-          <li><span class="span-bg-color">italic</span> - текст с курсивом (наклоном)</li>
-        </ul>
-        <textarea name="" id="" cols="95" rows="7" class="html">
-<h1 сlass="title">Iste odit similique sit</h1>
-<p class="text">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-  veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-  cumque fuga facere labore quo id necessitatibus quaerat rerum.
-</p>
-        </textarea>
-        <p>
-          Сделаем текст заголовка наклонным.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="css">
-.title {
-  font-style: italic;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство font-family-->
-    <section class="font-family">
-      <div class="container">
-        <h3>
-          Свойство <span class="span-bg-color">font-family</span>
-          <a name="font-family-anchor"></a>
-        </h3>
-        <p>
-          <strong>Шрифт</strong> — это набор типографских литер, цифр и специальных знаков 
-          определенного стиля для набора текста.
-        </p>
-        <p>
-          Шрифты делят на несколько основных групп (семейств): шрифты с засечками (serif), 
-          шрифты без засечек (sans-serif), моноширинные (monospace), декоративные и рукописные. 
-          MacOS, Linux и Windows содержат набор стандартных шрифтов из каждого семейства. По умолчанию, 
-          если никакой другой шрифт не задан, браузер использует 
-          <span class="span-bg-color">Times New Roman</span>  из семейства с засечками (serif).
-        </p>
-        <p>
-          Посмотреть каким шрифтом отрисован текст элемента можно в инструментах разработчика на вкладке 
-          <span class="span-bg-color">Computed</span>.
-        </p>
-        <img src="./img/rendered-font.png" alt="font family information" width="700">
-        <p>
-          Свойство <span class="span-bg-color">font-family</span> задаёт шрифт текста элемента. 
-          Через запятую можно перечислить произвольное количество шрифтов, которые браузер, 
-          в порядке слева направо, попытается найти в системе пользователя и применить первый найденный.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="css">
 body {
-  font-family: 'Helvetica Neue', 'Roboto', 'Verdana', 'Tahoma', sans-serif;
+ font-family: sans-serif;
+ line-height: 1.5;
 }
-        </textarea>
-        <p>
-          В конце списка всегда указывается семейство шрифтов, 
-          на тот случай если ни одного перечисленного шрифта не найдено. 
-          Тогда применится стандартный шрифт из этого семейства, 
-          который есть в системе пользователя.
-        </p>
+          </textarea>
+          <h4>
+            ИНТЕРЕСНО
+          </h4>
+          <p>
+            Для некоторых элементов в таблице стилей браузера установлены размеры полей и
+            отступов по умолчанию. Например спискам, абзацам, заголовкам и т. д. Это было
+            необходимо для того, чтобы текстовый контент страницы выглядел единообразно
+            без дополнительного оформления.
+          </p>
+        </ul>
       </div>
     </section>
 
-
-
-
-
-
-
-
-
-    <!--Псевдоэлементы текста-->
-    <section class="pseudo-elements">
+    <!--Свойства width и height-->
+    <section class="width-and-height">
       <div class="container">
         <h2>
-          Псевдоэлементы текста
-          <a name="pseudo-elements-anchor"></a>
-        </h2>
-      </div>
-    </section>
-
-    <!--Псевдоэлемент ::first-letter-->
-    <section class="first-letter">
-      <div class="container">
-        <h3>
-          Псевдоэлемент <span class="span-bg-color">::first-letter</span>
-          <a name="first-letter-anchor"></a>
-        </h3>
-        <p>
-          Управляет стилем первого символа в тексте элемента, к которому добавляется. 
-          К этому псевдоэлементу можно применить только свойства оформления шрифта, цвета, фона, а также геометрии элемента.
-        </p>
-        <textarea name="" id="" cols="95" rows="3" class="css">
-элемент::first-letter {
-}
-        </textarea>
-        <p>
-          Например, можно выделить первые буквы каждого абзаца стихотворения.
-        </p>
-        <textarea name="" id="" cols="95" rows="21" class="html">
-<pre>
-  А ты когда-то слушал тишину?
-  Как жаль, что ничего ты не услышал,
-  Лишь тронь её беззвучную струну,
-  И ты поймёшь, что можно даже тише.
-</pre>
-
-<pre>
-  А ты когда-то спорил с тишиной?
-  И не пытайся, я однажды спорил,
-  Как будто смыло штормовой волной,
-  Противоречия всех моих историй.
-</pre>
-
-<pre>
-  А ты когда-то видел тишину?
-  Как идёт дождь, или летают птицы,
-  А может видел ночью синеву,
-  Или улыбку на любимых лицах.
-</pre>
-        </textarea>
-        <p>
-          Добавим стили для псевдоэлемента  <span class="span-bg-color">::first-letter</span> 
-          тега <span class="span-bg-color">pre</span>. Изменим шрифт, размер шрифта и цвет.
-        </p>
-        <textarea name="" id="" cols="95" rows="12" class="css">
-pre {
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  color: #2a2a2a;
-  font-size: 16px;
-}
-
-pre::first-letter {
-  font-family: 'Tahoma', serif;
-  font-size: 32px;
-  color: #f44336;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Псевдоэлемент ::selection-->
-    <section class="selection">
-      <div class="container">
-        <h3>
-          Псевдоэлемент <span class="span-bg-color">::selection</span>
-          <a name="selection-anchor"></a>
-        </h3>
-        <p>
-          Управляет стилем выделения текста элемента, переопределяя стандартные значения из таблицы стилей браузера. 
-          В оформлении можно использовать только свойства <span class="span-bg-color">color</span> и 
-          <span class="span-bg-color">background-color</span>. Выделите мышкой часть текста примера.
-        </p>
-        <textarea name="" id="" cols="95" rows="21" class="html">
-<pre>
-  Wyatt resteth here, that quick could never rest;
-  Whose heavenly gifts increased by disdain,
-  And virtue sank the deeper in his breast;
-  Such profit he by envy could obtain.
-</pre>
-
-<pre>
-  A head where wisdom mysteries did frame,
-  Whose hammers beat still in that lively brain
-  As on a stithy where that some work of fame
-  Was daily wrought, to turn to Britain's gain.
-</pre>
-
-<pre>
-  A visage stern and mild, where both did grow,
-  Vice to contemn, in virtue to rejoice;
-  Amid great storms, whom grace assured so
-  To live upright and smile at fortune's choice.
-</pre>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="18" class="css">
-pre {
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  color: #2a2a2a;
-  font-size: 16px;
-}
-
-pre::first-letter {
-  font-family: 'Tahoma', serif;
-  font-size: 32px;
-  color: #f44336;
-}
-
-/* Let's add text selection styles for each paragraph of the poem. */
-pre::selection {
-  color: #ffffff;
-  background-color: #3f51b5;
-}
-        </textarea>
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-    <!--Нестандартные шрифты-->
-    <section class="custom fonts">
-      <div class="container">
-        <h2>
-          Нестандартные шрифты
-          <a name="custom-fonts-anchor"></a>
+          Свойства <span class="mark">width и height</span>
+          <a name="width-and-height-anchor"></a>
         </h2>
         <p>
-          Шрифт помогает сделать сайт ярким и запоминающимся. Миллионы сайтов с одним шрифтом «Times New Roman» 
-          были бы, наверное, слишком скучны. Поэтому дизайнеры создают свои шрифты, 
-          а разработчики могут использовать их в проектах.
-        </p>
-        <h4>
-          ИНТЕРЕСНО
-        </h4>
-        <p>
-          Шрифты делятся на платные и бесплатные. Лицензию платного шрифта необходимо покупать, а использовать 
-          его без лицензии чревато нарушением авторских прав. Есть много красивых бесплатных шрифтов, которые находятся в общем доступе.
-        </p>
-      </div>
-    </section>
-
-    <!--Сервис Google Fonts-->
-    <section class="google-fonts">
-      <div class="container">
-        <h3>
-          Сервис Google Fonts
-          <a name="google-fonts-anchor"></a>
-        </h3>
-        <p>
-          <a href="https://fonts.google.com/" class="resource-link" rel="noopener nofollow noreferrer" target="_blank">Google Fonts</a>  
-          это хранилище огромного количества бесплатных шрифтов. Всё что необходимо сделать, 
-          это найти понравившийся шрифт, получить на него ссылку и подключить в своём HTML-файле как еще одну таблицу стилей.
+          Эти свойства позволяют явно указать общую ширину и высоту элемента, или только
+          размер его области содержимого (контента), всё зависит от типа блочной модели.
         </p>
         <p>
-          Скопируйте и вставьте следующий HTML-код в свой файл разметки и откройте страницу в браузере. 
-          Текст, отрисованный нестандартным шрифтом, 
-          не отличается ничем, кроме внешнего вида, поэтому для его оформления можно использовать любые CSS-свойства.
+          Несколько советов при использовании этих свойств.
         </p>
-        <textarea name="" id="" cols="95" rows="18" class="html">
-<html>
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
-      rel="stylesheet"
-    />
-
-    <style>
-      .title {
-        font-family: 'Tangerine', cursive;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="title">Making the Web Beautiful!</h1>
-  </body>
-</html>
+        <ul class="info-list">
+          <li>
+            Не задавайте элементам фиксированную высоту, пусть она определяется контентом.
+Жёстко установленная высота ведёт к проблеме переполнения, когда контента
+больше чем элемент может вместить.
+          </li>
+          <li>
+            Большинству элементов задаётся только ширина. Указывать одновременно <span class="mark">width</span>  и
+<span class="mark">height</span> стоит только декоративным элементам с фиксированным размером,
+например иконкам.
+          </li>
+          <li>
+            Ширину можно задавать не только в <span class="mark">px</span> , <span class="mark">em</span> или <span class="mark">rem</span> , но и в процентах. В таком
+случае ширина блока будет рассчитана как процент от ширины родителя. Детальнее
+об этом при построении сеток.
+          </li>
+        </ul>
+        <textarea name="" id="" cols="95" rows="2" class="html">
+<div class="box"></div>
         </textarea>
-        <p>
-          Для того, чтобы подключить нестандартный бесплатный шрифт с сервиса Google Fonts, 
-          переходим по ссылке и попадаем на 
-          <a href="https://fonts.google.com/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">страницу поиска</a> .
-        </p>
-        <img src="./img/font-step-1.png" alt="google fonts search system" width="700">
-        <p>
-          Можно пролистывать галерею шрифтов и искать понравившийся, 
-          или, если имя шрифта известно, ввести его в поле поиска и нажать на карточку шрифта.
-        </p>
-        <img src="./img/font-step-2.png" alt="goggle fonts galery" width="700">
-        <p>
-          На странице шрифта выбираем необходимый вес. Выбирать все доступные жирности не нужно, чем больше вариантов, 
-          тем тяжелее будет файл шрифта, и тем дольше будет загружаться ваша веб-страница. 
-          Тоже самое и с количеством шрифтов, обычно ограничиваются одним, максимум двумя шрифтами для всего сайта.
-        </p>
+        <textarea name="" id="" cols="95" rows="15" class="css">
+.box {
+/* Control the overall width
+ and element height or only
+ the size of its content area */
+ width: 150px;
+ height: 150px;
+ /* Sets the border */
+ border: 5px solid #f44336;
+ /* Adds an inner padding */
+ padding: 30px;
+ /* Sets outer margins */
+ margin: 80px;
+ background-color: #ffeb3b;
+}
+        </textarea>
         <h4>
           ВНИМАНИЕ
         </h4>
         <p>
-          Не все шрифты поддерживают полный диапазон жирностей 
-          (от <span class="span-bg-color">100</span> до <span class="span-bg-color">900</span>) и начертаний (стандартный или курсив). 
-          Дизайнер создаёт набор самых популярных значений. 
-          Если шрифт не поддерживает определённый вес, браузер будет отрисовывать его ближайшей доступной жирностью.
-        </p>
-        <p>
-          Нам нужен только вес <span class="span-bg-color">700</span>, потому что мы подключаем шрифт для заголовков.
-        </p>
-        <img src="./img/font-step-3.png" alt="choose of google font weight" width="700">
-        <p>
-          На вкладке <span class="span-bg-color">Embed</span> копируем тег <span class="span-bg-color">&lt;link&gt;</span>, 
-          в котором указана ссылка на таблицу стилей шрифта, и добавляем её в шапку своего 
-          HTML-документа, перед остальными стилями.
-        </p>
-        <img src="./img/font-step-4.png" alt="embed link on google fonts" width="700">
-        <p>
-          Теперь в файле стилей можно использовать шрифт <span class="span-bg-color">Tangerine</span> 
-          указав его в свойстве <span class="span-bg-color">font-family</span>.
+          Финальная ширина и высота блока <span class="mark">div.box</span> будет 220px, а не 150px, как указано в
+свойствах <span class="mark">width</span> и <span class="mark">height</span>. Дело в том, что есть несколько типов блочной модели,
+которые отличаются формулой расчёта размера элемента.
         </p>
       </div>
     </section>
 
-    <!--Директива @font-face-->
-    <section class="font-face">
+    <!--Свойство box-sizing-->
+    <section class="box-sizing">
+      <div class="container">
+        <h2>
+          Свойство <span class="mark">box-sizing</span>
+          <a name="box-sizing-anchor"></a>
+        </h2>
+        <p>
+          Устанавливает тип блочной модели элемента - формулу расчёта его размеров.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+box-sizing: content-box | border-box | inherit
+        </textarea>
+        <ul>
+          <li><span class="mark">content-box</span> - свойства width и height задают ширину и высоту области
+содержимого и не включают в себя размеры полей (padding), границ (border) и
+отступов (margin).</li>
+          <li><span class="mark">border-box</span> - свойства width и height задают финальный размер элемента и
+включают в себя значения полей (padding) и границ (border), но не отступов
+(margin)</li>
+          <li><span class="mark">inherit</span> - наследует значение блочной модели предка.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Значение content-box-->
+    <section class="content-box">
       <div class="container">
         <h3>
-          Директива <span class="span-bg-color">@font-face</span>
-          <a name="font-face-anchor"></a>
+          Значение <span class="mark">content-box</span>
+          <a name="content-box-anchor"></a>
         </h3>
         <p>
-          Давайте разберёмся что именно мы подключили к HTML-документу в прошлой секции.
+          Этот тип блочной модели используется в браузерах по умолчанию. Расчёт финальных
+размеров элемента сложнее, потому что свойства width и height устанавливают не
+общий размер элемента, а только высоту и ширину его области содержимого (контента).
         </p>
-        <img src="./img/font-face.png" alt="connected fonts in developers tools" width="700">
-        <ol>
-          <li>Открываем инструменты разработчика и переходим на вкладку «Network».</li>
-          <li>Выбираем фильтр «CSS», чтобы отображались только файлы стилей.</li>
-          <li>Кликаем по файлу от Google Fonts.</li>
-          <li>Выбираем вкладку «Preview», в которой отображается содержимое файла.</li>
-        </ol>
-        <textarea name="" id="" cols="95" rows="14" class="css">
-/* latin */
-@font-face {
-  font-family: 'Tangerine';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Tangerine Bold'), local('Tangerine-Bold'),
-    url(https://fonts.gstatic.com/s/tangerine/v12/Iurd6Y5j_oScZZow4VO5srNZi5FNym499g.woff2)
-      format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+        <img src="./img/content-box-width.png" alt="content box model width" width="400">
+        <p>
+          Формулы расчёта финальной ширины и высоты блока при значении <span class="mark">content-box</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="values">
+Ширина = width + padding-left + padding-right + border-left + border-right
+
+Высота = height + padding-top + padding-bottom + border-top + border-bottom
+        </textarea>
+        <p>
+          Задав элементу width 150px, padding 30px и border 5px, получим финальную ширину
+220px.
+        </p>
+        <textarea name="" id="" cols="95" rows="10" class="css">
+/* Финальная ширина блока = 150px + 30px + 30px + 5px + 5px */
+.box {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #f44336;
+  padding: 30px;
+  margin: 100px;
+  background-color: #ffeb3b;
 }
         </textarea>
         <p>
-          Итак, Google Fonts вернул нам самый обычный CSS-файл, в котором есть директива 
-          <span class="span-bg-color">@font-face</span> - объявление шрифта. Эта директива позволяет указать параметры подключаемого шрифта.
+          В инструментах разработчика, на вкладке <span class="mark">Computed </span>, показана геометрия этого элемента.
         </p>
-        <ul>
-          <li><span class="span-bg-color">font-family</span> - локальное имя для использования в нашем CSS-коде.</li>
-          <li><span class="span-bg-color">font-style</span> - тип начертаний (обычный, курсив и т. п.).</li>
-          <li><span class="span-bg-color">font-weight</span> - вес подключаемого шрифта.</li>
-          <li><span class="span-bg-color">font-display</span> - управляет отображеним текста во время загрузки шрифта.</li>
-          <li><span class="span-bg-color">src</span> - ссылка на сам файл шрифта и уточнение его типа, обычно woff или woff2. В нашем случае файл шрифта лежит на серверах Google, но это может быть и локальный шрифт, который хранится в файлах проекта.</li>
-          <li><span class="span-bg-color">unicode-range</span> - указывает набор необходимых символов в шрифте из таблицы символов <a href="https://unicode-table.com/en/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Unicode</a> . Загружать все символы излишне, чем их меньше, тем быстрее загрузится шрифт.</li>
-        </ul>
+        <img src="./img/content-box.png" alt="content box model in computed of dewtools" width="500">
+      </div>
+    </section>
+
+    <!--Значение border-box-->
+    <section class="border-box">
+      <div class="container">
+        <h3>
+          Значение <span class="mark">border-box</span>
+          <a name="border-box-anchor"></a>
+        </h3>
+        <p>
+          В этой блочной модели свойства <span class="mark">width</span> и <span class="mark">height</span> устанавливают финальные размеры
+элемента, а не его области содержимого. Контент автоматически «ужимается» так, чтобы
+внутри контейнера ещё вместились <span class="mark">padding</span> и <span class="mark">border</span>.
+        </p>
+        <img src="./img/border-box-width.png" alt="border box model width" width="400">
+        <p>
+          Формулы расчёта финальной ширины и высоты блока при значении <span class="mark">border-box</span>
+        </p>
+        <textarea name="" id="" cols="95" rows="3" class="values">
+Ширина = width
+Высота = height
+        </textarea>
+        <p>
+          Установив свойству <span class="mark">box-sizing</span> значение <span class="mark">border-box</span>, мы меняем тип блочной модели текущему элементу.
+        </p>
+        <textarea name="" id="" cols="95" rows="10" class="css">
+.box {
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #f44336;
+  padding: 30px;
+  margin: 100px;
+  background-color: #ffeb3b;
+}
+        </textarea>
+        <p>
+          В инструментах разработчика, на вкладке <span class="mark">Computed</span>, показана геометрия этого элемента.
+        </p>
+        <img src="./img/border-box.png" alt="border box model in dewtools" width="500">
+      </div>
+    </section>
+
+    <!--Глобальный border-box-->
+    <section class="global-border-box">
+      <div class="container">
+        <h3>
+          Глобальный <span class="mark">border-box</span>
+          <a name="global-border-box-anchor"></a>
+        </h3>
+        <p>
+          Стандартная блочная модель в современных проектах это <span class="mark">border-box</span>. Для того, чтобы
+не задавать свойство <span class="mark">box-sizing</span> каждому элементу отдельно в самом начале файла
+стилей используется следующий CSS-код.
+        </p>
+        <textarea name="" id="" cols="95" rows="8" class="css">
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Остальной код */
+        </textarea>
+        <p>
+          Используя универсальный селектор <span class="mark">*</span>, значение <span class="mark">border-box</span> устанавливается для всех
+элементов и псевдоэлементов (о них узнаем позже) документа.
+        </p>
+      </div>
+    </section>
+
+    <!--Нормализация стилей-->
+    <section class="normalize">
+      <div class="container">
+        <h2>
+          Нормализация стилей
+          <a name="normalize-anchor"></a>
+        </h2>
+        <p>
+          Мы хотим, чтобы HTML-элементы выглядели одинаково, независимо от браузера. К
+сожалению, это не так, в разных браузерах элементы могут выглядеть немного иначе.
+Когда браузер отображает веб-страницу, сначала применяется его базовая таблица
+стилей (user agent stylesheet), значения свойств в которой могут отличаться от таблиц
+стилей других браузеров. Это и приводит к небольшим отличиям во внешнем виде
+элементов.
+        </p>
+        <img src="./img/user-agent-stylesheet.png" alt="user agent stylesheet normalize" width="500">
+        <p>
+          Нормализация стилей это попытка решить данную проблему путём подключения ещё
+одного файла стилей, в котором исправлены все возможные расхождения между
+таблицами стилей браузеров. То есть это техника улучшения кроссбраузерности вебстраницы - 
+одинакового отображения и работы сайта в различных браузерах.
+        </p>
+        <p>
+          Всё, что необходимо сделать, это подключить еще один файл стилей перед всеми
+вашими стилями.
+        </p>
+        <textarea name="" id="" cols="95" rows="10" class="html">
+<head>
+  <!-- Сначала нормализатор -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+  />
+  <!-- Потом ваши стили -->
+  <link rel="stylesheet" href="ссылка на ваш файл стилей" />
+</head>
+        </textarea>
         <h4>
           ПОЛЕЗНО
         </h4>
         <p>
-          Все известные человечеству символы (языков, математические знаки и т. п.) собраны и описаны стандартом, называемым Unicode, 
-          в котором каждый символ имеет имя (например, «latin capital letter a») и код (code point) — число от <span class="span-bg-color">0</span> до <span class="span-bg-color">10FFFF</span>.
+          В нормализаторе 
+          <a href="https://github.com/sindresorhus/modern-normalize" target="_blank" rel="noopener noreferrer nofollow" class="resource-link">modern-normalize</a> 
+          по умолчанию задан глобальный <span class="mark">border-box</span>,
+поэтому в своих стилях его можно не указывать.
         </p>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Геометрия элемента-->
+    <section class="element-geometry">
+      <div class="container">
+        <h1>
+          Геометрия элемента
+          <a name="element-geometry-anchor"></a>
+        </h1>
+        <p>
+          В геометрии элемента есть 4 стороны: верх (top), право (right), низ (bottom) и лево (left).
+Именно в таком порядке, по часовой стрелке начиная с верха, задаются значения
+составных свойств <span class="mark">padding</span>, <span class="mark">margin</span> и <span class="mark">border</span>.
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство padding-->
+    <section class="padding">
+      <div class="container">
+        <h2>
+          Свойство padding
+          <a name="padding-anchor"></a>
+        </h2>
+        <img src="./img/padding.png" alt="padding exampl" width="400">
+        <p>
+          Составное свойство, контролирующее внутренние поля между контентом и рамкой,
+для всех сторон элемента. Результат работы зависит от количества значений свойства.
+        </p>
+        <textarea name="" id="" cols="95" rows="12" class="values">
+/* Одинаковые поля по 20px со всех сторон */
+padding: 20px;
+
+/* Поля сверху и снизу по 10px, слева и справа по 20px */
+padding: 10px 20px;
+
+/* Поле сверху 10px, слева и справа по 20px, снизу 5px */
+padding: 10px 20px 5px;
+
+/* Поле сверху 10px, справа 15px, снизу 20px, слева 25px */
+padding: 10px 15px 20px 25px;
+        </textarea>
+        <p>
+          Также есть свойства для задания полей каждой стороны отдельно.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="values">
+padding-top: 20px;
+padding-right: 10px;
+padding-bottom: 15px;
+padding-left: 30px;
+        </textarea>
+        <p>
+          Поля (падинги) используются для декоративных эффектов. Например для создания
+свободного пространства между рамкой элемента и его контентом, как в примере.
+Если не задать падинг, то текст будет некрасиво прилегать к границе абзаца.
+        </p>
+        <textarea name="" id="" cols="95" rows="6" class="html">
+<p class="text">Lorem ipsum dolor sit, amet consectetur elit omnis adipisicing. Omnis
+voluptatibus sit reprehenderit iure est eveniet saepe fugit debitis laborum odio
+voluptatem repellat eaque voluptatum quos neque optio, perspiciatis aperiam error odit
+praesentium consequatur totam maiores. Minus similique molestias, eveniet delectus
+eaque dignissimos! Id deserunt magni doloremque, corrupti consectetur vero!</p>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="17" class="css">
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
+}
+body {
+ font-family: sans-serif;
+ line-height: 1.5;
+ color: #2a2a2a;
+}
+.text {
+ /* Setting the margin between the border and the element's content */
+ padding: 20px;
+ background-color: #fff;
+ border: 2px dashed #2a2a2a;
+}
+        </textarea>
+        <h4>
+          ПОЛЕЗНО
+        </h4>
+        <p>
+          В примере свойства рамки не указаны явно, но она всё равно есть. По
+умолчанию её ширина равна <span class="mark">0px</span> и она учавствует в построении геометрии
+элемента, поэтому можно задать поле между ней и контентом.
+
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство margin-->
+    <section class="margin">
+      <div class="container">
+        <h2>
+          Свойство margin
+          <a name="margin-anchor"></a>
+        </h2>
+        <p>
+          Составное свойство контролирующее внешние отступы от рамки для всех сторон
+элемента. Результат работы зависит от количества значений свойства.
+        </p>
+        <textarea name="" id="" cols="95" rows="12" class="values">
+/* Одинаковые отступы по 20px со всех сторон */
+margin: 20px;
+
+/* Отступ сверху и снизу по 10px, слева и справа по 20px */
+margin: 10px 20px;
+
+/* Отступ сверху 10px, слева и справа по 20px, снизу 5px */
+margin: 10px 20px 5px;
+
+/* Отступ сверху 10px, справа 15px, снизу 20px, слева 25px */
+margin: 10px 15px 20px 25px;
+        </textarea>
+        <p>
+          Также есть свойства для задания отступов каждой стороны отдельно.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="values">
+margin-top: 20px;
+margin-right: 10px;
+margin-bottom: 15px;
+margin-left: 30px;
+        </textarea>
+        <p>
+          Внешние отступы используются для создания зазора между двумя соседними
+элементами. В примере у каждого элемента карточки есть разноцветная рамка,
+поэтому видно, что между ними есть отступы.
+        </p>
+        <textarea name="" id="" cols="95" rows="13" class="html">
+<article class="post">
+ <div class="post-thumb">
+ <img class="post-image" src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat2934720_1280.jpg" alt="Tabby cat in a funny sitting position">
+ </div>
+ <h1 class="post-heading">All about cats</h1>
+ <p class="post-text">Lorem ipsum dolor sit, amet consectetur elit omnis adipisicing.
+Omnis voluptatibus sit reprehenderit iure est eveniet saepe fugit debitis laborum odio
+voluptatem repellat eaque voluptatum quos neque optio, perspiciatis aperiam error odit
+praesentium consequatur totam maiores. Minus similique molestias, eveniet delectus
+eaque dignissimos! Id deserunt magni doloremque, corrupti consectetur vero veniam!</p>
+</article>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="41" class="css">
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #212121;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.post {
+ /* Setting the margin between the border and the element's content */
+  padding: 20px;
+  max-width: 400px;
+  background-color: #fff;
+  border: 2px dashed #2a2a2a;
+}
+/* Set the bottom margin between the "thumb" and the title */
+.post-thumb {
+  margin-bottom: 30px;
+  border: 2px dashed tomato;
+}
+/* Clearing the default top padding of the title
+ and set the bottom margin between the heading and paragraph */
+.post-heading {
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: 2px dashed teal;
+}
+/* Clearing default paragraph indents from the browser */
+.post-text {
+  margin-bottom: 0;
+  margin-top: 0;
+  border: 2px dashed blue;
+}
+        </textarea>
+        <h4>
+          ВНИМАНИЕ
+        </h4>
+        <p>
+          При использовании падингов для создания зазоров, элементы будут плотно
+прилегать друг к другу рамками, без зазора. Если у элемента не задан цвет рамки
+или фона, визуально определить правильно ли сделаны отступы невозможно,
+нужно открывать инструменты разработчика.
+        </p>
+        <figure>
+          <img src="./img/margin-vs-padding.png" alt="margin with padding" width="700">
+          <figcaption>Свойство padding отделяет контент от границы элемента, а margin создает
+  промежутки между соседними элементами. В этом и заключается разница.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!--Схлопывание вертикальных отступов-->
+    <section class="collapsing">
+      <div class="container">
+        <h3>
+          Схлопывание вертикальных отступов
+          <a name="collapsing-anchor"></a>
+        </h3>
+        <p>
+          Вертикальные отступы соседних блочных элементов не складываются, а выбирается
+наибольший из двух. Схлопывание отступов выполняется только для блочных
+элементов в нормальном потоке документа.
+        </p>
+        <img src="./img/margin-collapse.png" alt="margin collapse" width="500">
+        <textarea name="" id="" cols="95" rows="3" class="html">
+<div class="box top"></div>
+<div class="box bottom"></div>
+        </textarea>
+        <p>
+          Дадим верхнему блоку нижний отступ в <span class="mark">20px</span>, а нижнему блоку верхний отступ в
+<span class="mark">40px</span>. Из-за схлопывания, отступ между ними будет <span class="mark">40px</span>, потому что выбирается
+больший из двух.
+        </p>
+        <textarea name="" id="" cols="95" rows="15" class="css">
+.box {
+  width: 200px;
+  height: 100px;
+}
+
+.top {
+  margin-bottom: 20px;
+  background-color: teal;
+}
+
+.bottom {
+  margin-top: 40px;
+  background-color: palevioletred;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Выпадение вертикальных отступов-->
+    <section class="loss">
+      <div class="container">
+        <h3>
+          Выпадение вертикальных отступов
+          <a name="loss-anchor"></a>
+        </h3>
+        <p>
+          Вертикальный отступ вложенного блока выпадает из родительского и отталкивает
+обоих от соседа. Если у родительского элемента также был задан верхний отступ, то
+выберется наибольшее из значений
+        </p>
+        <img src="./img/vertical-margin.png" alt="vertical margin" width="500">
+        <textarea name="" id="" cols="95" rows="4" class="html">
+<div class="outer-box">
+  <div class="inner-box"></div>
+</div>
+        </textarea>
+        <p>
+          В примере мы задаём верхний отступ в <span class="mark">div.outer-box</span>40px для <span class="mark">div.inner-box</span> , а в результате
+отодвинется не он сам от верха <span class="mark">div.outer-box</span> , а весь <span class="mark">div.outer-box</span> от края экрана
+        </p>
+        <textarea name="" id="" cols="95" rows="12" class="css">
+.outer-box {
+width: 200px;
+height: 200px;
+background-color: teal;
+}
+.inner-box {
+width: 100px;
+height: 100px;
+margin-top: 40px;
+background-color: palevioletred;
+}
+        </textarea>
+        <h4>
+          ВНИМАНИЕ
+        </h4>
+        <p>
+          Верхние и нижние отступы на стыке с блоком-родителем как будто пробивают
+его и выпадают наружу, это одна из самых частых ошибок вёрстки. Делайте
+отступы только между двумя соседними элементами.
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство border-->
+    <section class="border">
+      <div class="container">
+        <h2>
+          Свойство <span class="mark">border</span>
+          <a name="border-anchor"></a>
+        </h2>
+        <img src="./img/border.png" alt="border" width="500">
+        <p>
+          Составное свойство контролирующее ширину, стиль и цвет рамки (границы) элемента.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+border: ширина стиль цвет;
+        </textarea>
+        <p>
+          Также есть свойства для того, чтобы задать эти значения по отдельности.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="values">
+border-width: ширина;
+border-style: стиль;
+border-color: цвет;
+        </textarea>
+        <p>
+          Стилей рамок много, самые популярные значения это <span class="mark">solid</span>, 
+          <span class="mark">dashed</span> и <span class="mark">dotted</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="6" class="css">
+.box {
+width: 100px;
+height: 100px;
+border: 5px solid tomato;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Индивидуальные рамки-->
+    <section class="individual-border">
+      <div class="container">
+        <h3>
+          Индивидуальные рамки
+          <a name="individual-border-anchor"></a>
+        </h3>
+        <p>
+          Можно задать индивидуальные стили рамке с каждой стороны элемента. Формат
+имени свойства простой - <span class="mark">border-сторона-свойство: значение</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="22" class="css">
+.box {
+  /* Установит стили верхней рамки */
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: blue;
+
+  /* Установит стили правой рамки */
+  border-right-width: 5px;
+  border-right-style: dotted;
+  border-right-color: black;
+
+  /* Установит стили нинжней рамки */
+  border-bottom-width: 7px;
+  border-bottom-style: dashed;
+  border-bottom-color: palevioletred;
+
+  /* Установит стили левой рамки */
+  border-left-width: 9px;
+  border-left-style: dashed;
+  border-left-color: green;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Закруглённая рамка-->
+    <section class="border-radius">
+      <div class="container">
+        <h3>
+          Закруглённая рамка
+          <a name="border-radius"></a>
+        </h3>
+        <p>
+          Для того чтобы скруглить все углы рамки есть составное свойство <span class="mark">border-radius</span>.
+Значением могут быть как абсолютные так и относительные единицы.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="html">
+<div class="box-1"></div>
+<div class="box-2"></div>
+<div class="box-3"></div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="32" class="css">
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.box-1 {
+  width: 180px;
+  height: 80px;
+  background-color: #f44336;
+ /* The value can be pixels */
+  border-radius: 10px;
+}
+.box-2 {
+  width: 120px;
+  height: 120px;
+  background-color: #2196f3;
+  /* The value can be percent */
+  border-radius: 20%;
+}
+.box-3 {
+  width: 150px;
+  height: 150px;
+  background-color: #4caf50;
+ /* If the block is a square, settings the radius to 50% will transform it to a
+circle */
+  border-radius: 50%;
+}
+.box-1,
+.box-2 {
+  margin-bottom: 20px;
+}
+        </textarea>
+        <p>
+          Следующие свойства позволяют скруглить каждый угол рамки по отдельности.
+        </p>
+        <textarea name="" id="" cols="95" rows="12" class="css">
+/* верхний левый угол */
+border-top-left-radius: значение;
+
+/* верхний правый угол */
+border-top-right-radius: значение;
+
+/* нижний правый угол */
+border-bottom-right-radius: значение;
+
+/* нижний левый угол */
+border-bottom-left-radius: значение;
+        </textarea>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Типы элементов-->
+    <section class="element-types">
+      <div class="container">
+        <h1>
+          Типы элементов
+          <a name="element-types"></a>
+        </h1>
+        <p>
+          В таблице стилей браузера для каждого элемента установлен его тип - свойство
+<span class="mark">display</span>. Поведение элемента определяется его типом. Самые распространённые
+типы это блочные (block) и строчные (inline) элементы. Кроме этого есть некоторое
+количество дополнительных типов, например блочно-строчные (inline-block)
+элементы.
+        </p>
+        <img src="./img/box-types.png" alt="box types" widrh="600">
+        <ul class="info-list">
+          <li>
+            Строчные элементы предназначены для выделения и оформления текстового
+контента. Например ссылка, кнопка, изображение и т. п.
+          </li>
+          <li>
+            Блочные используются для разметки текстовых контейнеров (заголовок, список,
+абзац) и крупных смысловых разделов (секция, шапка, подвал).
+          </li>
+          <li>
+            Узнать тип любого элемента можно в 
+            <a href="https://htmlreference.io/" target="_link" rel="noopener noreferrer nofollow" class="resource-link">справочнике</a> 
+            или 
+            <a href="https://html.spec.whatwg.org/multipage/" target="_link" rel="noopener noreferrer nofollow" class="resource-link">спецификации</a> .
+          </li>
+        </ul>
+        <p>
+          Иногда необходимо, чтобы строчный элемент вёл себя как блочный и наоборот,
+поэтому значение свойства <span class="mark">display</span> можно менять по необходимости на любое
+другое.
+
+        </p>
+      </div>
+    </section>
+
+    <!--Блочные элементы (block-level)-->
+    <section class="block-level">
+      <div class="container">
+        <h2>
+          Блочные элементы (block-level)
+          <a name="block-level-anchor"></a>
+        </h2>
+        <p>
+          Визуально представляют собой прямоугольные области идущие друг за другом сверху
+вниз.
+        </p>
+        <img src="./img/block-elements.png" alt="block elements" width="500">
+        <ul class="info-list">
+          <li>
+            Для них задано свойство <span class="mark">display: block</span>.
+          </li>
+          <li>
+            Они занимают всю доступную ширину строки (пространство по горизонтали)
+внутри родителя.
+          </li>
+          <li>
+            Их высота определяется содержимым, если явно не задана в свойстве <span class="mark">height</span>.
+          </li>
+          <li>
+            Они всегда начинаются с новой строки, поэтому несколько соседних блочных
+элементов расположены вертикально друг под другом.
+          </li>
+          <li>
+            Им можно задавать любые свойства геометрии элемента: ширину, высоту, поля,
+рамки и отступы.
+          </li>
+        </ul>
+          <h4>
+            ПОЛЕЗНО
+          </h4>
+          <p>
+            Подавляющее большинство элементов - блочные. Например <span class="mark">&lt;h1&gt;</span>, 
+            <span class="mark">&lt;p&gt;</span>, 
+            <span class="mark">&lt;section&gt;</span>, 
+            <span class="mark">&lt;ul&gt;</span>, 
+            <span class="mark">&lt;li&gt;</span>, 
+            <span class="mark">&lt;div&gt;</span>, 
+            <span class="mark"> &lt;header&gt;</span> и многие другие.
+          </p>        
+      </div>
+    </section>
+
+    <!--Фиксированная ширина-->
+    <section class="fixed-width">
+      <div class="container">
+        <h3>
+          Фиксированная ширина
+          <a name="fixed-width-anchor"></a>
+        </h3>
+        <p>
+          Даже если ширина блочных элементов задана явно, они все равно будут
+располагаться вертикально друг под другом. Всё свободное место в строке, по
+умолчанию, занимается автоматическим правым отступом ( <span class="mark">margin-right</span> ) элемента.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="html">
+<div class="box indigo"></div>
+<div class="box green"></div>
+<div class="box amber"></div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="16" class="css">
+body {
+ background-color: #f9f9fd;
+}
+.box {
+ width: 280px;
+ height: 100px;
+}
+.indigo {
+ background-color: #3f51b5;
+}
+.green {
+ background-color: #4caf50;
+}
+.amber {
+ background-color: #ffc107;
+        </textarea>
+        <h4>
+          ИНСТРУМЕНТЫ РАЗРАБОТЧИКА
+        </h4>
+        <p>
+          Чтобы посмотреть на отступ элемента необходимо использовать инструменты
+разработчика, визуально на странице они никак не выделяются.
+        </p>
+      </div>
+    </section>
+
+    <!--Горизонтальное центрирование блочных элементов-->
+    <section class="horizontal-centering">
+      <div class="container">
+        <h3>
+          Горизонтальное центрирование блочных элементов
+          <a name="horizontal-centering-anchor"></a>
+        </h3>
+        <p>
+          Блочный элемент можно горизонтально центировать внутри его родителя, в случае
+когда родитель больше по ширине, чем центрируемый элемент. То есть блочному
+элементу задана фиксированна ширина. Для этого используется особенность
+автоматических горизонтальных отступов.
+        </p>
+        <p>
+          По умолчанию у блочного элемент автоматический правый отступ, который занимает
+всё свободное пространство в строке.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.box {
+margin-right: auto;
+}
+        </textarea>
+        <p>
+          Если задать автоматические левый и правый отступы, свободное пространство
+распределяется поровну между ними, и блочный элемент центрируется.
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="css">
+.box {
+width: 300px;
+background-color: tomato;
+margin-right: auto;
+margin-left: auto;
+}
+        </textarea>
+        <p>
+          Для более краткой записи можно использовать составное свойство <span class="mark">margin</span>, задав
+нулевые вертикальные отступы и автоматические горизонтальные.
+        </p>
+        <textarea name="" id="" cols="95" rows="6" class="css">
+.box {
+width: 300px;
+background-color: tomato;
+margin: 0 auto;
+}
+        </textarea>
+        <textarea name="" id="" cols="95" rows="5" class="html">
+<div class="parent">
+ <p>Parent element</p>
+ <div class="child">Block-level child element</div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="22" class="css">
+body {
+ background-color: #f9f9fd;
+ font-family: sans-serif;
+ line-height: 1.5;
+ color: #fff;
+ font-size: 20px;
+}
+.parent {
+ background-color: #3f51b5;
+}
+.child {
+ max-width: 300px;
+ margin: 0 auto;
+ background-color: #4caf50;
+ text-align: center;
+}
+.parent,
+.child {
+ padding: 20px;
+ border-radius: 4px;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Элемент-контейнер-->
+    <section class="element-container">
+      <div class="container">
+        <h3>
+          Элемент-контейнер
+          <a name="element-container-anchor"></a>
+        </h3>
+        <p>
+          <strong>Контейнер, обёртка, враппер, центровщик</strong> - всё это имена стандартного блочного
+          элемента-контейнера для ограничения ширины и центрирования контента страницы.
+        </p>
+        <img src="./img/container-width.jpg" alt="container width" width="800">
+        <p>
+          В CSS создаётся класс <span class="mark">container</span>, который можно задать любому элементу, но на
+практике это всегда будет несемантический <span class="mark">&lt;div&gt;</span>. Контейнеру обязательно
+устанавливается ширина (фиксированная или адаптивная), по сетке из макета,
+автоматические горизонтальные отступы и необязательные поля, также по макету.
+        </p>
+        <textarea name="" id="" cols="95" rows="6" class="css">
+.container {
+width: 480px;
+margin: 0 auto;
+padding: 0 15px;
+}
+        </textarea>
+        <p>
+          Контейнер может быть всего один - общий, оборачивающий сразу весь контент
+страницы. В следующем примере границы контейнера выделены пунктиром для
+наглядности.
+        </p>
+        <textarea name="" id="" cols="95" rows="21" class="html">
+<div class="container">
+ <h1>Lorem ipsum dolor sit amet.</h1>
+ <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quod quo
+tenetur quia expedita laboriosam at doloribus molestiae illum, modi minus qui sunt
+odio iste commodi nisi dicta distinctio esse. Quae beatae nam ullam earum velit illum
+voluptate nesciunt consectetur! Quam fuga labore dicta iusto tenetur nesciunt velit
+iure soluta!</p>
+ <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+ <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eum quas quia nam
+fugit quibusdam esse amet et! Nam et quo nisi commodi dolor, deserunt vero deleniti
+vel ducimus praesentium aliquid odio fugit accusantium debitis facere eos asperiores
+eaque quas? Rerum deserunt ipsa veritatis vel totam voluptate repellendus minus sit?
+</p>
+ <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta deserunt hic
+eos aliquam saepe quo facere, corporis assumenda, ratione debitis suscipit.
+Dignissimos exercitationem error amet, facilis a velit excepturi neque ut nostrum odio
+ad, vitae ab quo. Velit aspernatur facere, magni cum fuga harum facilis numquam.
+Neque, quae et.</p>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="12" class="css">
+body {
+ font-family: sans-serif;
+ line-height: 1.5;
+ background-color: #f9f9fd;
+}
+.container {
+ max-width: 480px;
+ margin: 0 auto;
+ padding: 0 15px;
+ border: 2px dashed #2a2a2a;
+}
+        </textarea>
+        <p>
+          Чаще всего контенеров несколько, так как в каждом разделе страницы необходим
+свой контейнер. При таком подходе можно удобно задавать различный
+полноразмерный фон и другие оформительные стили отдельным разделам страницы.
+        </p>
+        <textarea name="" id="" cols="95" rows="33" class="html">
+<header class="page-header">
+ <div class="container">
+ <p>Page header</p>
+ </div>
+</header>
+<main>
+ <section class="hero">
+ <div class="container">
+ <h1>Hero section with CTA button etc.</h1>
+ </div>
+ </section>
+ <section class="about">
+ <div class="container">
+ <h2>Lorem ipsum dolor sit amet.</h2>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+dignissimos debitis ipsum minus recusandae saepe voluptatem sunt neque eaque ad,
+facilis consequatur porro excepturi, nulla corrupti consequuntur voluptates?
+Consectetur expedita eaque voluptate inventore possimus sit. Nesciunt commodi ut
+vitae at similique vero harum amet eos? Sit adipisci deserunt nam libero?</p>
+ </div>
+ <section class="features">
+ <div class="container">
+ <h2>Lorem ipsum dolor sit amet.</h2>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+dignissimos debitis ipsum minus recusandae saepe voluptatem sunt neque eaque ad,
+facilis consequatur porro excepturi, nulla corrupti consequuntur voluptates?
+Consectetur expedita eaque voluptate inventore possimus sit. Nesciunt commodi ut
+vitae at similique vero harum amet eos? Sit adipisci deserunt nam libero?</p>
+ </div>
+ </section>
+</main>
+<footer class="page-footer">
+        </textarea>
+        <textarea name="" id="" cols="95" rows="42" class="css">
+body {
+ margin: 0;
+ font-family: sans-serif;
+ line-height: 1.5;
+ background-color: #f9f9fd;
+}
+h1,
+h2,
+p {
+ margin: 0;
+}
+.container {
+ max-width: 480px;
+ margin: 0 auto;
+ padding: 0 15px;
+
+ outline: 2px dashed #f44336;
+}
+
+.page-header,
+.page-footer,
+.hero,
+.about,
+.features {
+ padding-top: 20px;
+ padding-bottom: 20px;
+}
+.page-header {
+ background-color: #e0e0e0;
+}
+.hero {
+ background-color: #4caf50;
+}
+.about {
+ background-color: #ffc107;
+}
+.features {
+ background-color: #2196f3;
+.page-footer {
+  background-color: #90a4ae;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Строчные элементы (inline)-->
+    <section class="inline">
+      <div class="container">
+        <h2>
+          Строчные элементы (inline)
+          <a name="inline-anchor"></a>
+        </h2>
+        <p>
+          Визуально располагаются в одной строке друг за другом до тех пор, пока в ней хватит
+места, после чего начнут перепрыгивать на следующую строку и заполнять её.
+        </p>
+        <img src="./img/inline-elements.png" alt="inline elements" width="700">
+        <ul class="info-list">
+          <li>
+            Для них задано свойство <span class="mark">display: inline</span>.
+          </li>
+          <li>
+            Их ширина и высота зависят только от содержимого, явно задать их нельзя. То
+есть свойства <span class="mark">width</span> и <span class="mark">height</span> не имеют никакого эффекта.
+          </li>
+          <li>
+            Они располагаются в строке до тех пор, пока в ней есть достаточно места, после
+чего новые переносятся на следующую строку
+          </li>
+          <li>
+            Им можно задавать только горизонтальную геометрию: левые и правые поля,
+отступы и рамки. То есть они игнорируют значения верхних и нижних <span class="mark">margin</span>,
+<span class="mark">padding</span> и <span class="mark">border</span>.
+          </li>
+        </ul>
+        <textarea name="" id="" cols="95" rows="2" class="html">
+<a class="link" href="">Ссылка</a>
+        </textarea>
+        <p>
+          Спан это строчный элемент, зададим ему разнообразную геометрию и посмотрим что
+будет.
+        </p>
+        <textarea name="" id="" cols="95" rows="18" class="css">
+.link {
+  background-color: tomato;
+  color: white;
+
+  /* ✅ Работает */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+
+  /* ❌ Никакого эффекта */
+  width: 1000px;
+  height: 1000px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+        </textarea>
+        <h4>
+          ПОЛЕЗНО
+        </h4>
+        <p>
+          Строчные элементы могут содержать только текст, медиаконтент и другие
+строчные элементы. Исключение составляет элемент &lt;a&gt; , который согласно
+спецификации может оборачивать абзацы, списки, таблицы, заголовки и целые
+разделы, при условии, что они не содержат другие интерактивные элементы -
+ссылки и кнопки.
+        </p>
+      </div>
+    </section>
+
+    <!--Зазор у строчных элементов-->
+    <section class="inline-gap">
+      <div class="container">
+        <h3>
+          Зазор у строчных элементов
+          <a name="inline-gap-anchor"></a>
+        </h3>
+        <p>
+          У строчных и строчно-блочных элментов есть правый или, в случае изображений,
+нижний зазор. Это не margin или padding, а буквально пустое место - особенность
+того, как браузер располагает строчный контент в строке.
+        </p>
+        <img src="./img/inline-gap.png" alt="inline gap" width="600">
+        <p>
+        Величина этого зазора определяется размером текста ближайшего предка с явно
+определённым значением или, если такого предка нет, используется размер шрифта
+от браузера по умолчанию - <span class="mark">16px</span>. Поэтому у кнопок, ссылок, спанов, полей ввода и
+других строчных элементов, по умолчанию будет зазор в <span class="mark">4px</span> - 1/4 размера шрифта
+ближайшего предка.
+        </p>
+        <p>
+          Как преодолеть эту особенность современным способом мы рассмотрим в следующих
+занятиях. Сейчас же разберёмся как убрать нижний зазор у изображения.
+        </p>
+        <textarea name="" id="" cols="95" rows="19" class="html">
+<div class="card">
+ <img class="card-image"
+src="https://images.pexels.com/photos/61727
+photo-617278.jpeg?
+auto=compress&cs=tinysrgb&dpr=2&h=240&w=320
+alt="A cat" >
+ <h2 class="card-heading">Card title
+1</h2>
+</div>
+<div class="card">
+ <img class="card-image no-gap"
+src="https://images.pexels.com/photos/61727
+photo-617278.jpeg?
+auto=compress&cs=tinysrgb&dpr=2&h=240&w=320
+alt="A cat" >
+ <h2 class="card-heading">Card title
+2</h2>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="37" class="css">
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
+}
+body {
+ font-family: sans-serif;
+ line-height: 1.5;
+ background-color: #f9f9fd;
+}
+.card {
+ max-width: 320px;
+ margin-bottom: 20px;
+ margin-left: auto;
+ margin-right: auto;
+ border-radius: 4px;
+ overflow: hidden;
+ background-color: #f44336;
+ box-shadow: 0px 2px 1px -1px rgba(0,
+0, 0, 0.2),
+ 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+ 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.card-image {
+ max-width: 100%;
+ height: auto;
+}
+.card-image.no-gap {
+ display: block;
+}
+.card-heading {
+ margin: 0;
+ padding: 20px;
+ font-weight: 500;
+ background-color: #03a9f4;
+}
+        </textarea>
+        <p>
+          Элементу <span class="mark">div.card</span> задан красный цвет фона. В первой карточке видна полоса цвета её
+фона между изображением и заголовком, а во второй карточке этой полосы нет. Во
+второй карточке изображению изменили тип элемента, сделав его блочным, в
+результате чего пропал нижний зазор.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.card-image.no-gap {
+  display: block;
+}
+        </textarea>
+      </div>      
+    </section>
+
+    <!--Особенности вертикальных полей и рамок-->
+    <section class="inline-margin-border">
+      <div class="container">
+        <h3>
+          Особенности вертикальных полей и рамок
+          <a name="inline-margin-border-anchor"></a>
+        </h3>
+        <p>
+          Верхние и нижние поля, а также рамки строчного элемента, работают очень странно - не
+увеличивают размер блока, но визуально отображаются.
+        </p>
+        <textarea name="" id="" cols="95" rows="23" class="html">
+<p>
+ Lorem ipsum dolor, sit amet
+consectetur adipisicing elit. Officia
+quaerat
+ eaque id voluptate reiciendis beatae
+vel nulla, doloremque dolore eum nobis
+ qui, laudantium dignissimos saepe.
+Possimus, nisi itaque? Fugiat facilis
+saepe
+ quo et architecto voluptatem
+blanditiis.
+</p>
+<span class="text">Inline element</span>
+<span class="text">Inline element</span>
+<p>
+ Lorem ipsum dolor, sit amet
+consectetur adipisicing elit. Officia
+quaerat
+ eaque id voluptate reiciendis beatae
+vel nulla, doloremque dolore eum nobis
+ qui, laudantium dignissimos saepe.
+ </p>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="29" class="css">
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
+}
+body {
+ font-family: sans-serif;
+ line-height: 1.5;
+ background-color: #f9f9fd;
+}
+.text {
+ background-color: tomato;
+ color: white;
+ padding-left: 10px;
+ padding-right: 10px;
+ border-left: 10px solid #2196f3;
+ border-right: 10px solid #2196f3;
+ /* Let's give the inline <span>
+element the top
+ and bottom margins, and borders
+ that don't work. */
+ padding-top: 100px;
+ padding-bottom: 100px;
+ border-top: 10px solid #2196f3;
+ }
+ p {
+  border: 5px solid #212121;
+ }
+        </textarea>
+        <p>
+          Визуально фон заполнил вертикальные поля и рамки, которые «залазят» на соседние
+строки абзацей и ведут себя очень странно. Это особенность отображения в браузере,
+они никак не влияют на геометрию соседних элементов и поэтому не используются.
+        </p>
+      </div>
+    </section>
+
+    <!--Строчно-блочные элементы (inlineblock)-->
+    <section class="inline-block">
+      <div class="container">
+        <h2>
+          Строчно-блочные элементы (inlineblock)
+          <a name="inline-block-anchor"></a>
+        </h2>
+        <p>
+          Гибрид между блочными и строчными элементами, который взял всё лучшее от обоих.
+        </p>
+        <ul class="info-list">
+          <li>
+            Для них задано свойство <span class="mark">display: inline-block</span>.
+          </li>
+          <li>
+            Их ширина и высота зависят от содержимого, но можно явно задать свойства <span class="mark">width</span> и 
+            <span class="mark">height</span>
+          </li>
+          <li>
+            Они располагаются в строке до тех пор, пока в ней есть достаточно места, после чего
+новые переносятся на следующую строку.
+          </li>
+          <li>
+            Им можно задавать любые свойства геометрии элемента: ширину, высоту, поля,
+рамки и отступы.
+          </li>
+        </ul>
+        <p>
+          Они используются в тех случаях, когда строчным элементам нужно добавить
+декоративные эффекты. Например, задать ссылке вертикальные поля, отступ или ширину
+с высотой, визуально сделав из неё кнопку, или превратить &lt;span&gt; в иконку с
+фиксированными размерами.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="html">
+<a href="" class="link">Узнать больше</a>
+        </textarea>
+        <p>
+          Меняем тип элемента при помощи свойства <span class="mark">display</span>. Теперь ссылке, изначально
+строчному элементу, можно задать вертикальные поля и другую геометрию.
+        </p>
+        <textarea name="" id="" cols="95" rows="15" class="css">
+.link {
+  display: inline-block;
+  padding: 16px 32px;
+
+  border-radius: 3px;
+  background-color: teal;
+  color: white;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Прячем элементы-->
+    <section class="display-none">
+      <div class="container">
+        <h2>
+          Прячем элементы
+          <a name="display-none-anchor"></a>
+        </h2>
+        <p>
+          Значение <span class="mark">display: none</span> позволяет полностью скрыть элемент, освободив его
+пространство для других. Такой элемент изымается из потока документа, визуально
+скрывается и не участвует в раскладке страницы.
+        </p>
+        <h4>
+          ИНТЕРЕСНО
+        </h4>
+        <p>
+          Минус этого подхода в том, что изменение значения свойства <span class="mark">display</span> нельзя
+анимировать, но для этого есть другие подходы, с которыми познакомимся позже.
+        </p>
+        <p>
+          Наберём простую разметку переключаемых панелей (табов), в которых должна
+отображаться только активная панель.
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<div class="tabs">
+  <div class="controls">...</div>
+  <div class="pane is-active">1 - Lorem ipsum dolor sit amet consectetur.</div>
+  <div class="pane">2 - Lorem ipsum dolor sit amet consectetur.</div>
+  <div class="pane">3 - Lorem ipsum dolor sit amet consectetur.</div>
+</div>
+        </textarea>
+        <p>
+          Изначально спрячем все панели при помощи <span class="mark">display: none</span>, они будут визуально
+скрыты и освободят своё место в потоке документа. Далее добавим класс активной
+панели <span class="mark">is-active</span> в котором будем устанавливать <span class="mark">display: block</span>. Панель с классом
+<span class="mark">is-active</span> будет видна, остальные скрыты.
+        </p>
+        <textarea name="" id="" cols="95" rows="11" class="css">
+.pane {
+  display: none;
+  padding: 8px;
+  border: 1px solid blue;
+  border-radius: 3px;
+}
+
+.is-active {
+  display: block;
+}
+        </textarea>
+        <h4>
+          ИНТЕРЕСНО
+        </h4>
+        <p>
+          Для того, чтобы это всё оживить, нужен язык программирования JavaScript. При
+каком-то событии можно будет динамически добавлять и удалять классы у
+элементов. 
+        </p>
+        <textarea name="" id="" cols="95" rows="30" class="html">
+<div class="tabs">
+ <div class="controls">
+ <a href="#pane-1">First cat</a>
+ <a href="#pane-2">Second cat</a>
+ <a href="#pane-3">Third cat</a>
+ </div>
+ <div id="pane-1" class="pane is-active">
+ <img src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg"
+width="320" alt="">
+ <p><b>1</b> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vitae
+quam ea dolorum nisi at illo sunt voluptates, mollitia nihil assumenda recusandae nobis
+eius adipisci consectetur, omnis corrupti culpa nesciunt architecto minus commodi!
+Laboriosam asperiores unde deserunt vitae nemo alias ducimus quas odit cum et!</p>
+ </div>
+ <div id="pane-2" class="pane">
+ <img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg"
+width="320" alt="">
+ <p><b>2</b> - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
+saepe molestiae fugit! Officiis voluptate, voluptas asperiores laudantium, ea vero
+distinctio quas quod porro possimus velit architecto? Exercitationem atque ex rem!</p>
+ </div>
+ <div id="pane-3" class="pane">
+  <div id="pane-3" class="pane">
+ <img src="https://cdn.pixabay.com/photo/2020/10/01/11/41/cat-5618328_1280.jpg"
+width="320" alt="">
+ <p><b>3</b> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus
+  Officiis voluptate, voluptas asperiores laudantium, ea vero
+distinctio quas quod porro possimus velit architecto? Exercitationem atque ex rem!</p>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="26" class="css">
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
+}
+body {
+ font-family: sans-serif;
+ line-height: 1.5;
+ color: #212121;
+ background-color: #f9f9fd;
+}
+.pane {
+ display: none;
+ padding: 8px;
+ border-radius: 3px;
+}
+.is-active {
+ display: block;
+}
+.controls {
+ display: flex;
+}
+.controls a {
+  padding: 4px 8px;
+}
+        </textarea>
+        <textarea name="" id="" cols="95" rows="15" class="js">
+const controls = document.querySelector(".controls");
+controls.addEventListener("click", (e) => {
+ if (e.target === e.currentTarget) {
+ return;
+ }
+ e.preventDefault();
+ const prevActivePane = document.querySelector(".pane.is-active");
+ if (prevActivePane) {
+ prevActivePane.classList.remove("is-active");
+ }
+ const paneId = e.target.getAttribute("href").slice(1);
+ const nextActivePane = document.querySelector(`#${paneId}`);
+ nextActivePane.classList.add("is-active");
+});
+        </textarea>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Структурные псевдоклассы-->
+    <section class="structure-pseudoclasses">
+      <div class="container">
+        <h1>
+          Структурные псевдоклассы
+          <a name="structure-pseudoclasses-anchor"></a>
+        </h1>
+        <p>
+          Структурные псевдоклассы это способ выбрать определённые элементы из <strong>коллекции
+дочерних элементов</strong> (соседей), без присваивания дополнительных классов. Дочерние
+элементы (соседи) - это элементы с общим родителем.
+        </p>
+        <textarea name="" id="" cols="95" rows="12" class="html">
+<ul class="list">
+  <li class="list-item">
+    <a class="list-link">Ссылка 1</a>
+  </li>
+  <li class="list-item">
+    <a class="list-link">Ссылка 2</a>
+  </li>
+  <li class="list-item">
+    <a class="list-link">Ссылка 3</a>
+  </li>
+</ul>
+        </textarea>
+        <p>
+          В примере выше элементы <span class="mark">li.list-item</span> это соседи, и к ним можно будет применить
+структурные псевдоклассы. В тоже время ссылки <span class="mark">a.list-link</span> не являются соседями, у
+них нет общего родителя, поэтому нельзя будет использовать псевдоклассы для выбора
+какой-то определённой ссылки или группы ссылок.
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="css">
+# ✅ Сработает, .list-item это коллекция соседей с общим родителем
+.list-item:структурный-псевдокласс {}
+
+# ❌ Не сработает, .list-link это не коллекция соседей, у них нет общего родителя
+.list-link:структурный-псевдокласс {}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Псевдоклассы :first-child и :last-child-->
+    <section class="first-last-child">
+      <div class="container">
+        <h2>
+          Псевдоклассы <span class="mark">:first-child</span> и <span class="mark">:last-child</span>
+          <a name="first-last-child-anchor"></a>
+        </h2>
+        <p>
+          Позволяют выбрать первый или последний элемент в коллекции соседей. Например,
+если каждому элементу списка задать нижний отступ, то он будет и у последнего.
+Крайнюю геометрию необходимо обязательно чистить, потому что такие оступы могут
+неочевидно выпадать или расширять родителя.
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<ul class="list">
+  <li class="list-item">HTML</li>
+  <li class="list-item">CSS</li>
+  <li class="list-item">JavaScript</li>
+  <li class="list-item">React</li>
+</ul>
+        </textarea>
+        <p>
+          Псевдокласс <span class="mark">:last-child</span> выбирает последний элемент в коллекции соседей.
+        </p>
+        <img src="./img/1-last-child.png" alt="last child select" width="700">
+        <textarea name="" id="" cols="95" rows="8" class="css">
+.list-item {
+  margin-bottom: 12px;
+}
+
+.list-item:last-child {
+  margin-bottom: 0;
+}
+        </textarea>
+        <p>
+          Аналогично работает <span class="mark">:first-child</span>, применяя стили к первому элементу в коллекции
+соседей. Например, когда нужно задать верхний отступ всем элементам кроме первого.
+        </p>
+        <img src="./img/2-first-child.png" alt="first child select" width="700">
+        <textarea name="" id="" cols="95" rows="8" class="css">
+.list-item {
+  margin-top: 12px;
+}
+
+.list-item:first-child {
+  margin-top: 0;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Псевдокласс :not(selector)-->
+    <section class="not">
+      <div class="container">
+        <h2>
+          Псевдокласс <span class="mark">:not(selector)</span>
+          <a name="not-anchor"></a>
+        </h2>
+        <p>
+          Позволяет выбрать все элементы, которые не подходят под критерий - простой селектор
+записанный в скобках. Простой селектор это универсальный селектор, селектор типа,
+идентификатора, атрибута, класса или псевдокласса.
+        </p>
+        <p>
+          Правило применения нижнего отступа ко всем элементам кроме последнего можно
+записать так.
+        </p>
+        <textarea name="" id="" cols="95" rows="8" class="css">
+/*
+ * Читается как: применить стили ко всем элементам с классом list-item,
+ * которые не являются последним элементом в коллекции соседей.
+ */
+.list-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Псевдокласс :nth-child(an+b)-->
+    <section class="nth-child">
+      <div class="container">
+        <h2>
+          Псевдокласс <span class="mark">:nth-child(an+b)</span>
+          <a name="nth-child-anchor"></a>
+        </h2>
+        <p>
+          Выбирает элементы в коллекции соседей по номеру указанному в скобках, при помощи
+цикла <span class="mark">an+b</span>, который позволяет задать правило для последовательности элементов.
+        </p>
+        <ul class="info-list">
+          <li><span class="mark">a</span> - период цикла. Произвольное число.</li>
+          <li><span class="mark">n</span> - счётчик цикла. Начинается с нуля и увеличивается на единицу на каждой итерации.</li>
+          <li><span class="mark">b</span> - смещение. Произвольное число.</li>
+        </ul>
+        <p>
+        Например, если <span class="mark">a = 2 /span>, а <span class="mark">b = 1</span>, то <span class="mark">an+b = 2n+1</span>. 
+        Эта формула выберет все нечётные элементы.
+        </p>
+        <textarea name="" id="" cols="95" rows="11" class="values">
+# При n = 0
+2 * 0 + 1 = 1
+
+# При n = 1
+2 * 1 + 1 = 3
+
+# При n = 2
+2 * 2 + 1 = 5
+
+# И так далее для n = 3, n = 4 ...
+        </textarea>
+        <p>
+          Создадим разметку списка из десяти элементов и будем изменять цвет их фона.
+        </p>
+        <textarea name="" id="" cols="95" rows="13" class="html">
+<ul class="list">
+  <li class="list-item">1</li>
+  <li class="list-item">2</li>
+  <li class="list-item">3</li>
+  <li class="list-item">4</li>
+  <li class="list-item">5</li>
+  <li class="list-item">6</li>
+  <li class="list-item">7</li>
+  <li class="list-item">8</li>
+  <li class="list-item">9</li>
+  <li class="list-item">10</li>
+</ul>
+        </textarea>
+      </div>
+    </section>
+
+    <!--N-й элемент-->
+    <section class="n-element">
+      <div class="container">
+        <h3>
+          N-й элемент
+          <a name="n-element-anchor"></a>
+        </h3>
+        <p>
+          В самом простом случае можно передать буквально номер элемента коллекции. То
+есть <span class="mark">a = 0</span>, а значение b это произвольное число - номер элемента коллекции. Тогда
+при любом <span class="mark">n</span>, формула будет <span class="mark">0 * n + b</span>, или просто <span class="mark">b</span>. 
+        </p>
+        <img src="./img/3-nth-5.png" alt="nth child selection" width="700">
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.list-item:nth-child(5) {
+  background-color: orange;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Чётные и нечётные элементы-->
+    <section class="even-odd">
+      <div class="container">
+        <h3>
+          Чётные и нечётные элементы
+          <a name="even-odd-anchor"></a>
+        </h3>
+        <p>
+          Для выбора всех чётных элементов можно использовать формулу <span class="mark">2n</span> или её
+псевдоним - значение <span class="mark">even</span>, зарезервированное слово. 
+        </p>
+        <img src="./img/4-nth-even.png" alt="even selector" width="700">
+        <textarea name="" id="" cols="95" rows="9" class="css">
+.list-item:nth-child(2n) {
+  background-color: orange;
+}
+
+/* Аналогично используя псевдоним */
+.list-item:nth-child(even) {
+  background-color: orange;
+}
+        </textarea>
+        <p>
+          Для выбора нечётных элементов можно использовать формулу <span class="mark">2n + 1</span> или её
+псевдоним - значение <span class="mark">odd</span>, зарезервированное слово. 
+        </p>
+        <img src="./img/5-nth-odd.png" alt="odd selector" width="700">
+        <textarea name="" id="" cols="95" rows="9" class="css">
+.list-item:nth-child(2n + 1) {
+  background-color: orange;
+}
+
+/* Аналогично используя псевдоним */
+.list-item:nth-child(odd) {
+  background-color: orange;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--От N-го элемента-->
+    <section class="from-nth">
+      <div class="container">
+        <h3>
+          От <span class="mark">N</span>-го элемента
+          <a name="from-nth-anchor"></a>
+        </h3>
+        <p>
+          Если задать <span class="mark">a = 1</span>, то результирующая формула <span class="mark">n + b</span> позволяет выбрать все
+элементы начиная с элемента под номером <span class="mark">b</span>. Например, для того, чтобы выбрать все
+элементы с шестого и дальше (то есть кроме первых пяти), используем формулу <span class="mark">n + 6</span>. 
+        </p>
+        <img src="./img/6-nth-last.png" alt="from nth element" width="700">
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.list-item:nth-child(n + 6) {
+  background-color: orange;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--До N-го элемента-->
+    <section class="to-nth">
+      <div class="container">
+        <h3>
+          До <span class="mark">N</span>-го элемента
+          <a name="to-nth-anchor"></a>
+        </h3>
+        <p>
+          Если задать <span class="mark">a = -1</span>, то результирующая формула <span class="mark">-n + b</span>позволяет выбрать все
+элементы начиная с первого и до элемента под номером <span class="mark">b</span>. Например, для того чтобы
+выбрать первые пять элементов используем формулу <span class="mark">-n + 5</span>. 
+        </p>
+        <img src="./img/7-nth-first.png" alt="to nth element" width="700">
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.list-item:nth-child(-n + 5) {
+  background-color: orange;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Каждый N-й элемент-->
+    <section class="every-nth">
+      <div class="container">
+        <h3>
+          Каждый <span class="mark">N</span>-й элемент
+          <a name="every-nth-anchor"></a>
+        </h3>
+        <p>
+          Например, для того, чтобы выбрать каждый <span class="mark">3-й</span> элемент начиная с первого,
+используем цикл <span class="mark">an+b</span>, в котором <span class="mark">a = 3</span>, а смещение <span class="mark">b = 1</span>. 
+        </p>
+        <img src="./img/8-nth-every.png" alt="every nth element" width="700">
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.list-item:nth-child(3n + 1) {
+  background-color: orange;
+}
+        </textarea>
+        <h4>
+          ПОЛЕЗНО
+        </h4>
+        <p>
+          Несколько примеров для закрепления.
+        </p>
+        <ul class="info-list">
+          <li><span class="mark">3n + 2</span> - каждый третий элемент начиная со 2-го, то есть элементы 2, 5, 8 и т.д.</li>
+          <li><span class="mark">2n + 4</span> - каждый второй элемент начиная с 4-го, то есть элементы 4, 6, 8 и т.д.</li>
+          <li><span class="mark">4n + 5</span> - каждый четвёртый элемент начиная с 5-го, то есть элементы 5, 9, 13 и т.д.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Псевдокласс :nth-last-child(an+b)-->
+    <section class="nth-last">
+      <div class="container">
+        <h2>
+          Псевдокласс <span class="mark">:nth-last-child(an+b)</span>
+          <a name="nth-last-anchor"></a>
+        </h2>
+        <p>
+          Аналог <span class="mark">:nth-child()</span> c отличием в том, что отсчёт ведётся с конца коллекции
+(последнего элемента). 
+        </p>
+      </div>
+    </section>
+
+    <!--N-й элемент-->
+    <section class="nth-last-child">
+      <div class="container">
+        <h3>
+          <span class="mark">N</span>-й элемент
+          <a name="nth-last-child-anchor"></a>
+        </h3>
+        <p>
+          Выберем 3-й элемент с конца, то есть 8-й, потому что всего 10-ть элементов. Если бы
+всего было 20-ть элементов, тогда был бы выбран 18-й и т. д
+        </p>
+        <img src="./img/9-nth-last-3.png" alt="nth last child" width="700">
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.list-item:nth-last-child(3) {
+  background-color: orange;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--До N-го элемента-->
+    <section class="to-nth-last">
+      <div class="container">
+        <h3>
+          До <span class="mark">N</span>-го элемента
+          <a name="to-nth-last-anchor"></a>
+        </h3>
+        <p>
+          Чтобы выбрать несколько последних элементов в коллекции, используется формула -
+          <span class="mark">n + b</span>, где <span class="mark">b</span> это количество выбираемых элементов. 
+          Например, при <span class="mark">b = 3</span> будут
+          выбраны только последние три элемента.
+        </p>
+        <img src="./img/10-nth-last-3.png" alt="to nth last child" width="700">
+        <textarea name="" id="" cols="95" rows="4" class="css">
+.list-item:nth-last-child(-n + 3) {
+  background-color: orange;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Дополнительные псевдоклассы-->
+    <section class="additional-pseudoclasses">
+      <div class="container">
+        <h2>
+          Дополнительные псевдоклассы
+          <a name="additional-pseudoclasses-anchor"></a>
+        </h2>
+        <p>
+          Эти псевдоклассы используются в довольно редких или очень специфических случаях.
+        </p>
+        <ul class="info-list">
+          <li><span class="mark">:first-of-type</span> - выбирает первый селектор данного типа.</li>
+          <li><span class="mark">:last-of-type</span> - выбирает последний селектор данного типа.</li>
+          <li><span class="mark">:only-of-type</span> - выбирает элемент, который является единственным ребёнком такого типа в коллекции соседей.</li>
+          <li><span class="mark">:nth-of-type(an+b)</span> - выбирает заданный в скобках номер селектора используя формулу <span class="mark">an+b</span>.</li>
+          <li><span class="mark">:nth-last-of-type(an+b)</span> - аналог <span class="mark">:nth-of-type()</span> с отличием в том, что отсчёт ведётся с конца колекции (последнего элемента).</li>
+          <li><span class="mark">:only-child</span> - выбирает элемент, который является единственным ребёнком с таким селектором в коллекции соседей.</li>
+          <li><span class="mark">:empty</span> - выбирает пустые элементы, то есть без потомков и текста.</li>
+        </ul>
       </div>
     </section>
   </main>
@@ -932,7 +2052,7 @@ pre::selection {
 
   <!--F O O T E R-->
   <footer class="footer">
-    <a href="#nav-anchor">Вверх</a>
+    <a href="#nav-anchor" class="footer-batton">Вверх</a>
 
   </footer>
 </body>
