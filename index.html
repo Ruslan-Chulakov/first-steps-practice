@@ -14,112 +14,2163 @@
     <a name="nav-anchor"></a>
     <nav class="nav"> 
       <ul class="nav-list">
-        <li><a href="#main-conceptions-anchor">Основные концепции</a></li>
-        <li><a href="#terminology-anchor">Терминология</a></li>
+        <li><a href="#image-types">Типы изображений</a></li>        
+      </ul>
+
+      <!--===========================================-->
+      <ul class="nav-list">
+        <li><a href="#element-background-anchor">Фон элемента</a></li>
+        <li><a href="#bg-color-anchor">Свойство background-color</a></li>
+        <li><a href="#bg-image-anchor">Свойство background-image</a></li>
+        <li><a href="#bg-repeat-anchor">Свойство background-repeat</a></li>
+        <li><a href="#bg-position-anchor">Свойство background-position</a></li>
+        <li><a href="#position-with-offset-anchor">Позиция со смещением</a></li>
+        <li><a href="#bg-size-anchor">Свойство background-size</a></li>
+        <li><a href="#contain-cover-anchor">Значения contain и cover</a></li>
+        <li><a href="#bg-attachment-anchor">Свойство background-attachment</a></li>
+        <li><a href="#layered-bg-anchor">Многослойный фон</a></li>
+        <li><a href="#bg-anchor">Свойство background</a></li>
+      </ul>
+
+      <ul class="nav-list">
+        <li><a href="#fit-position-anchor">Свойства object-fit и object-position</a></li>
+        <li><a href="#fit-anchor">Свойство object-fit</a></li>
+        <li><a href="#position-anchor">Свойство object-position</a></li>
+      </ul>
+
+      <ul class="nav-list">
+        <li><a href="#pseudo-elements-anchor">Псевдоэлементы</a></li>
+        <li><a href="#content-anchor">Свойство content</a></li>
+        <li><a href="#hover-anchor">Псевдокласс :hover</a></li>
+        <li><a href="#icin-anchor">Псевдоэлемент-иконка</a></li>
+      </ul>
+
+      <ul class="nav-list">
+        <li><a href="#gradient-anchor">Градиент</a></li>
+        <li><a href="#linear-gradient-anchor">Линейный градиент</a></li>
+        <li><a href="#color-stop-anchor">Колорстоп (color-stop)</a></li>
+        <li><a href="#solid-gradient-anchor">Сплошной градиент</a></li>
+        <li><a href="#radial-gradient-anchor">Радиальный градиент</a></li>
+        <li><a href="#repeating-gradient-anchor">Повторяющийся градиент</a></li>
+        <li><a href="#striped-headers-anchor">Полосатые заголовки</a></li>
         <li><a href="#additional-materials-anchor">Дополнительные материалы</a></li>
       </ul>
 
       <ul class="nav-list">
-        <li><a href="#container-properties-anchor">Свойства контейнера</a></li>
-        <li><a href="#display-anchor">Свойство display</a></li>
-        <li><a href="#flex-direction-anchor">Свойство flex-direction</a></li>
-        <li><a href="#justify-content-anchor">Свойство justify-content</a></li>
-        <li><a href="#align-items-anchor">Свойство align-items</a></li>
-        <li><a href="#picture-card-anchor">Карточка с изображением</a></li>
-        <li><a href="#flex-wrap-anchor">Свойство flex-wrap</a></li>
-        <li><a href="#element-grid-anchor">Сетка элементов</a></li>
-        <li><a href="#align-content-anchor">Свойство align-content</a></li>
-      </ul>
-
-      <ul class="nav-list">
-        <li><a href="#element-properties-anchor">Свойства элемента</a></li>
-        <li><a href="#flex-basis-anchor">Свойство flex-basis</a></li>
-        <li><a href="#flex-grow-anchor">Свойство flex-grow</a></li>
-        <li><a href="#rubber-content-anchor">Резиновый контент</a></li>
-        <li><a href="#card-footer-anchor">Футер карточки</a></li>
-        <li><a href="#flex-shrink-anchor">Свойство flex-shrink</a></li>
-        <li><a href="#align-self-anchor">Свойство align-self</a></li>
-        <li><a href="#order-anchor">Свойство order</a></li>
+        <li><a href="#element-shadow-anchor">Тень элемента</a></li>
+        <li><a href="#one-side-shadow-anchor">Тень с одной стороны</a></li>
+        <li><a href="#inner-shadow-anchor">Внутренняя тень</a></li>
+        <li><a href="#layered-shadow-anchor">Многослойная тень</a></li>
+        <li><a href="#decor-effects-anchor">Декоративные эффекты</a></li>
+        <li><a href="#add-material-anchor">Дополнительные материалы</a></li>
       </ul>
       
         
     </nav>
   </header>
   <main>
-    <!--Основные концепции-->
-    <section class="main-conceptions-anchor">
+    <!--image-types-->
+    <section class="image-types">
       <div class="container">
         <h1>
-          Основные концепции
-          <a name="main-conceptions-anchor"></a>
+          Типы изображений
+          <a name="image-types-anchor"></a>
         </h1>
         <p>
-          <strong>Flexible Box Layout (Flexbox)</strong> - это CSS-модуль, который определяет набор свойств для
-размещения, выравнивания и распределения пространства между элементами в
-контейнере, даже если их размер неизвестен или динамичен.
+          На сайте всегда есть изображения, они помогают донести смысл или просто добавить декоративное оформление страницы. 
+          Значит есть два типа изображений: контентные и декоративные. Какая между ними разница?
         </p>
         <p>
-          Основная идея состоит в том, чтобы разделить элементы на блок-контейнер 
-          <span class="mark">( flexконтейнер )</span>  и его детей <span class="mark">( flex-элементы )</span>.
+          <strong>Контентные изображения</strong> - несут смысловую нагрузку, относятся к содержанию страницы и помогают донести до пользователя полезную ему информацию. 
+          Они добавляются в HTML-разметке используя тег <span class="mark">&lt;img&gt;</span> с обязательно заполненным атрибутом <span class="mark">alt</span>, описывающим изображение.
         </p>
-        <img src="./img/flex-container.svg" alt="flex-container" width="500">
-        <img src="./img/flex-items.svg" alt="flex-items" width="500">
         <p>
-          Flexbox-контейнер может изменять ширину и высоту его детей, а так же направление их
-расположения - выравнивание в колонку или строку, порядок отображения элементов и
-расстояние между ними. Контейнер расширяет элементы, чтобы наиболее оптимально
-заполнить доступное пространство, или сжимает их, чтобы предотвратить переполнение.
+          Фотография продукта на карточке товара в интернет-магазине, фотографии членов команды, логотип компании, 
+          рекламные банеры, карты с локацией, картинки слайдера, аватарки, это всё контентные изображения.
+        </p>
+        <p>
+          <strong>Декоративные изображения</strong> - используются исключительно для дополнительного оформления. Они не несут никакой полезной информации и служат только для «красоты». 
+          Добавляются через CSS как фон, используя свойство <span class="mark">background-image</span>, или размечаются в HTML тегом <span class="mark">&lt;svg&gt;</span> (в случае векторной графики).
+        </p>
+        <p>
+          Кастомные маркеры списков, всевозможные вспомогательные иконки, плашки, фоновые изображения блоков - это всё декоративные изображения.
+        </p>
+        <p>
+          Несколько особенностей такого разделения.
+        </p>
+        <ul class="info-list">
+          <li>Очищается код страницы, что улучшает его читабельность для разработчика, упрощает работу поисковых роботов и ускоряет начальную загрузку страницы.</li>
+          <li>Все что должно быть проиндексировано роботами, добавляем как <span class="mark">&lt;img&gt;</span>, остальное фоном.</li>
+          <li>При печати веб-страницы теги <span class="mark">&lt;img&gt;</span> печатаются, а фоновые изображения нет.</li>
+          <li>Ассистивные технологии (скринридеры) для людей с ограниченными возможностями читают <span class="mark">alt</span> изображений, поэтому если изображение несёт информацию, оно обязательно должно быть в HTML-разметке.</li>
+        </ul>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Фон элемента-->
+    <section class="element-background">
+      <div class="container">
+        <h1>
+          Фон элемента
+          <a name="element-background-anchor"></a>
+        </h1>
+        <p>
+          Фон это не только декоративный эффект для оформления, но и помощь в восприятии смысла, 
+          подсказка о содержимом элемента. Например, зелёный цвет ассоциируется с успешной операцией, а красный - с ошибкой.
+        </p>
+        <p>
+          Если текст светлый, то фон должен быть тёмным (и наоборот), в противном случае, чтение становится трудным или невозможным. Текст с названием компании на фоне пальм и 
+          морского пляжа без лишних слов подскажет сферу деятельности и поможет принять решение о том, продолжать ли знакомство с контентом.
         </p>
         <h4>
           ВНИМАНИЕ
         </h4>
         <p>
-          Во flex-контейнере отменяется большинство правил расположения элементов
-согласно их типу и потоку документа.
+          По умолчанию фон элемента распространяется на <span class="mark">content</span> и <span class="mark">padding</span>. 
+          На <span class="mark">margin</span> - никогда не распостраняется, это внешний отступ.
         </p>
-        <ul class="info-list">
-          <li>Элементы теряют «тип», перестают быть строчными или блочными.</li>
-          <li>Блочные элементы перестают идти вертикально друг под другом.</li>
-          <li>Крайние отступы на стыке с границей родителя не выпадают.</li>
-          <li>Вертикальные отступы элементов не схлопываются.</li>
-          <li>Работают автоматические вертикальные отступы.</li>
-        </ul>
       </div>
     </section>
 
-    <!--Терминология-->
-    <section class="terminology">
+    <!--Свойство background-color-->
+    <section class="bg-color">
       <div class="container">
         <h2>
-          Терминология
-          <a name="terminology-anchor"></a>
+          Свойство background-color
+          <a name="bg-color-anchor"></a>
         </h2>
         <p>
-          Обычный порядок расположения элементов определяется потоком документа и их
-типом (блочный или строчный). В модели Flexbox направление расположения элементов
-определяется <b>направляющими осями</b> контейнера, вдоль которых выстраиваются
-элементы.
+          Задаёт цвет фона элемента. Значением может быть зарезервированное слово или цвет, записанный в RGB, RGBA и HEX-формате.
         </p>
-        <img src="./img/basic-terminology.svg" alt="basic terminology" width="700">
-        <ul class="info-list">
-          <li>
-            <b>main axis</b> - главная ось flex-контейнера, вдоль которой располагаются элементы.
-Она не обязательно горизонтальная, её направление контролируется свойством
-<span class="mark">flex-direction</span>.
-          </li>
-          <li>
-            <b>main-start</b> и <b>main-end</b> - элементы в контейнере всегда располагаются от <span class="mark">main-start</span> (начало главной оси) 
-            и до <span class="mark">main-end</span> (конец главной оси).
-          </li>
-          <li>
-            <b>cross axis</b> - поперечная ось, которая всегда перпендикулярна главной оси. Её
-направление зависит от главной оси и явно не устанавливается.
-          </li>
-          <li>
-            <b>cross-start</b> и <b>cross-end</b> - начало и конец поперечной оси, вдоль которой
-располагаются строки элементов.
-          </li>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+background-color: цвет
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство background-image-->
+    <section class="bg-image">
+      <div class="container">
+        <h2>
+          Свойство background-image
+          <a name="bg-image-anchor"></a>
+        </h2>
+        <p>
+          Задаёт фоновое изображение элемента, адрес которого указывается аргументом функции <span class="mark">url()</span>. 
+          Это может быть как относительный, так и абсолютный путь.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+background-image: url('адрес картинки');
+        </textarea>
+        <p>
+          Можно сразу задать цвет фона и фоновое изображение, которое будет поверх фона. Например, 
+          в случае когда не загрузилась фоновая картинка, пользователь увидит хотябы цвет фона, а не пустое место.
+        </p>
+        <textarea name="" id="" cols="95" rows="18" class="html">
+<div class="tile-set">
+  <div class="tile">
+    <p>✅ There is a background and the picture is loaded</p>
+    <span class="icon with-bg with-icon"></span>
+  </div>
+
+  <div class="tile">
+    <p>⚠️ There is a background but the picture is not loaded</p>
+    <span class="icon with-bg"></span>
+  </div>
+
+  <div class="tile">
+    <p>❌ There is no background and the picture is not loaded</p>
+    <span class="icon"></span>
+  </div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="45" class="css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #212121;
+}
+
+.tile-set {
+  display: flex;
+  justify-content: center;
+}
+
+.tile {
+  padding: 10px;
+  text-align: center;
+  border: 2px dashed #2a2a2a;
+  border-radius: 4px;
+}
+
+.tile:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon {
+  display: inline-flex;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon.with-bg {
+  background-color: #ff9800;
+}
+
+.icon.with-icon {
+  background-image: url("https://cdn2.iconfinder.com/data/icons/avatars-60/5985/34-Father-512.png");
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство background-repeat-->
+    <section class="bg-repeat">
+      <div class="container">
+        <h2>
+          Свойство background-repeat
+          <a name="bg-repeat-anchor"></a>
+        </h2>
+        <p>
+          Управляет повторением фонового изображения. 
+          По умолчанию оно повторяется по горизонтали и вертикали. Это заметно если картинка меньше, чем размер элемента.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+background-repeat: repeat | repeat-x | repeat-y | no-repeat
+        </textarea>
+        <ul class="info list">
+          <li><span class="mark">repeat</span> - повторять по X и Y. Значение по умолчанию.</li>
+          <li><span class="mark">repeat-x</span> - повторять только по X, то есть по горизонтали.</li>
+          <li><span class="mark">repeat-y</span> - повторять только по Y, то есть по вертикали.</li>
+          <li><span class="mark">no-repeat</span> - не повторять.</li>
         </ul>
+        <textarea name="" id="" cols="95" rows="9" class="html">
+<div class="container">
+   <div class="tile-set">
+      <div class="tile no-repeat"></div>
+      <div class="tile repeat-x"></div>
+      <div class="tile repeat-y"></div>
+      <div class="tile repeat"></div>
+   </div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="88" class="css">
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   font-family: sans-serif;
+   line-height: 1.5;
+   color: #2a2a2a;
+}
+
+.container {
+   max-width: 960px;
+   padding-left: 8px;
+   padding-right: 8px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.tile-set {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-top: 40px;
+   margin-left: -40px;
+   margin-top: -40px;
+}
+
+.tile {
+   position: relative;
+   margin-left: 40px;
+   margin-top: 40px;
+   height: 120px;
+   flex-basis: calc(100% / 2 - 40px);
+   border: 2px dashed #2a2a2a;
+   border-radius: 4px;
+   background-color: #fff;
+
+   background-image: url("https://cdn0.iconfinder.com/data/icons/essentials-volume-6/128/apple-512.png");
+   background-size: 40px;
+}
+
+.tile::before {
+   position: absolute;
+   top: -32px;
+   width: 100%;
+   content: "";
+   font-weight: 700;
+   font-size: 20px;
+   text-align: center;
+}
+
+.no-repeat {
+   background-repeat: no-repeat;
+}
+
+.no-repeat::before {
+   content: "no-repeat";
+   font-family: monospace;
+}
+
+.repeat-x {
+   background-repeat: repeat-x;
+}
+
+.repeat-x::before {
+   content: "repeat-x";
+}
+
+.repeat-y {
+   background-repeat: repeat-y;
+}
+
+.repeat-y::before {
+   content: "repeat-y";
+}
+
+.repeat {
+   background-repeat: repeat;
+}
+
+.repeat::before {
+   content: "repeat";
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство background-position-->
+    <section class="bg-position">
+      <div class="container">
+        <h2>
+          Свойство background-position
+          <a name="bg-position-anchor"></a>
+        </h2>
+        <p>
+          Управляет положением фонового изображения относительно границ элемента используя две координаты - <span class="mark">x</span> 
+          по горизонтали и <span class="mark">y</span> по вертикали.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+background-position: x y
+        </textarea>
+        <p>
+          В качестве значения можно использовать абсолютные единицы или относительные единицы и ключевые слова (top, bottom, right, left, center). 
+          По умолчанию заданы значения <span class="mark">left</span> для <span class="mark">x</span> и <span class="mark">top</span> для <span class="mark">y</span> , то есть фон позиционируется относительно верхнего левого угла элемента.
+        </p>
+        <textarea name="" id="" cols="95" rows="12" class="values">
+/* Поставит фоновое изображение по центру */
+background-position: 50% 50%;
+
+/* Поставит фоновое изображение 100px от левого края и 200px от верха */
+background-position: 100px 200px;
+
+/* Поставит фоновое изображение в нижний праый угол */
+background-position: right bottom;
+
+/* Поставит фоновое изображение в верхний левый угол */
+background-position: left top;
+        </textarea>
+        <textarea name="" id="" cols="95" rows="15" class="html">
+<div class="controls">
+  <label>
+  <input type="range" min="0" max="100" step="1" name="horizontal" value="0"> X
+  </label>
+    <label>
+  <input type="range" min="0" max="100" step="1"
+         name="vertical" value="0"> Y
+  </label>
+</div>
+<div class="wrapper">
+  <h1 id="h1-x">x = <span>0</span>%</h1>
+  <h1 id="h1-y">y = <span>0</span>%</h1>
+  <div class="dot"></div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="30" class="css">
+:root {
+  --wrapper-width: 320px; 
+  --wrapper-height: var(--wrapper-width); 
+  --dot-width: 16px;
+}
+
+.wrapper {
+  width: var(--wrapper-width);
+  height: var(--wrapper-height);
+  margin: auto;
+  background: var(
+--wr-color) url(https://image.ibb.co/n0M0cQ/red90x90.jpg) no-repeat;
+/*   background-position: 50% 50%; */
+  position: relative;
+}
+
+.controls {
+  width: var(--wrapper-width);
+  height: calc(var(--wrapper-width) / 5);
+  margin: 10px auto;
+}
+
+label {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-family: var(--ss);
+}
+
+#h1-x, #h1-y {
+  color: #fff;
+  font-size: 20px;
+  font-family: var(--ss);
+  text-align: center;
+} 
+
+.dot {
+  width: var(--dot-width);
+  height: var(--dot-width);
+  background: #fff;
+  border-radius: calc( var(--dot-width) / 2);
+  position: absolute;
+  top: calc( var(--dot-width) / -2);
+  left: calc( var(--dot-width) / -2);
+}
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="js">
+const dot = document.querySelector('.dot');
+const wrapper = document.querySelector('.wrapper');
+const inputs = document.querySelectorAll('input');
+const h1_x = document.querySelector('#h1-x > span');
+const h1_y = document.querySelector('#h1-y > span');
+
+inputs.forEach(input => input.addEventListener('input', positionUpdate));
+
+function positionUpdate (e) {
+  let x = +inputs[0].value;
+  let y = +inputs[1].value;
+  let background_position = ` ${x}% ${y}%`;
+  wrapper.style.setProperty("background-position", background_position);
+  h1_x.textContent = x;
+  h1_y.textContent = y;
+  
+  let wrp_width = parseInt( window.getComputedStyle(wrapper, null).getPropertyValue("width"), 10);
+
+    let dot_width = parseInt( window.getComputedStyle(dot, null).getPropertyValue("width"), 10);
+  
+  dot.style.left = (wrp_width / 100 * x - dot_width / 2) + 'px';
+  dot.style.top = (wrp_width / 100 * y - dot_width / 2)  + 'px';
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Позиция со смещением-->
+    <section class="position-with-offset">
+      <div class="container">
+        <h3>
+          Позиция со смещением
+          <a name="position-with-offset-anchor"></a>
+        </h3>
+        <p>
+          Чтобы не привязываться к размерам элемента и не задавать позицию фона жёстко, можно использовать синтаксис позиции со смещением.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+backrgound-position: x смещение-x y смещение-y
+        </textarea>
+        <p>
+          Например, если необходимо поставить фон в нижний правый угол элемента произвольных размеров так, 
+          чтобы фон отставал от границ на <span class="mark">30px</span> справа и <span class="mark">20px</span> снизу.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+backrgound-position: right 30px bottom 20px;
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство background-size-->
+    <section class="bg-size">
+      <div class="container">
+        <h2>
+          Свойство background-size
+          <a name="bg-size-anchor"></a>
+        </h2>
+        <p>
+          По умолчанию браузер не изменяет размер фонового изображения. Если картинка будет больше или меньше размера элемента, 
+          будет пустое пространство, не занятое фоном, или наоборот, фон будет виден только частично.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+background-size: auto | значение | cover | contain
+        </textarea>
+        <p>
+          Это свойство позволяет подкорректировать размеры избражения, 
+          указав необходимую ширину и высоту. Если не указать высоту, она будет высчитана автоматически, сохраняя пропорции.
+        </p>
+        <textarea name="" id="" cols="95" rows="9" class="values">
+/* Исходные размеры изображения, значение по умолчанию */
+background-size: auto auto;
+
+/* Ширина 200px, высота будет пропорциональна */
+background-size: 200px;
+
+/* Ширина 200px, высота 300px */
+background-size: 200px 300px;
+        </textarea>
+      </div>
+    </section>
+
+    <!--Значения contain и cover-->
+    <section class="contain-cover">
+      <div class="container">
+        <h2>
+          Значения contain и cover
+          <a name="contain-cover-anchor"></a>
+        </h2>
+        <p>
+          Значением также могут быть два зарезервированных слова - <span class="mark">contain</span> и <span class="mark">cover</span>. 
+          Они стремятся вместить в контейнер фоновое изображение по максимуму, 
+          только одно за счёт обрезания лишнего, а другое за счёт появления пустого пространства в контейнере.
+        </p>
+        <img src="./img/cover-contain.jpg" alt="contain and cover examples" width="500">
+        <p>
+          Значение <span class="mark">contain</span>:
+        </p>
+        <ul class="info-list">
+          <li>Гарантированно сохраняет пропорции изображения.</li>
+          <li>Изображению задаются максимально возможнные размеры (не больше оригинала), при которых оно полностью помещается в элемент.</li>
+          <li>Изображение может не закрыть весь фон элемента по вертикали или горизонтали, если пропорции блока и изображения не совпадают.</li>
+        </ul>
+        <p>
+          Значение <span class="mark">cover</span>:
+        </p>
+        <ul class="info-list">
+          <li>Гарантированно сохраняет пропорции изображения.</li>
+          <li>Изображению задаются минимальные размеры, при которых оно зальёт фон всего элемента.</li>
+          <li>Если пропорции изображения и элемента разные, часть изображения, по вертикали или горизонтали, визуально обрезается.</li>
+        </ul>
+        <p>
+          Нажимая на кнопки в примере, вы изменяете значение свойства <span class="mark">background-size</span>. По умолчанию установлено значение <span class="mark">auto</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="10" class="html">
+<div class="controls">
+   <button type="button" data-size="auto">Auto</button>
+   <button type="button" data-size="cover">Cover</button>
+   <button type="button" data-size="contain">Contain</button>
+</div>
+
+<div class="wrapper">
+   <p class="label">Auto</p>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="30" class="css">
+* {
+   box-sizing: border-box;
+}
+
+:root {
+   --wrapper-width: 480px;
+   --add-to-content: 50px;
+}
+
+body {
+   background-color: #fff;
+   font-family: sans-serif;
+   line-height: 1.5;
+}
+
+.wrapper {
+   width: var(--wrapper-width);
+   height: var(--wrapper-width);
+   line-height: var(--wrapper-width);
+   margin: auto;
+   background: #fff url("https://image.ibb.co/mjdbZ5/bg5.jpg") no-repeat
+      center;
+   border: 2px dashed #2a2a2a;  
+   border-radius: 4px;
+   box-shadow: none;
+}
+
+.controls {
+   width: var(--wrapper-width);
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   margin-bottom: 10px;
+   padding: 10px;
+   text-align: center;
+}
+
+button {
+   margin-left: 4px;
+   margin-right: 4px;
+   font-size: 20px;
+   padding: 8px 30px;
+   background-color: #3f51b5;
+   color: #fff;
+   border-radius: 4px;
+   cursor: pointer;
+   border: none;
+   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+button:hover {
+   transform: scale(1.03);
+}
+
+.label {
+   color: #fff;
+   font-size: 60px;
+   text-align: center;
+   text-transform: uppercase;
+}
+        </textarea>
+        <textarea name="" id="" cols="95" rows="12" class="js">
+const controls = document.querySelector(".controls");
+const wrapper = document.querySelector(".wrapper");
+const label = wrapper.querySelector(".label");
+
+controls.addEventListener("click", onControlsClick);
+
+function onControlsClick(e) {
+   const { size } = e.target.dataset;
+   wrapper.style.backgroundSize = size;
+   label.textContent = size;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Свойство background-attachment-->
+    <section class="bg-attachment">
+      <div class="container">
+        <h2>
+          Свойство background-attachment
+          <a name="bg-attachment-anchor"></a>
+        </h2>
+        <p>
+          По умолчанию фоновое изображение прокручивается вместе с содержимым элемента. 
+          С помощью свойства <span class="mark">background-attachment</span> можно зафиксировать фон на месте и запретить прокручиваться при скроле.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+background-attachment: scroll| fixed | inherit
+        </textarea>
+        <ul class="info-list">
+          <li><span class="mark">scroll</span> - фон прокручиватеся вместе с содержимым. Это значение по умолчанию.</li>
+          <li><span class="mark">fixed</span> - фон не прокручивается, зафиксирован на месте.</li>
+        </ul>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<div class="container">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="30" class="css">
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 40px;
+  background-image: url("https://cdn.pixabay.com/photo/2020/10/07/10/51/mountains-5634817_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /*  Comment out this line  */
+  background-attachment: fixed;
+}
+
+.box {
+  height: 300px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.box:nth-child(1) {
+  background-color: #2196f3;
+}
+
+.box:nth-child(2) {
+  background-color: #4caf50;
+}
+
+.box:nth-child(3) {
+  background-color: #ff9800;
+}
+
+.box:nth-child(4) {
+  background-color: #e91e63;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Многослойный фон-->
+    <section class="layered-bg">
+      <div class="container">
+        <h3>
+          Многослойный фон
+          <a name="layered-bg-anchor"></a>
+        </h3>
+        <p>
+          Элементу можно задать несколько фоновых изображений одновременно. Достаточно перечислить их в свойстве <span class="mark">background-image</span> через запятую. 
+          Для каждого изображения также можно задать значения других свойств фона, тоже через запятую в каждом свойстве.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="values">
+background-image: url('картинка-1'), url('картинка-2');
+background-size: 100px, cover;
+background-position: top right, center;
+background-repeat: repeat-x, no-repeat;
+        </textarea>
+        <p>
+          Получается слоёный пирог из картинок, в котором выше будет то изображение, которое указано раньше в перечислении. 
+          Звёздное небо, свинка, комета, космический корабль и планета это 5 разных фоновых изображений.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="html">
+<div class="canvas"></div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="20" class="css">
+body {
+  margin: 0;
+}
+
+.canvas {
+  max-width: 1000px;
+  height: 400px;
+
+  background-image: url("https://cdn-icons-png.flaticon.com/512/361/361678.png"),
+    url("https://cdn-icons-png.flaticon.com/512/4206/4206277.png"),
+    url("https://cdn-icons-png.flaticon.com/512/814/814513.png"), url('https://tlgrm.ru/_/stickers/e3a/876/e3a87689-707f-3495-b94a-8ee96e2538e5/256/61.webp'),
+    url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg");
+
+  background-size: 80px, 100px, 150px, 130px, cover;
+  background-repeat: no-repeat;
+  background-position: top 120px right 130px, top 270px left 130px, center, 100px 60px,
+    center;
+}
+        </textarea>
+        <h4>
+          ПОЛЕЗНО
+        </h4>
+        <p>
+          В большинстве случаев многослойный фон можно заменить одним изображением, на котором в специальном редакторе были 
+          совмещены все другие. Вес такого файла будет меньше, чем общий вес отдельных картинок, и браузеру необходимо будет 
+          сделать только один запрос вместо пяти, что также увеличит скорость загрузки и отображения страницы.
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство background-->
+    <section class="bg">
+      <div class="container">
+        <h2>
+          Свойство background
+          <a name="bg-anchor"></a>
+        </h2>
+        <p>
+          Составное свойство для одновременного задания значений всех рассмотренных свойств.
+        </p>
+        <textarea name="" id="" cols="95" rows="3" class="values">
+background: background-color background-image background-repeat background-position background-attachment
+        </textarea>
+        <p>
+          Если какой-то компонент не указан, будет взято его значение по умолчанию.
+        </p>
+        <textarea name="" id="" cols="95" rows="6" class="values">
+/* Установит только цвет фона */
+background: #2a2a2a;
+
+/* Прозрачный цвет фона с повторяющейся по x картинкой начиная с верхнего левого угла */
+background: url('адрес картинки') repeat-x;
+        </textarea>
+        <h4>
+          ПОЛЕЗНО
+        </h4>
+        <p>
+          Рекомендуется, как минимум вначале, использовать отдельные свойства для каждого значения, 
+          так как с составным <span class="mark">background</span> можно легко запутаться.
+        </p>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!--Свойства object-fit и object-position-->
+    <section class="fit-position">
+      <div class="container">
+        <h1>
+          Свойства object-fit и object-position
+          <a name="fit-position-anchor"></a>
+        </h1>
+        <p>
+          Бывают ситуации, когда контентное изображение больше или меньше, чем контейнер, в который его необходимо поместить, 
+          или изображение имеет другие пропорции. Например, частая задача в карточках товара это «тумба» фиксированной высоты, 
+          в которую необходимо красиво вместить фотографию товара произвольного размера, то есть подогнать картинку под контейнер.
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство object-fit-->
+    <section class="fit">
+      <div class="container">
+        <h2>
+          Свойство object-fit
+          <a name="fit-anchor"></a>
+        </h2>
+        <p>
+          Определяет каким образом содержимое <span class="mark">&lt;img&gt;</span> (или <span class="mark">&lt;video&gt;</span>) будет вмещаться в контейнер, 
+          когда их размеры или пропорции не совпадают. Свойство <span class="mark">object-fit</span> обрезает, 
+          растягивает или масштабирует контентное изображение. Это похоже на <span class="mark">background-size</span>, 
+          но для контентных изображений. 
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+object-fit: fill | contain | cover | scale-down | none
+        </textarea>
+        <ul class="info-list">
+          <li><span class="mark">fill</span> - изображение масштабируется без сохранения пропорций, чтобы полностью заполнить контейнер. Значение по умолчанию.</li>
+          <li><span class="mark">contain</span> - изображение масштабируется с сохранением пропорций, чтобы максимально заполнить контейнер.</li>
+          <li><span class="mark">cover </span>- изображение масштабируется с сохранением пропорций, чтобы полностью заполнить контейнер.</li>
+          <li><span class="mark">scale-down</span> - будет выбрано значение <span class="mark">none</span> или <span class="mark">contain</span>, чтобы изображение было наименьшего размера.</li>
+          <li><span class="mark">none</span> - сохраняются исходные размеры изображения, заданная высота и ширина не имеют эффекта.</li>
+        </ul>
+        <textarea name="" id="" cols="95" rows="30" class="html">
+<figure class="base">
+  <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+  <figcaption class="label">Original image</figcaption>
+</figure>
+
+<div class="container">
+  <div class="card-set">
+    <figure class="card">
+      <div class="thumb">
+        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+      </div>
+      <figcaption class="label">object-fit: fill</figcaption>
+    </figure>
+
+    <figure class="card">
+      <div class="thumb">
+        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+      </div>
+      <figcaption class="label">object-fit: contain</figcaption>
+    </figure>
+
+    <figure class="card">
+      <div class="thumb">
+        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+      </div>
+      <figcaption class="label">object-fit: cover</figcaption>
+    </figure>
+
+    <figure class="card">
+      <div class="thumb">
+        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+      </div>
+      <figcaption class="label">object-fit: scale-down</figcaption>
+    </figure>
+
+    <figure class="card">
+      <div class="thumb">
+        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+      </div>
+      <figcaption class="label">object-fit: none</figcaption>
+    </figure>
+  </div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="30" class="css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.base {
+  width: 480px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.base > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 2px dashed #2a2a2a;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.card {
+  margin: 20px 0 0 20px;
+  flex-basis: calc(100% / 2 - 20px);
+}
+
+.card,
+.base {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.card > .label,
+.base > .label {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.card > .label {
+  font-family: monospace;
+  letter-spacing: -0.05em;
+}
+
+.thumb {
+  position: relative;
+  height: 380px;
+  width: 100%;
+  border: 2px dashed #2a2a2a;
+  border-radius: 4px;
+}
+
+.thumb > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.card:nth-child(1) img {
+  object-fit: fill;
+}
+
+.card:nth-child(2) img {
+  object-fit: contain;
+}
+
+.card:nth-child(3) img {
+  object-fit: cover;
+}
+
+.card:nth-child(4) img {
+  object-fit: scale-down;
+}
+
+.card:nth-child(5) img {
+  object-fit: none;
+}
+        </textarea>
+        <p>
+          Для того, чтобы эта техника работала необходимы два обязательных шага.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="html">
+<div class="thumb">
+  <img src="" alt="" />
+</div>
+        </textarea>
+        <p>
+          Первый - у контейнера (тумбы) должна быть явно указана фиксированная высота. Ширина может быть по ширине родителя, как в примере.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="css">
+.thumb {
+  height: 400px;
+  width: 300px;
+}
+        </textarea>
+        <p>
+          Второй - изображение необходимо «вместить» в контейнер, задав высоту и ширину <span class="mark">100%</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="6" class="css">
+.thumb > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+        </textarea>
+        <p>
+          После этого к изображению можно применять свойство <span class="mark">object-fit</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="8" class="css">
+.thumb > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+        </textarea>
+        <h4>
+          ПОЛЕЗНО
+        </h4>
+        <p>
+          Можно не использовать «тумбу», задав фиксированные размеры самому элементу <span class="mark">&lt;img&gt;</span>, но чаще всего вы столкнётесь именно с такой разметкой. 
+          «Тумба» служит контейнером для создания анимаций и других декоративных эффектов связанных с областью изображения.
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство object-position-->
+    <section class="position">
+      <div class="container">
+        <h2>
+          Свойство object-position
+          <a name="position-anchor"></a>
+        </h2>
+        <p>
+          Дополняет свойство <span class="mark">object-fit</span> позволяя задать положение изображения в контейнере по осям X и Y. 
+          Это похоже на <span class="mark">background-position</span>, но для контентных изображений.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+object-position: position | initial | inherit
+        </textarea>
+        <p>
+          Значением свойства могут быть зарезервированные слова, абсолютные или относительные единиицы измерения. 
+          По умолчанию значение <span class="mark">50% 50%</span>, то есть вертикально и горизонтально по центру.
+        </p>
+        <textarea name="" id="" cols="95" rows="25" class="html">
+<div class="container">
+  <div class="card-set">
+    <figure class="card">
+      <div class="thumb">
+        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+      </div>
+      <figcaption class="label">
+        <span>object-fit: fill</span>
+        <span>object-position: 50px 50px</span>
+      </figcaption>
+    </figure>
+
+    <figure class="card">
+      <div class="thumb">
+        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+      </div>
+      <figcaption class="label">
+        <span>object-fit: contain</span>
+        <span>object-position: left bottom</span>
+      </figcaption>
+    </figure>
+
+    <figure class="card">
+      <div class="thumb">
+        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+      </div>
+      <figcaption class="label">
+        <span>object-fit: cover</span>
+        <span>object-position: 20% 30px</span>
+      </figcaption>
+    </figure>
+
+    <figure class="card">
+      <div class="thumb">
+        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
+      </div>
+      <figcaption class="label">
+        <span>object-fit: scale-down</span>
+        <span>object-position: right top</span>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  color: #212121;
+  letter-spacing: -0.05em;
+  line-height: 1.5;
+}
+
+.base {
+  width: 480px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.base > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+border: 2px dashed #2a2a2a;  
+   border-radius: 4px;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.card {
+  margin: 20px 0 0 20px;
+  flex-basis: calc(100% / 2 - 20px);
+}
+
+.card,
+.base {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.card > .label,
+.base > .label {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.label > span {
+  display: block;
+  text-align: center;
+}
+
+.thumb {
+  position: relative;
+  height: 380px;
+  width: 100%;
+ border: 2px dashed #2a2a2a;  
+   border-radius: 4px;
+}
+
+.thumb > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.card:nth-child(1) img {
+  object-fit: fill;
+  object-position: 50px 50px;
+}
+
+.card:nth-child(2) img {
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+.card:nth-child(3) img {
+  object-fit: cover;
+  object-position: 20% 30px;
+}
+
+.card:nth-child(4) img {
+  object-fit: scale-down;
+  object-position: right top;
+}
+        </textarea>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Псевдоэлементы-->
+    <section class="pseudo-elements">
+      <div class="container">
+        <h1>
+          Псевдоэлементы
+          <a name="pseudo-elements-anchor"></a>
+        </h1>
+        <p>
+          Псевдоэлементы <span class="mark">::before</span> и <span class="mark">::after</span> используются для добавления 
+          декоративных эффектов (иконок, плашек, оверлеев) без необходимости создания дополнительных пустых тегов в разметке.
+        </p>
+        <ul class="info-list">
+          <li><span class="mark">::before</span> - создаёт псевдоэлемент перед всем контентом элемента (в начале).</li>
+          <li><span class="mark">::after</span> - создаёт псевдоэлемент после всего контента элемента (в конце).</li>
+        </ul>
+        <textarea name="" id="" cols="95" rows="12" class="css">
+.box {
+  /* стили элемента */
+}
+
+.box::before {
+  /* стили псевдоэлемент before */
+}
+
+.box::after {
+  /* стили псевдоэлемент after */
+}
+        </textarea>
+        <h4>
+          ПОЛЕЗНО
+        </h4>
+        <p>
+          По умолчанию это строчные элементы. Для того, чтобы задать псевдоэлементу вертикальную геометрию, 
+          необходимо изменить его тип на блочный или, что чаще всего, строчно-блочный.
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство content-->
+    <section class="content">
+      <div class="container">
+        <h2>
+          Свойство content
+          <a name="content-anchor"></a>
+        </h2>
+        <p>
+          Это обязательное свойство позволяет добавить текстовый контент внутрь псевдоэлемента. 
+          Даже если текстовый контент не нужен, его значением необходимо поставить пустую строку, 
+          иначе браузер просто не создаст псевдоэлемент.
+        </p>
+        <textarea name="" id="" cols="95" rows="6" class="html">
+<div class="box">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia itaque quia
+  nobis fugit amet adipisci, corrupti animi, iusto eius a sed totam voluptas
+  porro. Dolorem aliquid rerum magnam eligendi aspernatur.
+</div>
+        </textarea>
+        <p>
+          В селекторе можно использовать только один псевдоэлемент, который должен добавляться после простого селектора (тега, класса, идентификатора).
+        </p>
+        <textarea name="" id="" cols="95" rows="12" class="css">
+.box::before {
+  content: 'Это текст в ::before';
+  font-size: 40px;
+  color: orange;
+}
+
+.box::after {
+  content: 'Это текст в ::after';
+  font-size: 30px;
+  color: teal;
+}
+        </textarea>
+        <h4>
+          ВНИМАНИЕ
+        </h4>
+        <p>
+          Не используйте псевдоэлементы для добавления текстового контента, это грубое нарушение спецификации, 
+          они служат исключительно для декоративного оформления. Текст внутри псевдоэлемента 
+          не воспринимается ассистивными технологиями и индексаторами, а также будет недоступен пользователю если не загрузится файл стилей.
+        </p>
+      </div>
+    </section>
+
+    <!--Псевдокласс :hover-->
+    <section class="hover">
+      <div class="container">
+        <h2>
+          Псевдокласс :hover
+          <a name="hover-anchor"></a>
+        </h2>
+        <p>
+          Для того, чтобы изменить стили псевдоэлемента при событии на родительском элементе, 
+          например ховер, необходимо использовать следующий селектор.
+        </p>
+        <textarea name="" id="" cols="95" rows="10" class="css">
+/* Применить стили к псевдоэлементу .box::before при ховере по элементу .box */
+.box:hover::before {
+  color: green;
+}
+
+/* Применить стили к псевдоэлементу .box::after при ховере по элементу .box */
+.box:hover::after {
+  color: tomato;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Псевдоэлемент-иконка-->
+    <section class="icon">
+      <div class="container">
+        <h2>
+          Псевдоэлемент-иконка
+          <a name="icin-anchor"></a>
+        </h2>
+        <p>
+          Используя псевдоэлементы добавим иконки перед и после ссылками в списке. Пусть <span class="mark">::before</span> 
+          будет виден всегда, а <span class="mark">::after</span> только при ховере по ссылке.
+        </p>
+        <textarea name="" id="" cols="95" rows="15" class="html">
+<ul class="list">
+  <li class="list-item">
+    <a href="" class="list-link">Home</a>
+  </li>
+  <li class="list-item">
+    <a href="" class="list-link">Portfolio</a>
+  </li>
+  <li class="list-item">
+    <a href="" class="list-link">Team</a>
+  </li>
+  <li class="list-item">
+    <a href="" class="list-link">About</a>
+  </li>
+</ul>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #2a2a2a;
+}
+
+.list {
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.list-link {
+  display: inline-flex;
+  align-items: center;
+  color: currentColor;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+.list-link::before,
+.list-link::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+
+/* Adds a fire icon in front of the link text */
+.list-link::before {
+  margin-right: 16px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/599/599502.png");
+}
+
+/* Adds and hides arrow icon after the link text */
+.list-link::after {
+  display: none;
+  margin-left: 16px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/507/507257.png")
+}
+
+.list-link:hover {
+  color: #2196f3;
+}
+
+/* Show arrow icon on hover */
+.list-link:hover::after {
+  display: block;
+}
+        </textarea>
+        <p>
+          Самое важное находится в этом CSS-правиле. Изменяем тип элемента на строчно-блочный и задаём фиксированную высоту и ширину. 
+          Также не забываем указать свойство <span class="mark">content</span> с пустой строкой, чтобы браузер создал псевдоэлемент.
+        </p>
+        <textarea name="" id="" cols="95" rows="8" class="css">
+.list-link::before,
+.list-link::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+        </textarea>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Градиент-->
+    <section class="gradient">
+      <div class="container">
+        <h1>
+          Градиент
+          <a name="gradient-anchor"></a>
+        </h1>
+        <p>
+          Градиент - переход от одного цвета к другому. Градиент в CSS это фоновое изображение, 
+          поэтому задаётся в свойстве <span class="mark">background-image</span>. 
+          Эта особенность позволит нам делать очень интересные вещи совмещая градиент с фоном. 
+          Градиент может быть линейный, радиальный или конический.
+        </p>
+        <h4>
+          ВНИМАНИЕ
+        </h4>
+        <p>
+          Конические градиенты ещё не входят в спецификацию и находятся в стадии разработки, поэтому мы не будем их рассматривать. 
+          Если вам интересно узнать больше, рекомендуем статью в секции дополнительных материалов.
+        </p>
+      </div>
+    </section>
+
+    <!--Линейный градиент-->
+    <section class="linear-gradient">
+      <div class="container">
+        <h2>
+          Линейный градиент
+          <a name="linear-gradient-anchor"></a>
+        </h2>
+        <p>
+          Создается с помощью двух и более цветов, для которых задано направление распостранения. 
+          Формат значения цвета может быть любой - ключевые слова, rgb, rgba или hex, и их можно смешивать.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+linear-gradient(<направление>, <цвет-1>, <цвет-2>, <цвет-3>, ...)
+        </textarea>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<div class="tile-set">
+  <div class="tile">to bottom</div>
+  <div class="tile">to top</div>
+  <div class="tile">to right</div>
+  <div class="tile">to top left</div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+:root {
+  --start-color: blue;
+  --end-color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tile-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tile {
+  height: 200px;
+  flex-basis: calc(50% - 10px);
+  margin: 5px;
+  border-radius: 4px;
+  background-color: #9e9e9e;
+
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 24px;
+  letter-spacing: -0.05em;
+  
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.tile:nth-child(1) {
+  background-image: linear-gradient(
+    to bottom,
+    var(--start-color),
+    var(--end-color)
+  );
+}
+
+.tile:nth-child(2) {
+  background-image: linear-gradient(
+    to top,
+    var(--start-color),
+    var(--end-color)
+  );
+}
+
+.tile:nth-child(3) {
+  background-image: linear-gradient(
+    to right,
+    var(--start-color),
+    var(--end-color)
+  );
+}
+
+.tile:nth-child(4) {
+  background-image: linear-gradient(
+    to top left,
+    var(--start-color),
+    var(--end-color)
+  );
+}
+        </textarea>
+        <p>
+          Направление градиента может быть задано ключевыми словами <span class="mark">to top</span>, <span class="mark">to right</span>, 
+          <span class="mark">to bottom</span>, <span class="mark">to left</span> и их комбинациями. Если направление не указано, 
+          используется значение по умолчанию - сверху-вниз (<span class="mark">to bottom</span>). 
+          В случае когда направление задано парой ключевых слов, например to <span class="mark">top left</span>, 
+          начальная точка градиента будет расположена в противоположном углу - правом нижнем, как в примере.
+        </p>
+        <p>
+          Направление также можно задать углом наклона в градусах - единица <span class="mark">deg</span>. Значение 
+          <span class="mark">0deg</span> аналогично <span class="mark">to top</span>. Увеличение угла 
+          поворачивает направление линии градиента, прямой проходящей через центр блока и вдоль которой распределяются цвета, по часовой стрелке.
+        </p>
+        <figure>
+          <img src="./img/gradient-direction.gif" alt="gradient direction" width="500">
+          <figcaption>
+            В этой анимации угол увеличивается от 0 до 360 градусов с шагом 10 градусов. Низкое разрешение позволяет лучше видеть, 
+            как различные цвета отображаются в виде «линий», всегда перпендикулярных линии градиента.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!--Колорстоп (color-stop)-->
+    <section class="color-stop">
+      <div class="container">
+        <h2>
+          Колорстоп (color-stop)
+          <a name="color-stop-anchor"></a>
+        </h2>
+        <p>
+          По умолчанию цвета градиента распределяются равномерно, но этим можно управлять используя колорстопы - точки перелома, 
+          до которых будет распространяться определённый цвет. Значением могут быть пиксели или проценты.
+        </p>
+        <textarea name="" id="" cols="95" rows="8" class="values">
+background-image: linear-gradient(
+  to right,
+  #f44336 15%,
+  #09792b 40%,
+  #00b9ff 65%,
+  #ffb800
+);
+        </textarea>
+        <p>
+          В таком градиенте:
+        </p>
+        <ul class="info-list">
+          <li>красный цвет (<span class="mark">#f44336</span>) будет распространяться от 0% до 15%</li>
+          <li>зелёный цвет (<span class="mark">#09792b</span>) будет распространяться от 15% до 40%</li>
+          <li>синий цвет (<span class="mark">#00b9ff</span>) будет распространяться от 40% до 65%</li>
+          <li>жёлтый цвет (<span class="mark">#ffb800</span>) будет распространяться от 65% до 100%</li>
+        </ul>
+        <textarea name="" id="" cols="95" rows="10" class="css">
+body {
+  background-image: linear-gradient(
+    to right,
+    #f44336 15%,
+    #09792b 40%,
+    #00b9ff 65%,
+    #ffb800
+  );
+}
+        </textarea>
+        <h4>
+          ПОЛЕЗНО
+        </h4>
+        <p>
+          Если колорстопы заданы в пикселях и общая сумма меньше, чем ширина или высота элемента, то получится повторяющийся градиент.
+        </p>
+      </div>
+    </section>
+
+    <!--Сплошной градиент-->
+    <section class="solid-gradient">
+      <div class="container">
+        <h2>
+          Сплошной градиент
+          <a name="solid-gradient-anchor"></a>
+        </h2>
+        <p>
+          Градиент это плавный переход между цветами, но если двум соседним из них 
+          задать одинаковые колорстопы, получим сплошные цвета и резкий переход между ними. 
+          Это можно использовать для создания «полосатого» фона.
+        </p>
+        <textarea name="" id="" cols="95" rows="10" class="values">
+background-image: linear-gradient(
+  to right,
+  #c64f4f 15%,
+  #09792b 15%,
+  #09792b 40%,
+  #00b9ff 40%,
+  #00b9ff 65%,
+  #ffb800 65%
+);
+        </textarea>
+        <p>
+          Если в последнем примере изменить направление на <span class="mark">to bottom</span> или любое другое не горизонтальное, 
+          то мы не получим красивые горизонтальные полосы. 
+          Дело в том, что для вертикального или углового распространения у элемента должна быть высота, 
+          от его контента или указана явно.
+        </p>
+        <textarea name="" id="" cols="95" rows="9" class="css">
+/* Задаём body минимальную высоту равную 100% высоты вьюпорта */
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  /* И добавляем вертикальный градиент с to bottom
+     или угловой, например с to bottom right */
+}
+        </textarea>
+        <p>
+          В следующем примере блокам <span class="mark">div.tile</span> задана фиксированая высота <span class="mark">200px</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<div class="tile-set">
+  <div class="tile">to bottom</div>
+  <div class="tile">to top</div>
+  <div class="tile">to bottom right</div>
+  <div class="tile">to top left</div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+* {
+  box-sizing: border-box;
+}
+
+.tile-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tile {
+  height: 200px;
+  flex-basis: calc(50% - 10px);
+  margin: 5px;
+  border-radius: 4px;
+  background-color: #9e9e9e;
+
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 24px;
+  letter-spacing: -0.05em;
+  
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.tile:nth-child(1) {
+  background-image: linear-gradient(
+    to bottom,
+    #f44336 15%,
+    #09792b 15%,
+    #09792b 40%,
+    #00b9ff 40%,
+    #00b9ff 65%,
+    #ffb800 65%
+  );
+}
+
+.tile:nth-child(2) {
+  background-image: linear-gradient(
+    to top,
+    #f44336 15%,
+    #09792b 15%,
+    #09792b 40%,
+    #00b9ff 40%,
+    #00b9ff 65%,
+    #ffb800 65%
+  );
+}
+
+.tile:nth-child(3) {
+  background-image: linear-gradient(
+    to bottom right,
+    #f44336 15%,
+    #09792b 15%,
+    #09792b 40%,
+    #00b9ff 40%,
+    #00b9ff 65%,
+    #ffb800 65%
+  );
+}
+
+.tile:nth-child(4) {
+  background-image: linear-gradient(
+    to top left,
+    #f44336 15%,
+    #09792b 15%,
+    #09792b 40%,
+    #00b9ff 40%,
+    #00b9ff 65%,
+    #ffb800 65%
+  );
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Радиальный градиент-->
+    <section class="radial-gradient">
+      <div class="container">
+        <h2>
+          Радиальный градиент
+          <a name="radial-gradient-anchor"></a>
+        </h2>
+        <p>
+          Радиальный градиент отличается от линейного тем, 
+          что цвета выходят из центра градиента и равномерно распостраняются наружу, принимая форму элипса.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="values">
+radial-gradient(<тип> <центр>, <цвет-1>, <цвет-2>, <цвет-3>, ...);
+        </textarea>
+        <p>
+          Форма градиента определяется ключевыми словами <span class="mark">circle</span> или <span class="mark">ellipse</span> 
+          (значение по умолчанию), поэтому если элемент не квадрат, по умолчанию градиент примет форму элипса. 
+          Позиция центра задаётся ключевыми словами <span class="mark">center</span> (значение по умолчанию), 
+          <span class="mark">top</span>, <span class="mark">bottom</span>, <span class="mark">right</span>, и <span class="mark">left</span>, 
+          с добавлением приставки <span class="mark">at</span>. 
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<div class="tile-set">
+  <div class="tile">elipse at center</div>
+  <div class="tile">circle at center</div>
+  <div class="tile">circle at top right</div>
+  <div class="tile">circle at bottom left</div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+:root {
+  --start-color: #ffeb3b;
+  --end-color: #ff5722;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tile-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tile {
+  height: 200px;
+  flex-basis: calc(50% - 10px);
+  margin: 5px;
+  border-radius: 4px;
+  background-color: #9e9e9e;
+
+  text-align: center;
+  line-height: 200px;
+  color: #212121;
+  font-family: monospace;
+  font-size: 24px;
+  letter-spacing: -0.05em;
+  
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.tile:nth-child(1) {
+  background-image: radial-gradient(
+    at center,
+    var(--start-color) 10%,
+    var(--end-color) 50%
+  );
+}
+
+.tile:nth-child(2) {
+  background-image: radial-gradient(
+    circle at center,
+    var(--start-color) 10%,
+    var(--end-color) 50%
+  );
+}
+
+.tile:nth-child(3) {
+  background-image: radial-gradient(
+    circle at top right,
+    var(--start-color) 10%,
+    var(--end-color) 50%
+  );
+}
+
+.tile:nth-child(4) {
+  background-image: radial-gradient(
+    circle at bottom left,
+    var(--start-color) 10%,
+    var(--end-color) 50%
+  );
+}
+        </textarea>
+        <p>
+          Радиальный градиент также может быть сплошным, достаточно правильно задать колорстопы.
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<div class="tile-set">
+  <div class="tile">ellipse at center</div>
+  <div class="tile">circle at center</div>
+  <div class="tile">circle at top right</div>
+  <div class="tile">circle at bottom right</div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+* {
+  box-sizing: border-box;
+}
+
+.tile-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tile {
+  height: 200px;
+  flex-basis: calc(50% - 10px);
+  margin: 5px;
+  border-radius: 4px;
+  background-color: #9e9e9e;
+
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 24px;
+  letter-spacing: -0.05em;
+  
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.tile:nth-child(1) {
+  background-image: radial-gradient(
+    ellipse at center,
+    #f44336 15%,
+    #09792b 15%,
+    #09792b 40%,
+    #00b9ff 40%,
+    #00b9ff 65%,
+    #ffb800 65%
+  );
+}
+
+.tile:nth-child(2) {
+  background-image: radial-gradient(
+    circle at center,
+    #f44336 15%,
+    #09792b 15%,
+    #09792b 40%,
+    #00b9ff 40%,
+    #00b9ff 65%,
+    #ffb800 65%
+  );
+}
+
+.tile:nth-child(3) {
+  background-image: radial-gradient(
+    circle at top right,
+    #f44336 15%,
+    #09792b 15%,
+    #09792b 40%,
+    #00b9ff 40%,
+    #00b9ff 65%,
+    #ffb800 65%
+  );
+}
+
+.tile:nth-child(4) {
+  background-image: radial-gradient(
+    circle at bottom right,
+    #f44336 15%,
+    #09792b 15%,
+    #09792b 40%,
+    #00b9ff 40%,
+    #00b9ff 65%,
+    #ffb800 65%
+  );
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Повторяющийся градиент-->
+    <section class="repeating-gradient">
+      <div class="container">
+        <h2>
+          Повторяющийся градиент
+          <a name="repeating-gradient-anchor"></a>
+        </h2>
+        <p>
+          Повторяющийся градиент может быть линейным или радиальным и позволяет сделать интересные декоративные эффекты. 
+          Чаще всего повторяющийся градиент делают сплошным.
+        </p>
+        <textarea name="" id="" cols="95" rows="9" class="html">
+<div class="tile-set">
+  <div class="tile">to right</div>
+  <div class="tile">to bottom</div>
+  <div class="tile">to top right</div>
+  <div class="tile">to bottom right</div>
+  <div class="tile">circle at center</div>
+  <div class="tile">circle at top right</div>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+:root {
+  --start-color: #ff8a00;
+  --end-color: #e52e71;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tile-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tile {
+  height: 200px;
+  flex-basis: calc(50% - 10px);
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #9e9e9e;
+
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 24px;
+  letter-spacing: -0.05em;
+  
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.tile:nth-child(1) {
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--start-color),
+    var(--start-color) 20px,
+    var(--end-color) 20px,
+    var(--end-color) 40px
+  );
+}
+
+.tile:nth-child(2) {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--start-color),
+    var(--start-color) 20px,
+    var(--end-color) 20px,
+    var(--end-color) 40px
+  );
+}
+
+.tile:nth-child(3) {
+  background-image: repeating-linear-gradient(
+    to top right,
+    var(--start-color),
+    var(--start-color) 20px,
+    var(--end-color) 20px,
+    var(--end-color) 40px
+  );
+}
+
+.tile:nth-child(4) {
+  background-image: repeating-linear-gradient(
+    to bottom right,
+    var(--start-color),
+    var(--start-color) 20px,
+    var(--end-color) 20px,
+    var(--end-color) 40px
+  );
+}
+
+.tile:nth-child(5) {
+  background-image: repeating-radial-gradient(
+    circle at center,
+    var(--start-color),
+    var(--start-color) 20px,
+    var(--end-color) 20px,
+    var(--end-color) 40px
+  );
+}
+
+.tile:nth-child(6) {
+  background-image: repeating-radial-gradient(
+    circle at top right,
+    var(--start-color),
+    var(--start-color) 20px,
+    var(--end-color) 20px,
+    var(--end-color) 40px
+  );
+}
+        </textarea>
+        <p>
+          Размер градиента определяется последним колорстопом. В примере это 40px пикселей, 
+          поэтому ширина градиента который затем повторяется равна 40 пикселей. 
+          В примере используется всего два цвета, но их количество не ограничено, главное правильно задать колорстопы.
+        </p>
+        <textarea name="" id="" cols="95" rows="8" class="values">
+background-image: repeating-linear-gradient(
+  to left,
+  blue,
+  blue 20px,
+  red 20px,
+  red 40px /* Опеределяет размер градиента */
+);
+        </textarea>
+      </div>
+    </section>
+
+    <!--Полосатые заголовки-->
+    <section class="striped-headers">
+      <div class="container">
+        <h3>
+          Полосатые заголовки
+          <a name="striped-headers-anchor"></a>
+        </h3>
+        <p>
+          Повторяющийся градиент можно использовать для создания интересных эффектов, напимер «полосатых» заголовков или любых других элементов.
+        </p>
+        <textarea name="" id="" cols="95" rows="21" class="html">
+<article class="post">
+  <h1 class="post-title angled">Striped header</h1>
+  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatem modi fugit iusto. Quod, consequuntur porro delectus aliquam minus perspiciatis adipisci quidem architecto nulla facere, recusandae eaque vitae, deserunt rem.</p>
+</article>
+
+<article class="post">
+  <h1 class="post-title vertical">Striped header</h1>
+  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatem modi fugit iusto. Quod, consequuntur porro delectus aliquam minus perspiciatis adipisci quidem architecto nulla facere, recusandae eaque vitae, deserunt rem.</p>
+</article>
+
+<article class="post">
+  <h1 class="post-title radial">Striped header</h1>
+  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatem modi fugit iusto. Quod, consequuntur porro delectus aliquam minus perspiciatis adipisci quidem architecto nulla facere, recusandae eaque vitae, deserunt rem.</p>
+</article>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+body {
+  background-color: #fff;
+  font-family: sans-serif;
+  color: #212121;
+  line-height: 1.5;
+}
+
+.post {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.post + .post {
+  margin-top: 20px;
+}
+
+.post-title {
+  margin: 0;
+  padding: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.post-text {
+  margin: 0;
+  padding: 16px;
+}
+
+.post-title.angled {
+  color: #fff;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+}
+
+.post-title.vertical {
+  background-image: repeating-linear-gradient(
+    to right,
+    #f6ba52,
+    #f6ba52 10px,
+    #ffd180 10px,
+    #ffd180 20px
+  );
+}
+
+.post-title.radial {
+  color: #fff;
+  background-image: repeating-radial-gradient(
+    circle,
+    purple,
+    purple 10px,
+    #4b026f 10px,
+    #4b026f 20px
+  );
+}
+        </textarea>
       </div>
     </section>
 
@@ -130,13 +2181,10 @@
           Дополнительные материалы
           <a name="additional-materials-anchor"></a>
         </h2>
-        <p>
-          Используйте эти интерактивные площадки для того, чтобы визуально закрепить
-основные рассматриваемые концепции.
-        </p>
         <ul class="info-list">
-          <li><a href="https://flexbox.tech/" target="_blank" rel=" noopener noreferrer nofollow" class="resource-link">Flexbox Playground</a></li>
-          <li><a href="https://flexboxfroggy.com/" target="_blank" rel=" noopener noreferrer nofollow" class="resource-link">Игра Flexbox Froggy</a></li>
+          <li><a href="https://cssgradient.io/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Генератор градиентов</a></li>
+          <li><a href="https://uigradients.com/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Подборка интересных градиентов</a></li>
+          <li><a href="https://lea.verou.me/2015/06/conical-gradients-today/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Конические градиенты</a></li>
         </ul>
       </div>
     </section>
@@ -148,1096 +2196,421 @@
 
 
 
-
-    <!--Свойства контейнера-->
-    <section class="container-properties">
+    <!--Тень элемента-->
+    <section class="element-shadow">
       <div class="container">
         <h1>
-          Свойства контейнера
-          <a name="container-properties-anchor"></a>
+          Тень элемента
+          <a name="element-shadow-anchor"></a>
         </h1>
         <p>
-          Flex-контейнер (дальше просто контейнер) это родитель группы элементов, которым
-необходимо изменить порядок расположения. Именно свойства контейнера
-контролируют направление осей, многострочность и позиционирование элементов в
-строке.
+          Тень добавляет элементу эффект объёмности и ощущение высоты. Тени бывают внешние и внутренние, размытые и плоские, одинарные и многослойные.
         </p>
-        <img src="./img/flex-container.svg" alt="flex-container" width="500">
-      </div>
-    </section>
-
-    <!--Свойство display-->
-    <section class="display">
-      <div class="container">
-        <h2>
-          Свойство display
-          <a name="display-anchor"></a>
-        </h2>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-display: flex | inline-flex
-        </textarea>
+        <img src="./img/shadow-intro.png" alt="shadows example" width="700">
         <p>
-          Создаёт flex-контейнер, блочный или строчно-блочный, в зависимости от заданного
-значения, и устанавливает flex-контекст для всех детей <b>(не потомков)</b> контейнера,
-превращая их во flex-элементы.
-        </p>
-        <textarea name="" id="" cols="95" rows="7" class="html">
-<ul class="menu">
-  <li class="item"><a href="" class="link">Главная</a></li>
-  <li class="item"><a href="" class="link">Блог</a></li>
-  <li class="item"><a href="" class="link">Подкасты</a></li>
-  <li class="item"><a href="" class="link">Контакты</a></li>
-</ul>
-        </textarea>
-        <p>
-          Создадим горизонтальное меню, превратив <span class="mark">ul.menu</span> во flex-контейнер. Тогда его дети,
-элементы <span class="mark">li.item </span>, расположатся вдоль главной оси, которая по умолчанию идёт слева
-направо.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="css">
-.menu {
-  display: flex;
-}
-        </textarea>
-        <p>
-          Флекс-контейнер <span class="mark">ul.menu</span> никак не влияет на <span class="mark">a.link</span> внутри элементов списка, потому
-что они его потомки, а не дети. Флекс-элементами становятся именно дети, в нашем
-случае элементы <span class="mark">li.item</span>.
-        </p>
-      </div>
-    </section>
-
-    <!--Свойство flex-direction-->
-    <section class="flex-direction">
-      <div class="container">
-        <h2>
-          Свойство <span class="mark">flex-direction</span>
-          <a name="flex-direction-anchor"></a>
-        </h2>
-        <p>
-          Flexbox это система расположения элементов в одном определённом направлении -
-<b>горизонтально</b> или <b>вертикально</b>. Свойство <span class="mark">flex-direction</span> устанавливает
-направление главной оси, определяя направление элементов в контейнере.
+          Свойство <span class="mark">box-shadow</span> задаёт элементу одну или более теней. 
+          По умолчанию размер тени совпадает с размером элемента, а её цвет такой же как цвет его текста.
         </p>
         <textarea name="" id="" cols="95" rows="2" class="values">
-flex-direction: row | row-reverse | column | column-reverse;
+box-shadow: <x-offset> <y-offset> <blur> <spread> <color>
         </textarea>
         <ul class="info-list">
-          <li><span class="mark">row</span> - ось начинается слева и заканчивается справа. Это значение по умолчанию.</li>
-          <li><span class="mark">row-reverse</span> - ось начинается справа и заканчивается слева.</li>
-          <li><span class="mark">column</span> - главная ось становится вертикально, начало сверху и конец снизу.</li>
-          <li><span class="mark">column-reverse</span> - главная ось становится вертикально, начало снизу и конец сверху.</li>
+          <li><span class="mark">x-offset</span> - горизонтальное смещение. Положительное значение смещает тень вправо от блока, отрицательное – влево. Обязательное значение.</li>
+          <li><span class="mark">y-offset</span> - вертикальное смещение. Положительное значение смещает тень вниз, отрицательное - вверх. Обязательное значение.</li>
+          <li><span class="mark">blur</span> - радиус размытия. Чем больше значение, тем сильнее размыта тень. Необязательное значение.</li>
+          <li><span class="mark">spread</span> - радиус распространения. Положительное значение увеличивает тень, отрицательное - уменьшает. Необязательное значение.</li>
+          <li><span class="mark">color</span> - цвет тени. Можно использовать любой формат записи цвета. Необязательное значение.</li>
         </ul>
-        <img src="./img/flex-direction.svg" alt="flex direction" width="500">
-        <h4>
-          ПОЛЕЗНО
-        </h4>
-        <p>
-          То есть это свойство меняет местами <span class="mark">main-start</span> и 
-          <span class="mark">main-end</span> главной оси. 
-          Flex-элементы всегда будут размещены вдоль главной оси от начала ( <span class="mark">main-start</span> ) до
-конца ( <span class="mark">main-end</span> ).
-        </p>
-        <p>
-          По умолчанию для <span class="mark">flex-direction</span> установлено значение <span class="mark">row</span>, 
-          поэтому элементы
-          верхнего меню начинают выстраиваться слева направо. Для нижнего меню задано
-          значение <span class="mark">row-reverse</span>, главная ось развернулась на 180 градусов и элементы
-          выстраиваются справа налево.
-        </p>
-        <textarea name="" id="" cols="95" rows="13" class="html">
-<ul class="menu">
- <li class="item"><a href="" class="link">Home page</a></li>
- <li class="item"><a href="" class="link">Blog</a></li>
- <li class="item"><a href="" class="link">Podcasts</a></li>
- <li class="item"><a href="" class="link">Contacts</a></li>
-</ul>
-<ul class="menu reversed">
- <li class="item"><a href="" class="link">Home page</a></li>
- <li class="item"><a href="" class="link">Blog</a></li>
- <li class="item"><a href="" class="link">Podcasts</a></li>
- <li class="item"><a href="" class="link">Contacts</a></li>
-</ul>
+        <textarea name="" id="" cols="95" rows="9" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
+</article>
         </textarea>
-        <textarea name="" id="" cols="95" rows="41" class="css">
+        <textarea name="" id="" cols="95" rows="25" class="css">
 * {
   box-sizing: border-box;
 }
+
 body {
-  font-family: sans-serif;
+  margin: 0;
+  min-height: 100vh;
   background-color: #f9f9fd;
-}
-.menu {
-  padding: 15px;
-  margin: 0;
-  list-style: none;
-  border-radius: 4px;
-  background-color: #2196f3;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    /* Making ul.menu a Flex container */
-  display: flex;
-}
-.menu.reversed {
- /* We rotate the main axis from right to left */
-  flex-direction: row-reverse;
-  margin-top: 20px;
-}
-.menu > .item:not(:last-child) {
-  margin-right: 10px;
-}
-.menu.reversed > .item:not(:last-child) {
-  margin-right: 0;
-  margin-left: 10px;
-}
-.menu .link {
-  display: block;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  background-color: #fff;
-.menu .link:hover {
-  text-decoration: underline;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство justify-content-->
-    <section class="justify-content">
-      <div class="container">
-        <h2>
-          Свойство <span class="mark">justify-content</span>
-          <a name="justify-content-anchor"></a>
-        </h2>
-        <p>
-          Управляет позиционированием элементов на главной оси, от <span class="mark">main-start</span> до <span class="mark">main-end</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-justify-content: flex-start | flex-end | center | space-between | spacearound | space-evenly
-        </textarea>
-        <ul class="info-list">
-          <li><span class="mark">flex-start</span> - элементы прижимаются к старту оси. Это значение по умолчанию.</li>
-          <li><span class="mark">flex-end</span> - элементы прижимаются к концу оси.</li>
-          <li><span class="mark">center</span> - элементы центрируются на оси.</li>
-          <li><span class="mark">space-between</span> - элементы равномерно распределяются на главной оси. Первый
-элемент устанавливается в начало оси, а последний в конец.</li>
-          <li><span class="mark">space-around</span> - элементы распределяются равномерно, но левый и правый элемент
-отстают от границ контейнера на половину зазора между остальными элементами.</li>
-          <li><span class="mark">space-evenly</span> - элементы распределяются так, что расстояние между элементами, и
-от крайних элементов до границ контейнера одинаковое.</li>
-        </ul>
-        <img src="./img/justify-content.jpg" alt="justify content positions" width="700">
-        <h4>
-          ВНИМАНИЕ
-        </h4>
-        <p>
-          У этого свойства есть и другие значения, но они не поддерживаются многими
-браузерами или работают нестабильно между разными браузерами.
-        </p>
-        <p>
-          Самые часто используемые значения, в том числе значение по умолчанию, приведены в
-примере. Они включают в себя сдвиг контента вправо ( <span class="mark">flex-end</span> ), центрирование
-( <span class="mark">center</span> ) и равномерное распределение пространства между элементами ( <span class="mark">space-between</span> ).
-        </p>
-        <textarea name="" id="" cols="95" rows="29" class="html">
-<code>justify-content: flex-start</code>
-<ul class="menu">
- <li class="item"><a href="" class="link">Home page</a></li>
- <li class="item"><a href="" class="link">Blog</a></li>
- <li class="item"><a href="" class="link">Podcasts</a></li>
- <li class="item"><a href="" class="link">Contacts</a></li>
-</ul>
-<code>justify-content: flex-end</code>
-<ul class="menu flex-end">
- <li class="item"><a href="" class="link">Home page</a></li>
- <li class="item"><a href="" class="link">Blog</a></li>
- <li class="item"><a href="" class="link">Podcasts</a></li>
- <li class="item"><a href="" class="link">Contacts</a></li>
-</ul>
-<code>justify-content: center</code>
-<ul class="menu center">
- <li class="item"><a href="" class="link">Home page</a></li>
- <li class="item"><a href="" class="link">Blog</a></li>
- <li class="item"><a href="" class="link">Podcasts</a></li>
- <li class="item"><a href="" class="link">Contacts</a></li>
-</ul>
-<code>justify-content: space-between</code>
-<ul class="menu space-between">
- <li class="item"><a href="" class="link">Home page</a></li>
- <li class="item"><a href="" class="link">Blog</a></li>
-  <li class="item"><a href="" class="link">Podcasts</a></li>
- <li class="item"><a href="" class="link">Contacts</a></li>
-</ul>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="49" class="css">
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: sans-serif;
-  background-color: #f9f9fd;
-}
-code {
-  display: block;
-  margin-bottom: 10px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 20px;
-}
-.menu {
-  display: flex;
-  padding: 15px;
-  margin: 0;
-  margin-bottom: 20px;
-  list-style: none;
-  border-radius: 4px;
-  background-color: #2196f3;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-.menu.flex-end {
-  justify-content: flex-end;
-}
-.menu.center {
-  justify-content: center;
-}
-.menu.space-between {
-  justify-content: space-between;
-}
-.menu > .item:not(last-child) {
-  margin-right: 10px;
-}
-.menu .link {
-  display: block;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  background color: #fff
-}
-.menu .link:hover {
-  text-decoration: underline;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство align-items-->
-    <section class="align-items">
-      <div class="container">
-        <h2>
-          Свойство <span class="mark">align-items</span>
-          <a name="align-items-anchor"></a>
-        </h2>
-        <p>
-          Управляет расположением элементов вдоль поперечной оси. Это аналог <span class="mark">justify-content</span> для главной оси.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-align-items: stretch | flex-start | flex-end | center | baseline
-        </textarea>
-        <ul class="info-list">
-          <li><span class="mark">stretch</span> - элементы растягиваются на всю длину оси. Это значение по умолчанию.</li>
-          <li><span class="mark">flex-start</span> - элементы прижимаются к старту оси.</li>
-          <li><span class="mark">flex-end</span> - элементы прижимаются к концу оси.</li>
-          <li><span class="mark">center</span> - элементы центрирутся на оси.</li>
-          <li><span class="mark">baseline</span> - элементы вырвниваются по базовой линии их текстового содержимого.</li>
-        </ul>
-        <img src="./img/align-items.svg" alt="align items" width="500">
-        <h4>
-          ВНИМАНИЕ
-        </h4>
-        <p>
-          У этого свойства есть и другие значения, но они не поддерживаются многими
-браузерами или работают нестабильно между разными браузерами.
-        </p>
-        <p>
-          Наверное самое частое применение - это вертикальное центрирование элементов в
-строке, особенно если элементы разной высоты. Добавим к нашей разметке шапку с
-логотипом и вложим меню в шапку так, чтобы логотип и меню были соседями.
-        </p>
-        <textarea name="" id="" cols="95" rows="11" class="html">
-<header class="page-header">
-  <a href="" class="logo">Логотип</a>
-
-  <ul class="menu">
-    <li class="item"><a href="" class="link">Главная</a></li>
-    <li class="item"><a href="" class="link">Блог</a></li>
-    <li class="item"><a href="" class="link">Подкасты</a></li>
-    <li class="item"><a href="" class="link">Контакты</a></li>
-  </ul>
-</header>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="11" class="html">
-<header class="page-header">
- <a href="" class="logo">Logo</a>
- <ul class="menu">
- <li class="item"><a href="" class="link">Home page</a></li>
- <li class="item"><a href="" class="link">Blog</a></li>
- <li class="item"><a href="" class="link">Podcasts</a></li>
- <li class="item"><a href="" class="link">Contacts</a></li>
- </ul>
-</header>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="51" class="css">
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: sans-serif;
-  background-color: #f9f9fd;
-}
-.page-header {
- /* Making header.page-header a Flex-container and aligning elements */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #607d8b;
-  border-radius: 4px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-.logo {
-  padding: 15px;
-  border-radius: 4px;
-  background-color: #ff5722;
-  text-decoration: none;
-  color: #fff;
-}
-.menu {
-  display: flex;
-  padding: 15px;
-  margin: 0;
-  list-style: none;
-  border-radius: 4px;
-  background-color: #2196f3;
-}
-.menu > .item:not(:last-child) {
-  margin-right: 10px;
-}
-.menu .link {
-  display: block;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  background-color: #fff;
-}
-.menu .link:hover,
-.menu .link:focus,
-.logo:hover,
-.logo:focus {
-  text-decoration: underline;
-}
-        </textarea>
-        <p>
-          Первое что необходимо сделать это поставить в строку логотип <span class="mark">a.logo</span> и меню
-<span class="mark">ul.menu</span>, для этого превращаем <span class="mark">header.page-header</span> во flex-контейнер.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="css">
-.page-header {
-  display: flex;
-}
-        </textarea>
-        <p>
-          Меню выше, чем логотип (со всеми стилями из примера), поэтому он растягивается по
-вертикали на всю длину поперечной оси, из-за того что <span class="mark">align-items</span> по умолчанию
-задано значение <span class="mark">stretch</span>. Чтобы исправить это и выровнять логотип и меню
-вертикально по центру - задём значение <span class="mark">center</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="css">
-.page-header {
-  display: flex;
-  align-items: center;
-}
-        </textarea>
-        <p>
-          Последним шагом раздвинем логотип и меню по углам хедера, задав <span class="mark">justify-content</span>
-значение <span class="mark">space-between</span>. Так как элемента в строке всего два (лого и меню), они
-прижимаются к краям главной оси, а всё свободное пространство находится между ними
-        </p>
-        <textarea name="" id="" cols="95" rows="6" class="css">
-.page-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Карточка с изображением-->
-    <section class="picture-card">
-      <div class="container">
-        <h3>
-          Карточка с изображением
-          <a name="picture-card-anchor"></a>
-        </h3>
-        <p>
-          Стандартная проблема - карточка с горизонтально расположенным контентом и
-изображением. Карточка - flex-контейнер, это значит что <span class="mark">align-items</span> по умолчанию
-задано значение <span class="mark">stretch</span>, то есть элементы вертикально растягиваются по высоте
-самого большого элемента. Если контента больше,, чем высота изображения, оно
-начинает растягиваться, менять пропорции и искажаться.
-        </p>
-        <textarea name="" id="" cols="95" rows="26" class="html">
-<div class="card">
- <img src="https://images.pexels.com/photos/952724/pexels-photo-952724.jpeg?
-auto=compress&cs=tinysrgb&w=240&dpr=2" alt="" width="240">
- <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Veritatis eaque odio voluptatibus assumenda reprehenderit? Nisi quibusdam nihil cum
-ipsam debitis alias at tempora omnis, recusandae tempore facilis, corrupti modi ducimus
-ullam natus amet, beatae inventore nulla deserunt aspernatur. Expedita, laudantium
-perspiciatis autem veniam quae est eveniet pariatur in quam repellendus magnam dolor
-laborum nulla culpa sunt aspernatur eius quidem? Quaerat neque tempore fuga ullam sed
-vitae, porro eveniet aut perspiciatis eaque ex iste minus, architecto fugiat, quasi a
-voluptate animi?</div>
-</div>
-<div class="card flex-start-aligned">
- <img src="https://images.pexels.com/photos/952724/pexels-photo-952724.jpeg?
-auto=compress&cs=tinysrgb&w=240&dpr=2" alt="" width="240">
- <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Veritatis eaque odio voluptatibus assumenda reprehenderit? Nisi quibusdam nihil cum
-ipsam debitis alias at tempora omnis, recusandae tempore facilis, corrupti modi ducimus
-ullam natus amet, beatae inventore nulla deserunt aspernatur. Expedita, laudantium
-perspiciatis autem veniam quae est eveniet pariatur in quam repellendus magnam dolor
-laborum nulla culpa sunt aspernatur eius quidem? Quaerat neque tempore fuga ullam sed
-vitae, porro eveniet aut perspiciatis eaque ex iste minus, architecto fugiat, quasi a
-perspiciatis eaque ex iste minus, architecto fugiat, quasi a
-voluptate animi?</div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="32" class="css">
-* {
- box-sizing: border-box;
-}
-body {
- font-family: sans-serif;
- line-height: 1.5;
- background-color: #edf2f7;
-}
-img {
- display: block;
- max-width: 100%;
- height: auto;
-}
-.card {
- display: flex;
- width: 640px;
- margin-bottom: 20px;
- margin-left: auto;
- margin-right: auto;
- padding: 10px;
- background-color: #fff;
- box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
- 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
- border-radius: 4px;
-}
-.card.flex-start-aligned {
- align-items: flex-start;
-}
-.card > .content {
-  margin-left: 15px;
-}
-        </textarea>
-        <p>
-          Проблема решается просто, достаточно переопределить значение <span class="mark">align-items</span> у flexконтейнера. 
-          В этом случае подойдёт значение <span class="mark">flex-start</span>, чтобы элементы
-прижимались к началу поперечной оси.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="css">
-.card {
-  display: flex;
-  align-items: flex-start;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство flex-wrap-->
-    <section class="flex-wrap">
-      <div class="container">
-        <h2>
-          Свойство flex-wrap
-          <a name="flex-wrap-anchor"></a>
-        </h2>
-        <p>
-          По умолчанию создаётся однострочный контейнер и элементы размещаются на одной
-строке, сжимаясь по необходимости. Свойство <span class="mark">flex-wrap</span> позвоялет превратить
-однострочный контейнер в многострочный. Элементы будут добавляться в строку до тех
-пор, пока в ней будет место, после чего будет автоматически создана еще одна строка
-        </p>
-        <img src="./img/flex-wrap.svg" alt="flex wrap" width="500">
-        <textarea name="" id="" cols="95" rows="2" class="values">
-flex-wrap: nowrap | wrap | wrap-reverse
-        </textarea>
-        <ul class="info-list">
-          <li><span class="mark">nowrap</span> - все элементы будут на одной строке. Это значение по умолчанию.</li>
-          <li><span class="mark">wrap</span> - разрешает элементам перепрыгивать на другие строки, которые по
-умолчанию располагаются сверху вниз (вдоль поперечной оси).</li>
-          <li><span class="mark">wrap-reverse</span> - разрешает элементам перепрыгивать на другие строки, которые
-располагаются снизу вверх (вдоль поперечной оси).</li>
-        </ul>
-      </div>
-    </section>
-
-    <!--Сетка элементов-->
-    <section class="element-grid">
-      <div class="container">
-        <h3>
-          Сетка элементов
-          <a name="element-grid-anchor"></a>
-        </h3>
-        <p>
-          Многострочный контейнер позволяет сделать «сетку» элементов, например карточек
-продуктов в интернет-магазине, превью статей в блоге, галерею изображений и т. п.
-        </p>
-        <textarea name="" id="" cols="95" rows="35" class="html">
-<div class="container">
-  <ul class="card-set">
-    <li class="item">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque excepturi
-    facilis molestias eius earum at officia velit reprehenderit veritatis.</p>
-    </li>
-    <li class="item">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque excepturi
-    facilis molestias eius earum at officia velit reprehenderit veritatis.</p>
-    </li>
-    <li class="item">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque excepturi
-    facilis molestias eius earum at officia velit reprehenderit veritatis.</p>
-    </li>
-    <li class="item">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque excepturi
-    facilis molestias eius earum at officia velit reprehenderit veritatis.</p>
-    </li>
-      <li class="item">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque excepturi
-    facilis molestias eius earum at officia velit reprehenderit veritatis.</p>
-    </li>
-    <li class="item">
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque excepturi
-    facilis molestias eius earum at officia velit reprehenderit veritatis.</p>
-    </li>
-  </ul>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="42" class="css">
-* {
- box-sizing: border-box;
-}
-body {
- margin: 0;
- font-family: sans-serif;
- line-height: 1.5;
- background-color: #edf2f7;
-}
-.container {
- max-width: 1200px;
- padding: 5px;
- margin-left: auto;
- margin-right: auto;
-}
-.card-set {
- display: flex;
- /* Make a flex container multiline */
- flex-wrap: wrap;
- /* Set gap between rows and columns */
- gap: 10px;
- padding: 0;
- list-style: none;
-}
-.item {
- /* Set the width of the elements */
- flex-basis: calc((100% - 20px) / 3);
-
- padding: 10px;
- background-color: #fff;
- border-radius: 4px;
- box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
- 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-.item h2 {
- margin-top: 0;
- font-size: 20px;
-}
-.item p {
-  margin: 0;
-}
-        </textarea>
-        <p>
-          Пошагово разберём технику создания «сеток». Первое, что необходимо сделать -
-превратить <span class="mark">ul.card-set</span> во flex-контейнер и сделать его многострочным. Контейнеру
-можно задать произвольную ширину.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="css">
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-}
-        </textarea>
-        <p>
-          Далее используем flex-свойство контейнера <span class="mark">gap</span>, которое определяет зазор между
-столбцами и строками сетки. Пусть в нашем предполагаемом макете это <span class="mark">10px</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="6" class="css">
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-        </textarea>
-        <h4>
-          СВОЙСТВО GAP
-        </h4>
-        <p>
-          Свойство <span class="mark">gap</span> комбинирует в себе значение свойств <span class="mark">row-gap</span> и 
-          <span class="mark">column-gap</span>,
-          которые позволяют отдельно указать размеры зазоров между строками и
-          столбцами сетки. Используйте <span class="mark">gap</span> когда зазоры одинаковые, в противном случае
-          подойдут <span class="mark">row-gap</span> и <span class="mark">column-gap</span>.
-        </p>
-        <p>
-          Последний шаг - задать размер flex-элементам <span class="mark">li.item</span>. Ширина указывается в
-процентах от общей ширины родителя (100%) по следующей формуле.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-calc((100% - кол-во_зазоров_в_строке * значение_одного_зазора) / кол-во_элементов_в_строке)
-        </textarea>
-        <p>
-          Количество зазоров между элементами в строке всегда на единицу меньше чем
-количество элементов. В нашей сетке три элемента в ряд, значит в одной строке есть два
-зазора по <span class="mark">10px</span>. Свойство <span class="mark">flex-basis</span> это замена 
-<span class="mark">width</span> для flex-элементов и
-рассматривается дальше.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="css">
-.item {
-  flex-basis: calc((100% - 20px) / 3);
-}
-        </textarea>
-        <h4>
-          ПОЧЕМУ НЕ ИСПОЛЬЗОВАТЬ ФИКСИРОВАННЫЕ ЗНАЧЕНИЯ?
-        </h4>
-        <p>
-          Это масштабируемое решение, так как размеры элементов не нужно будет
-пересчитывать заново при изменении ширины контейнера или значения зазора
-между элементами.
-        </p>
-      </div>
-    </section>
-
-    <!--Свойство align-content-->
-    <section class="align-content">
-      <div class="container">
-        <h2>
-          Свойство <span class="mark">align-content</span> 
-          <a name="align-content-anchor"></a>
-        </h2>
-        <p>
-          Управляет выравниванием всех строк многострочного контейнера вдоль поперечной
-          оси, если есть свободное место. Аналогично тому, как <span class="mark">justify-content</span> выравнивает
-          элементы в каждой строке. Это свойство не действует, когда есть только одна строка
-          элементов или в контейнере нет свободного места по вертикали (явно не задана высота
-          больше чем контент).
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-align-content: flex-start| flex-end| center| space-between| space-around| space-evenly| stretch
-        </textarea>
-        <ul class="info-list">
-          <li><span class="mark">stretch</span> - строки равномерно растягиваются чтобы занять всё место. Значение по умолчанию</li>
-          <li><span class="mark">flex-start</span> - строки прижимаются к старту оси.</li>
-          <li><span class="mark">flex-end</span> - строки прижимаются к концу оси.</li>
-          <li><span class="mark">center</span> - строки центрируются на оси.</li>
-        </ul>
-        <h4>
-          ИНТЕРЕСНО
-        </h4>
-        <p>
-          Значения <span class="mark">space-between</span>, <span class="mark">space-around</span> и 
-          <span class="mark">space-evenly</span> работают аналогично
-          свойству <span class="mark">justify-content</span>, только для строк, и используются редко.
-        </p>
-        <img src="./img/align-content.svg" alt="align-content" width="500">
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-    <!--Свойства элемента-->
-    <section class="element-properties">
-      <div class="container">
-        <h1>
-          Свойства элемента
-          <a name="element-properties-anchor"></a>
-        </h1>
-        <p>
-          <strong>Flex-элементы</strong> - это дети flex-контейнера, элементы первого уровня вложенности.
-Flex-элементы (дальше просто элементы) перестают подчиняться стандартному потоку
-документа, теряют свой тип (блочный, строчный и т. п.) и следуют правилам
-позиционированая Flexbox-модели.
-
-        </p>
-        <img src="./img/flex-items.svg" alt="flex-items" width="500">
-
-      </div>
-    </section>
-
-    <!--Свойство flex-basis-->
-    <section class="flex-basis">
-      <div class="container">
-        <h2>
-          Свойство <span class="mark">flex-basis</span>
-          <a name="flex-basis-anchor"></a>
-        </h2>
-        <p>
-          Определяет начальный размер элемента перед распределением свободного
-          пространства. Значением может быть любая валидная величина: пиксели, проценты,
-          rem и т. д. Для flex-элементов это замена свойства <span class="mark">width</span>, но с некоторыми
-          <a href="https://medium.com/@stasonmars/%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-width-%D0%B8-flex-basis-f34e658ce6a2" target="_blank" rel="noopener noreferrer nofollow" class="resource-link">особенностями</a>. 
-          В примерах этого занятия для всех flex-элементов задавался именно
-          <span class="mark">flex-basis</span>, а не <span class="mark">width</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-flex-basis: auto | значение
-        </textarea>
-        <ul class="info-list">
-          <li>Если указаны оба свойства, <span class="mark">flex-basis</span> и <span class="mark">width</span>, то свойство width игнорируется.</li>
-          <li>Свойство flex-basis это не финальный размер элемента, а размер до распределения свободного пространства.</li>
-          <li>Свойства <span class="mark">min-width</span> и <span class="mark">max-width</span> работют как ограничители размера элемента даже если у него указан <span class="mark">flex-basis</span> , а не <span class="mark">width</span>.</li>
-          <li>Свойство <span class="mark">flex-basis</span> может определять высоту, а не ширину элемента. Это происходит в случае когда главная ось идёт вертикально.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!--Свойство flex-grow-->
-    <section class="flex-grow">
-      <div class="container">
-        <h2>
-          Свойство <span class="mark">flex-grow</span>
-          <a name="flex-grow-anchor"></a>
-        </h2>
-        <p>
-          Определяет способность элемента, по необходимости, занимать больше места (расти),
-чем его начальный размер. Значение задаётся как пропорция (доля) свободного места
-в контейнере.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-flex-grow: доля
-        </textarea>
-        <p>
-          По умолчанию у всех элементов установлено значение <span class="mark">0</span>, то есть элементы не
-пытаются занять дополнительное свободное место, даже если такое есть.
-Отрицательные значения задавать нельзя
-        </p>
-        <img src="./img/flex-grow.svg" alt="flex grow" width="500">
-        <p>
-          Например, если у всех элементов установлено одинаковое значение этого свойства, то
-они займут равное количество места в контейнере. А вот если всем задать значение
-<span class="mark">1 </span>, а одному элементу <span class="mark">2 </span>, то он попытается занять в два раза больше места, чем любой
-другой элемент.
-        </p>
-      </div>
-    </section>
-
-    <!--Резиновый контент-->
-    <section class="rubber-content">
-      <div class="container">
-        <h3>
-          Резиновый контент
-          <a name="rubber-content-anchor"></a>
-        </h3>
-        <p>
-          Типичный случай использования этого свойства - сайдбар фиксированной ширины и
-«резиновый» контент, который занимает всё оставшееся свободное место в строке.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="html">
-<div class="container">
- <aside class="sidebar">Sidebar</aside>
- <main class="content">Main content</main>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="35" class="css">
-* {
- box-sizing: border-box;
-}
-body {
- font-family: "Open Sans", sans-serif;
- line-height: 1.5;
- font-size: 20px;
- background-color: #edf2f7;
-}
-.container {
- display: flex;
- max-width: 960px;
- padding-right: 10px;
- padding-left: 10px;
- margin-right: auto;
- margin-left: auto;
-}
-.sidebar {
- flex-basis: 250px;
- margin-right: 24px;
-}
-.content {
- flex-grow: 1;
-}
-.sidebar,
-.content {
- height: 350px;
- padding: 20px;
- border-radius: 4px;
- background-color: #fff;
- box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-        </textarea>
-        <p>
-          Всё, что необходимо - это сделать <span class="mark">div.container</span> <span class="mark">flex-контейнером</span>, после чего задать
-<span class="mark">aside.sidebar</span> фиксированную ширину, а <span class="mark">main.content</span> свойство <span class="mark">flex-grow: 1</span>
-        </p>
-      </div>
-    </section>
-
-    <!--Футер карточки-->
-    <section class="card-footer">
-      <div class="container">
-        <h3>
-          Футер карточки
-          <a name="card-footer-anchor"></a>
-        </h3>
-        <textarea name="" id="" cols="95" rows="17" class="html">
-<div class="container">
- <div class="card">
- <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing
-elit. Consequatur quos consequuntur libero, ab possimus voluptates.</div>
- <div class="meta">Card «footer»</div>
- </div>
- <div class="card">
- <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing
-elit. Accusamus quod odit perferendis quaerat, quasi doloremque, delectus
-impedit earum possimus unde neque similique quam aliquam, pariatur fugiat modi
-tempore autem officia. Nostrum reiciendis suscipit, culpa nam rem, libero
-delectus similique amet architecto qui deleniti expedita odio accusamus sint
-ratione nesciunt magni!</div>
- <div class="meta">Card «footer»</div>
- </div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="40" class="css">
-* {
- box-sizing: border-box;
-}
-body {
- font-family: sans-serif;
- line-height: 1.5;
- background-color: #edf2f7;
-}
-.card {
- display: flex;
- flex-direction: column;
- flex-basis: 320px;
- margin: 8px;
- padding: 10px;
- background-color: #fff;
- box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
- 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
- border-radius: 4px;
-}
-.card > .content {
-  flex-grow: 1;
-
- margin-bottom: 10px;
- padding: 10px;
- border: 2px dashed tomato;
- border-radius: 4px;
-}
-.card > .meta {
- padding: 10px;
- text-align: center;
- background-color: teal;
- color: white;
- border-radius: 4px;
-}
-.container {
   display: flex;
   justify-content: center;
-  margin: -8px;
+  align-items: center;
+  padding: 20px;
 }
-        </textarea>
-        <p>
-          Эта техника состоит из двух шагов. Первый - необходимо сделать карточку flexконтейнером и поменять направление главной оси так, чтобы она шла вертикально,
-сверху вниз. Это заставит flex-элементы располагаться в столбик.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="css">
-.card {
-  display: flex;
-  flex-direction: column;
+
+.post {
+  position: relative;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
+  
+  box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
 }
-        </textarea>
-        <p>
-          Осталось задать контенту <span class="mark">div.content</span> свойство <span class="mark">flex-grow</span> , чтобы разрешить ему
-занимать всё свободное место на главной оси, отодвигая «футер» в её конец, то есть
-вниз.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="css">
-.card > .content {
-  flex-grow: 1;
+
+.post-title {
+  margin-top: 0;
+}
+
+.post-text {
+  margin-bottom: 0;
 }
         </textarea>
       </div>
     </section>
 
-    <!--Свойство flex-shrink-->
-    <section class="flex-shrink">
+    <!--Тень с одной стороны-->
+    <section class="one-side">
       <div class="container">
         <h2>
-          Свойство <span class="mark">flex-shrink</span>
-          <a name="flex-shrink-anchor"></a>
+          Тень с одной стороны
+          <a name="one-side-shadow-anchor"></a>
         </h2>
         <p>
-          Определяет способность элемента по необходимости занимать меньше места
-(сжиматься), чем его начальный размер. Значение задаётся как пропорция (доля).
+          Используя отрицательный радиус распространения (значение <span class="mark">spread</span>), 
+          можно сжать тень блока, сделав её меньше размера элемента, и задать смещение только с одной стороны.
         </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-flex-shrink: доля
-        </textarea>
-        <p>
-          По умолчанию у всех элементов установлено значение <span class="mark">1</span>, то есть элементы будут
-сжиматься при необходимости. Отрицательные значения задавать нельзя. Используется
-довольно редко.
-        </p>
-      </div>
-    </section>
-
-    <!--Свойство align-self-->
-    <section class="align-self">
-      <div class="container">
-        <h2>
-          Свойство <span class="mark">align-self</span>
-          <a name="align-self-anchor"></a>
-        </h2>
-        <p>
-          Позволяет элементу изменить своё положение на поперечной оси, переопределив для
-себя значение свойства <span class="mark">align-items</span> от контейнера. Аналога для главной оси не
-существует, элемент может сместить себя только на поперечной оси.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-align-self: auto | flex-start | flex-end | center | baseline | stretch
-        </textarea>
-        <img src="./img/align-self.svg" alt="align self" width="500">
-        <p>
-          Вернёмся к примеру карточки с изображением и контентом. Для решения проблемы
-вертикального растягивания картинки мы использовали свойство <span class="mark">align-items</span> у
-контейнера. Свойство <span class="mark">align-self</span> позволяет решить эту проблему более точечно,
-переопределив значение <span class="mark">align-items</span> только для изображения.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="css">
-.card > img {
-align-self: flex-start;
-}
-        </textarea>
         <textarea name="" id="" cols="95" rows="25" class="html">
-<div class="card">
- <img src="https://images.pexels.com/photos/952724/pexels-photo-952724.jpeg?
-auto=compress&cs=tinysrgb&w=240&dpr=2" alt="" width="240">
- <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Veritatis eaque odio voluptatibus assumenda reprehenderit? Nisi quibusdam nihil cum
-ipsam debitis alias at tempora omnis, recusandae tempore facilis, corrupti modi ducimus
-ullam natus amet, beatae inventore nulla deserunt aspernatur. Expedita, laudantium
-perspiciatis autem veniam quae est eveniet pariatur in quam repellendus magnam dolor
-laborum nulla culpa sunt aspernatur eius quidem? Quaerat neque tempore fuga ullam sed
-vitae, porro eveniet aut perspiciatis eaque ex iste minus, architecto fugiat, quasi a
-voluptate animi?</div>
-</div>
-<div class="card flex-start-aligned">
- <img src="https://images.pexels.com/photos/952724/pexels-photo-952724.jpeg?
-auto=compress&cs=tinysrgb&w=240&dpr=2" alt="" width="240">
- <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Veritatis eaque odio voluptatibus assumenda reprehenderit? Nisi quibusdam nihil cum
-ipsam debitis alias at tempora omnis, recusandae tempore facilis, corrupti modi ducimus
-ullam natus amet, beatae inventore nulla deserunt aspernatur. Expedita, laudantium
-perspiciatis autem veniam quae est eveniet pariatur in quam repellendus magnam dolor
-laborum nulla culpa sunt aspernatur eius quidem? Quaerat neque tempore fuga ullam sed
-vitae, porro eveniet aut perspiciatis eaque ex iste minus, architecto fugiat, quasi a voluptate animi?</div>
+<div class="card-set">
+  <article class="post">
+    <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+    <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi.</p>
+  </article>
+
+  <article class="post">
+    <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+    <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi.</p>
+  </article>
+
+  <article class="post">
+    <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+    <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi.</p>
+  </article>
+
+  <article class="post">
+    <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+    <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi.</p>
+  </article>
 </div>
         </textarea>
-        <textarea name="" id="" cols="95" rows="32" class="css">
+        <textarea name="" id="" cols="95" rows="25" class="css">
 * {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 body {
- font-family: sans-serif;
- line-height: 1.5;
- background-color: #edf2f7;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f9f9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-img {
- display: block;
- max-width: 100%;
- height: auto;
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.card {
- display: flex;
- width: 640px;
- margin-bottom: 20px;
- margin-left: auto;
- margin-right: auto;
- padding: 10px;
- background-color: #fff;
- box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
- 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
- border-radius: 4px;
+
+.post {
+  flex-basis: calc(50% - 30px);
+  min-width: 320px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
 }
-.card.flex-start-aligned > img {
- align-self: flex-start;
+
+.post:nth-child(1) {
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
 }
-.card > .content {
-  margin_left: 15px;
+
+.post:nth-child(2) {
+  box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.post:nth-child(3) {
+  box-shadow: -10px 0 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.post:nth-child(4) {
+  box-shadow: 0 -10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.post-title {
+  margin-top: 0;
+}
+
+.post-text {
+  margin-bottom: 0;
 }
         </textarea>
       </div>
     </section>
-    
-    <!--Свойство order-->
-    <section class="order">
+
+    <!--Внутренняя тень-->
+    <section class="inner">
       <div class="container">
         <h2>
-          Свойство order
-          <a name="order-anchor"></a>
+          Внутренняя тень
+          <a name="inner-shadow-anchor"></a>
         </h2>
         <p>
-          По умолчанию элементы располагаются в том порядке, в котором они указаны в HTMLфайле. 
-          Используя свойство order можно <b>визуально</b> изменить порядок расположения
-          элементов вдоль главной оси. При этом, в HTML-коде ничего не поменяется.
+          Если внешняя тень визуально приподнимает элемент, то внутренняя тень позвоялет добавить эффект глубины, вдавливая элемент в интерфейс. 
+          Синтаксис объявления внутренней тени аналогичен обычной, но первым значением необходимо указать <span class="mark">inset</span>.
         </p>
-        <textarea name="" id="" cols="95" rows="3" class="values">
-# По умолчанию у всех элементов установлено значение 0
-order: позиция
+        <textarea name="" id="" cols="95" rows="2" class="values">
+box-shadow: inset <x-offset> <y-offset> <blur> <spread> <color>
         </textarea>
         <p>
-          Это свойство применяется не часто, из-за того, что нарушает связь между визуальным
-порядком элементов и тем, как их видит браузер и ассистивные технологии.
+          Смещение, размытие и распространение тени происходит внутри элемента и визуально ограничено его рамкой.
         </p>
-        <img src="./img/flex-order.svg" alt="flex order" width="500">
+        <textarea name="" id="" cols="95" rows="9" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
+</article>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f9f9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.post {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.post-title {
+  margin-top: 0;
+}
+
+.post-text {
+  margin-bottom: 0;
+}
+        </textarea>
       </div>
     </section>
-    
-    
+
+    <!--Многослойная тень-->
+    <section class="layered">
+      <div class="container">
+        <h2>
+          Многослойная тень
+          <a name="layered-shadow-anchor"></a>
+        </h2>
+        <p>
+          На один элемент можно добавить несколько теней, указав их через запятую.
+        </p>
+        <textarea name="" id="" cols="95" rows="5" class="values">
+box-shadow: <x-offset> <y-offset> <blur> <spread> <color>,
+            <x-offset> <y-offset> <blur> <spread> <color>,
+            <x-offset> <y-offset> <blur> <spread> <color>,
+            ...
+        </textarea>
+        <p>
+          Получается многослойный пирог, в котором первая тень в списке размещается на самом верху, 
+          последняя - в самом низу. То есть, чем раньше указана тень, тем выше она в слоях, и будет визуально перекрывать все последующие. 
+          Этот подход позволяет сделать очень мягкие и красивые тени.
+        </p>
+        <textarea name="" id="" cols="95" rows="9" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
+</article>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f9f9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.post {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
+
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.post-title {
+  margin-top: 0;
+}
+.post-text {
+  margin-bottom: 0;
+}
+        </textarea>
+        <p>
+          Для наглядности зададим слоям тени из предыдущего примера разные цвета.
+        </p>
+        <textarea name="" id="" cols="95" rows="9" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
+</article>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f9f9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.post {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
+
+  box-shadow: 0 2.8px 2.2px red, 0 6.7px 5.3px blue, 0 12.5px 10px green,
+    0 22.3px 17.9px purple, 0 41.8px 33.4px orange, 0 100px 80px teal;
+}
+
+.post-title {
+  margin-top: 0;
+}
+.post-text {
+  margin-bottom: 0;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Декоративные эффекты-->
+    <section class="decor">
+      <div class="container">
+        <h2>
+          Декоративные эффекты
+          <a name="decor-effects-anchor"></a>
+        </h2>
+        <p>
+          Используя тени, псевдоэлементы, а также трансформации и позиционирование, 
+          которое мы рассмотрим дальше в курсе, можно делать очень интересные эффекты. Например, визуально загнутые углы карточки.
+        </p>
+        <textarea name="" id="" cols="95" rows="9" class="html">
+<article class="post">
+  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
+</article>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f9f9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.post {
+  position: relative;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.post:before,
+.post:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(-3deg);
+}
+
+.post:after {
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+.post-title {
+  margin-top: 0;
+}
+
+.post-text {
+  margin-bottom: 0;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Дополнительные материалы-->
+    <section class="add-materials">
+      <div class="container">
+        <h2>
+          Дополнительные материалы
+          <a name="add-material-anchor"></a>
+        </h2>
+        <ul class="info-list">
+          <li><a href="https://cssgenerator.org/box-shadow-css-generator.html" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Генератор тени</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
 
