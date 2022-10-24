@@ -13,97 +13,363 @@
   <header class="header">
     <a name="nav-anchor"></a>
     <nav class="nav"> 
-      <ul class="nav-list">
-        <li><a href="#image-types">Типы изображений</a></li>        
-      </ul>
-
       <!--===========================================-->
       <ul class="nav-list">
-        <li><a href="#element-background-anchor">Фон элемента</a></li>
-        <li><a href="#bg-color-anchor">Свойство background-color</a></li>
-        <li><a href="#bg-image-anchor">Свойство background-image</a></li>
-        <li><a href="#bg-repeat-anchor">Свойство background-repeat</a></li>
-        <li><a href="#bg-position-anchor">Свойство background-position</a></li>
-        <li><a href="#position-with-offset-anchor">Позиция со смещением</a></li>
-        <li><a href="#bg-size-anchor">Свойство background-size</a></li>
-        <li><a href="#contain-cover-anchor">Значения contain и cover</a></li>
-        <li><a href="#bg-attachment-anchor">Свойство background-attachment</a></li>
-        <li><a href="#layered-bg-anchor">Многослойный фон</a></li>
-        <li><a href="#bg-anchor">Свойство background</a></li>
-      </ul>
-
-      <ul class="nav-list">
-        <li><a href="#fit-position-anchor">Свойства object-fit и object-position</a></li>
-        <li><a href="#fit-anchor">Свойство object-fit</a></li>
-        <li><a href="#position-anchor">Свойство object-position</a></li>
-      </ul>
-
-      <ul class="nav-list">
-        <li><a href="#pseudo-elements-anchor">Псевдоэлементы</a></li>
-        <li><a href="#content-anchor">Свойство content</a></li>
-        <li><a href="#hover-anchor">Псевдокласс :hover</a></li>
-        <li><a href="#icin-anchor">Псевдоэлемент-иконка</a></li>
-      </ul>
-
-      <ul class="nav-list">
-        <li><a href="#gradient-anchor">Градиент</a></li>
-        <li><a href="#linear-gradient-anchor">Линейный градиент</a></li>
-        <li><a href="#color-stop-anchor">Колорстоп (color-stop)</a></li>
-        <li><a href="#solid-gradient-anchor">Сплошной градиент</a></li>
-        <li><a href="#radial-gradient-anchor">Радиальный градиент</a></li>
-        <li><a href="#repeating-gradient-anchor">Повторяющийся градиент</a></li>
-        <li><a href="#striped-headers-anchor">Полосатые заголовки</a></li>
-        <li><a href="#additional-materials-anchor">Дополнительные материалы</a></li>
-      </ul>
-
-      <ul class="nav-list">
-        <li><a href="#element-shadow-anchor">Тень элемента</a></li>
-        <li><a href="#one-side-shadow-anchor">Тень с одной стороны</a></li>
-        <li><a href="#inner-shadow-anchor">Внутренняя тень</a></li>
-        <li><a href="#layered-shadow-anchor">Многослойная тень</a></li>
-        <li><a href="#decor-effects-anchor">Декоративные эффекты</a></li>
-        <li><a href="#add-material-anchor">Дополнительные материалы</a></li>
-      </ul>
+        <li><a href="#vector-anchor">Векторная графика</a></li>
+      </ul>     
       
-        
+      <ul class="nav-list">
+        <li><a href="#svg-elements-anchor">SVG-элементы</a></li>
+        <li><a href="#svg-anchor">Элемент &lt;svg&gt;</a></li>
+        <li><a href="#rect-anchor">Элемент &lt;rect&gt;</a></li>
+        <li><a href="#circle-anchor">Элемент &lt;circle&gt;</a></li>
+        <li><a href="#ellipse-anchor">Элемент &lt;ellipse&gt;</a></li>
+        <li><a href="#line-anchor">Элемент &lt;line&gt;</a></li>
+        <li><a href="#polygon-anchor">Элемент &lt;polygon&gt;</a></li>
+        <li><a href="#path-anchor">Элемент &lt;path&gt;</a></li>
+      </ul>
+
+      <ul class="nav-list">
+        <li><a href="#svg-document-anchor">SVG-документ</a></li>
+        <li><a href="#svg-viewport-anchor">SVG-viewport</a></li>
+        <li><a href=""></a></li>
+      </ul>
+
+      <ul class="nav-list">
+        <li><a href="#usage-anchor">Использование</a></li>
+        <li><a href="#svg-img-anchor">В элементе &lt;img&gt;</a></li>
+        <li><a href="#svg-background-img-anchor">Как фон элемента</a></li>
+        <li><a href="#inline-svg-anchor">Встроенный SVG</a></li>
+        <li><a href="#svg-sprite-anchor">SVG-спрайт</a></li>
+      </ul>
+
+      <ul class="nav-list">
+        <li><a href="#figures-decorations-anchor">Оформление фигур</a></li>
+        <li><a href="#fill-anchor">Свойство fill</a></li>
+        <li><a href="#fill-opacity-anchor">Свойство fill-opacity</a></li>
+        <li><a href="#stroke-anchor">Свойство stroke</a></li>
+        <li><a href="#stroke-width-anchor">Свойство stroke-width</a></li>
+        <li><a href="#stroke-opacity-anchor">Свойство stroke-opacity</a></li>
+      </ul>
     </nav>
   </header>
   <main>
-    <!--image-types-->
-    <section class="image-types">
+   <!--Векторная графика-->
+   <section class="vector">
+    <div class="container">
+      <h1>
+        Векторная графика
+        <a name="vector-anchor"></a>
+      </h1>
+      <img src="./img/raster-vs-vector.png" alt="raster and vector anchor" width="500">
+      <p>
+        <strong>SVG (Scalable Vector Graphics)</strong> - формат графики и язык для описания векторных изображений. 
+        Внутри файл не бинарный, а обычный текст (XML), описывающий объекты, их эффекты и поведение.
+      </p>
+      <p>
+        Векторная графика имеет ряд преимуществ.
+      </p>
+      <ul class="info-list">
+        <li><b>Масштабирование</b> - в отличие от растровой графики, SVG не теряет в качестве при масштабировании.</li>
+        <li><b>Размер файла</b> - векторные изображения весят намного меньше растровых, если используются для иконок или другой абстрактной графики. 
+          Использование вектора для фотореалестичных изображений наоборот ведёт к огромному размеру файла.</li>
+        <li><b>Динамичность</b> - при помощи CSS и JavaScript можно изменять параметры векторного изображения, например цвет или рамки.</li>
+      </ul>
+    </div>
+   </section>
+
+
+
+
+
+
+
+
+
+   <!--SVG-элементы-->
+   <section class="svg-elements">
+    <div class="container">
+      <h1>
+        SVG-элементы
+        <a name="svg-elements-anchor"></a>
+      </h1>
+      <p>
+        Любое векторное изображение состоит из набора фигур, которые представлены SVG-элементами. 
+        Когда дизайнер экспортирует иконку из графического редактора, например <span class="mark">Adobe Illustrator</span> или 
+        <span class="mark">Inkscape</span>, 
+        программа переводит изображение в набор элементов и получается SVG-файл. Разработчик использует готовое SVG-изображение, 
+        не задумываясь о его содержимом, но базовое знакомство с элементами не будет лишним, поэтому рассмотрим некоторые из них.
+      </p>
+    </div>
+   </section>
+
+   <!--Элемент <svg>-->
+    <section class="svg">
       <div class="container">
-        <h1>
-          Типы изображений
-          <a name="image-types-anchor"></a>
-        </h1>
+        <h2>
+          Элемент &lt;svg&gt;
+          <a name="svg-anchor"></a>
+        </h2>
         <p>
-          На сайте всегда есть изображения, они помогают донести смысл или просто добавить декоративное оформление страницы. 
-          Значит есть два типа изображений: контентные и декоративные. Какая между ними разница?
+          Определяет холст, на котором можно рисовать фигуры. 
+          Сделаем холст <span class="mark">400x300</span> пикселей и добавим ему встроенный стиль с <span class="mark">outline</span> для визуализации границ.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="values">
+<svg width="400" height="300" style="outline: 2px dashed #2a2a2a;">
+  <!-- Тут будет разметка фигур -->
+</svg>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="4" class="html">
+<svg width="400" height="300" style="outline: 2px dashed #2a2a2a;">
+  <!-- This is where the svg shapes markup will be. -->
+</svg>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="9" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9fd;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Элемент <rect>-->
+      <section class="rect">
+        <div class="container">
+          <h2>
+            Элемент &lt;rect&gt;
+            <a name="rect-anchor"></a>
+          </h2>
+          <p>
+            Создаёт прямоугольную область. Нарисуем прямоугольник <span class="mark">250x150</span> пикселей и добавим следующие характеристики.
+          </p>
+          <ul class="info-list">
+            <li>Зальём цветом используя атрибут <span class="mark">fill</span>.</li>
+            <li>Установим рамку чёрного цвета шириной в <span class="mark">4px</span> атрибутами <span class="mark">stroke</span> и <span class="mark">stroke-width</span>.</li>
+            <li>Зададим смещение <span class="mark">20px</span> по вертикали и горизонтали относительно верхнего левого угла холста атрибутами <span class="mark">x</span> и <span class="mark">y</span>.</li>
+            <li>Добавим скругление углов прямоугольника атрибутами <span class="mark">rx</span> (по горизонтали) и <span class="mark">ry</span> ( по вертикали). Если задать только одно значение, другое будет идентично.</li>
+          </ul>
+          <textarea name="" id="" cols="95" rows="13" class="values">
+<svg width="400" height="300" style="outline: 1px solid black;">
+  <rect
+    width="250"
+    height="150"
+    fill="tomato"
+    stroke="black"
+    stroke-width="4"
+    x="20"
+    y="20"
+    rx="40"
+  />
+</svg>
+          </textarea>
+          <p>
+            Нарисуем еще один прямоугольник и разместим его в нижней правой части холста. Новая фигура перекроет первый прямоугольник, потому что фигуры располагаются как в слоёном пироге - ниже в разметке значит выше в слоях на холсте.
+          </p>
+          <textarea name="" id="" cols="95" rows="7" class="html">
+<svg width="400" height="300" style="outline: 2px dashed #2a2a2a;">
+  <rect width="250" height="150" fill="tomato" stroke="#2a2a2a" stroke-width="4" x="20" y="20" rx="40" />
+  <rect width="250" height="150" fill="orange" stroke="#2a2a2a" stroke-width="4" x="120" y="120" rx="60" ry="30" />
+</svg>
+          </textarea>
+          <textarea name="" id="" cols="95" rows="9" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9fd;
+}
+          </textarea>
+        </div>
+      </section>
+    
+    <!--Элемент <circle>-->
+    <section class="circle">
+      <div class="container">
+        <h2>
+          Элемент &lt;circle&gt;
+          <a name="circle-anchor"></a>
+        </h2>
+        <p>
+          Создаёт окружность, радиус которой задаётся атрибутом <span class="mark">r</span>. Нарисуем эту фигуру размером <span class="mark">100x100</span> пикселей, 
+          дадим ей рамку и зальём цветом. Получится окружность с центром в верхнем левом углу, 
+          большая часть которой скрыта, так как находится за холстом.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="values">
+<svg width="400" height="300" style="outline: 2px dashed #2a2a2a;">
+  <circle r="100" fill="tomato" stroke="#2a2a2a" stroke-width="4" />
+</svg>
+        </textarea>
+        <p>
+          Координаты центра окружности на холсте задаются атрибутами <span class="mark">cx</span> (center x) и <span class="mark">cy</span> (center y).
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="html">
+<svg width="400" height="300" style="outline: 2px dashed #2a2a2a;">
+  <circle r="100" cx="200" cy="150" fill="tomato" stroke="#2a2a2a" stroke-width="4" />
+</svg>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="9" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9fd;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Элемент <ellipse>-->
+    <section class="eclipse">
+      <div class="container">
+        <h2>
+          Элемент &lt;ellipse&gt;
+          <a name="ellipse-anchor"></a>
+        </h2>
+        <p>
+          Создаёт элипс. Горизонтальный и вертикальный радиус задаётся атрибутами <span class="mark">rx</span> и <span class="mark">ry</span>. 
+          Остальные атрибуты совпадают с элементом <span class="mark">&lt;circle&gt;</span>. 
+          Нарисуем элипс <span class="mark">150x100</span> пикселей, дадим ему рамку и зальём цветом.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="html">
+<svg width="400" height="300" style="outline: 2px dashed #2a2a2a;">
+  <ellipse rx="150" ry="100" cx="200" cy="150" fill="tomato" stroke="#2a2a2a" stroke-width="4" />
+</svg>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="9" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9fd;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Элемент <line>-->
+    <section class="line">
+      <div class="container">
+        <h2>
+          Элемент &lt;line&gt;
+          <a name="line-anchor"></a>
+        </h2>
+        <p>
+          Создаёт прямую линию. Атрибуты <span class="mark">x1</span> и <span class="mark">y1</span> указывают точку начала линии, 
+          а <span class="mark">x2</span> и <span class="mark">y2</span> её конец. 
+          Нарисуем на холсте иконку гамбургер-меню из трёх паралельных горизонтальных линий.
+        </p>
+        <textarea name="" id="" cols="95" rows="6" class="values">
+<svg width="400" height="300" style="outline: 2px dashed #2a2a2a;">
+  <line x1="20" y1="50" x2="380" y2="50" stroke="#2a2a2a" stroke-width="16" />
+  <line x1="20" y1="80" x2="380" y2="80" stroke="#2a2a2a" stroke-width="16" />
+  <line x1="20" y1="110" x2="380" y2="110" stroke="#2a2a2a" stroke-width="16" />
+</svg>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="9" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9fd;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Элемент <polygon>-->
+    <section class="polygon">
+      <div class="container">
+        <h2>
+          Элемент &lt;polygon&gt;
+          <a name="polygon-anchor"></a>
+        </h2>
+        <p>
+          Описывает многоугольник, вид которого определяется атрибутом <span class="mark">points</span> - набором точек в виде координат линий, которые разделены на группы.
+        </p>
+        <textarea name="" id="" cols="95" rows="9" class="values">
+<svg width="600" height="300" style="outline: 2px dashed #2a2a2a;">
+  <polygon
+    points="20,20 20,200 200,200 200,20"
+    fill="orange"
+    stroke="#2a2a2a"
+    stroke-width="4"
+  />
+</svg>
+        </textarea>
+        <p>
+          Первая цифра группы - координата <span class="mark">x</span>, вторая цифра после запятой – координата <span class="mark">y</span>. 
+          Первая группа цифр определяет координаты начала первой линии, 
+          вторая группа определяет конец первой линии и одновременно начало второй линии и т. д.
         </p>
         <p>
-          <strong>Контентные изображения</strong> - несут смысловую нагрузку, относятся к содержанию страницы и помогают донести до пользователя полезную ему информацию. 
-          Они добавляются в HTML-разметке используя тег <span class="mark">&lt;img&gt;</span> с обязательно заполненным атрибутом <span class="mark">alt</span>, описывающим изображение.
+          Полигон это замкнутая фигура, поэтому последняя замыкающая линия добавляется автоматически, 
+          соединяя конец последней линии с началом первой линии фигуры.
         </p>
+        <textarea name="" id="" cols="95" rows="13" class="html">
+<svg width="600" height="300" style="outline: 2px dashed #2a2a2a;">
+  <!-- Square -->
+  <polygon points="20,20 20,200 200,200 200,20" fill="orange" stroke="#2a2a2a" stroke-width="4" />
+
+  <!-- Triangle -->
+  <polygon points="250,20 250,200 400,200" fill="skyblue" stroke="#2a2a2a" stroke-width="4" />
+
+  <!-- Parallelogram -->
+  <polygon points="430,20 430,200 550,250 550, 70" fill="palevioletred" stroke="#2a2a2a" stroke-width="4" />
+</svg>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="9" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9fd;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Элемент <path>-->
+    <section class="path">
+      <div class="container">
+        <h2>
+          Элемент &lt;path&gt;
+          <a name="path-anchor"></a>
+        </h2>
         <p>
-          Фотография продукта на карточке товара в интернет-магазине, фотографии членов команды, логотип компании, 
-          рекламные банеры, карты с локацией, картинки слайдера, аватарки, это всё контентные изображения.
+          Универсальный элемент для представления фигур любой сложности. Все SVG-иконки, экспортируемые дизайнером, описаны этим элементом. 
+          Атрибут <span class="mark">d</span> содержит набор координат и соединяющих их кривых, определяющих направление линий. 
+          Вручную редакторивать <span class="mark">path</span> не нужно. 
+          Иконки рисуются в специальных редакторах, которые при экспорте заполняют <span class="mark">path</span> и другие элементы и их атрибуты.
         </p>
-        <p>
-          <strong>Декоративные изображения</strong> - используются исключительно для дополнительного оформления. Они не несут никакой полезной информации и служат только для «красоты». 
-          Добавляются через CSS как фон, используя свойство <span class="mark">background-image</span>, или размечаются в HTML тегом <span class="mark">&lt;svg&gt;</span> (в случае векторной графики).
-        </p>
-        <p>
-          Кастомные маркеры списков, всевозможные вспомогательные иконки, плашки, фоновые изображения блоков - это всё декоративные изображения.
-        </p>
-        <p>
-          Несколько особенностей такого разделения.
-        </p>
-        <ul class="info-list">
-          <li>Очищается код страницы, что улучшает его читабельность для разработчика, упрощает работу поисковых роботов и ускоряет начальную загрузку страницы.</li>
-          <li>Все что должно быть проиндексировано роботами, добавляем как <span class="mark">&lt;img&gt;</span>, остальное фоном.</li>
-          <li>При печати веб-страницы теги <span class="mark">&lt;img&gt;</span> печатаются, а фоновые изображения нет.</li>
-          <li>Ассистивные технологии (скринридеры) для людей с ограниченными возможностями читают <span class="mark">alt</span> изображений, поэтому если изображение несёт информацию, оно обязательно должно быть в HTML-разметке.</li>
-        </ul>
+        <textarea name="" id="" cols="95" rows="10" class="html">
+<svg viewBox="0 -10 511.991 511" xmlns="http://www.w3.org/2000/svg" width="300" height="300" style="outline: 2px dashed #2a2a2a;">
+  <path d="M510.652 185.883a27.177 27.177 0 00-23.402-18.688l-147.797-13.418-58.41-136.75C276.73 6.98 266.918.497 255.996.497s-20.738 6.483-25.023 16.53l-58.41 136.75-147.82 13.418c-10.837 1-20.013 8.34-23.403 18.688a27.25 27.25 0 007.937 28.926L121 312.773 88.059 457.86c-2.41 10.668 1.73 21.7 10.582 28.098a27.087 27.087 0 0015.957 5.184 27.14 27.14 0 0013.953-3.86l127.445-76.203 127.422 76.203a27.197 27.197 0 0029.934-1.324c8.851-6.398 12.992-17.43 10.582-28.098l-32.942-145.086 111.723-97.964a27.246 27.246 0 007.937-28.926zM258.45 409.605" fill="#2a2a2a" />
+</svg>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="8" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+        </textarea>
       </div>
     </section>
 
@@ -115,2500 +381,964 @@
 
 
 
-    <!--Фон элемента-->
-    <section class="element-background">
+    <!--SVG-документ-->
+    <section class="svg-document">
       <div class="container">
         <h1>
-          Фон элемента
-          <a name="element-background-anchor"></a>
+          SVG-документ
+          <a name="svg-document-anchor"></a>
         </h1>
         <p>
-          Фон это не только декоративный эффект для оформления, но и помощь в восприятии смысла, 
-          подсказка о содержимом элемента. Например, зелёный цвет ассоциируется с успешной операцией, а красный - с ошибкой.
+          Векторную графику хранят в файлах с расширением <span class="mark">.svg</span>. 
+          Это обычные текстовые файлы, в которых на верхнем уровне находится тег <span class="mark">&lt;svg&gt;</span> 
+            с набором служебных атрибутов, указывающих в какой версии языка разметки и согласно какой версии SVG-спецификации написан документ. 
+            Из всех служебных только атрибут <span class="mark">xmlns</span> является обязательным, остальные обычно пропускают.
         </p>
+        <textarea name="" id="" cols="95" rows="9" class="values">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+>
+  <circle r="75" cx="50%" cy="50%" fill="tomato" />
+</svg>
+        </textarea>
         <p>
-          Если текст светлый, то фон должен быть тёмным (и наоборот), в противном случае, чтение становится трудным или невозможным. Текст с названием компании на фоне пальм и 
-          морского пляжа без лишних слов подскажет сферу деятельности и поможет принять решение о том, продолжать ли знакомство с контентом.
+          Если сохранить этот код во внешнем файле, например <span class="mark">icon.svg</span>, и добавить на веб-страницу используя тег <span class="mark">&lt;img&gt;</span>, 
+          браузер нарисует холст <span class="mark">300x150</span> пикселей в центре которого будет окружность.
         </p>
         <h4>
-          ВНИМАНИЕ
+          ИНТЕРЕСНО
         </h4>
         <p>
-          По умолчанию фон элемента распространяется на <span class="mark">content</span> и <span class="mark">padding</span>. 
-          На <span class="mark">margin</span> - никогда не распостраняется, это внешний отступ.
+          Если явно не задать размер, браузер по умолчанию устанавливает размер элемента <span class="mark">300x150</span> пикселей. Всё что не поместилось - обрежется.
         </p>
       </div>
     </section>
 
-    <!--Свойство background-color-->
-    <section class="bg-color">
+    <!--SVG-viewport-->
+    <section class="svg-viewport">
       <div class="container">
         <h2>
-          Свойство background-color
-          <a name="bg-color-anchor"></a>
+          SVG-viewport
+          <a name="svg-viewport-anchor"></a>
         </h2>
         <p>
-          Задаёт цвет фона элемента. Значением может быть зарезервированное слово или цвет, записанный в RGB, RGBA и HEX-формате.
+          Содержимое SVG-документа отрисовывается на бесконечном холсте и может быть сколь угодно большого размера, 
+          но видимая часть холста соответствует размерам элемента <span class="mark">&lt;svg&gt;</span>. Атрибуты <span class="mark">width</span> и <span class="mark">height</span> 
+          задают размер рабочей области просмотра (<span class="mark">viewport</span>). Верхний левый угол области просмотра это начало координат, 
+          где <span class="mark">x = 0</span> и <span class="mark">y = 0</span>. По умолчанию используются пиксели, поэтому указание <span class="mark">px</span> излишне.
         </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-background-color: цвет
+        <textarea name="" id="" cols="95" rows="9" class="values">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="400"
+  height="200"
+  style="outline: 2px dashed #2a2a2a;"
+>
+  <circle r="75" cx="50%" cy="50%" fill="tomato" />
+</svg>
         </textarea>
       </div>
     </section>
 
-    <!--Свойство background-image-->
-    <section class="bg-image">
+    <!--SVG-viewBox-->
+    <section class="svg-viewbox">
       <div class="container">
         <h2>
-          Свойство background-image
-          <a name="bg-image-anchor"></a>
+          SVG-viewBox
+          <a name="svg-vievbox-anchor"></a>
         </h2>
         <p>
-          Задаёт фоновое изображение элемента, адрес которого указывается аргументом функции <span class="mark">url()</span>. 
-          Это может быть как относительный, так и абсолютный путь.
+          Если перевести «view box», то буквально получим «окно просмотра». 
+          То есть, это «окно», через которое можно просматривать некоторую часть SVG-документа. 
+          Чем-то похоже на окно иллюминатора в самолёте, через которое вы можете видеть окружающий мир, 
+          но <span class="mark">viewBox</span> также может масштабировать (приближать или отдалять) картинку, как телескоп.
+        </p>
+        <img src="./img/viewbox.svg" alt="svg viewbox" width="500">
+        <p>
+          Атрибут <span class="mark">viewBox</span> определяет какая часть изображения будет отображена, и в каком масштабе.
         </p>
         <textarea name="" id="" cols="95" rows="2" class="values">
-background-image: url('адрес картинки');
+viewBox="x y width height"
         </textarea>
         <p>
-          Можно сразу задать цвет фона и фоновое изображение, которое будет поверх фона. Например, 
-          в случае когда не загрузилась фоновая картинка, пользователь увидит хотябы цвет фона, а не пустое место.
+          Значения <span class="mark">x</span> и <span class="mark">y</span> управляют смещением относительно начальных координат области просмотра (viewbox) 
+          и позволяют отобразить только часть изображения. Значения <span class="mark">width</span> и <span class="mark">height</span> управляют масштабированием.
         </p>
-        <textarea name="" id="" cols="95" rows="18" class="html">
-<div class="tile-set">
-  <div class="tile">
-    <p>✅ There is a background and the picture is loaded</p>
-    <span class="icon with-bg with-icon"></span>
-  </div>
+        <textarea name="" id="" cols="95" rows="25" class="html">
+<div class="controls js-controls">
+  <label>
+    x
+    <input type="range" min="-400" max="400" name="x">
+  </label>
 
-  <div class="tile">
-    <p>⚠️ There is a background but the picture is not loaded</p>
-    <span class="icon with-bg"></span>
-  </div>
+  <label>
+    y
+    <input type="range" min="-200" max="200" name="y">
+  </label>
 
-  <div class="tile">
-    <p>❌ There is no background and the picture is not loaded</p>
-    <span class="icon"></span>
-  </div>
+  <label>
+    width
+    <input type="range" min="200" max="800" name="width">
+  </label>
+
+  <label>
+    height
+    <input type="range" min="100" max="400" name="height">
+  </label>
 </div>
+
+<code class="output js-output">&lt;svg viewBox="<span data-x>0</span> <span data-y>0</span> <span data-width>0</span> <span data-height>0</span>"&gt;</code>
+
+<svg class="js-vector" xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200" style="outline: 2px dashed #2a2a2a;">
+  <circle r="75" cx="50%" cy="50%" fill="tomato" />
+</svg>
         </textarea>
-        <textarea name="" id="" cols="95" rows="45" class="css">
+        <textarea name="" id="" cols="95" rows="25" class="css">
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
-  line-height: 1.5;
-  color: #212121;
-}
-
-.tile-set {
+  margin: 0;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #f9f9fd;
 }
 
-.tile {
+.controls {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
   padding: 10px;
-  text-align: center;
-  border: 2px dashed #2a2a2a;
-  border-radius: 4px;
 }
 
-.tile:not(:last-child) {
-  margin-right: 10px;
+.controls input {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.controls label {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.output {
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="js">
+const viewBoxState = {
+  x: 0,
+  y: 0,
+  width: 400,
+  height: 200
+};
+
+const controlsRef = document.querySelector(".js-controls");
+const outputXRef = document.querySelector("[data-x]");
+const outputYRef = document.querySelector("[data-y]");
+const outputWidthRef = document.querySelector("[data-width]");
+const outputHeightRef = document.querySelector("[data-height]");
+const svgRef = document.querySelector(".js-vector");
+
+setOutput();
+updateSVG();
+
+controlsRef.addEventListener("input", (event) => {
+  const { name, value } = event.target;
+  viewBoxState[name] = value;
+  setOutput();
+  updateSVG();
+});
+
+function setOutput() {
+  const { x, y, width, height } = viewBoxState;
+  outputXRef.textContent = x;
+  outputYRef.textContent = y;
+  outputWidthRef.textContent = width;
+  outputHeightRef.textContent = height;
+}
+
+function updateSVG() {
+  const { x, y, width, height } = viewBoxState;
+  svgRef.setAttribute("viewBox", `${x} ${y} ${width} ${height}`);
+}
+        </textarea>
+        <p>
+          Если соотношение значений атрибутов <span class="mark">width</span> и <span class="mark">height</span> 
+          к их аналогам у <span class="mark">viewBox</span> равно <span class="mark">1:1</span>, изображение будет отрисовано в оригинальном размере.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="values">
+<svg width="400" height="200" viewBox="0 0 400 200">
+  <circle r="75" cx="50%" cy="50%" fill="tomato" />
+</svg>
+        </textarea>
+        <p>
+          При соотношении <span class="mark">2:1</span>, оригинальное изображение будет увеличено в масштабе ровно в два раза, 
+          но размеры элемента останутся прежними - <span class="mark">400x200</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="values">
+<svg width="400" height="200" viewBox="0 0 200 100">
+  <circle r="75" cx="50%" cy="50%" fill="tomato" />
+</svg>
+        </textarea>
+        <p>
+          При соотношении <span class="mark">1:2</span>, оригинальное изображение будет уменьшено в масштабе ровно в два раза, 
+          но размеры элемента останутся прежними - <span class="mark">400x200</span>.
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="values">
+<svg width="400" height="200" viewBox="0 0 800 400">
+  <circle r="75" cx="50%" cy="50%" fill="tomato" />
+</svg>
+        </textarea>
+        <h4>
+          ВНИМАНИЕ
+        </h4>
+        <p>
+          То есть <span class="mark">viewBox</span> это «окно», через которое пользователь смотрит на SVG-документ. 
+          Оно может быть перемещено в любое место SVG-документа, 
+          и пользователь увидит фрагмент, который находится непосредственно под <span class="mark">viewBox</span>, согласно заданному масштабу.
+        </p>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Использование-->
+    <section class="usage">
+      <div class="container">
+        <h1>
+          Использование
+          <a name="usage-anchor"></a>
+        </h1>
+        <p>
+          Есть несколько способов использования векторной графики, каждый имеет свои плюсы и минусы.
+        </p>
+      </div>
+    </section>
+
+    <!--В элементе <img>-->
+    <section class="svg-img">
+      <div class="container">
+        <h2>
+          В элементе &lt;img&gt;
+          <a name="svg-img-anchor"></a>
+        </h2>
+        <p>
+          Такой подход ничем не отличается от использования растровых изображений, достаточно указать путь к изображению.
+        </p>
+        <p>
+          Создадим три элемента &lt;img&gt; разных размеров и используем одну и ту же SVG-иконку. 
+          Пикселизации нет даже если максимально масштабировать веб-страницу, 
+          потому что в элементе &lt;img&gt; вектор также рисуется браузером по заданым формулам внутри SVG-файла.
+        </p>
+        <textarea name="" id="" cols="95" rows="7" class="html">
+<img src="https://res.cloudinary.com/goit-academy/image/upload/v1614773221/codepen/cat_segyum.svg" alt="Кот" width="60">
+<img src="https://res.cloudinary.com/goit-academy/image/upload/v1614773221/codepen/cat_segyum.svg" alt="Кот" width="120">
+<img src="https://res.cloudinary.com/goit-academy/image/upload/v1614773221/codepen/cat_segyum.svg" alt="Кот" width="180">
+        </textarea>
+        <textarea name="" id="" cols="95" rows="22" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9fd;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px dashed #2a2a2a;
+  border-radius: 8px;
+}
+
+img + img {
+  margin-top: 10px;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Как фон элемента-->
+    <section class="svg-background-img">
+      <div class="container">
+        <h2>
+          Как фон элемента
+          <a name="svg-background-img-anchor"></a>
+        </h2>
+        <p>
+          Векторное изображение может использоваться как фон элемента в свойстве <span class="mark">background-image</span>. 
+          Можно делать любые манипуляции с векторным фоном, так же как и с растровой графикой.
+        </p>
+        <textarea name="" id="" cols="95" rows="2" class="html">
+<span class="facebook-icon"></span>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="22" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9fd;
+}
+
+.facebook-icon {
+  display: inline-flex;
+  width: 240px;
+  height: 240px;
+  border: 2px dashed #2a2a2a;
+  border-radius: 8px;
+  background-image: url("https://res.cloudinary.com/goit-academy/image/upload/v1614773221/codepen/cat_segyum.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+        </textarea>
+      </div>
+    </section>
+
+    <!--Встроенный SVG-->
+    <section class="inline-svg">
+      <div class="container">
+        <h2>
+          Встроенный SVG
+          <a name="inline-svg-anchor"></a>
+        </h2>
+        <p>
+          Предыдущие два метода подходят для статической графики, например абстрактного фона или иконок, 
+          для которых не нужно добавлять эффект ховера или фокуса. Но у них есть один существенный недостаток - 
+          нет возможности динамичекски изменить цвет или другие характеристики векторного изображения из CSS.
+        </p>
+        <p>
+          SVG-изображение можно добавить целиком в HTML, это называется встроенный SVG (inline svg). 
+          То есть, открыть SVG-файл в текстовом редакторе, 
+          скопировать содержимое и вставить его в HTML-документ. Так можно обратиться к его внутренней структуре.
+        </p>
+        <p>
+          В примере мы добавляем элементу <span class="mark">&lt;svg&gt;</span> класс <span class="mark">.icon</span>, 
+          устанавливаем базовый чёрный цвет заливки (свойство <span class="mark">fill</span>) и меняем его при ховере на оранжевый.
+        </p>
+        <textarea name="" id="" cols="95" rows="25" class="html">
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="icon"><path d="M164.216 139.486c-10.518 3.328-24.077 5.793-41.235 5.793-17.111 0-30.642-2.451-41.149-5.765-38.399 42.885.824 85.034 13.139 96.461 1.413 1.311.985 3.529-.81 4.323-4.477 1.981-6.036 5.131-6.453 7.858-.432 2.832 1.979 5.344 5.02 5.344h18.056c7.606 0 11.035-4.702 11.955-11.653h.397c.92 6.951 4.349 11.653 11.955 11.653h18.252c3.041 0 5.452-2.513 5.02-5.344-.416-2.727-1.975-5.877-6.452-7.858-1.796-.794-2.223-3.012-.81-4.323 12.318-11.43 51.556-53.594 13.115-96.489z" fill="#f9bd55"/><path d="M123.968 169.5h-2.059c-7.9 0-14.304 6.404-14.304 14.304v.226s14.243 30.517 15.333 51.098c1.09-20.582 15.333-51.098 15.333-51.098.126-7.987-6.314-14.53-14.303-14.53zM122.938 235.128a40.89 40.89 0 000 4.659 40.89 40.89 0 000-4.659z" fill="#f4dbce"/><path d="M192.285 93.744c6.845 0 14.545-6.329 14.545-6.329-10.227-1.706-12.33-11.645-17.807-24.41 22.519-11.25 16.81-45.832 13.712-58.937-.401-1.698-2.59-2.13-3.637-.735-2.699 3.594-8.444 8.53-20.429 11.296-11.576 2.671-18.086 8.631-21.552 13.279-16.285-6.556-34.135-5.59-34.135-5.59s-17.851-.966-34.135 5.59C85.379 23.26 78.869 17.3 67.293 14.629c-11.985-2.766-17.73-7.702-20.429-11.296-1.048-1.395-3.236-.962-3.637.735-3.098 13.104-8.807 47.687 13.712 58.937-5.477 12.764-7.58 22.703-17.807 24.41 0 0 7.7 6.329 14.545 6.329 0 0-3.422 8.137-12.834 9.945 0 0 5.134 9.041 21.39 9.041 0 0-5.134 7.233-11.123 9.041 0 0 18.823 23.507 71.871 23.507s71.871-23.507 71.871-23.507c-5.989-1.808-11.123-9.041-11.123-9.041 16.256 0 21.39-9.041 21.39-9.041-9.412-1.808-12.834-9.945-12.834-9.945z" fill="#f9bd55"/><path d="M123.497 101.516s-.031 10.225-11.853 11.085c1.051 10.022 5.954 17.609 11.853 17.609s10.802-7.587 11.853-17.609c-11.822-.86-11.853-11.085-11.853-11.085z" fill="#52565b"/><path d="M115.603 124.919c2.115 3.291 4.872 5.292 7.894 5.292 3.023 0 5.779-2.001 7.894-5.292-2.114-3.296-4.87-5.299-7.894-5.299-3.024-.001-5.78 2.003-7.894 5.299z" fill="#fd605b"/><path d="M174.507 239.049c9.435-4.956 40.084-24.333 5.543-52.136-3.582 23.335-21.365 42.024-28.949 49.061-1.413 1.311-.986 3.529.81 4.323 4.477 1.981 6.036 5.131 6.452 7.858.432 2.832-1.979 5.344-5.02 5.344h20.047c3.081 0 5.469-2.573 5.005-5.439-.35-2.161-1.425-4.575-4.1-6.456-.937-.658-.81-2.018.212-2.555z" fill="#f9bd55"/><path d="M213.196 142.873c-7.008-.997-13.409 4.229-13.735 11.3-.826 17.904-6.032 30.472-12.354 39.225 4.205 4.499 6.724 8.74 7.975 12.693 16.366-14.382 24.355-34.792 28.035-48.067 1.944-7.01-2.719-14.126-9.921-15.151z" fill="#f9bd55"/><path d="M202.735 4.069c-.026-.11-.078-.199-.118-.297-2.177 4.411-10.31 19.205-23.363 23.556-15.401 5.134-6.845 16.256-6.845 16.256l-4.278 2.567s2.567 11.978 12.834 11.978l8.729 4.505c21.713-11.606 16.107-45.596 13.041-58.565zM66.708 27.327C53.655 22.976 45.522 8.182 43.345 3.771c-.04.099-.092.188-.118.297-3.066 12.969-8.672 46.959 13.041 58.566l8.729-4.505c10.267 0 12.834-11.978 12.834-11.978l-4.278-2.567s8.556-11.123-6.845-16.257z" fill="#f98080"/><path d="M132.046 90.987c0 4.166-4.383 10.057-8.549 10.057s-8.549-5.891-8.549-10.057 4.383-1.006 8.549-1.006 8.549-3.16 8.549 1.006z" fill="#52565b"/><circle cx="122.994" cy="164.405" fill="#f9e63a" r="11.063"/><path d="M122.981 145.279c-14.952 0-27.171-1.872-37.026-4.555 2.792 7.71 14.701 13.798 29.849 15.284 1.934-1.658 4.443-2.666 7.19-2.666s5.256 1.008 7.19 2.666c15.154-1.487 27.066-7.579 29.852-15.293-9.86 2.688-22.087 4.564-37.055 4.564z" fill="#039be6"/><path d="M71.565 239.049c-9.435-4.956-40.084-24.333-5.543-52.136 3.582 23.335 21.365 42.024 28.949 49.061 1.413 1.311.986 3.529-.81 4.323-4.477 1.981-6.036 5.131-6.452 7.858-.432 2.832 1.979 5.344 5.02 5.344H72.682c-3.081 0-5.469-2.573-5.005-5.439.35-2.161 1.425-4.575 4.1-6.456.937-.658.81-2.018-.212-2.555z" fill="#f9bd55"/><path d="M173.391 256h-20.047a2.5 2.5 0 110-5c.819 0 1.574-.333 2.072-.913.276-.322.583-.853.477-1.555-.412-2.699-2.045-4.645-4.993-5.949-1.637-.724-2.785-2.18-3.072-3.895a5.057 5.057 0 011.573-4.547c7.317-6.79 24.71-25.02 28.178-47.608a2.501 2.501 0 014.038-1.568c12.132 9.765 17.801 19.664 16.852 29.421-1.292 13.274-14.556 22.312-21.486 26.165a11.98 11.98 0 013.881 7.109c.327 2.018-.259 4.083-1.607 5.668-1.446 1.698-3.584 2.672-5.866 2.672zm-12.843-5h12.842c.814 0 1.564-.332 2.058-.912.233-.273.605-.85.479-1.628-.326-2.013-1.33-3.586-3.071-4.811a3.945 3.945 0 01-1.688-3.498c.091-1.409.904-2.648 2.175-3.316 5.677-2.982 19.005-11.187 20.148-22.933.694-7.131-3.27-14.623-11.793-22.307-5.049 22.108-21.66 39.495-28.897 46.211-.045.067-.022.142.121.205 5.692 2.518 7.445 6.701 7.912 9.767a6.815 6.815 0 01-.286 3.222zm15.121-9.737c.001-.001.001-.001 0 0zM92.729 256H72.682c-2.283 0-4.42-.974-5.865-2.67-1.348-1.584-1.934-3.65-1.607-5.668a11.975 11.975 0 013.881-7.109c-6.931-3.853-20.195-12.891-21.487-26.165-.95-9.758 4.72-19.657 16.852-29.422a2.5 2.5 0 014.038 1.568c3.468 22.588 20.861 40.818 28.179 47.608 1.265 1.174 1.853 2.874 1.573 4.547-.287 1.715-1.436 3.171-3.072 3.895-2.947 1.304-4.58 3.25-4.992 5.949-.107.702.2 1.232.476 1.554.498.581 1.254.913 2.073.913a2.5 2.5 0 11-.002 5zm-28.356-64.404c-8.523 7.685-12.488 15.176-11.793 22.308 1.144 11.746 14.471 19.95 20.148 22.932a4.025 4.025 0 012.175 3.315 3.944 3.944 0 01-1.688 3.499c-1.741 1.224-2.745 2.797-3.071 4.811-.126.778.247 1.354.479 1.628.493.58 1.243.912 2.058.912h12.842a6.829 6.829 0 01-.286-3.222c.467-3.065 2.22-7.249 7.912-9.767.143-.063.166-.137.164-.154-7.277-6.763-23.89-24.153-28.94-46.262zM135.091 256c-5.326 0-9.297-1.997-11.805-5.935-4.561-7.162-3.749-20.729 2.413-40.326 4.466-14.204 10.248-26.643 10.306-26.767a2.499 2.499 0 114.53 2.114c-6.199 13.285-20.625 50.372-13.032 62.293 1.552 2.436 4.033 3.62 7.587 3.62a2.5 2.5 0 01.001 5.001z"/><path d="M110.785 256a2.5 2.5 0 110-5c3.554 0 6.036-1.184 7.587-3.62 7.592-11.921-6.833-49.009-13.032-62.293a2.5 2.5 0 014.53-2.114c.058.124 5.84 12.563 10.306 26.767 6.162 19.596 6.974 33.164 2.413 40.326-2.507 3.937-6.479 5.934-11.804 5.934zM195.082 208.591a2.5 2.5 0 01-2.383-1.746c-1.208-3.817-3.704-7.767-7.417-11.74a2.501 2.501 0 01-.201-3.171c7.185-9.947 11.183-22.691 11.883-37.877a14.469 14.469 0 015.224-10.451 14.63 14.63 0 0111.361-3.208 14.552 14.552 0 0111.979 18.295c-4.009 14.459-12.259 34.746-28.794 49.277a2.51 2.51 0 01-1.652.621zm-4.79-15.391c2.467 2.851 4.395 5.724 5.763 8.587 13.878-13.502 21.047-31.421 24.654-44.431a9.55 9.55 0 00-7.864-12.008 9.63 9.63 0 00-7.468 2.109c-2.08 1.723-3.294 4.149-3.417 6.831-.71 15.352-4.633 28.43-11.668 38.912zM122.981 147.779c-53.632 0-73.023-23.447-73.822-24.445a2.5 2.5 0 011.229-3.955c2.476-.748 4.857-2.674 6.652-4.46-13.49-1.683-18.158-9.619-18.371-9.995a2.499 2.499 0 011.702-3.69c4.569-.878 7.49-3.471 9.167-5.561-6.195-1.611-11.712-6.097-11.993-6.327a2.502 2.502 0 011.175-4.398c6.842-1.142 9.308-6.559 13.422-16.838.52-1.299 1.052-2.628 1.618-3.998-9.26-5.547-14.564-15.514-15.775-29.667-1.042-12.185 1.312-24.622 2.809-30.952A4.494 4.494 0 0144.276.097a4.53 4.53 0 014.587 1.735c2.478 3.298 7.784 7.774 18.992 10.36 11.144 2.572 17.899 8.065 21.807 12.72 15.522-5.741 31.559-5.18 33.319-5.098 1.763-.083 17.799-.642 33.319 5.098 3.908-4.655 10.663-10.148 21.807-12.72 11.208-2.586 16.515-7.062 18.992-10.361a4.536 4.536 0 014.587-1.734 4.494 4.494 0 013.482 3.396c1.496 6.33 3.851 18.767 2.809 30.952-1.211 14.153-6.515 24.12-15.775 29.667.566 1.37 1.098 2.699 1.618 3.998 4.114 10.279 6.58 15.697 13.422 16.838a2.498 2.498 0 011.175 4.398c-.281.23-5.798 4.716-11.993 6.327 1.677 2.09 4.597 4.683 9.166 5.561a2.502 2.502 0 011.702 3.69c-.213.376-4.881 8.312-18.371 9.995 1.795 1.786 4.176 3.712 6.652 4.46a2.5 2.5 0 011.229 3.955c-.799.999-20.19 24.445-73.821 24.445zM55.404 122.55c6.411 5.776 26.559 20.229 67.577 20.229 41.202 0 61.228-14.439 67.591-20.22-5.01-2.983-8.694-8.117-8.882-8.382a2.498 2.498 0 012.038-3.947c9.119 0 14.316-2.987 16.954-5.266-7.632-3.15-10.563-9.921-10.703-10.251a2.499 2.499 0 012.305-3.47c3.07 0 6.466-1.57 9.011-3.07-6.155-3.304-8.963-10.322-12.119-18.205a256.883 256.883 0 00-2.452-5.977 2.5 2.5 0 011.18-3.222c20.255-10.119 15.788-41.264 12.612-55.197-3.178 3.868-9.38 8.746-21.287 11.493-10.891 2.513-16.947 8.096-20.11 12.337a2.5 2.5 0 01-2.938.825c-15.552-6.261-32.894-5.422-33.068-5.413-.088.004-.18.004-.268 0-.171-.009-17.518-.848-33.068 5.413a2.5 2.5 0 01-2.938-.825c-3.163-4.241-9.219-9.824-20.11-12.337-11.908-2.748-18.11-7.625-21.287-11.493-3.176 13.934-7.643 45.079 12.612 55.197a2.499 2.499 0 011.18 3.222 256.883 256.883 0 00-2.452 5.977c-3.155 7.883-5.963 14.901-12.119 18.205 2.545 1.5 5.941 3.07 9.012 3.07a2.501 2.501 0 012.305 3.47c-.139.331-3.071 7.103-10.705 10.252 2.633 2.274 7.832 5.265 16.957 5.265a2.5 2.5 0 012.038 3.947c-.186.264-3.863 5.389-8.866 8.373z"/><path d="M189.696 65.135a2.5 2.5 0 01-1.181-4.705c8.562-4.577 13.44-13.583 14.5-26.768.664-8.262-.322-16.672-1.45-22.939-4.115 6.514-11.4 15.604-21.52 18.976-4.12 1.374-6.569 3.249-7.28 5.574-.995 3.253 1.599 6.752 1.625 6.787a2.503 2.503 0 01-.695 3.668l-2.618 1.571c1.021 2.854 3.778 8.331 9.888 8.331a2.5 2.5 0 110 5c-9.72 0-14.244-9.128-15.278-13.955a2.5 2.5 0 011.158-2.668l2.154-1.292c-1.032-2.134-2.073-5.443-1.015-8.903 1.211-3.962 4.737-6.941 10.48-8.855 12.118-4.039 19.835-18.083 21.912-22.291a2.522 2.522 0 012.333-1.392 2.502 2.502 0 012.226 1.558c.049.105.16.346.234.662 1.474 6.233 3.801 18.492 2.831 30.569-1.204 14.991-6.966 25.346-17.126 30.776-.377.201-.78.296-1.178.296zM153.343 256h-18.252c-4.218 0-9.201-1.291-12.153-6.489-2.953 5.199-7.935 6.489-12.153 6.489H92.729c-2.278 0-4.416-.968-5.865-2.655-1.336-1.555-1.929-3.584-1.626-5.566.468-3.066 2.22-7.249 7.913-9.767.142-.063.165-.137.163-.154-7.003-6.509-19.665-19.953-26.269-37.433-8.487-22.467-4.139-43.521 12.925-62.578a2.497 2.497 0 012.614-.717c11.884 3.749 25.476 5.649 40.397 5.649 14.957 0 28.576-1.91 40.48-5.676a2.497 2.497 0 012.616.715c17.082 19.061 21.44 40.121 12.954 62.595-6.603 17.486-19.269 30.934-26.231 37.394-.044.067-.021.142.122.205 5.692 2.518 7.444 6.701 7.912 9.767.303 1.982-.29 4.011-1.626 5.566-1.449 1.687-3.586 2.655-5.865 2.655zm-30.604-16.653h.397c1.254 0 2.314.929 2.479 2.172.868 6.557 3.791 9.481 9.477 9.481h18.252c.819 0 1.574-.333 2.072-.913.276-.322.583-.853.477-1.555-.412-2.699-2.045-4.645-4.993-5.949-1.637-.724-2.785-2.18-3.072-3.895-.28-1.673.308-3.373 1.572-4.547 12.213-11.332 48.995-51.181 14.006-91.791-12.013 3.603-25.603 5.428-40.425 5.428-14.786 0-28.346-1.816-40.337-5.401-34.95 40.601 1.819 80.436 14.028 91.764 1.265 1.174 1.853 2.874 1.573 4.547-.287 1.715-1.435 3.17-3.071 3.895-2.948 1.304-4.581 3.25-4.993 5.949-.107.702.2 1.233.477 1.555.498.58 1.253.913 2.072.913h18.056c5.686 0 8.609-2.924 9.476-9.481a2.498 2.498 0 012.477-2.172z"/><path d="M122.994 177.968c-7.479 0-13.563-6.084-13.563-13.563s6.084-13.563 13.563-13.563 13.563 6.084 13.563 13.563-6.084 13.563-13.563 13.563zm0-22.126c-4.722 0-8.563 3.841-8.563 8.563s3.841 8.563 8.563 8.563 8.563-3.841 8.563-8.563-3.841-8.563-8.563-8.563z"/><path d="M130.185 158.508a2.5 2.5 0 01-1.627-.602c-1.553-1.331-3.528-2.063-5.563-2.063s-4.011.733-5.564 2.064a2.513 2.513 0 01-1.871.59c-16.267-1.596-28.811-8.238-31.956-16.921a2.5 2.5 0 013.007-3.264c10.888 2.964 23.124 4.468 36.37 4.468 13.256 0 25.502-1.506 36.398-4.477a2.501 2.501 0 013.009 3.262c-3.139 8.688-15.684 15.334-31.959 16.932a2.863 2.863 0 01-.244.011zm-38.396-13.803c4.744 4.276 13.313 7.58 23.27 8.71a13.557 13.557 0 017.936-2.573c2.854 0 5.631.907 7.936 2.573 9.964-1.131 18.538-4.438 23.279-8.718-9.614 2.047-20.087 3.083-31.229 3.083-11.128-.001-21.589-1.033-31.192-3.075zM122.994 177.968c-7.479 0-13.563-6.084-13.563-13.563a2.5 2.5 0 012.5-2.5h22.126a2.5 2.5 0 012.5 2.5c0 7.479-6.084 13.563-13.563 13.563zm-8.191-11.063c1.072 3.506 4.339 6.063 8.191 6.063s7.119-2.557 8.191-6.063z"/><path d="M122.867 169.922a2.5 2.5 0 01-2.5-2.5v-3.017a2.5 2.5 0 115 0v3.017a2.5 2.5 0 01-2.5 2.5zM123.497 103.544c-5.691 0-11.049-7.074-11.049-12.557 0-1.697.534-2.975 1.586-3.798 1.732-1.357 3.905-.817 6.007-.296 1.168.29 2.376.589 3.456.589s2.288-.299 3.456-.589c2.101-.521 4.274-1.06 6.007.296 1.053.823 1.586 2.102 1.586 3.798 0 5.483-5.358 12.557-11.049 12.557zm-6.026-12.115c.307 3.07 3.655 7.116 6.026 7.116s5.72-4.045 6.026-7.116c-.441.087-.963.217-1.368.317-1.322.328-2.968.736-4.658.736s-3.336-.408-4.658-.736c-.405-.1-.927-.23-1.368-.317z"/><path d="M136.43 115.143c-.402 0-.812-.015-1.231-.045-14.002-1-14.201-13.449-14.202-13.575a2.5 2.5 0 012.493-2.507h.007a2.5 2.5 0 012.5 2.477c.015.826.417 7.964 9.558 8.618 2.439.172 4.306-.358 5.682-1.629 2.661-2.457 2.728-6.931 2.728-6.976.011-1.376 1.161-2.458 2.51-2.484a2.496 2.496 0 012.49 2.495c0 .27-.049 6.647-4.302 10.608-2.154 2.004-4.92 3.018-8.233 3.018z"/><path d="M110.565 115.143c-3.314 0-6.079-1.013-8.233-3.019-4.253-3.96-4.302-10.339-4.302-10.608a2.5 2.5 0 115 0c0 .035.067 4.509 2.728 6.966 1.376 1.271 3.235 1.807 5.682 1.629 9.426-.673 9.557-8.279 9.558-8.602a2.5 2.5 0 012.5-2.493h.007a2.5 2.5 0 012.493 2.507c0 .125-.199 12.574-14.202 13.575-.419.029-.829.045-1.231.045z"/><path d="M123.497 132.71c-7.217 0-13.113-8.162-14.339-19.849a2.5 2.5 0 012.304-2.754c9.128-.665 9.52-7.805 9.535-8.618a2.508 2.508 0 012.5-2.464h.019a2.49 2.49 0 012.481 2.468c.016.828.419 7.951 9.535 8.614a2.498 2.498 0 012.304 2.754c-1.226 11.687-7.122 19.849-14.339 19.849zm-9.025-17.97c1.345 7.44 5.089 12.971 9.025 12.971s7.68-5.531 9.025-12.971c-4.599-.926-7.364-3.252-9.025-5.7-1.661 2.448-4.425 4.774-9.025 5.7zM226.083 102.539c-.195 0-.393-.023-.591-.071-32.438-7.864-61.307-5.99-61.594-5.97a2.5 2.5 0 11-.344-4.988c.295-.019 29.937-1.944 63.116 6.099a2.5 2.5 0 01-.587 4.93zM223.417 127.014c-.389 0-.783-.091-1.152-.283-29.61-15.406-58.087-20.501-58.371-20.551a2.5 2.5 0 11.862-4.926c.292.051 29.53 5.283 59.817 21.041a2.5 2.5 0 01-1.156 4.719zM21.917 102.539a2.501 2.501 0 01-.587-4.931c33.18-8.043 62.82-6.119 63.116-6.099a2.5 2.5 0 01-.343 4.989c-.29-.02-29.197-1.885-61.595 5.97a2.512 2.512 0 01-.591.071zM24.583 127.014a2.5 2.5 0 01-1.156-4.719c30.288-15.758 59.526-20.99 59.817-21.041a2.5 2.5 0 01.862 4.926c-.285.05-28.799 5.165-58.372 20.551a2.478 2.478 0 01-1.151.283zM138.143 83.357a2.5 2.5 0 01-2.5-2.492c-.017-5.29 4.273-9.607 9.562-9.624 2.591-.014 4.975.981 6.793 2.788a9.537 9.537 0 012.832 6.774 2.5 2.5 0 01-2.492 2.508h-.008a2.5 2.5 0 01-2.5-2.492 4.56 4.56 0 00-1.356-3.244 4.565 4.565 0 00-3.237-1.335h-.015a4.6 4.6 0 00-4.579 4.608 2.5 2.5 0 01-2.492 2.508l-.008.001zM108.339 83.334a2.5 2.5 0 01-2.5-2.5c0-2.533-2.061-4.593-4.594-4.593s-4.593 2.061-4.593 4.593a2.5 2.5 0 11-5 0c0-5.29 4.304-9.593 9.593-9.593 5.29 0 9.594 4.304 9.594 9.593a2.5 2.5 0 01-2.5 2.5zM56.266 65.135c-.398 0-.801-.095-1.177-.296-10.159-5.431-15.922-15.785-17.126-30.776-.97-12.078 1.357-24.337 2.831-30.569.075-.316.186-.557.238-.673a2.494 2.494 0 012.224-1.553 2.51 2.51 0 012.331 1.397c2.077 4.208 9.797 18.252 21.912 22.291 5.743 1.914 9.269 4.894 10.48 8.855 1.058 3.46.017 6.77-1.016 8.903l2.154 1.292a2.5 2.5 0 011.158 2.668c-1.034 4.827-5.559 13.955-15.278 13.955a2.5 2.5 0 110-5c6.069 0 8.848-5.489 9.881-8.335l-2.611-1.566a2.501 2.501 0 01-.695-3.668c.02-.026 2.633-3.546 1.619-6.81-.72-2.314-3.167-4.182-7.272-5.551-10.118-3.372-17.405-12.463-21.521-18.977-1.128 6.267-2.114 14.678-1.45 22.941 1.06 13.185 5.938 22.19 14.5 26.767a2.5 2.5 0 01-1.182 4.705z"/><path d="M123.497 132.71c-3.777 0-7.328-2.287-9.997-6.44a2.499 2.499 0 01-.001-2.701c2.668-4.159 6.219-6.45 9.999-6.45s7.331 2.291 9.999 6.45a2.503 2.503 0 01-.001 2.702c-2.671 4.152-6.222 6.439-9.999 6.439zm-4.808-7.793c1.13 1.368 2.792 2.793 4.808 2.793s3.678-1.425 4.809-2.793c-1.13-1.37-2.791-2.798-4.809-2.798-2.017 0-3.679 1.428-4.808 2.798z"/></svg>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="23" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9fd;
 }
 
 .icon {
   display: inline-flex;
-  height: 64px;
-  width: 64px;
-  border-radius: 50%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 240px;
+  height: 240px;
+  border: 2px dashed #2a2a2a;
+  border-radius: 8px;
+ fill: #2a2a2a;
 }
 
-.icon.with-bg {
-  background-color: #ff9800;
-}
-
-.icon.with-icon {
-  background-image: url("https://cdn2.iconfinder.com/data/icons/avatars-60/5985/34-Father-512.png");
+.icon:hover {
+  fill: #bf360c;
 }
         </textarea>
+        <p>
+          У такого подхода есть ряд существенных минусов.
+        </p>
+        <ul class="info-list">
+          <li>Встроенный SVG-код увеличивает размер HTML-файла.</li>
+          <li>Невозможно повторно использовать одно и то же изображение без дублирования кода.</li>
+          <li>Поддержка и правки встроенного SVG трудозатратны.</li>
+          <li>Браузер не может кэшировать встроенные фигуры, в отличии от внешних SVG-файлов.</li>
+        </ul>
       </div>
     </section>
 
-    <!--Свойство background-repeat-->
-    <section class="bg-repeat">
+    <!--SVG-спрайт-->
+    <section class="svg-sprite">
       <div class="container">
         <h2>
-          Свойство background-repeat
-          <a name="bg-repeat-anchor"></a>
+          SVG-спрайт
+          <a name="svg-sprite-anchor"></a>
         </h2>
         <p>
-          Управляет повторением фонового изображения. 
-          По умолчанию оно повторяется по горизонтали и вертикали. Это заметно если картинка меньше, чем размер элемента.
+          SVG-спрайт это современная техника, которую применяют в большинстве случаев.
         </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-background-repeat: repeat | repeat-x | repeat-y | no-repeat
-        </textarea>
-        <ul class="info list">
-          <li><span class="mark">repeat</span> - повторять по X и Y. Значение по умолчанию.</li>
-          <li><span class="mark">repeat-x</span> - повторять только по X, то есть по горизонтали.</li>
-          <li><span class="mark">repeat-y</span> - повторять только по Y, то есть по вертикали.</li>
-          <li><span class="mark">no-repeat</span> - не повторять.</li>
+        <ul class="info-list">
+          <li>Один файл для всех SVG-иконок веб-сайта.</li>
+          <li>Файл спрайта кешируется браузером и не будет загружен при повторных посещениях.</li>
+          <li>Иконкам в спрайте можно изменять цвет и другие характеристики через CSS.</li>
         </ul>
-        <textarea name="" id="" cols="95" rows="9" class="html">
+        <h4>
+          ВНИМАНИЕ  
+        </h4>
+        <p>
+          Создание SVG-спрайта, используя сервис 
+          <a href="https://icomoon.io/app/" target="_blank" rel="noopener noreferrer nofollow" class="resource-link">icomoon.io</a>, 
+          рассматривается в видео-лекции.
+        </p>
+        <p>
+          SVG-документ это просто текстовый файл, внутри которого, в отличие от растровой графики, описаны фигуры, 
+          которые отрисует браузер. Внутри одного файла можно описать множество разных групп фигур используя элемент <span class="mark">&lt;symbol&gt;</span>, 
+            после чего, дав каждому символу уникальный <span class="mark">id</span>, обратиться к любому из них из HTML-документа. 
+        </p>
+        <textarea name="" id="" cols="95" rows="4" class="values">
+<svg>
+  <use href="./путь-к-свг-спрайту/имя-спрайта.svg#идентификатор-символа"></use>
+</svg>
+        </textarea>
+        <p>
+          Для использования иконки из спрайта в HTML-документе необходимо добавить разметку элемента 
+          <span class="mark">&lt;svg&gt;</span> и вложенного в него элемента <span class="mark">&lt;use&gt;</span> 
+          с атрибутом <span class="mark">href</span>, в котором указан путь к иконке. 
+            Путь задаётся как к обычному файлу, но в конце добавляется якорь с идентификатором символа в спрайте. 
+        </p>
+        <p>
+          Разберём пример. Для наглядности мы вставили весь SVG-спрайт в документ (и задав ему id, спрятали), 
+          чтобы сэкономить вам время перехода поиска SVG-кода (ведь интересно как он там внутри устроен).
+        </p>
+        <textarea name="" id="" cols="95" rows="25" class="html">
+<!-- This is an SVG sprite that we added in its entirety and hidden visually. -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <!-- Trash can icon -->
+    <symbol id="delete" viewBox="0 0 32 32">
+      <path d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z" />
+    </symbol>
+    <!-- Camera icon -->
+    <symbol id="camera" viewBox="0 0 32 32">
+      <path d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z" />
+      <path d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z" />
+    </symbol>
+    <!-- Portfolio icon -->
+    <symbol id="work" viewBox="0 0 32 32">
+      <path d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z" />
+    </symbol>
+  </defs>
+</svg>
+
 <div class="container">
-   <div class="tile-set">
-      <div class="tile no-repeat"></div>
-      <div class="tile repeat-x"></div>
-      <div class="tile repeat-y"></div>
-      <div class="tile repeat"></div>
-   </div>
+  <svg class="icon" width="150" height="150">
+    <use href="#delete"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#camera"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#work"></use>
+  </svg>
 </div>
         </textarea>
-        <textarea name="" id="" cols="95" rows="88" class="css">
-*,
-*::before,
-*::after {
-   box-sizing: border-box;
-}
-
-body {
-   margin: 0;
-   font-family: sans-serif;
-   line-height: 1.5;
-   color: #2a2a2a;
-}
-
-.container {
-   max-width: 960px;
-   padding-left: 8px;
-   padding-right: 8px;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-.tile-set {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   padding-top: 40px;
-   margin-left: -40px;
-   margin-top: -40px;
-}
-
-.tile {
-   position: relative;
-   margin-left: 40px;
-   margin-top: 40px;
-   height: 120px;
-   flex-basis: calc(100% / 2 - 40px);
-   border: 2px dashed #2a2a2a;
-   border-radius: 4px;
-   background-color: #fff;
-
-   background-image: url("https://cdn0.iconfinder.com/data/icons/essentials-volume-6/128/apple-512.png");
-   background-size: 40px;
-}
-
-.tile::before {
-   position: absolute;
-   top: -32px;
-   width: 100%;
-   content: "";
-   font-weight: 700;
-   font-size: 20px;
-   text-align: center;
-}
-
-.no-repeat {
-   background-repeat: no-repeat;
-}
-
-.no-repeat::before {
-   content: "no-repeat";
-   font-family: monospace;
-}
-
-.repeat-x {
-   background-repeat: repeat-x;
-}
-
-.repeat-x::before {
-   content: "repeat-x";
-}
-
-.repeat-y {
-   background-repeat: repeat-y;
-}
-
-.repeat-y::before {
-   content: "repeat-y";
-}
-
-.repeat {
-   background-repeat: repeat;
-}
-
-.repeat::before {
-   content: "repeat";
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство background-position-->
-    <section class="bg-position">
-      <div class="container">
-        <h2>
-          Свойство background-position
-          <a name="bg-position-anchor"></a>
-        </h2>
-        <p>
-          Управляет положением фонового изображения относительно границ элемента используя две координаты - <span class="mark">x</span> 
-          по горизонтали и <span class="mark">y</span> по вертикали.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-background-position: x y
-        </textarea>
-        <p>
-          В качестве значения можно использовать абсолютные единицы или относительные единицы и ключевые слова (top, bottom, right, left, center). 
-          По умолчанию заданы значения <span class="mark">left</span> для <span class="mark">x</span> и <span class="mark">top</span> для <span class="mark">y</span> , то есть фон позиционируется относительно верхнего левого угла элемента.
-        </p>
-        <textarea name="" id="" cols="95" rows="12" class="values">
-/* Поставит фоновое изображение по центру */
-background-position: 50% 50%;
-
-/* Поставит фоновое изображение 100px от левого края и 200px от верха */
-background-position: 100px 200px;
-
-/* Поставит фоновое изображение в нижний праый угол */
-background-position: right bottom;
-
-/* Поставит фоновое изображение в верхний левый угол */
-background-position: left top;
-        </textarea>
-        <textarea name="" id="" cols="95" rows="15" class="html">
-<div class="controls">
-  <label>
-  <input type="range" min="0" max="100" step="1" name="horizontal" value="0"> X
-  </label>
-    <label>
-  <input type="range" min="0" max="100" step="1"
-         name="vertical" value="0"> Y
-  </label>
-</div>
-<div class="wrapper">
-  <h1 id="h1-x">x = <span>0</span>%</h1>
-  <h1 id="h1-y">y = <span>0</span>%</h1>
-  <div class="dot"></div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="30" class="css">
-:root {
-  --wrapper-width: 320px; 
-  --wrapper-height: var(--wrapper-width); 
-  --dot-width: 16px;
-}
-
-.wrapper {
-  width: var(--wrapper-width);
-  height: var(--wrapper-height);
-  margin: auto;
-  background: var(
---wr-color) url(https://image.ibb.co/n0M0cQ/red90x90.jpg) no-repeat;
-/*   background-position: 50% 50%; */
-  position: relative;
-}
-
-.controls {
-  width: var(--wrapper-width);
-  height: calc(var(--wrapper-width) / 5);
-  margin: 10px auto;
-}
-
-label {
-  display: block;
-  text-align: center;
-  color: #fff;
-  font-family: var(--ss);
-}
-
-#h1-x, #h1-y {
-  color: #fff;
-  font-size: 20px;
-  font-family: var(--ss);
-  text-align: center;
-} 
-
-.dot {
-  width: var(--dot-width);
-  height: var(--dot-width);
-  background: #fff;
-  border-radius: calc( var(--dot-width) / 2);
-  position: absolute;
-  top: calc( var(--dot-width) / -2);
-  left: calc( var(--dot-width) / -2);
-}
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="js">
-const dot = document.querySelector('.dot');
-const wrapper = document.querySelector('.wrapper');
-const inputs = document.querySelectorAll('input');
-const h1_x = document.querySelector('#h1-x > span');
-const h1_y = document.querySelector('#h1-y > span');
-
-inputs.forEach(input => input.addEventListener('input', positionUpdate));
-
-function positionUpdate (e) {
-  let x = +inputs[0].value;
-  let y = +inputs[1].value;
-  let background_position = ` ${x}% ${y}%`;
-  wrapper.style.setProperty("background-position", background_position);
-  h1_x.textContent = x;
-  h1_y.textContent = y;
-  
-  let wrp_width = parseInt( window.getComputedStyle(wrapper, null).getPropertyValue("width"), 10);
-
-    let dot_width = parseInt( window.getComputedStyle(dot, null).getPropertyValue("width"), 10);
-  
-  dot.style.left = (wrp_width / 100 * x - dot_width / 2) + 'px';
-  dot.style.top = (wrp_width / 100 * y - dot_width / 2)  + 'px';
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Позиция со смещением-->
-    <section class="position-with-offset">
-      <div class="container">
-        <h3>
-          Позиция со смещением
-          <a name="position-with-offset-anchor"></a>
-        </h3>
-        <p>
-          Чтобы не привязываться к размерам элемента и не задавать позицию фона жёстко, можно использовать синтаксис позиции со смещением.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-backrgound-position: x смещение-x y смещение-y
-        </textarea>
-        <p>
-          Например, если необходимо поставить фон в нижний правый угол элемента произвольных размеров так, 
-          чтобы фон отставал от границ на <span class="mark">30px</span> справа и <span class="mark">20px</span> снизу.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-backrgound-position: right 30px bottom 20px;
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство background-size-->
-    <section class="bg-size">
-      <div class="container">
-        <h2>
-          Свойство background-size
-          <a name="bg-size-anchor"></a>
-        </h2>
-        <p>
-          По умолчанию браузер не изменяет размер фонового изображения. Если картинка будет больше или меньше размера элемента, 
-          будет пустое пространство, не занятое фоном, или наоборот, фон будет виден только частично.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-background-size: auto | значение | cover | contain
-        </textarea>
-        <p>
-          Это свойство позволяет подкорректировать размеры избражения, 
-          указав необходимую ширину и высоту. Если не указать высоту, она будет высчитана автоматически, сохраняя пропорции.
-        </p>
-        <textarea name="" id="" cols="95" rows="9" class="values">
-/* Исходные размеры изображения, значение по умолчанию */
-background-size: auto auto;
-
-/* Ширина 200px, высота будет пропорциональна */
-background-size: 200px;
-
-/* Ширина 200px, высота 300px */
-background-size: 200px 300px;
-        </textarea>
-      </div>
-    </section>
-
-    <!--Значения contain и cover-->
-    <section class="contain-cover">
-      <div class="container">
-        <h2>
-          Значения contain и cover
-          <a name="contain-cover-anchor"></a>
-        </h2>
-        <p>
-          Значением также могут быть два зарезервированных слова - <span class="mark">contain</span> и <span class="mark">cover</span>. 
-          Они стремятся вместить в контейнер фоновое изображение по максимуму, 
-          только одно за счёт обрезания лишнего, а другое за счёт появления пустого пространства в контейнере.
-        </p>
-        <img src="./img/cover-contain.jpg" alt="contain and cover examples" width="500">
-        <p>
-          Значение <span class="mark">contain</span>:
-        </p>
-        <ul class="info-list">
-          <li>Гарантированно сохраняет пропорции изображения.</li>
-          <li>Изображению задаются максимально возможнные размеры (не больше оригинала), при которых оно полностью помещается в элемент.</li>
-          <li>Изображение может не закрыть весь фон элемента по вертикали или горизонтали, если пропорции блока и изображения не совпадают.</li>
-        </ul>
-        <p>
-          Значение <span class="mark">cover</span>:
-        </p>
-        <ul class="info-list">
-          <li>Гарантированно сохраняет пропорции изображения.</li>
-          <li>Изображению задаются минимальные размеры, при которых оно зальёт фон всего элемента.</li>
-          <li>Если пропорции изображения и элемента разные, часть изображения, по вертикали или горизонтали, визуально обрезается.</li>
-        </ul>
-        <p>
-          Нажимая на кнопки в примере, вы изменяете значение свойства <span class="mark">background-size</span>. По умолчанию установлено значение <span class="mark">auto</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="10" class="html">
-<div class="controls">
-   <button type="button" data-size="auto">Auto</button>
-   <button type="button" data-size="cover">Cover</button>
-   <button type="button" data-size="contain">Contain</button>
-</div>
-
-<div class="wrapper">
-   <p class="label">Auto</p>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="30" class="css">
-* {
-   box-sizing: border-box;
-}
-
-:root {
-   --wrapper-width: 480px;
-   --add-to-content: 50px;
-}
-
-body {
-   background-color: #fff;
-   font-family: sans-serif;
-   line-height: 1.5;
-}
-
-.wrapper {
-   width: var(--wrapper-width);
-   height: var(--wrapper-width);
-   line-height: var(--wrapper-width);
-   margin: auto;
-   background: #fff url("https://image.ibb.co/mjdbZ5/bg5.jpg") no-repeat
-      center;
-   border: 2px dashed #2a2a2a;  
-   border-radius: 4px;
-   box-shadow: none;
-}
-
-.controls {
-   width: var(--wrapper-width);
-   display: flex;
-   justify-content: center;
-   margin: 0 auto;
-   margin-bottom: 10px;
-   padding: 10px;
-   text-align: center;
-}
-
-button {
-   margin-left: 4px;
-   margin-right: 4px;
-   font-size: 20px;
-   padding: 8px 30px;
-   background-color: #3f51b5;
-   color: #fff;
-   border-radius: 4px;
-   cursor: pointer;
-   border: none;
-   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-}
-
-button:hover {
-   transform: scale(1.03);
-}
-
-.label {
-   color: #fff;
-   font-size: 60px;
-   text-align: center;
-   text-transform: uppercase;
-}
-        </textarea>
-        <textarea name="" id="" cols="95" rows="12" class="js">
-const controls = document.querySelector(".controls");
-const wrapper = document.querySelector(".wrapper");
-const label = wrapper.querySelector(".label");
-
-controls.addEventListener("click", onControlsClick);
-
-function onControlsClick(e) {
-   const { size } = e.target.dataset;
-   wrapper.style.backgroundSize = size;
-   label.textContent = size;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Свойство background-attachment-->
-    <section class="bg-attachment">
-      <div class="container">
-        <h2>
-          Свойство background-attachment
-          <a name="bg-attachment-anchor"></a>
-        </h2>
-        <p>
-          По умолчанию фоновое изображение прокручивается вместе с содержимым элемента. 
-          С помощью свойства <span class="mark">background-attachment</span> можно зафиксировать фон на месте и запретить прокручиваться при скроле.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-background-attachment: scroll| fixed | inherit
-        </textarea>
-        <ul class="info-list">
-          <li><span class="mark">scroll</span> - фон прокручиватеся вместе с содержимым. Это значение по умолчанию.</li>
-          <li><span class="mark">fixed</span> - фон не прокручивается, зафиксирован на месте.</li>
-        </ul>
-        <textarea name="" id="" cols="95" rows="7" class="html">
-<div class="container">
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="30" class="css">
+        <textarea name="" id="" cols="95" rows="28" class="css">
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9fd;
 }
 
 .container {
-  padding: 40px;
-  background-image: url("https://cdn.pixabay.com/photo/2020/10/07/10/51/mountains-5634817_1280.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  /*  Comment out this line  */
-  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
 }
 
-.box {
-  height: 300px;
-  width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
+.icon {
+  margin-left: 12px;
+  margin-right: 12px;
+  border: 2px dashed #2a2a2a;
+  border-radius: 8px;
+  fill: #2a2a2a;
 }
 
-.box:not(:last-child) {
-  margin-bottom: 20px;
+.icon:hover {
+  fill: #03a9f4;
+}
+        </textarea>
+        <p>
+          Итак, внутри SVG-спрайта есть набор элементов <span class="mark">&lt;svg&gt;</span> и <span class="mark">&lt;symbol&gt;</span>, описывающих весь SVG-спрайт целиком и каждую фигуру по отдельности. 
+            Каждому <span class="mark">&lt;symbol&gt;</span> задан уникальный идентификатор. 
+              В HTML используем атрибут <span class="mark">href</span> и обращаемся к SVG-символу через хеш (#) и его идентификатор. 
+        </p>
+        <h4>
+          ВНИМАНИЕ
+        </h4>
+        <p>
+          В примере весь SVG-спрайт находится в HTML-разметке, поэтому нет имени SVG-файла перед хешем. 
+          Если бы SVG-спрайт лежал отдельным файлом, было бы обращение по имени, а потом <span class="mark">#</span> и <span class="mark">id</span> символа. 
+        </p>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--Оформление фигур-->
+    <section class="figures-decorations">
+      <div class="container">
+        <h1>
+          Оформление фигур
+          <a name="figures-decorations-anchor"></a>
+        </h1>
+        <p>
+          В CSS можно динамически изменять некоторые характеристики встроенного векторного изображения или иконки из SVG-спрайта, например заливку, цвет или тип обводки. Значения можно задавать как атрибутами SVG-фигур, так и одноимёнными CSS-свойствами. На практике для оформления фигур используют не атрибуты, а CSS-код, так как его проще поддерживать и изменять.
+        </p>
+      </div>
+    </section>
+
+    <!--Свойство fill-->
+    <section class="fill">
+      <div class="container">
+        <h2>
+          Свойство fill
+          <a name="fill-anchor"></a>
+        </h2>
+        <p>
+          Управляет цветом заливки. Цвет можно задавать в любом удобном формате. Если цвет заливки не указан, 
+          фигура будет залита текущим цветом текста, по умолчанию чёрным (<span class="mark">#000000</span>). 
+          Полностью убрать заливку можно значением <span class="mark">none</span>, в результате получится полностью прозрачная фигура.
+        </p>
+        <textarea name="" id="" cols="95" rows="10" class="values">
+/* Устанавливаем цвет заливки в спокойном состоянии. */
+.icon {
+  fill: #2a2a2a;
 }
 
-.box:nth-child(1) {
-  background-color: #2196f3;
+/* Изменяем цвет заливки при ховере. */
+.icon:hover {
+  fill: #ff6347;
+}
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="html">
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <symbol id="delete" viewBox="0 0 32 32">
+      <path d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z" />
+    </symbol>
+    <symbol id="camera" viewBox="0 0 32 32">
+      <path d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z" />
+      <path d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z" />
+    </symbol>
+    <symbol id="work" viewBox="0 0 32 32">
+      <path d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z" />
+    </symbol>
+  </defs>
+</svg>
+
+<div class="container">
+  <svg class="icon" width="150" height="150">
+    <use href="#delete"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#camera"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#work"></use>
+  </svg>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="25" class="css">
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9fd;
 }
 
-.box:nth-child(2) {
-  background-color: #4caf50;
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
 }
 
-.box:nth-child(3) {
-  background-color: #ff9800;
+.icon {
+  margin-left: 12px;
+  margin-right: 12px;
+  border: 2px dashed #2a2a2a;
+  border-radius: 8px;
+  fill: #2a2a2a;
 }
 
-.box:nth-child(4) {
-  background-color: #e91e63;
+.icon:hover {
+  fill: #03a9f4;
 }
         </textarea>
       </div>
     </section>
 
-    <!--Многослойный фон-->
-    <section class="layered-bg">
+    <!--Свойство fill-opacity-->
+    <section class="fill-opacity">
       <div class="container">
-        <h3>
-          Многослойный фон
-          <a name="layered-bg-anchor"></a>
-        </h3>
+        <h2>
+          Свойство fill-opacity
+          <a name="fill-opacity-anchor"></a>
+        </h2>
         <p>
-          Элементу можно задать несколько фоновых изображений одновременно. Достаточно перечислить их в свойстве <span class="mark">background-image</span> через запятую. 
-          Для каждого изображения также можно задать значения других свойств фона, тоже через запятую в каждом свойстве.
+          Управляет только прозрачностью цвета заливки, а не всего цвета или элемента, 
+          то есть отличается от <span class="mark">opacity</span> или <span class="mark">stroke-opacity</span>. 
+          Например, если у иконки будет задана красная обводка, то на её цвет это свойство не повлияет. Значение задаётся числом от 0 до 1.
         </p>
-        <textarea name="" id="" cols="95" rows="5" class="values">
-background-image: url('картинка-1'), url('картинка-2');
-background-size: 100px, cover;
-background-position: top right, center;
-background-repeat: repeat-x, no-repeat;
+        <textarea name="" id="" cols="95" rows="10" class="values">
+.icon {
+  fill: #2a2a2a;
+  fill-opacity: 0.7;
+}
+
+/* fill-opacity также применится к новому цвету при ховере. */
+.icon:hover {
+  fill: #03a9f4;
+}
         </textarea>
-        <p>
-          Получается слоёный пирог из картинок, в котором выше будет то изображение, которое указано раньше в перечислении. 
-          Звёздное небо, свинка, комета, космический корабль и планета это 5 разных фоновых изображений.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="html">
-<div class="canvas"></div>
+        <textarea name="" id="" cols="95" rows="20" class="html">
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <symbol id="delete" viewBox="0 0 32 32">
+      <path d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z" />
+    </symbol>
+    <symbol id="camera" viewBox="0 0 32 32">
+      <path d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z" />
+      <path d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z" />
+    </symbol>
+    <symbol id="work" viewBox="0 0 32 32">
+      <path d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z" />
+    </symbol>
+  </defs>
+</svg>
+
+<div class="container">
+  <svg class="icon" width="150" height="150">
+    <use href="#delete"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#camera"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#work"></use>
+  </svg>
+</div>
         </textarea>
         <textarea name="" id="" cols="95" rows="20" class="css">
 body {
   margin: 0;
-}
-
-.canvas {
-  max-width: 1000px;
-  height: 400px;
-
-  background-image: url("https://cdn-icons-png.flaticon.com/512/361/361678.png"),
-    url("https://cdn-icons-png.flaticon.com/512/4206/4206277.png"),
-    url("https://cdn-icons-png.flaticon.com/512/814/814513.png"), url('https://tlgrm.ru/_/stickers/e3a/876/e3a87689-707f-3495-b94a-8ee96e2538e5/256/61.webp'),
-    url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg");
-
-  background-size: 80px, 100px, 150px, 130px, cover;
-  background-repeat: no-repeat;
-  background-position: top 120px right 130px, top 270px left 130px, center, 100px 60px,
-    center;
-}
-        </textarea>
-        <h4>
-          ПОЛЕЗНО
-        </h4>
-        <p>
-          В большинстве случаев многослойный фон можно заменить одним изображением, на котором в специальном редакторе были 
-          совмещены все другие. Вес такого файла будет меньше, чем общий вес отдельных картинок, и браузеру необходимо будет 
-          сделать только один запрос вместо пяти, что также увеличит скорость загрузки и отображения страницы.
-        </p>
-      </div>
-    </section>
-
-    <!--Свойство background-->
-    <section class="bg">
-      <div class="container">
-        <h2>
-          Свойство background
-          <a name="bg-anchor"></a>
-        </h2>
-        <p>
-          Составное свойство для одновременного задания значений всех рассмотренных свойств.
-        </p>
-        <textarea name="" id="" cols="95" rows="3" class="values">
-background: background-color background-image background-repeat background-position background-attachment
-        </textarea>
-        <p>
-          Если какой-то компонент не указан, будет взято его значение по умолчанию.
-        </p>
-        <textarea name="" id="" cols="95" rows="6" class="values">
-/* Установит только цвет фона */
-background: #2a2a2a;
-
-/* Прозрачный цвет фона с повторяющейся по x картинкой начиная с верхнего левого угла */
-background: url('адрес картинки') repeat-x;
-        </textarea>
-        <h4>
-          ПОЛЕЗНО
-        </h4>
-        <p>
-          Рекомендуется, как минимум вначале, использовать отдельные свойства для каждого значения, 
-          так как с составным <span class="mark">background</span> можно легко запутаться.
-        </p>
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-    <!--Свойства object-fit и object-position-->
-    <section class="fit-position">
-      <div class="container">
-        <h1>
-          Свойства object-fit и object-position
-          <a name="fit-position-anchor"></a>
-        </h1>
-        <p>
-          Бывают ситуации, когда контентное изображение больше или меньше, чем контейнер, в который его необходимо поместить, 
-          или изображение имеет другие пропорции. Например, частая задача в карточках товара это «тумба» фиксированной высоты, 
-          в которую необходимо красиво вместить фотографию товара произвольного размера, то есть подогнать картинку под контейнер.
-        </p>
-      </div>
-    </section>
-
-    <!--Свойство object-fit-->
-    <section class="fit">
-      <div class="container">
-        <h2>
-          Свойство object-fit
-          <a name="fit-anchor"></a>
-        </h2>
-        <p>
-          Определяет каким образом содержимое <span class="mark">&lt;img&gt;</span> (или <span class="mark">&lt;video&gt;</span>) будет вмещаться в контейнер, 
-          когда их размеры или пропорции не совпадают. Свойство <span class="mark">object-fit</span> обрезает, 
-          растягивает или масштабирует контентное изображение. Это похоже на <span class="mark">background-size</span>, 
-          но для контентных изображений. 
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-object-fit: fill | contain | cover | scale-down | none
-        </textarea>
-        <ul class="info-list">
-          <li><span class="mark">fill</span> - изображение масштабируется без сохранения пропорций, чтобы полностью заполнить контейнер. Значение по умолчанию.</li>
-          <li><span class="mark">contain</span> - изображение масштабируется с сохранением пропорций, чтобы максимально заполнить контейнер.</li>
-          <li><span class="mark">cover </span>- изображение масштабируется с сохранением пропорций, чтобы полностью заполнить контейнер.</li>
-          <li><span class="mark">scale-down</span> - будет выбрано значение <span class="mark">none</span> или <span class="mark">contain</span>, чтобы изображение было наименьшего размера.</li>
-          <li><span class="mark">none</span> - сохраняются исходные размеры изображения, заданная высота и ширина не имеют эффекта.</li>
-        </ul>
-        <textarea name="" id="" cols="95" rows="30" class="html">
-<figure class="base">
-  <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-  <figcaption class="label">Original image</figcaption>
-</figure>
-
-<div class="container">
-  <div class="card-set">
-    <figure class="card">
-      <div class="thumb">
-        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-      </div>
-      <figcaption class="label">object-fit: fill</figcaption>
-    </figure>
-
-    <figure class="card">
-      <div class="thumb">
-        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-      </div>
-      <figcaption class="label">object-fit: contain</figcaption>
-    </figure>
-
-    <figure class="card">
-      <div class="thumb">
-        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-      </div>
-      <figcaption class="label">object-fit: cover</figcaption>
-    </figure>
-
-    <figure class="card">
-      <div class="thumb">
-        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-      </div>
-      <figcaption class="label">object-fit: scale-down</figcaption>
-    </figure>
-
-    <figure class="card">
-      <div class="thumb">
-        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-      </div>
-      <figcaption class="label">object-fit: none</figcaption>
-    </figure>
-  </div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="30" class="css">
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  line-height: 1.5;
-}
-
-.base {
-  width: 480px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.base > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border: 2px dashed #2a2a2a;
-  border-radius: 4px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9fd;
 }
 
 .container {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card-set {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: -20px;
-  margin-left: -20px;
+  padding: 16px;
 }
 
-.card {
-  margin: 20px 0 0 20px;
-  flex-basis: calc(100% / 2 - 20px);
-}
-
-.card,
-.base {
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
-
-.card > .label,
-.base > .label {
-  padding: 10px;
-  font-size: 20px;
-}
-
-.card > .label {
-  font-family: monospace;
-  letter-spacing: -0.05em;
-}
-
-.thumb {
-  position: relative;
-  height: 380px;
-  width: 100%;
+.icon {
+  margin-left: 12px;
+  margin-right: 12px;
   border: 2px dashed #2a2a2a;
-  border-radius: 4px;
+  border-radius: 8px;
+  fill: #2a2a2a;
+  fill-opacity: 0.7;
+  stroke: #f44336;
+  stroke-width: 1px;
 }
 
-.thumb > img {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.card:nth-child(1) img {
-  object-fit: fill;
-}
-
-.card:nth-child(2) img {
-  object-fit: contain;
-}
-
-.card:nth-child(3) img {
-  object-fit: cover;
-}
-
-.card:nth-child(4) img {
-  object-fit: scale-down;
-}
-
-.card:nth-child(5) img {
-  object-fit: none;
+.icon:hover {
+  fill: #03a9f4;
 }
         </textarea>
-        <p>
-          Для того, чтобы эта техника работала необходимы два обязательных шага.
-        </p>
-        <textarea name="" id="" cols="95" rows="4" class="html">
-<div class="thumb">
-  <img src="" alt="" />
-</div>
-        </textarea>
-        <p>
-          Первый - у контейнера (тумбы) должна быть явно указана фиксированная высота. Ширина может быть по ширине родителя, как в примере.
-        </p>
-        <textarea name="" id="" cols="95" rows="5" class="css">
-.thumb {
-  height: 400px;
-  width: 300px;
-}
-        </textarea>
-        <p>
-          Второй - изображение необходимо «вместить» в контейнер, задав высоту и ширину <span class="mark">100%</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="6" class="css">
-.thumb > img {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-        </textarea>
-        <p>
-          После этого к изображению можно применять свойство <span class="mark">object-fit</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="8" class="css">
-.thumb > img {
-  display: block;
-  height: 100%;
-  width: 100%;
-
-  object-fit: cover;
-}
-        </textarea>
-        <h4>
-          ПОЛЕЗНО
-        </h4>
-        <p>
-          Можно не использовать «тумбу», задав фиксированные размеры самому элементу <span class="mark">&lt;img&gt;</span>, но чаще всего вы столкнётесь именно с такой разметкой. 
-          «Тумба» служит контейнером для создания анимаций и других декоративных эффектов связанных с областью изображения.
-        </p>
       </div>
     </section>
 
-    <!--Свойство object-position-->
-    <section class="position">
+    <!--Свойство stroke-->
+    <section class="stroke">
       <div class="container">
         <h2>
-          Свойство object-position
-          <a name="position-anchor"></a>
+          Свойство stroke
+          <a name="stroke-anchor"></a>
         </h2>
         <p>
-          Дополняет свойство <span class="mark">object-fit</span> позволяя задать положение изображения в контейнере по осям X и Y. 
-          Это похоже на <span class="mark">background-position</span>, но для контентных изображений.
+          Устанавливает цвет обводки. По умолчанию не имеет значения. Характеристики обводки, например цвет и толщина, задаются отдельными свойствами.
         </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-object-position: position | initial | inherit
+        <textarea name="" id="" cols="95" rows="4" class="values">
+.icon {
+  stroke: #f44336;
+}
         </textarea>
-        <p>
-          Значением свойства могут быть зарезервированные слова, абсолютные или относительные единиицы измерения. 
-          По умолчанию значение <span class="mark">50% 50%</span>, то есть вертикально и горизонтально по центру.
-        </p>
-        <textarea name="" id="" cols="95" rows="25" class="html">
+        <textarea name="" id="" cols="95" rows="20" class="html">
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <symbol id="delete" viewBox="0 0 32 32">
+      <path d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z" />
+    </symbol>
+    <symbol id="camera" viewBox="0 0 32 32">
+      <path d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z" />
+      <path d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z" />
+    </symbol>
+    <symbol id="work" viewBox="0 0 32 32">
+      <path d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z" />
+    </symbol>
+  </defs>
+</svg>
+
 <div class="container">
-  <div class="card-set">
-    <figure class="card">
-      <div class="thumb">
-        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-      </div>
-      <figcaption class="label">
-        <span>object-fit: fill</span>
-        <span>object-position: 50px 50px</span>
-      </figcaption>
-    </figure>
+  <svg class="icon" width="150" height="150">
+    <use href="#delete"></use>
+  </svg>
 
-    <figure class="card">
-      <div class="thumb">
-        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-      </div>
-      <figcaption class="label">
-        <span>object-fit: contain</span>
-        <span>object-position: left bottom</span>
-      </figcaption>
-    </figure>
+  <svg class="icon" width="150" height="150">
+    <use href="#camera"></use>
+  </svg>
 
-    <figure class="card">
-      <div class="thumb">
-        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-      </div>
-      <figcaption class="label">
-        <span>object-fit: cover</span>
-        <span>object-position: 20% 30px</span>
-      </figcaption>
-    </figure>
-
-    <figure class="card">
-      <div class="thumb">
-        <img src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240" alt="">
-      </div>
-      <figcaption class="label">
-        <span>object-fit: scale-down</span>
-        <span>object-position: right top</span>
-      </figcaption>
-    </figure>
-  </div>
+  <svg class="icon" width="150" height="150">
+    <use href="#work"></use>
+  </svg>
 </div>
         </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
-}
-
+        <textarea name="" id="" cols="95" rows="20" class="css">
 body {
-  font-family: monospace;
-  color: #212121;
-  letter-spacing: -0.05em;
-  line-height: 1.5;
-}
-
-.base {
-  width: 480px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.base > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-border: 2px dashed #2a2a2a;  
-   border-radius: 4px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9fd;
 }
 
 .container {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card-set {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: -20px;
-  margin-left: -20px;
-}
-
-.card {
-  margin: 20px 0 0 20px;
-  flex-basis: calc(100% / 2 - 20px);
-}
-
-.card,
-.base {
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
-
-.card > .label,
-.base > .label {
-  padding: 10px;
-  font-size: 20px;
-}
-
-.label > span {
-  display: block;
-  text-align: center;
-}
-
-.thumb {
-  position: relative;
-  height: 380px;
-  width: 100%;
- border: 2px dashed #2a2a2a;  
-   border-radius: 4px;
-}
-
-.thumb > img {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.card:nth-child(1) img {
-  object-fit: fill;
-  object-position: 50px 50px;
-}
-
-.card:nth-child(2) img {
-  object-fit: contain;
-  object-position: left bottom;
-}
-
-.card:nth-child(3) img {
-  object-fit: cover;
-  object-position: 20% 30px;
-}
-
-.card:nth-child(4) img {
-  object-fit: scale-down;
-  object-position: right top;
-}
-        </textarea>
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-    <!--Псевдоэлементы-->
-    <section class="pseudo-elements">
-      <div class="container">
-        <h1>
-          Псевдоэлементы
-          <a name="pseudo-elements-anchor"></a>
-        </h1>
-        <p>
-          Псевдоэлементы <span class="mark">::before</span> и <span class="mark">::after</span> используются для добавления 
-          декоративных эффектов (иконок, плашек, оверлеев) без необходимости создания дополнительных пустых тегов в разметке.
-        </p>
-        <ul class="info-list">
-          <li><span class="mark">::before</span> - создаёт псевдоэлемент перед всем контентом элемента (в начале).</li>
-          <li><span class="mark">::after</span> - создаёт псевдоэлемент после всего контента элемента (в конце).</li>
-        </ul>
-        <textarea name="" id="" cols="95" rows="12" class="css">
-.box {
-  /* стили элемента */
-}
-
-.box::before {
-  /* стили псевдоэлемент before */
-}
-
-.box::after {
-  /* стили псевдоэлемент after */
-}
-        </textarea>
-        <h4>
-          ПОЛЕЗНО
-        </h4>
-        <p>
-          По умолчанию это строчные элементы. Для того, чтобы задать псевдоэлементу вертикальную геометрию, 
-          необходимо изменить его тип на блочный или, что чаще всего, строчно-блочный.
-        </p>
-      </div>
-    </section>
-
-    <!--Свойство content-->
-    <section class="content">
-      <div class="container">
-        <h2>
-          Свойство content
-          <a name="content-anchor"></a>
-        </h2>
-        <p>
-          Это обязательное свойство позволяет добавить текстовый контент внутрь псевдоэлемента. 
-          Даже если текстовый контент не нужен, его значением необходимо поставить пустую строку, 
-          иначе браузер просто не создаст псевдоэлемент.
-        </p>
-        <textarea name="" id="" cols="95" rows="6" class="html">
-<div class="box">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia itaque quia
-  nobis fugit amet adipisci, corrupti animi, iusto eius a sed totam voluptas
-  porro. Dolorem aliquid rerum magnam eligendi aspernatur.
-</div>
-        </textarea>
-        <p>
-          В селекторе можно использовать только один псевдоэлемент, который должен добавляться после простого селектора (тега, класса, идентификатора).
-        </p>
-        <textarea name="" id="" cols="95" rows="12" class="css">
-.box::before {
-  content: 'Это текст в ::before';
-  font-size: 40px;
-  color: orange;
-}
-
-.box::after {
-  content: 'Это текст в ::after';
-  font-size: 30px;
-  color: teal;
-}
-        </textarea>
-        <h4>
-          ВНИМАНИЕ
-        </h4>
-        <p>
-          Не используйте псевдоэлементы для добавления текстового контента, это грубое нарушение спецификации, 
-          они служат исключительно для декоративного оформления. Текст внутри псевдоэлемента 
-          не воспринимается ассистивными технологиями и индексаторами, а также будет недоступен пользователю если не загрузится файл стилей.
-        </p>
-      </div>
-    </section>
-
-    <!--Псевдокласс :hover-->
-    <section class="hover">
-      <div class="container">
-        <h2>
-          Псевдокласс :hover
-          <a name="hover-anchor"></a>
-        </h2>
-        <p>
-          Для того, чтобы изменить стили псевдоэлемента при событии на родительском элементе, 
-          например ховер, необходимо использовать следующий селектор.
-        </p>
-        <textarea name="" id="" cols="95" rows="10" class="css">
-/* Применить стили к псевдоэлементу .box::before при ховере по элементу .box */
-.box:hover::before {
-  color: green;
-}
-
-/* Применить стили к псевдоэлементу .box::after при ховере по элементу .box */
-.box:hover::after {
-  color: tomato;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Псевдоэлемент-иконка-->
-    <section class="icon">
-      <div class="container">
-        <h2>
-          Псевдоэлемент-иконка
-          <a name="icin-anchor"></a>
-        </h2>
-        <p>
-          Используя псевдоэлементы добавим иконки перед и после ссылками в списке. Пусть <span class="mark">::before</span> 
-          будет виден всегда, а <span class="mark">::after</span> только при ховере по ссылке.
-        </p>
-        <textarea name="" id="" cols="95" rows="15" class="html">
-<ul class="list">
-  <li class="list-item">
-    <a href="" class="list-link">Home</a>
-  </li>
-  <li class="list-item">
-    <a href="" class="list-link">Portfolio</a>
-  </li>
-  <li class="list-item">
-    <a href="" class="list-link">Team</a>
-  </li>
-  <li class="list-item">
-    <a href="" class="list-link">About</a>
-  </li>
-</ul>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  line-height: 1.5;
-  color: #2a2a2a;
-}
-
-.list {
-  padding: 20px;
-  margin: 0;
-  list-style: none;
-}
-
-.list-item:not(:last-child) {
-  margin-bottom: 5px;
-}
-
-.list-link {
-  display: inline-flex;
-  align-items: center;
-  color: currentColor;
-  text-decoration: none;
-  font-size: 32px;
-}
-
-.list-link::before,
-.list-link::after {
-  content: "";
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-}
-
-/* Adds a fire icon in front of the link text */
-.list-link::before {
-  margin-right: 16px;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/599/599502.png");
-}
-
-/* Adds and hides arrow icon after the link text */
-.list-link::after {
-  display: none;
-  margin-left: 16px;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/507/507257.png")
-}
-
-.list-link:hover {
-  color: #2196f3;
-}
-
-/* Show arrow icon on hover */
-.list-link:hover::after {
-  display: block;
-}
-        </textarea>
-        <p>
-          Самое важное находится в этом CSS-правиле. Изменяем тип элемента на строчно-блочный и задаём фиксированную высоту и ширину. 
-          Также не забываем указать свойство <span class="mark">content</span> с пустой строкой, чтобы браузер создал псевдоэлемент.
-        </p>
-        <textarea name="" id="" cols="95" rows="8" class="css">
-.list-link::before,
-.list-link::after {
-  content: '';
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-}
-        </textarea>
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-    <!--Градиент-->
-    <section class="gradient">
-      <div class="container">
-        <h1>
-          Градиент
-          <a name="gradient-anchor"></a>
-        </h1>
-        <p>
-          Градиент - переход от одного цвета к другому. Градиент в CSS это фоновое изображение, 
-          поэтому задаётся в свойстве <span class="mark">background-image</span>. 
-          Эта особенность позволит нам делать очень интересные вещи совмещая градиент с фоном. 
-          Градиент может быть линейный, радиальный или конический.
-        </p>
-        <h4>
-          ВНИМАНИЕ
-        </h4>
-        <p>
-          Конические градиенты ещё не входят в спецификацию и находятся в стадии разработки, поэтому мы не будем их рассматривать. 
-          Если вам интересно узнать больше, рекомендуем статью в секции дополнительных материалов.
-        </p>
-      </div>
-    </section>
-
-    <!--Линейный градиент-->
-    <section class="linear-gradient">
-      <div class="container">
-        <h2>
-          Линейный градиент
-          <a name="linear-gradient-anchor"></a>
-        </h2>
-        <p>
-          Создается с помощью двух и более цветов, для которых задано направление распостранения. 
-          Формат значения цвета может быть любой - ключевые слова, rgb, rgba или hex, и их можно смешивать.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-linear-gradient(<направление>, <цвет-1>, <цвет-2>, <цвет-3>, ...)
-        </textarea>
-        <textarea name="" id="" cols="95" rows="7" class="html">
-<div class="tile-set">
-  <div class="tile">to bottom</div>
-  <div class="tile">to top</div>
-  <div class="tile">to right</div>
-  <div class="tile">to top left</div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-:root {
-  --start-color: blue;
-  --end-color: red;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.tile-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tile {
-  height: 200px;
-  flex-basis: calc(50% - 10px);
-  margin: 5px;
-  border-radius: 4px;
-  background-color: #9e9e9e;
-
-  text-align: center;
-  line-height: 200px;
-  color: #fff;
-  font-family: monospace;
-  font-size: 24px;
-  letter-spacing: -0.05em;
-  
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-}
-
-.tile:nth-child(1) {
-  background-image: linear-gradient(
-    to bottom,
-    var(--start-color),
-    var(--end-color)
-  );
-}
-
-.tile:nth-child(2) {
-  background-image: linear-gradient(
-    to top,
-    var(--start-color),
-    var(--end-color)
-  );
-}
-
-.tile:nth-child(3) {
-  background-image: linear-gradient(
-    to right,
-    var(--start-color),
-    var(--end-color)
-  );
-}
-
-.tile:nth-child(4) {
-  background-image: linear-gradient(
-    to top left,
-    var(--start-color),
-    var(--end-color)
-  );
-}
-        </textarea>
-        <p>
-          Направление градиента может быть задано ключевыми словами <span class="mark">to top</span>, <span class="mark">to right</span>, 
-          <span class="mark">to bottom</span>, <span class="mark">to left</span> и их комбинациями. Если направление не указано, 
-          используется значение по умолчанию - сверху-вниз (<span class="mark">to bottom</span>). 
-          В случае когда направление задано парой ключевых слов, например to <span class="mark">top left</span>, 
-          начальная точка градиента будет расположена в противоположном углу - правом нижнем, как в примере.
-        </p>
-        <p>
-          Направление также можно задать углом наклона в градусах - единица <span class="mark">deg</span>. Значение 
-          <span class="mark">0deg</span> аналогично <span class="mark">to top</span>. Увеличение угла 
-          поворачивает направление линии градиента, прямой проходящей через центр блока и вдоль которой распределяются цвета, по часовой стрелке.
-        </p>
-        <figure>
-          <img src="./img/gradient-direction.gif" alt="gradient direction" width="500">
-          <figcaption>
-            В этой анимации угол увеличивается от 0 до 360 градусов с шагом 10 градусов. Низкое разрешение позволяет лучше видеть, 
-            как различные цвета отображаются в виде «линий», всегда перпендикулярных линии градиента.
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!--Колорстоп (color-stop)-->
-    <section class="color-stop">
-      <div class="container">
-        <h2>
-          Колорстоп (color-stop)
-          <a name="color-stop-anchor"></a>
-        </h2>
-        <p>
-          По умолчанию цвета градиента распределяются равномерно, но этим можно управлять используя колорстопы - точки перелома, 
-          до которых будет распространяться определённый цвет. Значением могут быть пиксели или проценты.
-        </p>
-        <textarea name="" id="" cols="95" rows="8" class="values">
-background-image: linear-gradient(
-  to right,
-  #f44336 15%,
-  #09792b 40%,
-  #00b9ff 65%,
-  #ffb800
-);
-        </textarea>
-        <p>
-          В таком градиенте:
-        </p>
-        <ul class="info-list">
-          <li>красный цвет (<span class="mark">#f44336</span>) будет распространяться от 0% до 15%</li>
-          <li>зелёный цвет (<span class="mark">#09792b</span>) будет распространяться от 15% до 40%</li>
-          <li>синий цвет (<span class="mark">#00b9ff</span>) будет распространяться от 40% до 65%</li>
-          <li>жёлтый цвет (<span class="mark">#ffb800</span>) будет распространяться от 65% до 100%</li>
-        </ul>
-        <textarea name="" id="" cols="95" rows="10" class="css">
-body {
-  background-image: linear-gradient(
-    to right,
-    #f44336 15%,
-    #09792b 40%,
-    #00b9ff 65%,
-    #ffb800
-  );
-}
-        </textarea>
-        <h4>
-          ПОЛЕЗНО
-        </h4>
-        <p>
-          Если колорстопы заданы в пикселях и общая сумма меньше, чем ширина или высота элемента, то получится повторяющийся градиент.
-        </p>
-      </div>
-    </section>
-
-    <!--Сплошной градиент-->
-    <section class="solid-gradient">
-      <div class="container">
-        <h2>
-          Сплошной градиент
-          <a name="solid-gradient-anchor"></a>
-        </h2>
-        <p>
-          Градиент это плавный переход между цветами, но если двум соседним из них 
-          задать одинаковые колорстопы, получим сплошные цвета и резкий переход между ними. 
-          Это можно использовать для создания «полосатого» фона.
-        </p>
-        <textarea name="" id="" cols="95" rows="10" class="values">
-background-image: linear-gradient(
-  to right,
-  #c64f4f 15%,
-  #09792b 15%,
-  #09792b 40%,
-  #00b9ff 40%,
-  #00b9ff 65%,
-  #ffb800 65%
-);
-        </textarea>
-        <p>
-          Если в последнем примере изменить направление на <span class="mark">to bottom</span> или любое другое не горизонтальное, 
-          то мы не получим красивые горизонтальные полосы. 
-          Дело в том, что для вертикального или углового распространения у элемента должна быть высота, 
-          от его контента или указана явно.
-        </p>
-        <textarea name="" id="" cols="95" rows="9" class="css">
-/* Задаём body минимальную высоту равную 100% высоты вьюпорта */
-body {
-  margin: 0;
-  min-height: 100vh;
-
-  /* И добавляем вертикальный градиент с to bottom
-     или угловой, например с to bottom right */
-}
-        </textarea>
-        <p>
-          В следующем примере блокам <span class="mark">div.tile</span> задана фиксированая высота <span class="mark">200px</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="7" class="html">
-<div class="tile-set">
-  <div class="tile">to bottom</div>
-  <div class="tile">to top</div>
-  <div class="tile">to bottom right</div>
-  <div class="tile">to top left</div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
-}
-
-.tile-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tile {
-  height: 200px;
-  flex-basis: calc(50% - 10px);
-  margin: 5px;
-  border-radius: 4px;
-  background-color: #9e9e9e;
-
-  text-align: center;
-  line-height: 200px;
-  color: #fff;
-  font-family: monospace;
-  font-size: 24px;
-  letter-spacing: -0.05em;
-  
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-}
-
-.tile:nth-child(1) {
-  background-image: linear-gradient(
-    to bottom,
-    #f44336 15%,
-    #09792b 15%,
-    #09792b 40%,
-    #00b9ff 40%,
-    #00b9ff 65%,
-    #ffb800 65%
-  );
-}
-
-.tile:nth-child(2) {
-  background-image: linear-gradient(
-    to top,
-    #f44336 15%,
-    #09792b 15%,
-    #09792b 40%,
-    #00b9ff 40%,
-    #00b9ff 65%,
-    #ffb800 65%
-  );
-}
-
-.tile:nth-child(3) {
-  background-image: linear-gradient(
-    to bottom right,
-    #f44336 15%,
-    #09792b 15%,
-    #09792b 40%,
-    #00b9ff 40%,
-    #00b9ff 65%,
-    #ffb800 65%
-  );
-}
-
-.tile:nth-child(4) {
-  background-image: linear-gradient(
-    to top left,
-    #f44336 15%,
-    #09792b 15%,
-    #09792b 40%,
-    #00b9ff 40%,
-    #00b9ff 65%,
-    #ffb800 65%
-  );
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Радиальный градиент-->
-    <section class="radial-gradient">
-      <div class="container">
-        <h2>
-          Радиальный градиент
-          <a name="radial-gradient-anchor"></a>
-        </h2>
-        <p>
-          Радиальный градиент отличается от линейного тем, 
-          что цвета выходят из центра градиента и равномерно распостраняются наружу, принимая форму элипса.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-radial-gradient(<тип> <центр>, <цвет-1>, <цвет-2>, <цвет-3>, ...);
-        </textarea>
-        <p>
-          Форма градиента определяется ключевыми словами <span class="mark">circle</span> или <span class="mark">ellipse</span> 
-          (значение по умолчанию), поэтому если элемент не квадрат, по умолчанию градиент примет форму элипса. 
-          Позиция центра задаётся ключевыми словами <span class="mark">center</span> (значение по умолчанию), 
-          <span class="mark">top</span>, <span class="mark">bottom</span>, <span class="mark">right</span>, и <span class="mark">left</span>, 
-          с добавлением приставки <span class="mark">at</span>. 
-        </p>
-        <textarea name="" id="" cols="95" rows="7" class="html">
-<div class="tile-set">
-  <div class="tile">elipse at center</div>
-  <div class="tile">circle at center</div>
-  <div class="tile">circle at top right</div>
-  <div class="tile">circle at bottom left</div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-:root {
-  --start-color: #ffeb3b;
-  --end-color: #ff5722;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.tile-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tile {
-  height: 200px;
-  flex-basis: calc(50% - 10px);
-  margin: 5px;
-  border-radius: 4px;
-  background-color: #9e9e9e;
-
-  text-align: center;
-  line-height: 200px;
-  color: #212121;
-  font-family: monospace;
-  font-size: 24px;
-  letter-spacing: -0.05em;
-  
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-}
-
-.tile:nth-child(1) {
-  background-image: radial-gradient(
-    at center,
-    var(--start-color) 10%,
-    var(--end-color) 50%
-  );
-}
-
-.tile:nth-child(2) {
-  background-image: radial-gradient(
-    circle at center,
-    var(--start-color) 10%,
-    var(--end-color) 50%
-  );
-}
-
-.tile:nth-child(3) {
-  background-image: radial-gradient(
-    circle at top right,
-    var(--start-color) 10%,
-    var(--end-color) 50%
-  );
-}
-
-.tile:nth-child(4) {
-  background-image: radial-gradient(
-    circle at bottom left,
-    var(--start-color) 10%,
-    var(--end-color) 50%
-  );
-}
-        </textarea>
-        <p>
-          Радиальный градиент также может быть сплошным, достаточно правильно задать колорстопы.
-        </p>
-        <textarea name="" id="" cols="95" rows="7" class="html">
-<div class="tile-set">
-  <div class="tile">ellipse at center</div>
-  <div class="tile">circle at center</div>
-  <div class="tile">circle at top right</div>
-  <div class="tile">circle at bottom right</div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
-}
-
-.tile-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tile {
-  height: 200px;
-  flex-basis: calc(50% - 10px);
-  margin: 5px;
-  border-radius: 4px;
-  background-color: #9e9e9e;
-
-  text-align: center;
-  line-height: 200px;
-  color: #fff;
-  font-family: monospace;
-  font-size: 24px;
-  letter-spacing: -0.05em;
-  
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-}
-
-.tile:nth-child(1) {
-  background-image: radial-gradient(
-    ellipse at center,
-    #f44336 15%,
-    #09792b 15%,
-    #09792b 40%,
-    #00b9ff 40%,
-    #00b9ff 65%,
-    #ffb800 65%
-  );
-}
-
-.tile:nth-child(2) {
-  background-image: radial-gradient(
-    circle at center,
-    #f44336 15%,
-    #09792b 15%,
-    #09792b 40%,
-    #00b9ff 40%,
-    #00b9ff 65%,
-    #ffb800 65%
-  );
-}
-
-.tile:nth-child(3) {
-  background-image: radial-gradient(
-    circle at top right,
-    #f44336 15%,
-    #09792b 15%,
-    #09792b 40%,
-    #00b9ff 40%,
-    #00b9ff 65%,
-    #ffb800 65%
-  );
-}
-
-.tile:nth-child(4) {
-  background-image: radial-gradient(
-    circle at bottom right,
-    #f44336 15%,
-    #09792b 15%,
-    #09792b 40%,
-    #00b9ff 40%,
-    #00b9ff 65%,
-    #ffb800 65%
-  );
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Повторяющийся градиент-->
-    <section class="repeating-gradient">
-      <div class="container">
-        <h2>
-          Повторяющийся градиент
-          <a name="repeating-gradient-anchor"></a>
-        </h2>
-        <p>
-          Повторяющийся градиент может быть линейным или радиальным и позволяет сделать интересные декоративные эффекты. 
-          Чаще всего повторяющийся градиент делают сплошным.
-        </p>
-        <textarea name="" id="" cols="95" rows="9" class="html">
-<div class="tile-set">
-  <div class="tile">to right</div>
-  <div class="tile">to bottom</div>
-  <div class="tile">to top right</div>
-  <div class="tile">to bottom right</div>
-  <div class="tile">circle at center</div>
-  <div class="tile">circle at top right</div>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-:root {
-  --start-color: #ff8a00;
-  --end-color: #e52e71;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.tile-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tile {
-  height: 200px;
-  flex-basis: calc(50% - 10px);
-  margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #9e9e9e;
-
-  text-align: center;
-  line-height: 200px;
-  color: #fff;
-  font-family: monospace;
-  font-size: 24px;
-  letter-spacing: -0.05em;
-  
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-}
-
-.tile:nth-child(1) {
-  background-image: repeating-linear-gradient(
-    to right,
-    var(--start-color),
-    var(--start-color) 20px,
-    var(--end-color) 20px,
-    var(--end-color) 40px
-  );
-}
-
-.tile:nth-child(2) {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    var(--start-color),
-    var(--start-color) 20px,
-    var(--end-color) 20px,
-    var(--end-color) 40px
-  );
-}
-
-.tile:nth-child(3) {
-  background-image: repeating-linear-gradient(
-    to top right,
-    var(--start-color),
-    var(--start-color) 20px,
-    var(--end-color) 20px,
-    var(--end-color) 40px
-  );
-}
-
-.tile:nth-child(4) {
-  background-image: repeating-linear-gradient(
-    to bottom right,
-    var(--start-color),
-    var(--start-color) 20px,
-    var(--end-color) 20px,
-    var(--end-color) 40px
-  );
-}
-
-.tile:nth-child(5) {
-  background-image: repeating-radial-gradient(
-    circle at center,
-    var(--start-color),
-    var(--start-color) 20px,
-    var(--end-color) 20px,
-    var(--end-color) 40px
-  );
-}
-
-.tile:nth-child(6) {
-  background-image: repeating-radial-gradient(
-    circle at top right,
-    var(--start-color),
-    var(--start-color) 20px,
-    var(--end-color) 20px,
-    var(--end-color) 40px
-  );
-}
-        </textarea>
-        <p>
-          Размер градиента определяется последним колорстопом. В примере это 40px пикселей, 
-          поэтому ширина градиента который затем повторяется равна 40 пикселей. 
-          В примере используется всего два цвета, но их количество не ограничено, главное правильно задать колорстопы.
-        </p>
-        <textarea name="" id="" cols="95" rows="8" class="values">
-background-image: repeating-linear-gradient(
-  to left,
-  blue,
-  blue 20px,
-  red 20px,
-  red 40px /* Опеределяет размер градиента */
-);
-        </textarea>
-      </div>
-    </section>
-
-    <!--Полосатые заголовки-->
-    <section class="striped-headers">
-      <div class="container">
-        <h3>
-          Полосатые заголовки
-          <a name="striped-headers-anchor"></a>
-        </h3>
-        <p>
-          Повторяющийся градиент можно использовать для создания интересных эффектов, напимер «полосатых» заголовков или любых других элементов.
-        </p>
-        <textarea name="" id="" cols="95" rows="21" class="html">
-<article class="post">
-  <h1 class="post-title angled">Striped header</h1>
-  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatem modi fugit iusto. Quod, consequuntur porro delectus aliquam minus perspiciatis adipisci quidem architecto nulla facere, recusandae eaque vitae, deserunt rem.</p>
-</article>
-
-<article class="post">
-  <h1 class="post-title vertical">Striped header</h1>
-  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatem modi fugit iusto. Quod, consequuntur porro delectus aliquam minus perspiciatis adipisci quidem architecto nulla facere, recusandae eaque vitae, deserunt rem.</p>
-</article>
-
-<article class="post">
-  <h1 class="post-title radial">Striped header</h1>
-  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatem modi fugit iusto. Quod, consequuntur porro delectus aliquam minus perspiciatis adipisci quidem architecto nulla facere, recusandae eaque vitae, deserunt rem.</p>
-</article>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-body {
-  background-color: #fff;
-  font-family: sans-serif;
-  color: #212121;
-  line-height: 1.5;
-}
-
-.post {
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-
-.post + .post {
-  margin-top: 20px;
-}
-
-.post-title {
-  margin: 0;
-  padding: 16px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.post-text {
-  margin: 0;
   padding: 16px;
 }
 
-.post-title.angled {
-  color: #fff;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    #606dbc,
-    #606dbc 10px,
-    #465298 10px,
-    #465298 20px
-  );
+.icon {
+  margin-left: 12px;
+  margin-right: 12px;
+  border: 2px dashed #2a2a2a;
+  border-radius: 8px;
+  fill: #2a2a2a;
+  stroke: #f44336;
 }
 
-.post-title.vertical {
-  background-image: repeating-linear-gradient(
-    to right,
-    #f6ba52,
-    #f6ba52 10px,
-    #ffd180 10px,
-    #ffd180 20px
-  );
-}
-
-.post-title.radial {
-  color: #fff;
-  background-image: repeating-radial-gradient(
-    circle,
-    purple,
-    purple 10px,
-    #4b026f 10px,
-    #4b026f 20px
-  );
+.icon:hover {
+  fill: #03a9f4;
 }
         </textarea>
       </div>
     </section>
 
-    <!--Дополнительные материалы-->
-    <section class="additional-materials">
+    <!--Свойство stroke-width-->
+    <section class="section strouke-width">
       <div class="container">
         <h2>
-          Дополнительные материалы
-          <a name="additional-materials-anchor"></a>
-        </h2>
-        <ul class="info-list">
-          <li><a href="https://cssgradient.io/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Генератор градиентов</a></li>
-          <li><a href="https://uigradients.com/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Подборка интересных градиентов</a></li>
-          <li><a href="https://lea.verou.me/2015/06/conical-gradients-today/" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Конические градиенты</a></li>
-        </ul>
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-    <!--Тень элемента-->
-    <section class="element-shadow">
-      <div class="container">
-        <h1>
-          Тень элемента
-          <a name="element-shadow-anchor"></a>
-        </h1>
-        <p>
-          Тень добавляет элементу эффект объёмности и ощущение высоты. Тени бывают внешние и внутренние, размытые и плоские, одинарные и многослойные.
-        </p>
-        <img src="./img/shadow-intro.png" alt="shadows example" width="700">
-        <p>
-          Свойство <span class="mark">box-shadow</span> задаёт элементу одну или более теней. 
-          По умолчанию размер тени совпадает с размером элемента, а её цвет такой же как цвет его текста.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-box-shadow: <x-offset> <y-offset> <blur> <spread> <color>
-        </textarea>
-        <ul class="info-list">
-          <li><span class="mark">x-offset</span> - горизонтальное смещение. Положительное значение смещает тень вправо от блока, отрицательное – влево. Обязательное значение.</li>
-          <li><span class="mark">y-offset</span> - вертикальное смещение. Положительное значение смещает тень вниз, отрицательное - вверх. Обязательное значение.</li>
-          <li><span class="mark">blur</span> - радиус размытия. Чем больше значение, тем сильнее размыта тень. Необязательное значение.</li>
-          <li><span class="mark">spread</span> - радиус распространения. Положительное значение увеличивает тень, отрицательное - уменьшает. Необязательное значение.</li>
-          <li><span class="mark">color</span> - цвет тени. Можно использовать любой формат записи цвета. Необязательное значение.</li>
-        </ul>
-        <textarea name="" id="" cols="95" rows="9" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
-</article>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: #f9f9fd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.post {
-  position: relative;
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 4px;
-  line-height: 1.5;
-  font-family: sans-serif;
-  background-color: #fff;
-  
-  box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
-}
-
-.post-title {
-  margin-top: 0;
-}
-
-.post-text {
-  margin-bottom: 0;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Тень с одной стороны-->
-    <section class="one-side">
-      <div class="container">
-        <h2>
-          Тень с одной стороны
-          <a name="one-side-shadow-anchor"></a>
+          Свойство stroke-width
+          <a name="stroke-width-anchor"></a>
         </h2>
         <p>
-          Используя отрицательный радиус распространения (значение <span class="mark">spread</span>), 
-          можно сжать тень блока, сделав её меньше размера элемента, и задать смещение только с одной стороны.
-        </p>
-        <textarea name="" id="" cols="95" rows="25" class="html">
-<div class="card-set">
-  <article class="post">
-    <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-    <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi.</p>
-  </article>
-
-  <article class="post">
-    <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-    <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi.</p>
-  </article>
-
-  <article class="post">
-    <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-    <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi.</p>
-  </article>
-
-  <article class="post">
-    <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-    <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi.</p>
-  </article>
-</div>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: #f9f9fd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.post {
-  flex-basis: calc(50% - 30px);
-  min-width: 320px;
-  margin: 15px;
-  padding: 15px;
-  border-radius: 4px;
-  line-height: 1.5;
-  font-family: sans-serif;
-  background-color: #fff;
-}
-
-.post:nth-child(1) {
-  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
-}
-
-.post:nth-child(2) {
-  box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.3);
-}
-
-.post:nth-child(3) {
-  box-shadow: -10px 0 10px -5px rgba(0, 0, 0, 0.3);
-}
-
-.post:nth-child(4) {
-  box-shadow: 0 -10px 10px -5px rgba(0, 0, 0, 0.3);
-}
-
-.post-title {
-  margin-top: 0;
-}
-
-.post-text {
-  margin-bottom: 0;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Внутренняя тень-->
-    <section class="inner">
-      <div class="container">
-        <h2>
-          Внутренняя тень
-          <a name="inner-shadow-anchor"></a>
-        </h2>
-        <p>
-          Если внешняя тень визуально приподнимает элемент, то внутренняя тень позвоялет добавить эффект глубины, вдавливая элемент в интерфейс. 
-          Синтаксис объявления внутренней тени аналогичен обычной, но первым значением необходимо указать <span class="mark">inset</span>.
-        </p>
-        <textarea name="" id="" cols="95" rows="2" class="values">
-box-shadow: inset <x-offset> <y-offset> <blur> <spread> <color>
-        </textarea>
-        <p>
-          Смещение, размытие и распространение тени происходит внутри элемента и визуально ограничено его рамкой.
-        </p>
-        <textarea name="" id="" cols="95" rows="9" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
-</article>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: #f9f9fd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.post {
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 4px;
-  line-height: 1.5;
-  font-family: sans-serif;
-  background-color: #fff;
-  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
-}
-
-.post-title {
-  margin-top: 0;
-}
-
-.post-text {
-  margin-bottom: 0;
-}
-        </textarea>
-      </div>
-    </section>
-
-    <!--Многослойная тень-->
-    <section class="layered">
-      <div class="container">
-        <h2>
-          Многослойная тень
-          <a name="layered-shadow-anchor"></a>
-        </h2>
-        <p>
-          На один элемент можно добавить несколько теней, указав их через запятую.
+          Контролирует толщину обводки. Значение по умолчанию <span class="mark">1px</span>, 
+          поэтому для однопиксельной обводки достаточно указать цвет в свойстве <span class="mark">stroke</span>. 
+          Если задана толщина обводки, но не задан цвет, она не отобразится.
         </p>
         <textarea name="" id="" cols="95" rows="5" class="values">
-box-shadow: <x-offset> <y-offset> <blur> <spread> <color>,
-            <x-offset> <y-offset> <blur> <spread> <color>,
-            <x-offset> <y-offset> <blur> <spread> <color>,
-            ...
-        </textarea>
-        <p>
-          Получается многослойный пирог, в котором первая тень в списке размещается на самом верху, 
-          последняя - в самом низу. То есть, чем раньше указана тень, тем выше она в слоях, и будет визуально перекрывать все последующие. 
-          Этот подход позволяет сделать очень мягкие и красивые тени.
-        </p>
-        <textarea name="" id="" cols="95" rows="9" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
-</article>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
+.icon {
+  stroke: #f44336;
+  stroke-width: 3px;
 }
+        </textarea>
+        <textarea name="" id="" cols="95" rows="20" class="html">
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <symbol id="delete" viewBox="0 0 32 32">
+      <path d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z" />
+    </symbol>
+    <symbol id="camera" viewBox="0 0 32 32">
+      <path d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z" />
+      <path d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z" />
+    </symbol>
+    <symbol id="work" viewBox="0 0 32 32">
+      <path d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z" />
+    </symbol>
+  </defs>
+</svg>
 
+<div class="container">
+  <svg class="icon" width="150" height="150">
+    <use href="#delete"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#camera"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#work"></use>
+  </svg>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="20" class="css">
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #f9f9fd;
+}
+
+.container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+  padding: 16px;
 }
 
-.post {
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 4px;
-  line-height: 1.5;
-  font-family: sans-serif;
-  background-color: #fff;
-
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
+.icon {
+  margin-left: 12px;
+  margin-right: 12px;
+  border: 2px dashed #2a2a2a;
+  border-radius: 8px;
+  fill: #2a2a2a;
+  stroke: #f44336;
+  stroke-width: 3px;
 }
 
-.post-title {
-  margin-top: 0;
-}
-.post-text {
-  margin-bottom: 0;
-}
-        </textarea>
-        <p>
-          Для наглядности зададим слоям тени из предыдущего примера разные цвета.
-        </p>
-        <textarea name="" id="" cols="95" rows="9" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
-</article>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: #f9f9fd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.post {
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 4px;
-  line-height: 1.5;
-  font-family: sans-serif;
-  background-color: #fff;
-
-  box-shadow: 0 2.8px 2.2px red, 0 6.7px 5.3px blue, 0 12.5px 10px green,
-    0 22.3px 17.9px purple, 0 41.8px 33.4px orange, 0 100px 80px teal;
-}
-
-.post-title {
-  margin-top: 0;
-}
-.post-text {
-  margin-bottom: 0;
+.icon:hover {
+  fill: #03a9f4;
 }
         </textarea>
       </div>
     </section>
 
-    <!--Декоративные эффекты-->
-    <section class="decor">
+    <!--Свойство stroke-opacity-->
+    <section class="stroke-opacity">
       <div class="container">
         <h2>
-          Декоративные эффекты
-          <a name="decor-effects-anchor"></a>
+          Свойство stroke-opacity
+          <a name="stroke-opacity-anchor"></a>
         </h2>
         <p>
-          Используя тени, псевдоэлементы, а также трансформации и позиционирование, 
-          которое мы рассмотрим дальше в курсе, можно делать очень интересные эффекты. Например, визуально загнутые углы карточки.
+          Управляет только прозрачностью цвета обводки, а не всего цвета или элемента. Значение задаётся числом от 0 до 1.
         </p>
-        <textarea name="" id="" cols="95" rows="9" class="html">
-<article class="post">
-  <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
-  <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum harum facere adipisci placeat reiciendis, consequatur aut officia non obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.</p>
-</article>
-        </textarea>
-        <textarea name="" id="" cols="95" rows="25" class="css">
-* {
-  box-sizing: border-box;
+        <textarea name="" id="" cols="95" rows="6" class="values">
+.icon {
+  stroke: #f44336;
+  stroke-width: 3px;
+  stroke-opacity: 0.7;
 }
+        </textarea>
+        <textarea name="" id="" cols="95" rows="20" class="html">
+<svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <symbol id="delete" viewBox="0 0 32 32">
+      <path d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z" />
+    </symbol>
+    <symbol id="camera" viewBox="0 0 32 32">
+      <path d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z" />
+      <path d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z" />
+    </symbol>
+    <symbol id="work" viewBox="0 0 32 32">
+      <path d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z" />
+    </symbol>
+  </defs>
+</svg>
 
+<div class="container">
+  <svg class="icon" width="150" height="150">
+    <use href="#delete"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#camera"></use>
+  </svg>
+
+  <svg class="icon" width="150" height="150">
+    <use href="#work"></use>
+  </svg>
+</div>
+        </textarea>
+        <textarea name="" id="" cols="95" rows="20" class="css">
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #f9f9fd;
+}
+
+.container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+  padding: 16px;
 }
 
-.post {
-  position: relative;
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 4px;
-  line-height: 1.5;
-  font-family: sans-serif;
-  background-color: #fff;
+.icon {
+  margin-left: 12px;
+  margin-right: 12px;
+  border: 2px dashed #2a2a2a;
+  border-radius: 8px;
+  fill: #2a2a2a;
+  stroke: #f44336;
+  stroke-width: 3px;
+  stroke-opacity: 0.7;
 }
 
-.post:before,
-.post:after {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  top: 80%;
-  max-width: 300px;
-  background: #777;
-  box-shadow: 0 15px 10px #777;
-  transform: rotate(-3deg);
-}
-
-.post:after {
-  transform: rotate(3deg);
-  right: 10px;
-  left: auto;
-}
-
-.post-title {
-  margin-top: 0;
-}
-
-.post-text {
-  margin-bottom: 0;
+.icon:hover {
+  fill: #03a9f4;
 }
         </textarea>
-      </div>
-    </section>
-
-    <!--Дополнительные материалы-->
-    <section class="add-materials">
-      <div class="container">
-        <h2>
-          Дополнительные материалы
-          <a name="add-material-anchor"></a>
-        </h2>
-        <ul class="info-list">
-          <li><a href="https://cssgenerator.org/box-shadow-css-generator.html" class="resource-link" target="_blank" rel="noopener noreferrer nofollow">Генератор тени</a></li>
-        </ul>
       </div>
     </section>
   </main>
